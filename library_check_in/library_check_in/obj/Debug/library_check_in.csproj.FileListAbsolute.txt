@@ -1,0 +1,8 @@
+C:\Users\FCFM\Documents\SS Arce\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.csprojResolveAssemblyReference.cache
+C:\Users\FCFM\Documents\SS Arce\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.frm_login.resources
+C:\Users\FCFM\Documents\SS Arce\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.Properties.Resources.resources
+C:\Users\FCFM\Documents\SS Arce\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.csproj.GenerateResource.Cache
+C:\Users\FCFM\Documents\SS Arce\library_check_in\library_check_in\library_check_in\bin\Debug\library_check_in.exe
+C:\Users\FCFM\Documents\SS Arce\library_check_in\library_check_in\library_check_in\bin\Debug\library_check_in.pdb
+C:\Users\FCFM\Documents\SS Arce\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.exe
+C:\Users\FCFM\Documents\SS Arce\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.pdb
