@@ -32,11 +32,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Lbl_Bienvenido = new System.Windows.Forms.Label();
-            this.Lbl_ = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Lbl_Codigo = new System.Windows.Forms.Label();
+            this.Lbl_Nombre = new System.Windows.Forms.Label();
+            this.Lbl_MatriculaOut = new System.Windows.Forms.Label();
+            this.Lbl_Carrera = new System.Windows.Forms.Label();
+            this.Lbl_Fecha = new System.Windows.Forms.Label();
+            this.Lbl_MatriculaIn = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -74,93 +74,93 @@
             this.Lbl_Bienvenido.TabIndex = 2;
             this.Lbl_Bienvenido.Text = "Bienvenido";
             // 
-            // Lbl_
+            // Lbl_Nombre
             // 
-            this.Lbl_.AutoSize = true;
-            this.Lbl_.Location = new System.Drawing.Point(279, 199);
-            this.Lbl_.Name = "Lbl_";
-            this.Lbl_.Size = new System.Drawing.Size(35, 13);
-            this.Lbl_.TabIndex = 3;
-            this.Lbl_.Text = "label1";
+            this.Lbl_Nombre.AutoSize = true;
+            this.Lbl_Nombre.Location = new System.Drawing.Point(203, 207);
+            this.Lbl_Nombre.Name = "Lbl_Nombre";
+            this.Lbl_Nombre.Size = new System.Drawing.Size(44, 13);
+            this.Lbl_Nombre.TabIndex = 3;
+            this.Lbl_Nombre.Text = "Nombre";
             // 
-            // label2
+            // Lbl_MatriculaOut
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(279, 225);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
+            this.Lbl_MatriculaOut.AutoSize = true;
+            this.Lbl_MatriculaOut.Location = new System.Drawing.Point(203, 233);
+            this.Lbl_MatriculaOut.Name = "Lbl_MatriculaOut";
+            this.Lbl_MatriculaOut.Size = new System.Drawing.Size(50, 13);
+            this.Lbl_MatriculaOut.TabIndex = 4;
+            this.Lbl_MatriculaOut.Text = "Matricula";
             // 
-            // label3
+            // Lbl_Carrera
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(279, 255);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "label3";
+            this.Lbl_Carrera.AutoSize = true;
+            this.Lbl_Carrera.Location = new System.Drawing.Point(203, 259);
+            this.Lbl_Carrera.Name = "Lbl_Carrera";
+            this.Lbl_Carrera.Size = new System.Drawing.Size(41, 13);
+            this.Lbl_Carrera.TabIndex = 5;
+            this.Lbl_Carrera.Text = "Carrera";
             // 
-            // label4
+            // Lbl_Fecha
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(279, 281);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "label4";
+            this.Lbl_Fecha.AutoSize = true;
+            this.Lbl_Fecha.Location = new System.Drawing.Point(203, 285);
+            this.Lbl_Fecha.Name = "Lbl_Fecha";
+            this.Lbl_Fecha.Size = new System.Drawing.Size(91, 13);
+            this.Lbl_Fecha.TabIndex = 6;
+            this.Lbl_Fecha.Text = "Fecha de entrada";
             // 
-            // Lbl_Codigo
+            // Lbl_MatriculaIn
             // 
-            this.Lbl_Codigo.AutoSize = true;
-            this.Lbl_Codigo.Location = new System.Drawing.Point(70, 255);
-            this.Lbl_Codigo.Name = "Lbl_Codigo";
-            this.Lbl_Codigo.Size = new System.Drawing.Size(40, 13);
-            this.Lbl_Codigo.TabIndex = 7;
-            this.Lbl_Codigo.Text = "Código";
+            this.Lbl_MatriculaIn.AutoSize = true;
+            this.Lbl_MatriculaIn.Location = new System.Drawing.Point(70, 255);
+            this.Lbl_MatriculaIn.Name = "Lbl_MatriculaIn";
+            this.Lbl_MatriculaIn.Size = new System.Drawing.Size(50, 13);
+            this.Lbl_MatriculaIn.TabIndex = 7;
+            this.Lbl_MatriculaIn.Text = "Matricula";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(333, 199);
+            this.textBox1.Location = new System.Drawing.Point(327, 200);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(239, 20);
             this.textBox1.TabIndex = 8;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(333, 226);
+            this.textBox2.Location = new System.Drawing.Point(327, 226);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(239, 20);
             this.textBox2.TabIndex = 9;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(333, 255);
+            this.textBox3.Location = new System.Drawing.Point(327, 252);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.Size = new System.Drawing.Size(239, 20);
             this.textBox3.TabIndex = 10;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(333, 281);
+            this.textBox4.Location = new System.Drawing.Point(327, 278);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.Size = new System.Drawing.Size(239, 20);
             this.textBox4.TabIndex = 11;
             // 
             // frm_entrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 405);
+            this.ClientSize = new System.Drawing.Size(695, 369);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.Lbl_Codigo);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.Lbl_);
+            this.Controls.Add(this.Lbl_MatriculaIn);
+            this.Controls.Add(this.Lbl_Fecha);
+            this.Controls.Add(this.Lbl_Carrera);
+            this.Controls.Add(this.Lbl_MatriculaOut);
+            this.Controls.Add(this.Lbl_Nombre);
             this.Controls.Add(this.Lbl_Bienvenido);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -179,11 +179,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label Lbl_Bienvenido;
-        private System.Windows.Forms.Label Lbl_;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label Lbl_Codigo;
+        private System.Windows.Forms.Label Lbl_Nombre;
+        private System.Windows.Forms.Label Lbl_MatriculaOut;
+        private System.Windows.Forms.Label Lbl_Carrera;
+        private System.Windows.Forms.Label Lbl_Fecha;
+        private System.Windows.Forms.Label Lbl_MatriculaIn;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
