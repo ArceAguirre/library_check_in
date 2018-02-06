@@ -6,3 +6,12 @@ C:\Users\FCFM\Documents\SS Arce\library_check_in\library_check_in\library_check_
 C:\Users\FCFM\Documents\SS Arce\library_check_in\library_check_in\library_check_in\bin\Debug\library_check_in.pdb
 C:\Users\FCFM\Documents\SS Arce\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.exe
 C:\Users\FCFM\Documents\SS Arce\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.pdb
+C:\Users\BiblioHP2\Documents\Juan Pablo Espinoza y ya\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.exe
+C:\Users\BiblioHP2\Documents\Juan Pablo Espinoza y ya\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.pdb
+C:\Users\BiblioHP2\Documents\Juan Pablo Espinoza y ya\library_check_in\library_check_in\library_check_in\bin\Debug\library_check_in.exe
+C:\Users\BiblioHP2\Documents\Juan Pablo Espinoza y ya\library_check_in\library_check_in\library_check_in\bin\Debug\library_check_in.pdb
+C:\Users\BiblioHP2\Documents\Juan Pablo Espinoza y ya\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.csprojResolveAssemblyReference.cache
+C:\Users\BiblioHP2\Documents\Juan Pablo Espinoza y ya\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.frm_login.resources
+C:\Users\BiblioHP2\Documents\Juan Pablo Espinoza y ya\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.Properties.Resources.resources
+C:\Users\BiblioHP2\Documents\Juan Pablo Espinoza y ya\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.csproj.GenerateResource.Cache
+C:\Users\BiblioHP2\Documents\Juan Pablo Espinoza y ya\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.frm_entrada.resources
