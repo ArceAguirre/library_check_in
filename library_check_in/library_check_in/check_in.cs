@@ -15,5 +15,15 @@ namespace library_check_in
         {
             InitializeComponent();
         }
+
+        private void tbpg_report_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbpg_signIn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

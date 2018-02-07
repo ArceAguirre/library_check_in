@@ -45,7 +45,8 @@ namespace library_check_in{
             }
             else
             {
-                MessageBox.Show("Correcto");
+                frm_entrada frm_checkIn = new frm_entrada();
+                frm_checkIn.Show();
             }
         }
     }
