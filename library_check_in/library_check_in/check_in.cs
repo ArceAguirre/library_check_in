@@ -25,5 +25,11 @@ namespace library_check_in
         {
 
         }
+
+        private void btn_generate_Click(object sender, EventArgs e)
+        {
+            frm_report frm_reporte = new frm_report();
+            frm_reporte.Show();
+        }
     }
 }

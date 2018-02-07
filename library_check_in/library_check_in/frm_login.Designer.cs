@@ -118,6 +118,7 @@
             this.Controls.Add(this.lbl_name);
             this.Controls.Add(this.img_logoFCFM);
             this.Controls.Add(this.img_logoUANL);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_login";

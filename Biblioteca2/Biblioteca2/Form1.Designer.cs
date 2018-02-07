@@ -88,6 +88,8 @@
             this.serialPort2 = new System.IO.Ports.SerialPort(this.components);
             this.serialPort3 = new System.IO.Ports.SerialPort(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label7 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -311,6 +313,8 @@
             // dataGridReporte
             // 
             this.dataGridReporte.BackColor = System.Drawing.Color.Gainsboro;
+            this.dataGridReporte.Controls.Add(this.button2);
+            this.dataGridReporte.Controls.Add(this.label7);
             this.dataGridReporte.Controls.Add(this.btnPDF);
             this.dataGridReporte.Controls.Add(this.button1);
             this.dataGridReporte.Controls.Add(this.rbGeneralPosgrado);
@@ -407,7 +411,7 @@
             "Maestría en Astrofísica Planetaria y Tencologías Afines",
             "Doctorado en Matemáticas",
             "Doctorado en Ing. Física Industrial"});
-            this.ddlCarreraPosgrado.Location = new System.Drawing.Point(389, 353);
+            this.ddlCarreraPosgrado.Location = new System.Drawing.Point(389, 306);
             this.ddlCarreraPosgrado.Name = "ddlCarreraPosgrado";
             this.ddlCarreraPosgrado.Size = new System.Drawing.Size(400, 23);
             this.ddlCarreraPosgrado.TabIndex = 29;
@@ -777,6 +781,24 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(479, 48);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 15);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "label7";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(45, 325);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 36;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -870,6 +892,8 @@
         private System.Windows.Forms.Label txtCEmpleados;
         private System.Windows.Forms.Label txtCAlumnos;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button2;
     }
 }
 
