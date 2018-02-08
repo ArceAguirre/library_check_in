@@ -9,21 +9,11 @@ using System.Windows.Forms;
 
 namespace library_check_in
 {
-    public partial class frm_entrada : Form
+    public partial class frm_signIn : Form
     {
-        public frm_entrada()
+        public frm_signIn()
         {
             InitializeComponent();
-        }
-
-        private void tbpg_report_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbpg_signIn_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_generate_Click(object sender, EventArgs e)
