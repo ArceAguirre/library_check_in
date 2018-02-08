@@ -3,28 +3,41 @@
 /*  Date        |   02-02-2018                      */
 /*  Description |   Base de datos para Entrada CICE */
 /****************************************************/
-
+/*
+ *	drop database library_check_in
+ *
+*/
 create database library_check_in;
-use library_check_in
+use library_check_in;
 
 /****************************************************/
 /*  Author      |   Arcelia Aguirre                 */
 /*  Date        |   02-02-2018                      */
 /*  Description |   Licenciatura 					*/
 /****************************************************/
+/****************************************************/
+/*  Author      |   Arcelia Aguirre                 */
+/*  Date        |   07-02-2018                      */
+/*  Change		|   Tipo de dato para fecha 		*/
+/****************************************************/
 create table career(
 	id integer primary key not null identity,			/*id incremental*/
 	career_name varchar(250) not null,					/*Nombre de la licenciatura*/
 	career_key varchar(6) not null,						/*Clave de la licenciatura*/
 	created_at datetime default getdate() not null,		/*Fecha de creación del registro*/
-	updated_at timestamp,								/*Fecha de ultima modificación*/
+	updated_at datetime default getdate() not null,		/*Fecha de ultima modificación*/
 	active bit default 1								/*Registro activo*/
-)
+);
 
 /****************************************************/
 /*  Author      |   Arcelia Aguirre                 */
 /*  Date        |   02-02-2018                      */
 /*  Description |   Estudiante  					*/
+/****************************************************/
+/****************************************************/
+/*  Author      |   Arcelia Aguirre                 */
+/*  Date        |   07-02-2018                      */
+/*  Change		|   Tipo de dato para fecha 		*/
 /****************************************************/
 create table student(
 	id integer primary key not null identity,			/*id incremental*/
@@ -35,10 +48,10 @@ create table student(
 	semester int not null,								/*Semestre*/
 	id_career int not null,								/*Lave foranea a la licenciatura(career)*/
 	created_at datetime default getdate() not null,		/*Fecha de creación del registro*/
-	updated_at timestamp,								/*Fecha de ultima modificación*/
+	updated_at datetime default getdate() not null,		/*Fecha de ultima modificación*/
 	active bit default 1								/*Registro activo*/
 	foreign key (id_career) references career(id)
-)
+);
 
 
 /****************************************************/
@@ -47,18 +60,28 @@ create table student(
 /*  Description |   Tipo de persona que no es 		*/
 /*					estudiante 						*/
 /****************************************************/
+/****************************************************/
+/*  Author      |   Arcelia Aguirre                 */
+/*  Date        |   07-02-2018                      */
+/*  Change		|   Tipo de dato para fecha 		*/
+/****************************************************/
 create table type_not_student(
 	id integer primary key not null identity,			/*id incremental*/
 	description varchar(250) not null,					/*Descripción de tipo*/
 	created_at datetime default getdate() not null,		/*Fecha de creación del registro*/
-	updated_at timestamp,								/*Fecha de ultima modificación*/
+	updated_at datetime default getdate() not null,		/*Fecha de ultima modificación*/
 	active bit default 1								/*Registro activo*/
-)
+);
 
 /****************************************************/
 /*  Author      |   Arcelia Aguirre                 */
 /*  Date        |   02-02-2018                      */
 /*  Description |   Persona que no es Estudiante 	*/
+/****************************************************/
+/****************************************************/
+/*  Author      |   Arcelia Aguirre                 */
+/*  Date        |   07-02-2018                      */
+/*  Change		|   Tipo de dato para fecha 		*/
 /****************************************************/
 create table not_student(
 	id integer primary key not null identity,			/*id incremental*/
@@ -67,10 +90,10 @@ create table not_student(
 	mother_last_name varchar(50),						/*Apellido Materno*/
 	id_type_not_student int not null,					/*Tipo de no estudiante*/
 	created_at datetime default getdate() not null,		/*Fecha de creación del registro*/
-	updated_at timestamp,								/*Fecha de ultima modificación*/
+	updated_at datetime default getdate() not null,		/*Fecha de ultima modificación*/
 	active bit default 1								/*Registro activo*/
 	foreign key (id_type_not_student) references type_not_student(id)
-)
+);
 
 /****************************************************/
 /*  Author      |   Arcelia Aguirre                 */
@@ -78,18 +101,28 @@ create table not_student(
 /*  Description |   Tipo de usuario para la 		*/
 /*					aplicación						*/
 /****************************************************/
+/****************************************************/
+/*  Author      |   Arcelia Aguirre                 */
+/*  Date        |   07-02-2018                      */
+/*  Change		|   Tipo de dato para fecha 		*/
+/****************************************************/
 create table type_user(
 	id integer primary key not null identity,			/*id incremental*/
 	description varchar(250) not null,					/*Descripción de tipo*/
 	created_at datetime default getdate() not null,		/*Fecha de creación del registro*/
-	updated_at timestamp,								/*Fecha de ultima modificación*/
+	updated_at datetime default getdate() not null,		/*Fecha de ultima modificación*/
 	active bit default 1								/*Registro activo*/
-)
+);
 
 /****************************************************/
 /*  Author      |   Arcelia Aguirre                 */
 /*  Date        |   02-02-2018                      */
 /*  Description |   Usuario para la aplicación		*/
+/****************************************************/
+/****************************************************/
+/*  Author      |   Arcelia Aguirre                 */
+/*  Date        |   07-02-2018                      */
+/*  Change		|   Tipo de dato para fecha 		*/
 /****************************************************/
 create table user_CICE(
 	id integer primary key not null identity,			/*id incremental*/
@@ -99,7 +132,7 @@ create table user_CICE(
 	mother_last_name varchar(50),						/*Apellido Materno*/
 	id_type_user int not null,							/*Tipo de no estudiante*/
 	created_at datetime default getdate() not null,		/*Fecha de creación del registro*/
-	updated_at timestamp,								/*Fecha de ultima modificación*/
+	updated_at datetime default getdate() not null,		/*Fecha de ultima modificación*/
 	active bit default 1								/*Registro activo*/
-	foreign key (type_user) references type_not_student(id)
-)
+	foreign key(id_type_user) references type_user(id)
+);

@@ -30,7 +30,7 @@ namespace library_check_in{
             var user = txt_name.Text;
             var pass = txt_password.Text;
 
-            string command = "select type_user from user_CICE where user_name = @user and user_password = @password";
+            string command = "select id_type_user from user_CICE where user_name = @user and user_password = @password";
             var conn = new SqlConnection(Connection.CONNECTION_STRING);
             var cmd = new SqlCommand(command, conn);
             cmd.Parameters.AddWithValue("@user", user);
