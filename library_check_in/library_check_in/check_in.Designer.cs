@@ -56,39 +56,39 @@
             this.lbl_finalDate = new System.Windows.Forms.Label();
             this.lbl_initalDate = new System.Windows.Forms.Label();
             this.lbl_reporte = new System.Windows.Forms.Label();
-            this.grpbx_load = new System.Windows.Forms.GroupBox();
-            this.btn_file = new System.Windows.Forms.Button();
-            this.lbl_type = new System.Windows.Forms.Label();
-            this.txt_file = new System.Windows.Forms.TextBox();
-            this.cmbbx_type = new System.Windows.Forms.ComboBox();
-            this.btn_saveLoad = new System.Windows.Forms.Button();
-            this.grpbx_unique = new System.Windows.Forms.GroupBox();
-            this.lbl_typeRegister = new System.Windows.Forms.Label();
-            this.cmbbx_typeRegister = new System.Windows.Forms.ComboBox();
-            this.btn_add = new System.Windows.Forms.Button();
             this.tbpg_dataUp = new System.Windows.Forms.TabPage();
-            this.tblctl_settings = new System.Windows.Forms.TabPage();
             this.lbl_register = new System.Windows.Forms.Label();
+            this.grpbx_unique = new System.Windows.Forms.GroupBox();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.cmbbx_typeRegister = new System.Windows.Forms.ComboBox();
+            this.lbl_typeRegister = new System.Windows.Forms.Label();
+            this.grpbx_load = new System.Windows.Forms.GroupBox();
+            this.btn_saveLoad = new System.Windows.Forms.Button();
+            this.cmbbx_type = new System.Windows.Forms.ComboBox();
+            this.txt_file = new System.Windows.Forms.TextBox();
+            this.lbl_type = new System.Windows.Forms.Label();
+            this.btn_file = new System.Windows.Forms.Button();
+            this.tblctl_settings = new System.Windows.Forms.TabPage();
+            this.grpbx_info = new System.Windows.Forms.GroupBox();
+            this.btn_help = new System.Windows.Forms.Button();
+            this.btn_documentation = new System.Windows.Forms.Button();
+            this.btn_manual = new System.Windows.Forms.Button();
+            this.btn_install = new System.Windows.Forms.Button();
+            this.grpbx_database = new System.Windows.Forms.GroupBox();
             this.btn_create = new System.Windows.Forms.Button();
+            this.btn_deleteDuplicate = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_drop = new System.Windows.Forms.Button();
-            this.btn_deleteDuplicate = new System.Windows.Forms.Button();
-            this.grpbx_database = new System.Windows.Forms.GroupBox();
-            this.btn_install = new System.Windows.Forms.Button();
-            this.grpbx_info = new System.Windows.Forms.GroupBox();
-            this.btn_manual = new System.Windows.Forms.Button();
-            this.btn_documentation = new System.Windows.Forms.Button();
-            this.btn_help = new System.Windows.Forms.Button();
             this.tblctl_signIn.SuspendLayout();
             this.tbpg_signIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_logoFCFM)).BeginInit();
             this.tbpg_report.SuspendLayout();
-            this.grpbx_load.SuspendLayout();
-            this.grpbx_unique.SuspendLayout();
             this.tbpg_dataUp.SuspendLayout();
+            this.grpbx_unique.SuspendLayout();
+            this.grpbx_load.SuspendLayout();
             this.tblctl_settings.SuspendLayout();
-            this.grpbx_database.SuspendLayout();
             this.grpbx_info.SuspendLayout();
+            this.grpbx_database.SuspendLayout();
             this.SuspendLayout();
             // 
             // tblctl_signIn
@@ -290,6 +290,7 @@
             // 
             // cmbbx_carrer
             // 
+            this.cmbbx_carrer.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cmbbx_carrer.FormattingEnabled = true;
             this.cmbbx_carrer.Location = new System.Drawing.Point(136, 184);
             this.cmbbx_carrer.Name = "cmbbx_carrer";
@@ -298,6 +299,7 @@
             // 
             // cmbbx_report
             // 
+            this.cmbbx_report.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cmbbx_report.FormattingEnabled = true;
             this.cmbbx_report.Location = new System.Drawing.Point(136, 156);
             this.cmbbx_report.Name = "cmbbx_report";
@@ -358,6 +360,66 @@
             this.lbl_reporte.TabIndex = 0;
             this.lbl_reporte.Text = "Reporte";
             // 
+            // tbpg_dataUp
+            // 
+            this.tbpg_dataUp.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tbpg_dataUp.Controls.Add(this.lbl_register);
+            this.tbpg_dataUp.Controls.Add(this.grpbx_unique);
+            this.tbpg_dataUp.Controls.Add(this.grpbx_load);
+            this.tbpg_dataUp.Location = new System.Drawing.Point(4, 22);
+            this.tbpg_dataUp.Name = "tbpg_dataUp";
+            this.tbpg_dataUp.Size = new System.Drawing.Size(448, 324);
+            this.tbpg_dataUp.TabIndex = 2;
+            this.tbpg_dataUp.Text = "Carga de datos";
+            // 
+            // lbl_register
+            // 
+            this.lbl_register.AutoSize = true;
+            this.lbl_register.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_register.Location = new System.Drawing.Point(167, 32);
+            this.lbl_register.Name = "lbl_register";
+            this.lbl_register.Size = new System.Drawing.Size(116, 31);
+            this.lbl_register.TabIndex = 18;
+            this.lbl_register.Text = "Registro";
+            // 
+            // grpbx_unique
+            // 
+            this.grpbx_unique.Controls.Add(this.btn_add);
+            this.grpbx_unique.Controls.Add(this.cmbbx_typeRegister);
+            this.grpbx_unique.Controls.Add(this.lbl_typeRegister);
+            this.grpbx_unique.Location = new System.Drawing.Point(17, 190);
+            this.grpbx_unique.Name = "grpbx_unique";
+            this.grpbx_unique.Size = new System.Drawing.Size(418, 55);
+            this.grpbx_unique.TabIndex = 17;
+            this.grpbx_unique.TabStop = false;
+            this.grpbx_unique.Text = "Registro";
+            // 
+            // btn_add
+            // 
+            this.btn_add.Location = new System.Drawing.Point(287, 19);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(75, 23);
+            this.btn_add.TabIndex = 17;
+            this.btn_add.Text = "Agregar";
+            this.btn_add.UseVisualStyleBackColor = true;
+            // 
+            // cmbbx_typeRegister
+            // 
+            this.cmbbx_typeRegister.FormattingEnabled = true;
+            this.cmbbx_typeRegister.Location = new System.Drawing.Point(109, 19);
+            this.cmbbx_typeRegister.Name = "cmbbx_typeRegister";
+            this.cmbbx_typeRegister.Size = new System.Drawing.Size(170, 21);
+            this.cmbbx_typeRegister.TabIndex = 17;
+            // 
+            // lbl_typeRegister
+            // 
+            this.lbl_typeRegister.AutoSize = true;
+            this.lbl_typeRegister.Location = new System.Drawing.Point(75, 22);
+            this.lbl_typeRegister.Name = "lbl_typeRegister";
+            this.lbl_typeRegister.Size = new System.Drawing.Size(28, 13);
+            this.lbl_typeRegister.TabIndex = 18;
+            this.lbl_typeRegister.Text = "Tipo";
+            // 
             // grpbx_load
             // 
             this.grpbx_load.Controls.Add(this.btn_saveLoad);
@@ -372,14 +434,30 @@
             this.grpbx_load.TabStop = false;
             this.grpbx_load.Text = "Carga con Archivo";
             // 
-            // btn_file
+            // btn_saveLoad
             // 
-            this.btn_file.Location = new System.Drawing.Point(50, 47);
-            this.btn_file.Name = "btn_file";
-            this.btn_file.Size = new System.Drawing.Size(54, 23);
-            this.btn_file.TabIndex = 14;
-            this.btn_file.Text = "Archivo";
-            this.btn_file.UseVisualStyleBackColor = true;
+            this.btn_saveLoad.Location = new System.Drawing.Point(287, 49);
+            this.btn_saveLoad.Name = "btn_saveLoad";
+            this.btn_saveLoad.Size = new System.Drawing.Size(75, 23);
+            this.btn_saveLoad.TabIndex = 16;
+            this.btn_saveLoad.Text = "Guardar";
+            this.btn_saveLoad.UseVisualStyleBackColor = true;
+            // 
+            // cmbbx_type
+            // 
+            this.cmbbx_type.FormattingEnabled = true;
+            this.cmbbx_type.Location = new System.Drawing.Point(110, 19);
+            this.cmbbx_type.Name = "cmbbx_type";
+            this.cmbbx_type.Size = new System.Drawing.Size(170, 21);
+            this.cmbbx_type.TabIndex = 12;
+            // 
+            // txt_file
+            // 
+            this.txt_file.Enabled = false;
+            this.txt_file.Location = new System.Drawing.Point(110, 49);
+            this.txt_file.Name = "txt_file";
+            this.txt_file.Size = new System.Drawing.Size(170, 20);
+            this.txt_file.TabIndex = 15;
             // 
             // lbl_type
             // 
@@ -390,80 +468,14 @@
             this.lbl_type.TabIndex = 13;
             this.lbl_type.Text = "Tipo";
             // 
-            // txt_file
+            // btn_file
             // 
-            this.txt_file.Enabled = false;
-            this.txt_file.Location = new System.Drawing.Point(110, 49);
-            this.txt_file.Name = "txt_file";
-            this.txt_file.Size = new System.Drawing.Size(170, 20);
-            this.txt_file.TabIndex = 15;
-            // 
-            // cmbbx_type
-            // 
-            this.cmbbx_type.FormattingEnabled = true;
-            this.cmbbx_type.Location = new System.Drawing.Point(110, 19);
-            this.cmbbx_type.Name = "cmbbx_type";
-            this.cmbbx_type.Size = new System.Drawing.Size(170, 21);
-            this.cmbbx_type.TabIndex = 12;
-            // 
-            // btn_saveLoad
-            // 
-            this.btn_saveLoad.Location = new System.Drawing.Point(287, 49);
-            this.btn_saveLoad.Name = "btn_saveLoad";
-            this.btn_saveLoad.Size = new System.Drawing.Size(75, 23);
-            this.btn_saveLoad.TabIndex = 16;
-            this.btn_saveLoad.Text = "Guardar";
-            this.btn_saveLoad.UseVisualStyleBackColor = true;
-            // 
-            // grpbx_unique
-            // 
-            this.grpbx_unique.Controls.Add(this.btn_add);
-            this.grpbx_unique.Controls.Add(this.cmbbx_typeRegister);
-            this.grpbx_unique.Controls.Add(this.lbl_typeRegister);
-            this.grpbx_unique.Location = new System.Drawing.Point(17, 190);
-            this.grpbx_unique.Name = "grpbx_unique";
-            this.grpbx_unique.Size = new System.Drawing.Size(418, 55);
-            this.grpbx_unique.TabIndex = 17;
-            this.grpbx_unique.TabStop = false;
-            this.grpbx_unique.Text = "Registro";
-            // 
-            // lbl_typeRegister
-            // 
-            this.lbl_typeRegister.AutoSize = true;
-            this.lbl_typeRegister.Location = new System.Drawing.Point(75, 22);
-            this.lbl_typeRegister.Name = "lbl_typeRegister";
-            this.lbl_typeRegister.Size = new System.Drawing.Size(28, 13);
-            this.lbl_typeRegister.TabIndex = 18;
-            this.lbl_typeRegister.Text = "Tipo";
-            // 
-            // cmbbx_typeRegister
-            // 
-            this.cmbbx_typeRegister.FormattingEnabled = true;
-            this.cmbbx_typeRegister.Location = new System.Drawing.Point(109, 19);
-            this.cmbbx_typeRegister.Name = "cmbbx_typeRegister";
-            this.cmbbx_typeRegister.Size = new System.Drawing.Size(170, 21);
-            this.cmbbx_typeRegister.TabIndex = 17;
-            // 
-            // btn_add
-            // 
-            this.btn_add.Location = new System.Drawing.Point(287, 19);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(75, 23);
-            this.btn_add.TabIndex = 17;
-            this.btn_add.Text = "Agregar";
-            this.btn_add.UseVisualStyleBackColor = true;
-            // 
-            // tbpg_dataUp
-            // 
-            this.tbpg_dataUp.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.tbpg_dataUp.Controls.Add(this.lbl_register);
-            this.tbpg_dataUp.Controls.Add(this.grpbx_unique);
-            this.tbpg_dataUp.Controls.Add(this.grpbx_load);
-            this.tbpg_dataUp.Location = new System.Drawing.Point(4, 22);
-            this.tbpg_dataUp.Name = "tbpg_dataUp";
-            this.tbpg_dataUp.Size = new System.Drawing.Size(448, 324);
-            this.tbpg_dataUp.TabIndex = 2;
-            this.tbpg_dataUp.Text = "Carga de datos";
+            this.btn_file.Location = new System.Drawing.Point(50, 47);
+            this.btn_file.Name = "btn_file";
+            this.btn_file.Size = new System.Drawing.Size(54, 23);
+            this.btn_file.TabIndex = 14;
+            this.btn_file.Text = "Archivo";
+            this.btn_file.UseVisualStyleBackColor = true;
             // 
             // tblctl_settings
             // 
@@ -477,15 +489,67 @@
             this.tblctl_settings.TabIndex = 3;
             this.tblctl_settings.Text = "Configuración";
             // 
-            // lbl_register
+            // grpbx_info
             // 
-            this.lbl_register.AutoSize = true;
-            this.lbl_register.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_register.Location = new System.Drawing.Point(167, 32);
-            this.lbl_register.Name = "lbl_register";
-            this.lbl_register.Size = new System.Drawing.Size(116, 31);
-            this.lbl_register.TabIndex = 18;
-            this.lbl_register.Text = "Registro";
+            this.grpbx_info.Controls.Add(this.btn_help);
+            this.grpbx_info.Controls.Add(this.btn_documentation);
+            this.grpbx_info.Controls.Add(this.btn_manual);
+            this.grpbx_info.Controls.Add(this.btn_install);
+            this.grpbx_info.Location = new System.Drawing.Point(14, 143);
+            this.grpbx_info.Name = "grpbx_info";
+            this.grpbx_info.Size = new System.Drawing.Size(418, 88);
+            this.grpbx_info.TabIndex = 7;
+            this.grpbx_info.TabStop = false;
+            this.grpbx_info.Text = "Información";
+            // 
+            // btn_help
+            // 
+            this.btn_help.Location = new System.Drawing.Point(218, 49);
+            this.btn_help.Name = "btn_help";
+            this.btn_help.Size = new System.Drawing.Size(157, 23);
+            this.btn_help.TabIndex = 10;
+            this.btn_help.Text = "Ayuda";
+            this.btn_help.UseVisualStyleBackColor = true;
+            // 
+            // btn_documentation
+            // 
+            this.btn_documentation.Location = new System.Drawing.Point(219, 19);
+            this.btn_documentation.Name = "btn_documentation";
+            this.btn_documentation.Size = new System.Drawing.Size(156, 23);
+            this.btn_documentation.TabIndex = 9;
+            this.btn_documentation.Text = "Documentación";
+            this.btn_documentation.UseVisualStyleBackColor = true;
+            // 
+            // btn_manual
+            // 
+            this.btn_manual.Location = new System.Drawing.Point(55, 49);
+            this.btn_manual.Name = "btn_manual";
+            this.btn_manual.Size = new System.Drawing.Size(157, 23);
+            this.btn_manual.TabIndex = 8;
+            this.btn_manual.Text = "Manual de Usuario";
+            this.btn_manual.UseVisualStyleBackColor = true;
+            // 
+            // btn_install
+            // 
+            this.btn_install.Location = new System.Drawing.Point(55, 19);
+            this.btn_install.Name = "btn_install";
+            this.btn_install.Size = new System.Drawing.Size(157, 23);
+            this.btn_install.TabIndex = 7;
+            this.btn_install.Text = "Cómo Instalar";
+            this.btn_install.UseVisualStyleBackColor = true;
+            // 
+            // grpbx_database
+            // 
+            this.grpbx_database.Controls.Add(this.btn_create);
+            this.grpbx_database.Controls.Add(this.btn_deleteDuplicate);
+            this.grpbx_database.Controls.Add(this.btn_delete);
+            this.grpbx_database.Controls.Add(this.btn_drop);
+            this.grpbx_database.Location = new System.Drawing.Point(14, 30);
+            this.grpbx_database.Name = "grpbx_database";
+            this.grpbx_database.Size = new System.Drawing.Size(418, 88);
+            this.grpbx_database.TabIndex = 6;
+            this.grpbx_database.TabStop = false;
+            this.grpbx_database.Text = "Base de Datos";
             // 
             // btn_create
             // 
@@ -495,6 +559,15 @@
             this.btn_create.TabIndex = 2;
             this.btn_create.Text = "Crear Base de Datos";
             this.btn_create.UseVisualStyleBackColor = true;
+            // 
+            // btn_deleteDuplicate
+            // 
+            this.btn_deleteDuplicate.Location = new System.Drawing.Point(218, 48);
+            this.btn_deleteDuplicate.Name = "btn_deleteDuplicate";
+            this.btn_deleteDuplicate.Size = new System.Drawing.Size(157, 23);
+            this.btn_deleteDuplicate.TabIndex = 5;
+            this.btn_deleteDuplicate.Text = "Borrar Registros Duplicados";
+            this.btn_deleteDuplicate.UseVisualStyleBackColor = true;
             // 
             // btn_delete
             // 
@@ -514,77 +587,6 @@
             this.btn_drop.Text = "Borrar Base de Datos";
             this.btn_drop.UseVisualStyleBackColor = true;
             // 
-            // btn_deleteDuplicate
-            // 
-            this.btn_deleteDuplicate.Location = new System.Drawing.Point(218, 48);
-            this.btn_deleteDuplicate.Name = "btn_deleteDuplicate";
-            this.btn_deleteDuplicate.Size = new System.Drawing.Size(157, 23);
-            this.btn_deleteDuplicate.TabIndex = 5;
-            this.btn_deleteDuplicate.Text = "Borrar Registros Duplicados";
-            this.btn_deleteDuplicate.UseVisualStyleBackColor = true;
-            // 
-            // grpbx_database
-            // 
-            this.grpbx_database.Controls.Add(this.btn_create);
-            this.grpbx_database.Controls.Add(this.btn_deleteDuplicate);
-            this.grpbx_database.Controls.Add(this.btn_delete);
-            this.grpbx_database.Controls.Add(this.btn_drop);
-            this.grpbx_database.Location = new System.Drawing.Point(14, 30);
-            this.grpbx_database.Name = "grpbx_database";
-            this.grpbx_database.Size = new System.Drawing.Size(418, 88);
-            this.grpbx_database.TabIndex = 6;
-            this.grpbx_database.TabStop = false;
-            this.grpbx_database.Text = "Base de Datos";
-            // 
-            // btn_install
-            // 
-            this.btn_install.Location = new System.Drawing.Point(55, 19);
-            this.btn_install.Name = "btn_install";
-            this.btn_install.Size = new System.Drawing.Size(157, 23);
-            this.btn_install.TabIndex = 7;
-            this.btn_install.Text = "Cómo Instalar";
-            this.btn_install.UseVisualStyleBackColor = true;
-            // 
-            // grpbx_info
-            // 
-            this.grpbx_info.Controls.Add(this.btn_help);
-            this.grpbx_info.Controls.Add(this.btn_documentation);
-            this.grpbx_info.Controls.Add(this.btn_manual);
-            this.grpbx_info.Controls.Add(this.btn_install);
-            this.grpbx_info.Location = new System.Drawing.Point(14, 143);
-            this.grpbx_info.Name = "grpbx_info";
-            this.grpbx_info.Size = new System.Drawing.Size(418, 88);
-            this.grpbx_info.TabIndex = 7;
-            this.grpbx_info.TabStop = false;
-            this.grpbx_info.Text = "Información";
-            // 
-            // btn_manual
-            // 
-            this.btn_manual.Location = new System.Drawing.Point(55, 49);
-            this.btn_manual.Name = "btn_manual";
-            this.btn_manual.Size = new System.Drawing.Size(157, 23);
-            this.btn_manual.TabIndex = 8;
-            this.btn_manual.Text = "Manual de Usuario";
-            this.btn_manual.UseVisualStyleBackColor = true;
-            // 
-            // btn_documentation
-            // 
-            this.btn_documentation.Location = new System.Drawing.Point(219, 19);
-            this.btn_documentation.Name = "btn_documentation";
-            this.btn_documentation.Size = new System.Drawing.Size(156, 23);
-            this.btn_documentation.TabIndex = 9;
-            this.btn_documentation.Text = "Documentación";
-            this.btn_documentation.UseVisualStyleBackColor = true;
-            // 
-            // btn_help
-            // 
-            this.btn_help.Location = new System.Drawing.Point(218, 49);
-            this.btn_help.Name = "btn_help";
-            this.btn_help.Size = new System.Drawing.Size(157, 23);
-            this.btn_help.TabIndex = 10;
-            this.btn_help.Text = "Ayuda";
-            this.btn_help.UseVisualStyleBackColor = true;
-            // 
             // frm_signIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -600,15 +602,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.img_logoFCFM)).EndInit();
             this.tbpg_report.ResumeLayout(false);
             this.tbpg_report.PerformLayout();
-            this.grpbx_load.ResumeLayout(false);
-            this.grpbx_load.PerformLayout();
-            this.grpbx_unique.ResumeLayout(false);
-            this.grpbx_unique.PerformLayout();
             this.tbpg_dataUp.ResumeLayout(false);
             this.tbpg_dataUp.PerformLayout();
+            this.grpbx_unique.ResumeLayout(false);
+            this.grpbx_unique.PerformLayout();
+            this.grpbx_load.ResumeLayout(false);
+            this.grpbx_load.PerformLayout();
             this.tblctl_settings.ResumeLayout(false);
-            this.grpbx_database.ResumeLayout(false);
             this.grpbx_info.ResumeLayout(false);
+            this.grpbx_database.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

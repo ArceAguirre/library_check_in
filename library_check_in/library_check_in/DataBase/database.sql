@@ -5,9 +5,10 @@
 /****************************************************/
 /*
  *	drop database library_check_in
+ *	create database library_check_in;
  *
 */
-create database library_check_in;
+
 use library_check_in;
 
 /****************************************************/
