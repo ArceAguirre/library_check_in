@@ -45,7 +45,7 @@ namespace library_check_in{
             }
             else
             {
-                frm_entrada frm_checkIn = new frm_entrada();
+                frm_signIn frm_checkIn = new frm_signIn();
                 frm_checkIn.Show();
             }
         }

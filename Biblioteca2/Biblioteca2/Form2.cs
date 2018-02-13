@@ -28,7 +28,7 @@ namespace Biblioteca2
             var pass = txtPassword.Text;
 
             string command = "SELECT c.tipoCuenta FROM cuenta c WHERE c.usuario = @usuario AND c.password = @password";
-            var conn = new SqlConnection("Data Source=148.234.36.134\\SQLEXPRESS;Initial Catalog=Biblioteca;Integrated Security=True");
+            var conn = new SqlConnection("Data Source=ISLABIBLIO-02\\SQLEXPRESS;Initial Catalog=Biblioteca;Integrated Security=True");
             var cmd = new SqlCommand(command, conn);
             cmd.Parameters.AddWithValue("@usuario", user);
             cmd.Parameters.AddWithValue("@password", pass);

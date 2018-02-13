@@ -93,15 +93,20 @@
             // 
             // tblctl_signIn
             // 
+            this.tblctl_signIn.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.tblctl_signIn.Controls.Add(this.tbpg_signIn);
             this.tblctl_signIn.Controls.Add(this.tbpg_report);
             this.tblctl_signIn.Controls.Add(this.tbpg_dataUp);
             this.tblctl_signIn.Controls.Add(this.tblctl_settings);
             this.tblctl_signIn.Location = new System.Drawing.Point(12, 12);
+            this.tblctl_signIn.Multiline = true;
             this.tblctl_signIn.Name = "tblctl_signIn";
+            this.tblctl_signIn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tblctl_signIn.RightToLeftLayout = true;
             this.tblctl_signIn.SelectedIndex = 0;
-            this.tblctl_signIn.Size = new System.Drawing.Size(456, 350);
+            this.tblctl_signIn.Size = new System.Drawing.Size(464, 337);
             this.tblctl_signIn.TabIndex = 12;
+            this.tblctl_signIn.TabStop = false;
             this.tblctl_signIn.Tag = "";
             // 
             // tbpg_signIn
@@ -119,17 +124,17 @@
             this.tbpg_signIn.Controls.Add(this.lbl_number);
             this.tbpg_signIn.Controls.Add(this.lbl_career);
             this.tbpg_signIn.Controls.Add(this.lbl_signInDate);
-            this.tbpg_signIn.Location = new System.Drawing.Point(4, 22);
+            this.tbpg_signIn.Location = new System.Drawing.Point(4, 4);
             this.tbpg_signIn.Name = "tbpg_signIn";
             this.tbpg_signIn.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpg_signIn.Size = new System.Drawing.Size(448, 324);
+            this.tbpg_signIn.Size = new System.Drawing.Size(456, 311);
             this.tbpg_signIn.TabIndex = 0;
             this.tbpg_signIn.Text = "Registro";
             // 
             // txt_signInDate
             // 
             this.txt_signInDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_signInDate.Location = new System.Drawing.Point(141, 259);
+            this.txt_signInDate.Location = new System.Drawing.Point(772, 439);
             this.txt_signInDate.Name = "txt_signInDate";
             this.txt_signInDate.PasswordChar = '*';
             this.txt_signInDate.Size = new System.Drawing.Size(234, 20);
@@ -138,7 +143,7 @@
             // ttx_career
             // 
             this.ttx_career.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ttx_career.Location = new System.Drawing.Point(141, 233);
+            this.ttx_career.Location = new System.Drawing.Point(772, 413);
             this.ttx_career.Name = "ttx_career";
             this.ttx_career.Size = new System.Drawing.Size(234, 20);
             this.ttx_career.TabIndex = 41;
@@ -146,7 +151,7 @@
             // txt_numberData
             // 
             this.txt_numberData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_numberData.Location = new System.Drawing.Point(141, 207);
+            this.txt_numberData.Location = new System.Drawing.Point(772, 387);
             this.txt_numberData.Name = "txt_numberData";
             this.txt_numberData.PasswordChar = '*';
             this.txt_numberData.Size = new System.Drawing.Size(234, 20);
@@ -155,7 +160,7 @@
             // txt_name
             // 
             this.txt_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_name.Location = new System.Drawing.Point(141, 181);
+            this.txt_name.Location = new System.Drawing.Point(772, 361);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(234, 20);
             this.txt_name.TabIndex = 39;
@@ -164,7 +169,7 @@
             // 
             this.img_logoUANL.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("img_logoUANL.BackgroundImage")));
             this.img_logoUANL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.img_logoUANL.Location = new System.Drawing.Point(6, 6);
+            this.img_logoUANL.Location = new System.Drawing.Point(6, 670);
             this.img_logoUANL.Name = "img_logoUANL";
             this.img_logoUANL.Size = new System.Drawing.Size(100, 100);
             this.img_logoUANL.TabIndex = 38;
@@ -172,7 +177,7 @@
             // txt_number
             // 
             this.txt_number.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_number.Location = new System.Drawing.Point(141, 132);
+            this.txt_number.Location = new System.Drawing.Point(165, 387);
             this.txt_number.Name = "txt_number";
             this.txt_number.Size = new System.Drawing.Size(234, 20);
             this.txt_number.TabIndex = 31;
@@ -180,7 +185,7 @@
             // img_logoFCFM
             // 
             this.img_logoFCFM.Image = ((System.Drawing.Image)(resources.GetObject("img_logoFCFM.Image")));
-            this.img_logoFCFM.Location = new System.Drawing.Point(338, 9);
+            this.img_logoFCFM.Location = new System.Drawing.Point(406, 670);
             this.img_logoFCFM.Name = "img_logoFCFM";
             this.img_logoFCFM.Size = new System.Drawing.Size(100, 100);
             this.img_logoFCFM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -190,7 +195,7 @@
             // lbl_name
             // 
             this.lbl_name.AutoSize = true;
-            this.lbl_name.Location = new System.Drawing.Point(91, 183);
+            this.lbl_name.Location = new System.Drawing.Point(722, 363);
             this.lbl_name.Name = "lbl_name";
             this.lbl_name.Size = new System.Drawing.Size(44, 13);
             this.lbl_name.TabIndex = 29;
@@ -199,7 +204,7 @@
             // lbl_numberData
             // 
             this.lbl_numberData.AutoSize = true;
-            this.lbl_numberData.Location = new System.Drawing.Point(85, 209);
+            this.lbl_numberData.Location = new System.Drawing.Point(716, 389);
             this.lbl_numberData.Name = "lbl_numberData";
             this.lbl_numberData.Size = new System.Drawing.Size(50, 13);
             this.lbl_numberData.TabIndex = 30;
@@ -208,7 +213,7 @@
             // lbl_number
             // 
             this.lbl_number.AutoSize = true;
-            this.lbl_number.Location = new System.Drawing.Point(85, 134);
+            this.lbl_number.Location = new System.Drawing.Point(109, 389);
             this.lbl_number.Name = "lbl_number";
             this.lbl_number.Size = new System.Drawing.Size(50, 13);
             this.lbl_number.TabIndex = 33;
@@ -217,7 +222,7 @@
             // lbl_career
             // 
             this.lbl_career.AutoSize = true;
-            this.lbl_career.Location = new System.Drawing.Point(94, 235);
+            this.lbl_career.Location = new System.Drawing.Point(725, 415);
             this.lbl_career.Name = "lbl_career";
             this.lbl_career.Size = new System.Drawing.Size(41, 13);
             this.lbl_career.TabIndex = 31;
@@ -226,7 +231,7 @@
             // lbl_signInDate
             // 
             this.lbl_signInDate.AutoSize = true;
-            this.lbl_signInDate.Location = new System.Drawing.Point(44, 261);
+            this.lbl_signInDate.Location = new System.Drawing.Point(675, 441);
             this.lbl_signInDate.Name = "lbl_signInDate";
             this.lbl_signInDate.Size = new System.Drawing.Size(91, 13);
             this.lbl_signInDate.TabIndex = 32;
@@ -247,10 +252,10 @@
             this.tbpg_report.Controls.Add(this.lbl_finalDate);
             this.tbpg_report.Controls.Add(this.lbl_initalDate);
             this.tbpg_report.Controls.Add(this.lbl_reporte);
-            this.tbpg_report.Location = new System.Drawing.Point(4, 22);
+            this.tbpg_report.Location = new System.Drawing.Point(4, 4);
             this.tbpg_report.Name = "tbpg_report";
             this.tbpg_report.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpg_report.Size = new System.Drawing.Size(448, 324);
+            this.tbpg_report.Size = new System.Drawing.Size(456, 311);
             this.tbpg_report.TabIndex = 1;
             this.tbpg_report.Text = "Reportes";
             // 
@@ -366,9 +371,9 @@
             this.tbpg_dataUp.Controls.Add(this.lbl_register);
             this.tbpg_dataUp.Controls.Add(this.grpbx_unique);
             this.tbpg_dataUp.Controls.Add(this.grpbx_load);
-            this.tbpg_dataUp.Location = new System.Drawing.Point(4, 22);
+            this.tbpg_dataUp.Location = new System.Drawing.Point(4, 4);
             this.tbpg_dataUp.Name = "tbpg_dataUp";
-            this.tbpg_dataUp.Size = new System.Drawing.Size(448, 324);
+            this.tbpg_dataUp.Size = new System.Drawing.Size(456, 311);
             this.tbpg_dataUp.TabIndex = 2;
             this.tbpg_dataUp.Text = "Carga de datos";
             // 
@@ -482,10 +487,10 @@
             this.tblctl_settings.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.tblctl_settings.Controls.Add(this.grpbx_info);
             this.tblctl_settings.Controls.Add(this.grpbx_database);
-            this.tblctl_settings.Location = new System.Drawing.Point(4, 22);
+            this.tblctl_settings.Location = new System.Drawing.Point(4, 4);
             this.tblctl_settings.Name = "tblctl_settings";
             this.tblctl_settings.Padding = new System.Windows.Forms.Padding(3);
-            this.tblctl_settings.Size = new System.Drawing.Size(448, 324);
+            this.tblctl_settings.Size = new System.Drawing.Size(456, 311);
             this.tblctl_settings.TabIndex = 3;
             this.tblctl_settings.Text = "Configuración";
             // 
@@ -591,7 +596,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(478, 370);
+            this.ClientSize = new System.Drawing.Size(1136, 826);
             this.Controls.Add(this.tblctl_signIn);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_signIn";

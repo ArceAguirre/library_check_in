@@ -15,5 +15,5 @@ C:\Users\BiblioHP2\Documents\Juan Pablo Espinoza y ya\library_check_in\library_c
 C:\Users\BiblioHP2\Documents\Juan Pablo Espinoza y ya\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.Properties.Resources.resources
 C:\Users\BiblioHP2\Documents\Juan Pablo Espinoza y ya\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.csproj.GenerateResource.Cache
 C:\Users\BiblioHP2\Documents\Juan Pablo Espinoza y ya\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.frm_entrada.resources
-C:\Users\FCFM\Documents\SS Arce\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.frm_entrada.resources
 C:\Users\FCFM\Documents\SS Arce\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.frm_report.resources
+C:\Users\FCFM\Documents\SS Arce\library_check_in\library_check_in\library_check_in\obj\Debug\library_check_in.frm_signIn.resources
