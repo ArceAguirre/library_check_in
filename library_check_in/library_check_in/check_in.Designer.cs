@@ -45,7 +45,7 @@
             this.lbl_signInDate = new System.Windows.Forms.Label();
             this.tbpg_report = new System.Windows.Forms.TabPage();
             this.btn_excel = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgd_report = new System.Windows.Forms.DataGridView();
             this.lbl_semester = new System.Windows.Forms.Label();
             this.lbl_carrer = new System.Windows.Forms.Label();
             this.lbl_report = new System.Windows.Forms.Label();
@@ -61,10 +61,10 @@
             this.tbpg_dataUp = new System.Windows.Forms.TabPage();
             this.tbctl_register = new System.Windows.Forms.TabControl();
             this.tbpg_students = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
+            this.dtgd_student = new System.Windows.Forms.DataGridView();
+            this.lbl_student = new System.Windows.Forms.Label();
             this.tbpg_notStudents = new System.Windows.Forms.TabPage();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dtgd_notStudent = new System.Windows.Forms.DataGridView();
             this.lbl_typeNotStudent = new System.Windows.Forms.Label();
             this.lbl_register = new System.Windows.Forms.Label();
             this.grpbx_unique = new System.Windows.Forms.GroupBox();
@@ -90,23 +90,25 @@
             this.lbl_type = new System.Windows.Forms.Label();
             this.btn_file = new System.Windows.Forms.Button();
             this.tblctl_settings = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tbctl_form = new System.Windows.Forms.TabControl();
+            this.tbpg_career = new System.Windows.Forms.TabPage();
+            this.txt_careerKey = new System.Windows.Forms.TextBox();
+            this.lbl_careerKey = new System.Windows.Forms.Label();
+            this.dtgd_career = new System.Windows.Forms.DataGridView();
+            this.btn_careerSave = new System.Windows.Forms.Button();
+            this.txt_careerName = new System.Windows.Forms.TextBox();
+            this.lbl_careerName = new System.Windows.Forms.Label();
+            this.tbpg_typeNotStudent = new System.Windows.Forms.TabPage();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tbpg_typeUser = new System.Windows.Forms.TabPage();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tbpg_userCICE = new System.Windows.Forms.TabPage();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -127,30 +129,33 @@
             this.btn_deleteDuplicate = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_drop = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.career_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.career_key = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tblctl_signIn.SuspendLayout();
             this.tbpg_signIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_logoFCFM)).BeginInit();
             this.tbpg_report.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgd_report)).BeginInit();
             this.tbpg_dataUp.SuspendLayout();
             this.tbctl_register.SuspendLayout();
             this.tbpg_students.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgd_student)).BeginInit();
             this.tbpg_notStudents.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgd_notStudent)).BeginInit();
             this.grpbx_unique.SuspendLayout();
             this.grpbx_load.SuspendLayout();
             this.tblctl_settings.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.tbctl_form.SuspendLayout();
+            this.tbpg_career.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgd_career)).BeginInit();
+            this.tbpg_typeNotStudent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            this.tabPage3.SuspendLayout();
+            this.tbpg_typeUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
-            this.tabPage4.SuspendLayout();
+            this.tbpg_userCICE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             this.grpbx_info.SuspendLayout();
             this.grpbx_database.SuspendLayout();
@@ -199,7 +204,7 @@
             // txt_signInDate
             // 
             this.txt_signInDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_signInDate.Location = new System.Drawing.Point(514, 440);
+            this.txt_signInDate.Location = new System.Drawing.Point(794, 434);
             this.txt_signInDate.Name = "txt_signInDate";
             this.txt_signInDate.PasswordChar = '*';
             this.txt_signInDate.Size = new System.Drawing.Size(234, 20);
@@ -208,7 +213,7 @@
             // ttx_career
             // 
             this.ttx_career.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ttx_career.Location = new System.Drawing.Point(514, 414);
+            this.ttx_career.Location = new System.Drawing.Point(794, 408);
             this.ttx_career.Name = "ttx_career";
             this.ttx_career.Size = new System.Drawing.Size(234, 20);
             this.ttx_career.TabIndex = 41;
@@ -216,7 +221,7 @@
             // txt_numberData
             // 
             this.txt_numberData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_numberData.Location = new System.Drawing.Point(514, 388);
+            this.txt_numberData.Location = new System.Drawing.Point(794, 382);
             this.txt_numberData.Name = "txt_numberData";
             this.txt_numberData.PasswordChar = '*';
             this.txt_numberData.Size = new System.Drawing.Size(234, 20);
@@ -225,7 +230,7 @@
             // txt_name
             // 
             this.txt_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_name.Location = new System.Drawing.Point(514, 362);
+            this.txt_name.Location = new System.Drawing.Point(794, 356);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(234, 20);
             this.txt_name.TabIndex = 39;
@@ -234,7 +239,7 @@
             // 
             this.img_logoUANL.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("img_logoUANL.BackgroundImage")));
             this.img_logoUANL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.img_logoUANL.Location = new System.Drawing.Point(6, 6);
+            this.img_logoUANL.Location = new System.Drawing.Point(6, 673);
             this.img_logoUANL.Name = "img_logoUANL";
             this.img_logoUANL.Size = new System.Drawing.Size(100, 100);
             this.img_logoUANL.TabIndex = 38;
@@ -242,7 +247,7 @@
             // txt_number
             // 
             this.txt_number.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_number.Location = new System.Drawing.Point(514, 314);
+            this.txt_number.Location = new System.Drawing.Point(277, 403);
             this.txt_number.Name = "txt_number";
             this.txt_number.Size = new System.Drawing.Size(234, 20);
             this.txt_number.TabIndex = 31;
@@ -250,7 +255,7 @@
             // img_logoFCFM
             // 
             this.img_logoFCFM.Image = ((System.Drawing.Image)(resources.GetObject("img_logoFCFM.Image")));
-            this.img_logoFCFM.Location = new System.Drawing.Point(998, 6);
+            this.img_logoFCFM.Location = new System.Drawing.Point(411, 670);
             this.img_logoFCFM.Name = "img_logoFCFM";
             this.img_logoFCFM.Size = new System.Drawing.Size(100, 100);
             this.img_logoFCFM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -260,7 +265,7 @@
             // lbl_name
             // 
             this.lbl_name.AutoSize = true;
-            this.lbl_name.Location = new System.Drawing.Point(464, 364);
+            this.lbl_name.Location = new System.Drawing.Point(744, 358);
             this.lbl_name.Name = "lbl_name";
             this.lbl_name.Size = new System.Drawing.Size(44, 13);
             this.lbl_name.TabIndex = 29;
@@ -269,7 +274,7 @@
             // lbl_numberData
             // 
             this.lbl_numberData.AutoSize = true;
-            this.lbl_numberData.Location = new System.Drawing.Point(458, 390);
+            this.lbl_numberData.Location = new System.Drawing.Point(738, 384);
             this.lbl_numberData.Name = "lbl_numberData";
             this.lbl_numberData.Size = new System.Drawing.Size(50, 13);
             this.lbl_numberData.TabIndex = 30;
@@ -278,7 +283,7 @@
             // lbl_number
             // 
             this.lbl_number.AutoSize = true;
-            this.lbl_number.Location = new System.Drawing.Point(458, 316);
+            this.lbl_number.Location = new System.Drawing.Point(221, 405);
             this.lbl_number.Name = "lbl_number";
             this.lbl_number.Size = new System.Drawing.Size(50, 13);
             this.lbl_number.TabIndex = 33;
@@ -287,7 +292,7 @@
             // lbl_career
             // 
             this.lbl_career.AutoSize = true;
-            this.lbl_career.Location = new System.Drawing.Point(467, 416);
+            this.lbl_career.Location = new System.Drawing.Point(747, 410);
             this.lbl_career.Name = "lbl_career";
             this.lbl_career.Size = new System.Drawing.Size(41, 13);
             this.lbl_career.TabIndex = 31;
@@ -296,7 +301,7 @@
             // lbl_signInDate
             // 
             this.lbl_signInDate.AutoSize = true;
-            this.lbl_signInDate.Location = new System.Drawing.Point(417, 442);
+            this.lbl_signInDate.Location = new System.Drawing.Point(697, 436);
             this.lbl_signInDate.Name = "lbl_signInDate";
             this.lbl_signInDate.Size = new System.Drawing.Size(91, 13);
             this.lbl_signInDate.TabIndex = 32;
@@ -306,7 +311,7 @@
             // 
             this.tbpg_report.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.tbpg_report.Controls.Add(this.btn_excel);
-            this.tbpg_report.Controls.Add(this.dataGridView1);
+            this.tbpg_report.Controls.Add(this.dtgd_report);
             this.tbpg_report.Controls.Add(this.lbl_semester);
             this.tbpg_report.Controls.Add(this.lbl_carrer);
             this.tbpg_report.Controls.Add(this.lbl_report);
@@ -335,13 +340,13 @@
             this.btn_excel.Text = "Excel";
             this.btn_excel.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dtgd_report
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(334, 18);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(749, 741);
-            this.dataGridView1.TabIndex = 14;
+            this.dtgd_report.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgd_report.Location = new System.Drawing.Point(334, 18);
+            this.dtgd_report.Name = "dtgd_report";
+            this.dtgd_report.Size = new System.Drawing.Size(749, 741);
+            this.dtgd_report.TabIndex = 14;
             // 
             // lbl_semester
             // 
@@ -476,8 +481,8 @@
             // tbpg_students
             // 
             this.tbpg_students.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.tbpg_students.Controls.Add(this.dataGridView2);
-            this.tbpg_students.Controls.Add(this.label1);
+            this.tbpg_students.Controls.Add(this.dtgd_student);
+            this.tbpg_students.Controls.Add(this.lbl_student);
             this.tbpg_students.Location = new System.Drawing.Point(4, 25);
             this.tbpg_students.Name = "tbpg_students";
             this.tbpg_students.Padding = new System.Windows.Forms.Padding(3);
@@ -485,27 +490,27 @@
             this.tbpg_students.TabIndex = 0;
             this.tbpg_students.Text = "Estudiantes";
             // 
-            // dataGridView2
+            // dtgd_student
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 50);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(698, 623);
-            this.dataGridView2.TabIndex = 22;
+            this.dtgd_student.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgd_student.Location = new System.Drawing.Point(6, 50);
+            this.dtgd_student.Name = "dtgd_student";
+            this.dtgd_student.Size = new System.Drawing.Size(698, 623);
+            this.dtgd_student.TabIndex = 22;
             // 
-            // label1
+            // lbl_student
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(329, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 31);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Tipo";
+            this.lbl_student.AutoSize = true;
+            this.lbl_student.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_student.Location = new System.Drawing.Point(329, 8);
+            this.lbl_student.Name = "lbl_student";
+            this.lbl_student.Size = new System.Drawing.Size(143, 31);
+            this.lbl_student.TabIndex = 21;
+            this.lbl_student.Text = "Estudiante";
             // 
             // tbpg_notStudents
             // 
-            this.tbpg_notStudents.Controls.Add(this.dataGridView3);
+            this.tbpg_notStudents.Controls.Add(this.dtgd_notStudent);
             this.tbpg_notStudents.Controls.Add(this.lbl_typeNotStudent);
             this.tbpg_notStudents.Location = new System.Drawing.Point(4, 25);
             this.tbpg_notStudents.Name = "tbpg_notStudents";
@@ -515,13 +520,13 @@
             this.tbpg_notStudents.Text = "No Estudiantes";
             this.tbpg_notStudents.UseVisualStyleBackColor = true;
             // 
-            // dataGridView3
+            // dtgd_notStudent
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(6, 51);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(698, 623);
-            this.dataGridView3.TabIndex = 20;
+            this.dtgd_notStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgd_notStudent.Location = new System.Drawing.Point(6, 51);
+            this.dtgd_notStudent.Name = "dtgd_notStudent";
+            this.dtgd_notStudent.Size = new System.Drawing.Size(698, 623);
+            this.dtgd_notStudent.TabIndex = 20;
             // 
             // lbl_typeNotStudent
             // 
@@ -749,7 +754,7 @@
             // tblctl_settings
             // 
             this.tblctl_settings.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.tblctl_settings.Controls.Add(this.tabControl1);
+            this.tblctl_settings.Controls.Add(this.tbctl_form);
             this.tblctl_settings.Controls.Add(this.grpbx_info);
             this.tblctl_settings.Controls.Add(this.grpbx_database);
             this.tblctl_settings.Location = new System.Drawing.Point(4, 4);
@@ -759,81 +764,103 @@
             this.tblctl_settings.TabIndex = 3;
             this.tblctl_settings.Text = "Configuración";
             // 
-            // tabControl1
+            // tbctl_form
             // 
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(213, 18);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(871, 734);
-            this.tabControl1.TabIndex = 8;
+            this.tbctl_form.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tbctl_form.Controls.Add(this.tbpg_career);
+            this.tbctl_form.Controls.Add(this.tbpg_typeNotStudent);
+            this.tbctl_form.Controls.Add(this.tbpg_typeUser);
+            this.tbctl_form.Controls.Add(this.tbpg_userCICE);
+            this.tbctl_form.Location = new System.Drawing.Point(213, 18);
+            this.tbctl_form.Name = "tbctl_form";
+            this.tbctl_form.SelectedIndex = 0;
+            this.tbctl_form.Size = new System.Drawing.Size(871, 734);
+            this.tbctl_form.TabIndex = 8;
             // 
-            // tabPage1
+            // tbpg_career
             // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.dataGridView4);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(863, 705);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Licenciatura";
+            this.tbpg_career.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tbpg_career.Controls.Add(this.txt_careerKey);
+            this.tbpg_career.Controls.Add(this.lbl_careerKey);
+            this.tbpg_career.Controls.Add(this.dtgd_career);
+            this.tbpg_career.Controls.Add(this.btn_careerSave);
+            this.tbpg_career.Controls.Add(this.txt_careerName);
+            this.tbpg_career.Controls.Add(this.lbl_careerName);
+            this.tbpg_career.Location = new System.Drawing.Point(4, 25);
+            this.tbpg_career.Name = "tbpg_career";
+            this.tbpg_career.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpg_career.Size = new System.Drawing.Size(863, 705);
+            this.tbpg_career.TabIndex = 0;
+            this.tbpg_career.Text = "Licenciatura";
             // 
-            // dataGridView4
+            // txt_careerKey
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(28, 81);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(815, 603);
-            this.dataGridView4.TabIndex = 3;
+            this.txt_careerKey.Location = new System.Drawing.Point(78, 52);
+            this.txt_careerKey.Name = "txt_careerKey";
+            this.txt_careerKey.Size = new System.Drawing.Size(167, 20);
+            this.txt_careerKey.TabIndex = 44;
             // 
-            // button1
+            // lbl_careerKey
             // 
-            this.button1.Location = new System.Drawing.Point(251, 49);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lbl_careerKey.AutoSize = true;
+            this.lbl_careerKey.Location = new System.Drawing.Point(38, 57);
+            this.lbl_careerKey.Name = "lbl_careerKey";
+            this.lbl_careerKey.Size = new System.Drawing.Size(34, 13);
+            this.lbl_careerKey.TabIndex = 43;
+            this.lbl_careerKey.Text = "Clave";
             // 
-            // textBox1
+            // dtgd_career
             // 
-            this.textBox1.Location = new System.Drawing.Point(78, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 20);
-            this.textBox1.TabIndex = 1;
+            this.dtgd_career.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgd_career.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.career_name,
+            this.career_key,
+            this.edit,
+            this.delete});
+            this.dtgd_career.Location = new System.Drawing.Point(28, 81);
+            this.dtgd_career.Name = "dtgd_career";
+            this.dtgd_career.Size = new System.Drawing.Size(815, 603);
+            this.dtgd_career.TabIndex = 3;
             // 
-            // label2
+            // btn_careerSave
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nombre";
+            this.btn_careerSave.Location = new System.Drawing.Point(251, 49);
+            this.btn_careerSave.Name = "btn_careerSave";
+            this.btn_careerSave.Size = new System.Drawing.Size(75, 23);
+            this.btn_careerSave.TabIndex = 2;
+            this.btn_careerSave.Text = "Guardar";
+            this.btn_careerSave.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // txt_careerName
             // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.tabPage2.Controls.Add(this.dataGridView5);
-            this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.textBox2);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(863, 705);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Tipos de No Estudiantes";
+            this.txt_careerName.Location = new System.Drawing.Point(78, 28);
+            this.txt_careerName.Name = "txt_careerName";
+            this.txt_careerName.Size = new System.Drawing.Size(167, 20);
+            this.txt_careerName.TabIndex = 1;
+            // 
+            // lbl_careerName
+            // 
+            this.lbl_careerName.AutoSize = true;
+            this.lbl_careerName.Location = new System.Drawing.Point(28, 33);
+            this.lbl_careerName.Name = "lbl_careerName";
+            this.lbl_careerName.Size = new System.Drawing.Size(44, 13);
+            this.lbl_careerName.TabIndex = 0;
+            this.lbl_careerName.Text = "Nombre";
+            // 
+            // tbpg_typeNotStudent
+            // 
+            this.tbpg_typeNotStudent.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tbpg_typeNotStudent.Controls.Add(this.dataGridView5);
+            this.tbpg_typeNotStudent.Controls.Add(this.button2);
+            this.tbpg_typeNotStudent.Controls.Add(this.textBox2);
+            this.tbpg_typeNotStudent.Controls.Add(this.label3);
+            this.tbpg_typeNotStudent.Location = new System.Drawing.Point(4, 25);
+            this.tbpg_typeNotStudent.Name = "tbpg_typeNotStudent";
+            this.tbpg_typeNotStudent.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpg_typeNotStudent.Size = new System.Drawing.Size(863, 705);
+            this.tbpg_typeNotStudent.TabIndex = 1;
+            this.tbpg_typeNotStudent.Text = "Tipos de No Estudiantes";
             // 
             // dataGridView5
             // 
@@ -868,19 +895,19 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Nombre";
             // 
-            // tabPage3
+            // tbpg_typeUser
             // 
-            this.tabPage3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.tabPage3.Controls.Add(this.dataGridView6);
-            this.tabPage3.Controls.Add(this.button3);
-            this.tabPage3.Controls.Add(this.textBox3);
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(863, 705);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Tipos de Usuario";
+            this.tbpg_typeUser.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tbpg_typeUser.Controls.Add(this.dataGridView6);
+            this.tbpg_typeUser.Controls.Add(this.button3);
+            this.tbpg_typeUser.Controls.Add(this.textBox3);
+            this.tbpg_typeUser.Controls.Add(this.label4);
+            this.tbpg_typeUser.Location = new System.Drawing.Point(4, 25);
+            this.tbpg_typeUser.Name = "tbpg_typeUser";
+            this.tbpg_typeUser.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpg_typeUser.Size = new System.Drawing.Size(863, 705);
+            this.tbpg_typeUser.TabIndex = 2;
+            this.tbpg_typeUser.Text = "Tipos de Usuario";
             // 
             // dataGridView6
             // 
@@ -915,25 +942,25 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Nombre";
             // 
-            // tabPage4
+            // tbpg_userCICE
             // 
-            this.tabPage4.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.tabPage4.Controls.Add(this.textBox5);
-            this.tabPage4.Controls.Add(this.label6);
-            this.tabPage4.Controls.Add(this.textBox7);
-            this.tabPage4.Controls.Add(this.button4);
-            this.tabPage4.Controls.Add(this.textBox8);
-            this.tabPage4.Controls.Add(this.textBox9);
-            this.tabPage4.Controls.Add(this.label8);
-            this.tabPage4.Controls.Add(this.label9);
-            this.tabPage4.Controls.Add(this.label10);
-            this.tabPage4.Controls.Add(this.dataGridView7);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(863, 705);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Usuarios";
+            this.tbpg_userCICE.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tbpg_userCICE.Controls.Add(this.textBox5);
+            this.tbpg_userCICE.Controls.Add(this.label6);
+            this.tbpg_userCICE.Controls.Add(this.textBox7);
+            this.tbpg_userCICE.Controls.Add(this.button4);
+            this.tbpg_userCICE.Controls.Add(this.textBox8);
+            this.tbpg_userCICE.Controls.Add(this.textBox9);
+            this.tbpg_userCICE.Controls.Add(this.label8);
+            this.tbpg_userCICE.Controls.Add(this.label9);
+            this.tbpg_userCICE.Controls.Add(this.label10);
+            this.tbpg_userCICE.Controls.Add(this.dataGridView7);
+            this.tbpg_userCICE.Location = new System.Drawing.Point(4, 25);
+            this.tbpg_userCICE.Name = "tbpg_userCICE";
+            this.tbpg_userCICE.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpg_userCICE.Size = new System.Drawing.Size(863, 705);
+            this.tbpg_userCICE.TabIndex = 3;
+            this.tbpg_userCICE.Text = "Usuarios";
             // 
             // textBox5
             // 
@@ -1114,21 +1141,47 @@
             this.btn_drop.Text = "Borrar Base de Datos";
             this.btn_drop.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // id
             // 
-            this.textBox4.Location = new System.Drawing.Point(78, 52);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(167, 20);
-            this.textBox4.TabIndex = 44;
+            this.id.DataPropertyName = "id";
+            this.id.Frozen = true;
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
             // 
-            // label5
+            // career_name
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 57);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
-            this.label5.TabIndex = 43;
-            this.label5.Text = "Clave";
+            this.career_name.DataPropertyName = "career_name";
+            this.career_name.Frozen = true;
+            this.career_name.HeaderText = "Nombre";
+            this.career_name.MaxInputLength = 250;
+            this.career_name.Name = "career_name";
+            this.career_name.ReadOnly = true;
+            // 
+            // career_key
+            // 
+            this.career_key.DataPropertyName = "career_key";
+            this.career_key.Frozen = true;
+            this.career_key.HeaderText = "Clave";
+            this.career_key.MaxInputLength = 6;
+            this.career_key.Name = "career_key";
+            this.career_key.ReadOnly = true;
+            // 
+            // edit
+            // 
+            this.edit.DataPropertyName = "Editar";
+            this.edit.Frozen = true;
+            this.edit.HeaderText = "Editar";
+            this.edit.Name = "edit";
+            this.edit.Text = "Editar";
+            this.edit.ToolTipText = "Editar";
+            this.edit.UseColumnTextForButtonValue = true;
+            // 
+            // delete
+            // 
+            this.delete.HeaderText = "Borrar";
+            this.delete.Name = "delete";
+            this.delete.ReadOnly = true;
             // 
             // frm_signIn
             // 
@@ -1145,33 +1198,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.img_logoFCFM)).EndInit();
             this.tbpg_report.ResumeLayout(false);
             this.tbpg_report.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgd_report)).EndInit();
             this.tbpg_dataUp.ResumeLayout(false);
             this.tbpg_dataUp.PerformLayout();
             this.tbctl_register.ResumeLayout(false);
             this.tbpg_students.ResumeLayout(false);
             this.tbpg_students.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgd_student)).EndInit();
             this.tbpg_notStudents.ResumeLayout(false);
             this.tbpg_notStudents.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgd_notStudent)).EndInit();
             this.grpbx_unique.ResumeLayout(false);
             this.grpbx_unique.PerformLayout();
             this.grpbx_load.ResumeLayout(false);
             this.grpbx_load.PerformLayout();
             this.tblctl_settings.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tbctl_form.ResumeLayout(false);
+            this.tbpg_career.ResumeLayout(false);
+            this.tbpg_career.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgd_career)).EndInit();
+            this.tbpg_typeNotStudent.ResumeLayout(false);
+            this.tbpg_typeNotStudent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.tbpg_typeUser.ResumeLayout(false);
+            this.tbpg_typeUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
+            this.tbpg_userCICE.ResumeLayout(false);
+            this.tbpg_userCICE.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             this.grpbx_info.ResumeLayout(false);
             this.grpbx_database.ResumeLayout(false);
@@ -1231,7 +1284,7 @@
         private System.Windows.Forms.Button btn_help;
         private System.Windows.Forms.Button btn_documentation;
         private System.Windows.Forms.Button btn_excel;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgd_report;
         private System.Windows.Forms.TabControl tbctl_register;
         private System.Windows.Forms.TabPage tbpg_students;
         private System.Windows.Forms.TabPage tbpg_notStudents;
@@ -1248,18 +1301,18 @@
         private System.Windows.Forms.Label lbl_careerStudent;
         private System.Windows.Forms.TextBox txt_semesterStudent;
         private System.Windows.Forms.Label lbl_semesterStudent;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dtgd_student;
+        private System.Windows.Forms.Label lbl_student;
+        private System.Windows.Forms.DataGridView dtgd_notStudent;
+        private System.Windows.Forms.TabControl tbctl_form;
+        private System.Windows.Forms.TabPage tbpg_career;
+        private System.Windows.Forms.TabPage tbpg_typeNotStudent;
+        private System.Windows.Forms.TabPage tbpg_typeUser;
+        private System.Windows.Forms.TabPage tbpg_userCICE;
+        private System.Windows.Forms.DataGridView dtgd_career;
+        private System.Windows.Forms.Button btn_careerSave;
+        private System.Windows.Forms.TextBox txt_careerName;
+        private System.Windows.Forms.Label lbl_careerName;
         private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox2;
@@ -1278,7 +1331,12 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dataGridView7;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txt_careerKey;
+        private System.Windows.Forms.Label lbl_careerKey;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn career_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn career_key;
+        private System.Windows.Forms.DataGridViewButtonColumn edit;
+        private System.Windows.Forms.DataGridViewButtonColumn delete;
     }
 }
