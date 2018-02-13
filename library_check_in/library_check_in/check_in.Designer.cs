@@ -99,26 +99,26 @@
             this.txt_careerName = new System.Windows.Forms.TextBox();
             this.lbl_careerName = new System.Windows.Forms.Label();
             this.tbpg_typeNotStudent = new System.Windows.Forms.TabPage();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.dtgd_typeNotStudent = new System.Windows.Forms.DataGridView();
+            this.btn_typeNotStudentSave = new System.Windows.Forms.Button();
+            this.txt_typeNotStudentName = new System.Windows.Forms.TextBox();
+            this.lbl_typeNotStudentName = new System.Windows.Forms.Label();
             this.tbpg_typeUser = new System.Windows.Forms.TabPage();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.dtgd_typeUser = new System.Windows.Forms.DataGridView();
+            this.btn_typeUserSave = new System.Windows.Forms.Button();
+            this.txt_typeUserName = new System.Windows.Forms.TextBox();
+            this.lbl_typeUserName = new System.Windows.Forms.Label();
             this.tbpg_userCICE = new System.Windows.Forms.TabPage();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.txt_passwordUser = new System.Windows.Forms.TextBox();
+            this.lbl_passwordUser = new System.Windows.Forms.Label();
+            this.txt_motherLastnameUser = new System.Windows.Forms.TextBox();
+            this.btn_userSave = new System.Windows.Forms.Button();
+            this.txt_fatherLastnameUser = new System.Windows.Forms.TextBox();
+            this.txt_nameUser = new System.Windows.Forms.TextBox();
+            this.lbl_nameUser = new System.Windows.Forms.Label();
+            this.lbl_motherLastnameUser = new System.Windows.Forms.Label();
+            this.lbl_fatherLastnameUser = new System.Windows.Forms.Label();
+            this.dtgd_user = new System.Windows.Forms.DataGridView();
             this.grpbx_info = new System.Windows.Forms.GroupBox();
             this.btn_help = new System.Windows.Forms.Button();
             this.btn_documentation = new System.Windows.Forms.Button();
@@ -152,11 +152,11 @@
             this.tbpg_career.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgd_career)).BeginInit();
             this.tbpg_typeNotStudent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgd_typeNotStudent)).BeginInit();
             this.tbpg_typeUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgd_typeUser)).BeginInit();
             this.tbpg_userCICE.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgd_user)).BeginInit();
             this.grpbx_info.SuspendLayout();
             this.grpbx_database.SuspendLayout();
             this.SuspendLayout();
@@ -851,10 +851,10 @@
             // tbpg_typeNotStudent
             // 
             this.tbpg_typeNotStudent.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.tbpg_typeNotStudent.Controls.Add(this.dataGridView5);
-            this.tbpg_typeNotStudent.Controls.Add(this.button2);
-            this.tbpg_typeNotStudent.Controls.Add(this.textBox2);
-            this.tbpg_typeNotStudent.Controls.Add(this.label3);
+            this.tbpg_typeNotStudent.Controls.Add(this.dtgd_typeNotStudent);
+            this.tbpg_typeNotStudent.Controls.Add(this.btn_typeNotStudentSave);
+            this.tbpg_typeNotStudent.Controls.Add(this.txt_typeNotStudentName);
+            this.tbpg_typeNotStudent.Controls.Add(this.lbl_typeNotStudentName);
             this.tbpg_typeNotStudent.Location = new System.Drawing.Point(4, 25);
             this.tbpg_typeNotStudent.Name = "tbpg_typeNotStudent";
             this.tbpg_typeNotStudent.Padding = new System.Windows.Forms.Padding(3);
@@ -862,46 +862,46 @@
             this.tbpg_typeNotStudent.TabIndex = 1;
             this.tbpg_typeNotStudent.Text = "Tipos de No Estudiantes";
             // 
-            // dataGridView5
+            // dtgd_typeNotStudent
             // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(24, 66);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(815, 614);
-            this.dataGridView5.TabIndex = 7;
+            this.dtgd_typeNotStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgd_typeNotStudent.Location = new System.Drawing.Point(24, 66);
+            this.dtgd_typeNotStudent.Name = "dtgd_typeNotStudent";
+            this.dtgd_typeNotStudent.Size = new System.Drawing.Size(815, 614);
+            this.dtgd_typeNotStudent.TabIndex = 7;
             // 
-            // button2
+            // btn_typeNotStudentSave
             // 
-            this.button2.Location = new System.Drawing.Point(247, 21);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Guardar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_typeNotStudentSave.Location = new System.Drawing.Point(247, 21);
+            this.btn_typeNotStudentSave.Name = "btn_typeNotStudentSave";
+            this.btn_typeNotStudentSave.Size = new System.Drawing.Size(75, 23);
+            this.btn_typeNotStudentSave.TabIndex = 6;
+            this.btn_typeNotStudentSave.Text = "Guardar";
+            this.btn_typeNotStudentSave.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txt_typeNotStudentName
             // 
-            this.textBox2.Location = new System.Drawing.Point(74, 24);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(167, 20);
-            this.textBox2.TabIndex = 5;
+            this.txt_typeNotStudentName.Location = new System.Drawing.Point(74, 24);
+            this.txt_typeNotStudentName.Name = "txt_typeNotStudentName";
+            this.txt_typeNotStudentName.Size = new System.Drawing.Size(167, 20);
+            this.txt_typeNotStudentName.TabIndex = 5;
             // 
-            // label3
+            // lbl_typeNotStudentName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Nombre";
+            this.lbl_typeNotStudentName.AutoSize = true;
+            this.lbl_typeNotStudentName.Location = new System.Drawing.Point(24, 29);
+            this.lbl_typeNotStudentName.Name = "lbl_typeNotStudentName";
+            this.lbl_typeNotStudentName.Size = new System.Drawing.Size(44, 13);
+            this.lbl_typeNotStudentName.TabIndex = 4;
+            this.lbl_typeNotStudentName.Text = "Nombre";
             // 
             // tbpg_typeUser
             // 
             this.tbpg_typeUser.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.tbpg_typeUser.Controls.Add(this.dataGridView6);
-            this.tbpg_typeUser.Controls.Add(this.button3);
-            this.tbpg_typeUser.Controls.Add(this.textBox3);
-            this.tbpg_typeUser.Controls.Add(this.label4);
+            this.tbpg_typeUser.Controls.Add(this.dtgd_typeUser);
+            this.tbpg_typeUser.Controls.Add(this.btn_typeUserSave);
+            this.tbpg_typeUser.Controls.Add(this.txt_typeUserName);
+            this.tbpg_typeUser.Controls.Add(this.lbl_typeUserName);
             this.tbpg_typeUser.Location = new System.Drawing.Point(4, 25);
             this.tbpg_typeUser.Name = "tbpg_typeUser";
             this.tbpg_typeUser.Padding = new System.Windows.Forms.Padding(3);
@@ -909,52 +909,52 @@
             this.tbpg_typeUser.TabIndex = 2;
             this.tbpg_typeUser.Text = "Tipos de Usuario";
             // 
-            // dataGridView6
+            // dtgd_typeUser
             // 
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(24, 66);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(815, 614);
-            this.dataGridView6.TabIndex = 7;
+            this.dtgd_typeUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgd_typeUser.Location = new System.Drawing.Point(24, 66);
+            this.dtgd_typeUser.Name = "dtgd_typeUser";
+            this.dtgd_typeUser.Size = new System.Drawing.Size(815, 614);
+            this.dtgd_typeUser.TabIndex = 7;
             // 
-            // button3
+            // btn_typeUserSave
             // 
-            this.button3.Location = new System.Drawing.Point(247, 22);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Guardar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_typeUserSave.Location = new System.Drawing.Point(247, 22);
+            this.btn_typeUserSave.Name = "btn_typeUserSave";
+            this.btn_typeUserSave.Size = new System.Drawing.Size(75, 23);
+            this.btn_typeUserSave.TabIndex = 6;
+            this.btn_typeUserSave.Text = "Guardar";
+            this.btn_typeUserSave.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // txt_typeUserName
             // 
-            this.textBox3.Location = new System.Drawing.Point(74, 24);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(167, 20);
-            this.textBox3.TabIndex = 5;
+            this.txt_typeUserName.Location = new System.Drawing.Point(74, 24);
+            this.txt_typeUserName.Name = "txt_typeUserName";
+            this.txt_typeUserName.Size = new System.Drawing.Size(167, 20);
+            this.txt_typeUserName.TabIndex = 5;
             // 
-            // label4
+            // lbl_typeUserName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 29);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Nombre";
+            this.lbl_typeUserName.AutoSize = true;
+            this.lbl_typeUserName.Location = new System.Drawing.Point(24, 29);
+            this.lbl_typeUserName.Name = "lbl_typeUserName";
+            this.lbl_typeUserName.Size = new System.Drawing.Size(44, 13);
+            this.lbl_typeUserName.TabIndex = 4;
+            this.lbl_typeUserName.Text = "Nombre";
             // 
             // tbpg_userCICE
             // 
             this.tbpg_userCICE.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.tbpg_userCICE.Controls.Add(this.textBox5);
-            this.tbpg_userCICE.Controls.Add(this.label6);
-            this.tbpg_userCICE.Controls.Add(this.textBox7);
-            this.tbpg_userCICE.Controls.Add(this.button4);
-            this.tbpg_userCICE.Controls.Add(this.textBox8);
-            this.tbpg_userCICE.Controls.Add(this.textBox9);
-            this.tbpg_userCICE.Controls.Add(this.label8);
-            this.tbpg_userCICE.Controls.Add(this.label9);
-            this.tbpg_userCICE.Controls.Add(this.label10);
-            this.tbpg_userCICE.Controls.Add(this.dataGridView7);
+            this.tbpg_userCICE.Controls.Add(this.txt_passwordUser);
+            this.tbpg_userCICE.Controls.Add(this.lbl_passwordUser);
+            this.tbpg_userCICE.Controls.Add(this.txt_motherLastnameUser);
+            this.tbpg_userCICE.Controls.Add(this.btn_userSave);
+            this.tbpg_userCICE.Controls.Add(this.txt_fatherLastnameUser);
+            this.tbpg_userCICE.Controls.Add(this.txt_nameUser);
+            this.tbpg_userCICE.Controls.Add(this.lbl_nameUser);
+            this.tbpg_userCICE.Controls.Add(this.lbl_motherLastnameUser);
+            this.tbpg_userCICE.Controls.Add(this.lbl_fatherLastnameUser);
+            this.tbpg_userCICE.Controls.Add(this.dtgd_user);
             this.tbpg_userCICE.Location = new System.Drawing.Point(4, 25);
             this.tbpg_userCICE.Name = "tbpg_userCICE";
             this.tbpg_userCICE.Padding = new System.Windows.Forms.Padding(3);
@@ -962,86 +962,86 @@
             this.tbpg_userCICE.TabIndex = 3;
             this.tbpg_userCICE.Text = "Usuarios";
             // 
-            // textBox5
+            // txt_passwordUser
             // 
-            this.textBox5.Location = new System.Drawing.Point(103, 49);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(156, 20);
-            this.textBox5.TabIndex = 42;
+            this.txt_passwordUser.Location = new System.Drawing.Point(103, 49);
+            this.txt_passwordUser.Name = "txt_passwordUser";
+            this.txt_passwordUser.Size = new System.Drawing.Size(156, 20);
+            this.txt_passwordUser.TabIndex = 42;
             // 
-            // label6
+            // lbl_passwordUser
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(36, 52);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 13);
-            this.label6.TabIndex = 41;
-            this.label6.Text = "Contraseña";
+            this.lbl_passwordUser.AutoSize = true;
+            this.lbl_passwordUser.Location = new System.Drawing.Point(36, 52);
+            this.lbl_passwordUser.Name = "lbl_passwordUser";
+            this.lbl_passwordUser.Size = new System.Drawing.Size(61, 13);
+            this.lbl_passwordUser.TabIndex = 41;
+            this.lbl_passwordUser.Text = "Contraseña";
             // 
-            // textBox7
+            // txt_motherLastnameUser
             // 
-            this.textBox7.Location = new System.Drawing.Point(103, 102);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(156, 20);
-            this.textBox7.TabIndex = 38;
+            this.txt_motherLastnameUser.Location = new System.Drawing.Point(103, 102);
+            this.txt_motherLastnameUser.Name = "txt_motherLastnameUser";
+            this.txt_motherLastnameUser.Size = new System.Drawing.Size(156, 20);
+            this.txt_motherLastnameUser.TabIndex = 38;
             // 
-            // button4
+            // btn_userSave
             // 
-            this.button4.Location = new System.Drawing.Point(265, 100);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(67, 23);
-            this.button4.TabIndex = 32;
-            this.button4.Text = "Guardar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_userSave.Location = new System.Drawing.Point(265, 100);
+            this.btn_userSave.Name = "btn_userSave";
+            this.btn_userSave.Size = new System.Drawing.Size(67, 23);
+            this.btn_userSave.TabIndex = 32;
+            this.btn_userSave.Text = "Guardar";
+            this.btn_userSave.UseVisualStyleBackColor = true;
             // 
-            // textBox8
+            // txt_fatherLastnameUser
             // 
-            this.textBox8.Location = new System.Drawing.Point(103, 75);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(156, 20);
-            this.textBox8.TabIndex = 37;
+            this.txt_fatherLastnameUser.Location = new System.Drawing.Point(103, 75);
+            this.txt_fatherLastnameUser.Name = "txt_fatherLastnameUser";
+            this.txt_fatherLastnameUser.Size = new System.Drawing.Size(156, 20);
+            this.txt_fatherLastnameUser.TabIndex = 37;
             // 
-            // textBox9
+            // txt_nameUser
             // 
-            this.textBox9.Location = new System.Drawing.Point(103, 23);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(158, 20);
-            this.textBox9.TabIndex = 36;
+            this.txt_nameUser.Location = new System.Drawing.Point(103, 23);
+            this.txt_nameUser.Name = "txt_nameUser";
+            this.txt_nameUser.Size = new System.Drawing.Size(158, 20);
+            this.txt_nameUser.TabIndex = 36;
             // 
-            // label8
+            // lbl_nameUser
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(53, 26);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 13);
-            this.label8.TabIndex = 33;
-            this.label8.Text = "Nombre";
+            this.lbl_nameUser.AutoSize = true;
+            this.lbl_nameUser.Location = new System.Drawing.Point(53, 26);
+            this.lbl_nameUser.Name = "lbl_nameUser";
+            this.lbl_nameUser.Size = new System.Drawing.Size(44, 13);
+            this.lbl_nameUser.TabIndex = 33;
+            this.lbl_nameUser.Text = "Nombre";
             // 
-            // label9
+            // lbl_motherLastnameUser
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 105);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 13);
-            this.label9.TabIndex = 35;
-            this.label9.Text = "Apellido Materno";
+            this.lbl_motherLastnameUser.AutoSize = true;
+            this.lbl_motherLastnameUser.Location = new System.Drawing.Point(13, 105);
+            this.lbl_motherLastnameUser.Name = "lbl_motherLastnameUser";
+            this.lbl_motherLastnameUser.Size = new System.Drawing.Size(86, 13);
+            this.lbl_motherLastnameUser.TabIndex = 35;
+            this.lbl_motherLastnameUser.Text = "Apellido Materno";
             // 
-            // label10
+            // lbl_fatherLastnameUser
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 78);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 13);
-            this.label10.TabIndex = 34;
-            this.label10.Text = "Apellido Paterno";
+            this.lbl_fatherLastnameUser.AutoSize = true;
+            this.lbl_fatherLastnameUser.Location = new System.Drawing.Point(13, 78);
+            this.lbl_fatherLastnameUser.Name = "lbl_fatherLastnameUser";
+            this.lbl_fatherLastnameUser.Size = new System.Drawing.Size(84, 13);
+            this.lbl_fatherLastnameUser.TabIndex = 34;
+            this.lbl_fatherLastnameUser.Text = "Apellido Paterno";
             // 
-            // dataGridView7
+            // dtgd_user
             // 
-            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Location = new System.Drawing.Point(24, 141);
-            this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.Size = new System.Drawing.Size(815, 539);
-            this.dataGridView7.TabIndex = 7;
+            this.dtgd_user.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgd_user.Location = new System.Drawing.Point(24, 141);
+            this.dtgd_user.Name = "dtgd_user";
+            this.dtgd_user.Size = new System.Drawing.Size(815, 539);
+            this.dtgd_user.TabIndex = 7;
             // 
             // grpbx_info
             // 
@@ -1219,13 +1219,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgd_career)).EndInit();
             this.tbpg_typeNotStudent.ResumeLayout(false);
             this.tbpg_typeNotStudent.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgd_typeNotStudent)).EndInit();
             this.tbpg_typeUser.ResumeLayout(false);
             this.tbpg_typeUser.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgd_typeUser)).EndInit();
             this.tbpg_userCICE.ResumeLayout(false);
             this.tbpg_userCICE.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgd_user)).EndInit();
             this.grpbx_info.ResumeLayout(false);
             this.grpbx_database.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -1313,24 +1313,24 @@
         private System.Windows.Forms.Button btn_careerSave;
         private System.Windows.Forms.TextBox txt_careerName;
         private System.Windows.Forms.Label lbl_careerName;
-        private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView6;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridView dataGridView7;
+        private System.Windows.Forms.DataGridView dtgd_typeNotStudent;
+        private System.Windows.Forms.Button btn_typeNotStudentSave;
+        private System.Windows.Forms.TextBox txt_typeNotStudentName;
+        private System.Windows.Forms.Label lbl_typeNotStudentName;
+        private System.Windows.Forms.DataGridView dtgd_typeUser;
+        private System.Windows.Forms.Button btn_typeUserSave;
+        private System.Windows.Forms.TextBox txt_typeUserName;
+        private System.Windows.Forms.Label lbl_typeUserName;
+        private System.Windows.Forms.TextBox txt_passwordUser;
+        private System.Windows.Forms.Label lbl_passwordUser;
+        private System.Windows.Forms.TextBox txt_motherLastnameUser;
+        private System.Windows.Forms.Button btn_userSave;
+        private System.Windows.Forms.TextBox txt_fatherLastnameUser;
+        private System.Windows.Forms.TextBox txt_nameUser;
+        private System.Windows.Forms.Label lbl_nameUser;
+        private System.Windows.Forms.Label lbl_motherLastnameUser;
+        private System.Windows.Forms.Label lbl_fatherLastnameUser;
+        private System.Windows.Forms.DataGridView dtgd_user;
         private System.Windows.Forms.TextBox txt_careerKey;
         private System.Windows.Forms.Label lbl_careerKey;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
