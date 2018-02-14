@@ -95,6 +95,11 @@
             this.txt_careerKey = new System.Windows.Forms.TextBox();
             this.lbl_careerKey = new System.Windows.Forms.Label();
             this.dtgd_career = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.career_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.career_key = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btn_careerSave = new System.Windows.Forms.Button();
             this.txt_careerName = new System.Windows.Forms.TextBox();
             this.lbl_careerName = new System.Windows.Forms.Label();
@@ -129,11 +134,6 @@
             this.btn_deleteDuplicate = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_drop = new System.Windows.Forms.Button();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.career_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.career_key = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tblctl_signIn.SuspendLayout();
             this.tbpg_signIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_logoFCFM)).BeginInit();
@@ -823,6 +823,48 @@
             this.dtgd_career.Size = new System.Drawing.Size(815, 603);
             this.dtgd_career.TabIndex = 3;
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.Frozen = true;
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // career_name
+            // 
+            this.career_name.DataPropertyName = "career_name";
+            this.career_name.Frozen = true;
+            this.career_name.HeaderText = "Nombre";
+            this.career_name.MaxInputLength = 250;
+            this.career_name.Name = "career_name";
+            this.career_name.ReadOnly = true;
+            // 
+            // career_key
+            // 
+            this.career_key.DataPropertyName = "career_key";
+            this.career_key.Frozen = true;
+            this.career_key.HeaderText = "Clave";
+            this.career_key.MaxInputLength = 6;
+            this.career_key.Name = "career_key";
+            this.career_key.ReadOnly = true;
+            // 
+            // edit
+            // 
+            this.edit.DataPropertyName = "Editar";
+            this.edit.Frozen = true;
+            this.edit.HeaderText = "Editar";
+            this.edit.Name = "edit";
+            this.edit.Text = "Editar";
+            this.edit.ToolTipText = "Editar";
+            this.edit.UseColumnTextForButtonValue = true;
+            // 
+            // delete
+            // 
+            this.delete.HeaderText = "Borrar";
+            this.delete.Name = "delete";
+            this.delete.ReadOnly = true;
+            // 
             // btn_careerSave
             // 
             this.btn_careerSave.Location = new System.Drawing.Point(251, 49);
@@ -878,6 +920,7 @@
             this.btn_typeNotStudentSave.TabIndex = 6;
             this.btn_typeNotStudentSave.Text = "Guardar";
             this.btn_typeNotStudentSave.UseVisualStyleBackColor = true;
+            this.btn_typeNotStudentSave.Click += new System.EventHandler(this.btn_typeNotStudentSave_Click);
             // 
             // txt_typeNotStudentName
             // 
@@ -885,15 +928,17 @@
             this.txt_typeNotStudentName.Name = "txt_typeNotStudentName";
             this.txt_typeNotStudentName.Size = new System.Drawing.Size(167, 20);
             this.txt_typeNotStudentName.TabIndex = 5;
+            this.txt_typeNotStudentName.TextChanged += new System.EventHandler(this.txt_typeNotStudentName_TextChanged);
+            this.txt_typeNotStudentName.Enter += new System.EventHandler(this.btn_typeNotStudentSave_Click);
             // 
             // lbl_typeNotStudentName
             // 
             this.lbl_typeNotStudentName.AutoSize = true;
-            this.lbl_typeNotStudentName.Location = new System.Drawing.Point(24, 29);
+            this.lbl_typeNotStudentName.Location = new System.Drawing.Point(40, 26);
             this.lbl_typeNotStudentName.Name = "lbl_typeNotStudentName";
-            this.lbl_typeNotStudentName.Size = new System.Drawing.Size(44, 13);
+            this.lbl_typeNotStudentName.Size = new System.Drawing.Size(28, 13);
             this.lbl_typeNotStudentName.TabIndex = 4;
-            this.lbl_typeNotStudentName.Text = "Nombre";
+            this.lbl_typeNotStudentName.Text = "Tipo";
             // 
             // tbpg_typeUser
             // 
@@ -925,6 +970,7 @@
             this.btn_typeUserSave.TabIndex = 6;
             this.btn_typeUserSave.Text = "Guardar";
             this.btn_typeUserSave.UseVisualStyleBackColor = true;
+            this.btn_typeUserSave.Click += new System.EventHandler(this.btn_typeUserSave_Click);
             // 
             // txt_typeUserName
             // 
@@ -932,15 +978,16 @@
             this.txt_typeUserName.Name = "txt_typeUserName";
             this.txt_typeUserName.Size = new System.Drawing.Size(167, 20);
             this.txt_typeUserName.TabIndex = 5;
+            this.txt_typeUserName.TextChanged += new System.EventHandler(this.txt_typeUserName_TextChanged);
             // 
             // lbl_typeUserName
             // 
             this.lbl_typeUserName.AutoSize = true;
-            this.lbl_typeUserName.Location = new System.Drawing.Point(24, 29);
+            this.lbl_typeUserName.Location = new System.Drawing.Point(40, 27);
             this.lbl_typeUserName.Name = "lbl_typeUserName";
-            this.lbl_typeUserName.Size = new System.Drawing.Size(44, 13);
+            this.lbl_typeUserName.Size = new System.Drawing.Size(28, 13);
             this.lbl_typeUserName.TabIndex = 4;
-            this.lbl_typeUserName.Text = "Nombre";
+            this.lbl_typeUserName.Text = "Tipo";
             // 
             // tbpg_userCICE
             // 
@@ -1140,48 +1187,6 @@
             this.btn_drop.TabIndex = 4;
             this.btn_drop.Text = "Borrar Base de Datos";
             this.btn_drop.UseVisualStyleBackColor = true;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.Frozen = true;
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // career_name
-            // 
-            this.career_name.DataPropertyName = "career_name";
-            this.career_name.Frozen = true;
-            this.career_name.HeaderText = "Nombre";
-            this.career_name.MaxInputLength = 250;
-            this.career_name.Name = "career_name";
-            this.career_name.ReadOnly = true;
-            // 
-            // career_key
-            // 
-            this.career_key.DataPropertyName = "career_key";
-            this.career_key.Frozen = true;
-            this.career_key.HeaderText = "Clave";
-            this.career_key.MaxInputLength = 6;
-            this.career_key.Name = "career_key";
-            this.career_key.ReadOnly = true;
-            // 
-            // edit
-            // 
-            this.edit.DataPropertyName = "Editar";
-            this.edit.Frozen = true;
-            this.edit.HeaderText = "Editar";
-            this.edit.Name = "edit";
-            this.edit.Text = "Editar";
-            this.edit.ToolTipText = "Editar";
-            this.edit.UseColumnTextForButtonValue = true;
-            // 
-            // delete
-            // 
-            this.delete.HeaderText = "Borrar";
-            this.delete.Name = "delete";
-            this.delete.ReadOnly = true;
             // 
             // frm_signIn
             // 
