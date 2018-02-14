@@ -25,7 +25,7 @@ begin
 	set @student_father_last_name = ltrim(rtrim(@student_father_last_name));
 	set @student_mother_last_name = ltrim(rtrim(@student_mother_last_name));
 	
-	select @var_id_career = 1|id from career where id = @id_career;
+	select @var_id_career = 1|id from career where id = @id_career and active = 1;
 	
 	if @number = '' or @number = null or @number is null
 	begin
