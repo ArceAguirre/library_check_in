@@ -8,12 +8,12 @@ namespace library_check_in
     class props
     {
 
-        void upperText(Text)
-        {
+        //void upperText(Text)
+        //{
             
-        }
-        string textIn;
-        textIn + ".text" = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(textIn + "text");
-        textIn+ ".text".SelectionStart = textIn + ".text".Length;
+        //}
+        //string textIn;
+        //textIn + ".text" = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(textIn + "text");
+        //textIn+ ".text".SelectionStart = textIn + ".text".Length;
     }
 }

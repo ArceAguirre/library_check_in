@@ -18,7 +18,7 @@ begin
             'El tipo está vacio' as error_message;
             return
 	end
-		insert into type_not_student(description)
+		insert into type_user(description)
 		values(@description)
 		
 		select 

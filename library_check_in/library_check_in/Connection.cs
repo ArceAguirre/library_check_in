@@ -33,7 +33,7 @@ namespace library_check_in
             SqlConnection conn = new SqlConnection(Connection.CONNECTION_STRING);
             SqlCommand cmd = new SqlCommand(command, conn);
 
-            for(int i = 0; i < param.Length; i++)
+            for(int i = 0; i < param.Rank; i++)
             {
                 cmd.Parameters.AddWithValue(paramName[i], param[i]);
             }
