@@ -24,18 +24,17 @@ namespace library_check_in
 
         private void btn_typeNotStudentSave_Click(object sender, EventArgs e)
         {
-            var typeNotStudentName = txt_typeNotStudentName.Text;
-
+            Connection con = new Connection();
+            string[] paramName = new string[20];
+            string[] param = new string[20];
+            string typeNotStudentName = txt_typeNotStudentName.Text;
             string command = "type_not_student_new @description =  @typeNotStudentName";
-            var conn = new SqlConnection(Connection.CONNECTION_STRING);
-            var cmd = new SqlCommand(command, conn);
-            cmd.Parameters.AddWithValue("@typeNotStudentName", typeNotStudentName);
-            System.Data.DataTable dt = new System.Data.DataTable();
+            
+            paramName[0] = "@typeNotStudentName";
+            param[0] = typeNotStudentName;
 
-            SqlDataAdapter adapt = new SqlDataAdapter(cmd);
-            adapt.Fill(dt);
+            System.Data.DataTable dt = con.loadData(command, paramName, param);
             txt_typeNotStudentName.Clear();
-
         }
 
 
