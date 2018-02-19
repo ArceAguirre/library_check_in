@@ -11,57 +11,77 @@ namespace library_check_in
 {
     public partial class frm_signIn : Form
     {
+        /*Variables Golbales*/
+        SqlDataAdapter da;
+        DataSet ds = new DataSet();
+        Connection con = new Connection();
+        string[] paramName = new string[20];
+        string[] param = new string[20];
+        public static int indice;
+
+        /****************************************************************/
+        /*  Description | Constructor del form                          */
+        /*  Date        |                                               */
+        /****************************************************************/
         public frm_signIn()
         {
             InitializeComponent();
         }
+
+        /****************************************************************/
+        /*  Description | Generar el reporte seleccionado               */
+        /*  Date        |                                               */
+        /*  Pestaña     | Reportes                                      */
+        /*  Parameters  | object sender, EventArgs e                    */
+        /*  Reurnt      |                                               */
+        /****************************************************************/
         private void btn_generate_Click(object sender, EventArgs e)
         {
-            frm_report frm_reporte = new frm_report();
-            frm_reporte.Show();
         }
-        SqlDataAdapter da;
-        DataSet ds = new DataSet();
+
+        /****************************************************************/
+        /*  Author      |                                               */
+        /*  Description |                                               */
+        /*  Date        |                                               */
+        /*  Parameters  |                                               */
+        /*  Reurnt      |                                               */
+        /****************************************************************/
         private void frm_signIn_Load(object sender, EventArgs e)
         {
-            // Build the Connection String and create a SQL Connection object
-            //String cnnStr = "Data Source = localhost; Initial Catalog = Northwind; Integrated Security = SSPI";
-            //SqlConnection cnn = new SqlConnection(cnnStr);
             var conn = new SqlConnection(Connection.CONNECTION_STRING);
-            // Create a SQL Command object from the connection object and setup the SELECT command
             SqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "SELECT * FROM type_user";
-            // Create the data adapter to use to get the data and handle connecting to the DB
             da = new SqlDataAdapter(cmd);
-            // Get the data from the database. I am using the Northwind database the customers table
             da.Fill(ds, "type_user");
-            // Disconnect the event handler to handle the comboBox1_SelectedIndexChanged event
-            // while the combo box is being populated, otherwise it will fire a couple of times
-            // before you are ready to handle them.
             this.cmbbx_typeUser.SelectedIndexChanged -= new System.EventHandler(this.cmbbx_typeUser_SelectedIndexChanged);
-            // Connect the cobo box to the data source from where the data is comming from
-            // In this case the Customers data table in the dataset.
             cmbbx_typeUser.DataSource = ds.Tables["type_user"];
-            // Tell the combo box what collumn to display to the user
             cmbbx_typeUser.DisplayMember = "description";
-            // Tell the combo box what collumn to use with the displayed value, value is not displayed
             cmbbx_typeUser.ValueMember = "id";
-            // Restored the event handler
             this.cmbbx_typeUser.SelectedIndexChanged += new System.EventHandler(this.cmbbx_typeUser_SelectedIndexChanged);
         }
-        public static int indice;
+
+        /****************************************************************/
+        /*  Author      |                                               */
+        /*  Description |                                               */
+        /*  Date        |                                               */
+        /*  Parameters  |                                               */
+        /*  Reurnt      |                                               */
+        /****************************************************************/
         private void cmbbx_typeUser_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // When the user clicks on a item in the combo box ist primary key will be displayed.
-            //MessageBox.Show("Customer Primary Key is \"" + cmbbx_typeUser.SelectedValue + "\"");
             indice = Int32.Parse(cmbbx_typeUser.SelectedValue.ToString());
         }
+
+        /****************************************************************/
+        /*  Author      |                                               */
+        /*  Description |                                               */
+        /*  Date        |                                               */
+        /*  Parameters  |                                               */
+        /*  Reurnt      |                                               */
+        /****************************************************************/
         private void btn_typeNotStudentSave_Click(object sender, EventArgs e)
         {
-            Connection con = new Connection();
-            string[] paramName = new string[20];
-            string[] param = new string[20];
             string typeNotStudentName = txt_typeNotStudentName.Text;
             string command = "type_not_student_new @description =  @typeNotStudentName";
             paramName[0] = "@typeNotStudentName";
@@ -69,11 +89,27 @@ namespace library_check_in
             System.Data.DataTable dt = con.loadData(command, paramName, param);
             txt_typeNotStudentName.Clear();
         }
+
+        /****************************************************************/
+        /*  Author      |                                               */
+        /*  Description |                                               */
+        /*  Date        |                                               */
+        /*  Parameters  |                                               */
+        /*  Reurnt      |                                               */
+        /****************************************************************/
         private void txt_typeNotStudentName_TextChanged(object sender, EventArgs e)
         {
             txt_typeNotStudentName.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txt_typeNotStudentName.Text);
             txt_typeNotStudentName.SelectionStart = txt_typeNotStudentName.Text.Length;
         }
+
+        /****************************************************************/
+        /*  Author      |                                               */
+        /*  Description |                                               */
+        /*  Date        |                                               */
+        /*  Parameters  |                                               */
+        /*  Reurnt      |                                               */
+        /****************************************************************/
         private void btn_typeUserSave_Click(object sender, EventArgs e)
         {
             var typeUserNew = txt_typeUserName.Text;
@@ -88,10 +124,26 @@ namespace library_check_in
             adapt.Fill(dt);
             txt_typeUserName.Clear();
         }
+
+        /****************************************************************/
+        /*  Author      |                                               */
+        /*  Description |                                               */
+        /*  Date        |                                               */
+        /*  Parameters  |                                               */
+        /*  Reurnt      |                                               */
+        /****************************************************************/
         private void txt_typeUserName_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+        /****************************************************************/
+        /*  Author      |                                               */
+        /*  Description |                                               */
+        /*  Date        |                                               */
+        /*  Parameters  |                                               */
+        /*  Reurnt      |                                               */
+        /****************************************************************/
         private void btn_careerSave_Click(object sender, EventArgs e)
         {
             string carrerName = txt_careerName.Text;
@@ -108,6 +160,14 @@ namespace library_check_in
             txt_careerName.Clear();
             txt_careerKey.Clear();
         }
+
+        /****************************************************************/
+        /*  Author      |                                               */
+        /*  Description |                                               */
+        /*  Date        |                                               */
+        /*  Parameters  |                                               */
+        /*  Reurnt      |                                               */
+        /****************************************************************/
         private void btn_userSave_Click(object sender, EventArgs e)
         {
             var nameUser = txt_nameUser.Text;
@@ -134,5 +194,16 @@ namespace library_check_in
             txt_motherLastnameUser.Clear();
         }
 
+        /****************************************************************/
+        /*  Author      |                                               */
+        /*  Description |                                               */
+        /*  Date        |                                               */
+        /*  Parameters  |                                               */
+        /*  Reurnt      |                                               */
+        /****************************************************************/
+        private void btn_create_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

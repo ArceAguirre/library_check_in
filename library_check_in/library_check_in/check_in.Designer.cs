@@ -892,7 +892,6 @@
             this.btn_careerSave.TabIndex = 2;
             this.btn_careerSave.Text = "Guardar";
             this.btn_careerSave.UseVisualStyleBackColor = true;
-            //this.btn_careerSave.Click += new System.EventHandler(this.btn_careerSave_Click);
             // 
             // txt_careerName
             // 
@@ -1136,7 +1135,6 @@
             this.btn_userSave.TabIndex = 32;
             this.btn_userSave.Text = "Guardar";
             this.btn_userSave.UseVisualStyleBackColor = true;
-            //this.btn_userSave.Click += new System.EventHandler(this.btn_userSave_Click);
             // 
             // txt_fatherLastnameUser
             // 
@@ -1308,6 +1306,7 @@
             this.btn_create.TabIndex = 2;
             this.btn_create.Text = "Crear Base de Datos";
             this.btn_create.UseVisualStyleBackColor = true;
+            this.btn_create.Click += new System.EventHandler(this.btn_create_Click);
             // 
             // btn_deleteDuplicate
             // 
@@ -1345,7 +1344,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_signIn";
             this.Text = "Entrada en CICE";
-//            this.Load += new System.EventHandler(this.frm_signIn_Load);
+            this.Load += new System.EventHandler(this.frm_signIn_Load);
             this.tblctl_signIn.ResumeLayout(false);
             this.tbpg_signIn.ResumeLayout(false);
             this.tbpg_signIn.PerformLayout();
