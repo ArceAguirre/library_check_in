@@ -11,12 +11,13 @@ namespace library_check_in.User_CICE
         object[] param = new object[20];
         Connection con = new Connection();
 
-        /****************************************************************/
-        /*  Author      | Arcelia Aguirre                               */
-        /*  Description | Agregar una carrera                           */
-        /*  Date        |  19-02-2018                                   */
-        /*  Parameters  | string carrerName, string carrerKey           */
-        /****************************************************************/
+        /**************************************************************************************/
+        /*  Author      | Arcelia Aguirre                                                     */
+        /*  Description | Agregar un usuario                                                  */
+        /*  Date        | 19-02-2018                                                          */
+        /*  Parameters  | string nameUser, string passwordUser,                               */
+        /*              | string fatherLastnameUser, string motherLastnameUser, int typeUser  */
+        /**************************************************************************************/
         public void save(string nameUser, string passwordUser, string fatherLastnameUser, string motherLastnameUser, int typeUser)
         {
             string command = "user_CICE_new @user_name = @nameUser, @user_password = @passwordUser, @father_last_name = @fatherLastnameUser, @mother_last_name = @motherLastnameUser, @id_type_user = @typeUser ";
@@ -35,18 +36,18 @@ namespace library_check_in.User_CICE
 
         /****************************************************************/
         /*  Author      |                                               */
-        /*  Description | Modificar una carrera                         */
+        /*  Description | Modificar usuario                             */
         /*  Date        |                                               */
-        /*  Parameters  | int id, string carrerName, string carrerKey   */
+        /*  Parameters  |                                               */
         /****************************************************************/
-        public void update(int id, string carrerName, string carrerKey)
+        public void update()
         {
 
         }
 
         /****************************************************************/
         /*  Author      |                                               */
-        /*  Description | Eliminar una carrera                          */
+        /*  Description | Eliminar un usuario                           */
         /*  Date        |                                               */
         /*  Parameters  | int id                                        */
         /****************************************************************/
@@ -57,7 +58,7 @@ namespace library_check_in.User_CICE
 
         /****************************************************************/
         /*  Author      |                                               */
-        /*  Description | Consultar carreras                            */
+        /*  Description | Consultar usuario                             */
         /*  Date        |                                               */
         /*  Parameters  | string type_consult                           */
         /****************************************************************/
@@ -65,7 +66,12 @@ namespace library_check_in.User_CICE
         {
 
         }
-
+        /****************************************************************/
+        /*  Author      |                                               */
+        /*  Description | login                                         */
+        /*  Date        |                                               */
+        /*  Parameters  | string user, string password                  */
+        /****************************************************************/
         public System.Data.DataTable login(string user, string password)
         {
             string command = "select id_type_user from user_CICE where user_name = @user and user_password = @password";

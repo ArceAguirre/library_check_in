@@ -20,8 +20,8 @@ namespace library_check_in.Type_user
         /****************************************************************/
         /*  Author      | Arcelia Aguirre                               */
         /*  Description | Agregar un Tipo de Usuario                    */
-        /*  Date        |  19-02-2018                                   */
-        /*  Parameters  | string carrerName, string carrerKey           */
+        /*  Date        | 19-02-2018                                    */
+        /*  Parameters  | string typeUserNew                            */
         /****************************************************************/
         public void save(string typeUserNew)
         {
@@ -33,18 +33,18 @@ namespace library_check_in.Type_user
 
         /****************************************************************/
         /*  Author      |                                               */
-        /*  Description | Modificar una carrera                         */
+        /*  Description | Modificar un Tipo de Usuario                  */
         /*  Date        |                                               */
-        /*  Parameters  | int id, string carrerName, string carrerKey   */
+        /*  Parameters  |                                               */
         /****************************************************************/
-        public void update(int id, string carrerName, string carrerKey)
+        public void update()
         {
 
         }
 
         /****************************************************************/
         /*  Author      |                                               */
-        /*  Description | Eliminar una carrera                          */
+        /*  Description | Eliminar un Tipo de Usuario                   */
         /*  Date        |                                               */
         /*  Parameters  | int id                                        */
         /****************************************************************/
@@ -55,7 +55,7 @@ namespace library_check_in.Type_user
 
         /****************************************************************/
         /*  Author      |                                               */
-        /*  Description | Consultar carreras                            */
+        /*  Description | Consultar un Tipo de Usuario                  */
         /*  Date        |                                               */
         /*  Parameters  | string type_consult                           */
         /****************************************************************/

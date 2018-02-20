@@ -20,8 +20,8 @@ namespace library_check_in.Type_not_student
         /****************************************************************/
         /*  Author      | Arcelia Aguirre                               */
         /*  Description | Agregar un tipo de no estudiante              */
-        /*  Date        |  19-02-2018                                   */
-        /*  Parameters  | string carrerName, string carrerKey           */
+        /*  Date        | 19-02-2018                                    */
+        /*  Parameters  | string typeNotStudentName                     */
         /****************************************************************/
         public void save(string typeNotStudentName)
         {
@@ -35,9 +35,9 @@ namespace library_check_in.Type_not_student
         /*  Author      |                                               */
         /*  Description | Modificar un tipo de no estudiante            */
         /*  Date        |                                               */
-        /*  Parameters  | int id, string carrerName, string carrerKey   */
+        /*  Parameters  |                                               */
         /****************************************************************/
-        public void update(int id, string carrerName, string carrerKey)
+        public void update()
         {
 
         }
