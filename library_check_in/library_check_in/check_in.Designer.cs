@@ -892,6 +892,7 @@
             this.btn_careerSave.TabIndex = 2;
             this.btn_careerSave.Text = "Guardar";
             this.btn_careerSave.UseVisualStyleBackColor = true;
+            this.btn_careerSave.Click += new System.EventHandler(this.btn_careerSave_Click);
             // 
             // txt_careerName
             // 
@@ -1135,6 +1136,7 @@
             this.btn_userSave.TabIndex = 32;
             this.btn_userSave.Text = "Guardar";
             this.btn_userSave.UseVisualStyleBackColor = true;
+            this.btn_userSave.Click += new System.EventHandler(this.btn_userSave_Click);
             // 
             // txt_fatherLastnameUser
             // 

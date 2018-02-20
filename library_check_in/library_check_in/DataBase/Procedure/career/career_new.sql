@@ -47,9 +47,3 @@ begin
 			'Correcto' as error_message;
 		return	 
 end;
-
-create procedure show_Types 
-as
-begin
-	select descrition from type_user
-end

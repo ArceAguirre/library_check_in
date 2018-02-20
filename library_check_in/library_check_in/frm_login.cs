@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using library_check_in.User_CICE;
 
 /****************************************************/
 /*  Author      |   Arcelia Aguirre                 */
@@ -27,18 +28,10 @@ namespace library_check_in{
         }
         private void login()
         {
-            var user = txt_name.Text;
-            var pass = txt_password.Text;
+            DataTable dt = new DataTable();
+            UserCICE userCICE = new UserCICE();
 
-            string command = "select id_type_user from user_CICE where user_name = @user and user_password = @password";
-            var conn = new SqlConnection(Connection.CONNECTION_STRING);
-            var cmd = new SqlCommand(command, conn);
-            cmd.Parameters.AddWithValue("@user", user);
-            cmd.Parameters.AddWithValue("@password", pass);
-            System.Data.DataTable dt = new System.Data.DataTable();
-
-            SqlDataAdapter adapt = new SqlDataAdapter(cmd);
-            adapt.Fill(dt);
+            dt =  userCICE.login(txt_name.Text, txt_password.Text);
             if (dt.Rows.Count == 0)
             {
                 MessageBox.Show("Usuario o Password Incorrectos");

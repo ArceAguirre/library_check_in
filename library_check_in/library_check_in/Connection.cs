@@ -28,20 +28,22 @@ namespace library_check_in
         public Connection() { }
 
 
-        public System.Data.DataTable loadData(string command, string[] paramName, string[] param)
+        public System.Data.DataTable loadData(string command, string[] paramName, object[] param)
         {
             SqlConnection conn = new SqlConnection(Connection.CONNECTION_STRING);
             SqlCommand cmd = new SqlCommand(command, conn);
-
-            for(int i = 0; i < param.Rank; i++)
+            for (int i = 0; i < paramName.Length; i++)
             {
-                cmd.Parameters.AddWithValue(paramName[i], param[i]);
+                if (paramName[i] != null && param[i] != null)
+                {
+                    cmd.Parameters.AddWithValue(paramName[i].ToString(), param[i]);
+                }
+                else{break;}
             }
             
             System.Data.DataTable dt = new System.Data.DataTable();
             SqlDataAdapter adapt = new SqlDataAdapter(cmd);
             adapt.Fill(dt);
-
             return dt;
         }
     }
