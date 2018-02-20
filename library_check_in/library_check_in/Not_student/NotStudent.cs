@@ -2,7 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+/*****************************************************/
+/*  Author      |   Arcelia Aguirre                  */
+/*  Date        |   19-02-2018                       */
+/*  Description |   Clase para operaciones de        */
+/*                  No Estudiantes                   */
+/*****************************************************/
 namespace library_check_in.Not_student
 {
     class NotStudent
@@ -13,29 +18,29 @@ namespace library_check_in.Not_student
 
         /****************************************************************/
         /*  Author      | Arcelia Aguirre                               */
-        /*  Description | Agregar una carrera                           */
+        /*  Description | Agregar un No Estudiante                      */
         /*  Date        |  19-02-2018                                   */
-        /*  Parameters  | string carrerName, string carrerKey           */
+        /*  Parameters  |                                               */
         /****************************************************************/
-        public void save(string carrerName, string carrerKey)
+        public void save()
         {
            
         }
 
         /****************************************************************/
         /*  Author      |                                               */
-        /*  Description | Modificar una carrera                         */
+        /*  Description | Modificar un No Estudiante                    */
         /*  Date        |                                               */
-        /*  Parameters  | int id, string carrerName, string carrerKey   */
+        /*  Parameters  |                                               */
         /****************************************************************/
-        public void update(int id, string carrerName, string carrerKey)
+        public void update()
         {
 
         }
 
         /****************************************************************/
         /*  Author      |                                               */
-        /*  Description | Eliminar una carrera                          */
+        /*  Description | Eliminar un No Estudiante                     */
         /*  Date        |                                               */
         /*  Parameters  | int id                                        */
         /****************************************************************/
@@ -46,7 +51,7 @@ namespace library_check_in.Not_student
 
         /****************************************************************/
         /*  Author      |                                               */
-        /*  Description | Consultar carreras                            */
+        /*  Description | Consultar un No Estudiante                    */
         /*  Date        |                                               */
         /*  Parameters  | string type_consult                           */
         /****************************************************************/
