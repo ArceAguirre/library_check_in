@@ -63,9 +63,14 @@
     <Compile Include="frm_report.Designer.cs">
       <DependentUpon>frm_report.cs</DependentUpon>
     </Compile>
+    <Compile Include="Not_student\NotStudent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="props.cs" />
+    <Compile Include="Student\Student.cs" />
+    <Compile Include="Type_not_student\TypeNotStudent.cs" />
+    <Compile Include="Type_user\TypeUser.cs" />
+    <Compile Include="User_CICE\UserCICE.cs" />
     <EmbeddedResource Include="check_in.resx">
       <DependentUpon>check_in.cs</DependentUpon>
     </EmbeddedResource>

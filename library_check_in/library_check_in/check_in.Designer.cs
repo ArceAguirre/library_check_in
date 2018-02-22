@@ -225,7 +225,7 @@
             this.txt_signInDate.Name = "txt_signInDate";
             this.txt_signInDate.PasswordChar = '*';
             this.txt_signInDate.Size = new System.Drawing.Size(234, 20);
-            this.txt_signInDate.TabIndex = 42;
+            this.txt_signInDate.TabIndex = 5;
             // 
             // ttx_career
             // 
@@ -233,7 +233,7 @@
             this.ttx_career.Location = new System.Drawing.Point(794, 408);
             this.ttx_career.Name = "ttx_career";
             this.ttx_career.Size = new System.Drawing.Size(234, 20);
-            this.ttx_career.TabIndex = 41;
+            this.ttx_career.TabIndex = 4;
             // 
             // txt_numberData
             // 
@@ -242,7 +242,7 @@
             this.txt_numberData.Name = "txt_numberData";
             this.txt_numberData.PasswordChar = '*';
             this.txt_numberData.Size = new System.Drawing.Size(234, 20);
-            this.txt_numberData.TabIndex = 40;
+            this.txt_numberData.TabIndex = 3;
             // 
             // txt_name
             // 
@@ -250,7 +250,7 @@
             this.txt_name.Location = new System.Drawing.Point(794, 356);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(234, 20);
-            this.txt_name.TabIndex = 39;
+            this.txt_name.TabIndex = 2;
             // 
             // img_logoUANL
             // 
@@ -267,7 +267,7 @@
             this.txt_number.Location = new System.Drawing.Point(277, 403);
             this.txt_number.Name = "txt_number";
             this.txt_number.Size = new System.Drawing.Size(234, 20);
-            this.txt_number.TabIndex = 31;
+            this.txt_number.TabIndex = 1;
             // 
             // img_logoFCFM
             // 
@@ -353,7 +353,7 @@
             this.btn_excel.Location = new System.Drawing.Point(162, 239);
             this.btn_excel.Name = "btn_excel";
             this.btn_excel.Size = new System.Drawing.Size(75, 23);
-            this.btn_excel.TabIndex = 15;
+            this.btn_excel.TabIndex = 10;
             this.btn_excel.Text = "Excel";
             this.btn_excel.UseVisualStyleBackColor = true;
             // 
@@ -397,23 +397,27 @@
             this.txt_semester.Location = new System.Drawing.Point(86, 208);
             this.txt_semester.Name = "txt_semester";
             this.txt_semester.Size = new System.Drawing.Size(100, 20);
-            this.txt_semester.TabIndex = 10;
+            this.txt_semester.TabIndex = 9;
             // 
             // cmbbx_carrer
             // 
+            this.cmbbx_carrer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbbx_carrer.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cmbbx_carrer.FormattingEnabled = true;
             this.cmbbx_carrer.Location = new System.Drawing.Point(86, 181);
             this.cmbbx_carrer.Name = "cmbbx_carrer";
+            this.cmbbx_carrer.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbbx_carrer.Size = new System.Drawing.Size(232, 21);
-            this.cmbbx_carrer.TabIndex = 9;
+            this.cmbbx_carrer.TabIndex = 8;
             // 
             // cmbbx_report
             // 
+            this.cmbbx_report.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbbx_report.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cmbbx_report.FormattingEnabled = true;
             this.cmbbx_report.Location = new System.Drawing.Point(86, 153);
             this.cmbbx_report.Name = "cmbbx_report";
+            this.cmbbx_report.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbbx_report.Size = new System.Drawing.Size(232, 21);
             this.cmbbx_report.TabIndex = 7;
             // 
@@ -422,7 +426,7 @@
             this.btn_generate.Location = new System.Drawing.Point(243, 239);
             this.btn_generate.Name = "btn_generate";
             this.btn_generate.Size = new System.Drawing.Size(75, 23);
-            this.btn_generate.TabIndex = 6;
+            this.btn_generate.TabIndex = 11;
             this.btn_generate.Text = "Generar";
             this.btn_generate.UseVisualStyleBackColor = true;
             this.btn_generate.Click += new System.EventHandler(this.btn_generate_Click);
@@ -433,7 +437,7 @@
             this.dttmpk_finalDate.Location = new System.Drawing.Point(236, 127);
             this.dttmpk_finalDate.Name = "dttmpk_finalDate";
             this.dttmpk_finalDate.Size = new System.Drawing.Size(82, 20);
-            this.dttmpk_finalDate.TabIndex = 5;
+            this.dttmpk_finalDate.TabIndex = 6;
             // 
             // dttmpk_initialDate
             // 
@@ -441,7 +445,7 @@
             this.dttmpk_initialDate.Location = new System.Drawing.Point(86, 127);
             this.dttmpk_initialDate.Name = "dttmpk_initialDate";
             this.dttmpk_initialDate.Size = new System.Drawing.Size(79, 20);
-            this.dttmpk_initialDate.TabIndex = 4;
+            this.dttmpk_initialDate.TabIndex = 5;
             // 
             // lbl_finalDate
             // 
@@ -594,7 +598,7 @@
             this.txt_careerStudent.Location = new System.Drawing.Point(95, 211);
             this.txt_careerStudent.Name = "txt_careerStudent";
             this.txt_careerStudent.Size = new System.Drawing.Size(156, 20);
-            this.txt_careerStudent.TabIndex = 31;
+            this.txt_careerStudent.TabIndex = 22;
             // 
             // lbl_careerStudent
             // 
@@ -610,7 +614,7 @@
             this.txt_semesterStudent.Location = new System.Drawing.Point(95, 185);
             this.txt_semesterStudent.Name = "txt_semesterStudent";
             this.txt_semesterStudent.Size = new System.Drawing.Size(156, 20);
-            this.txt_semesterStudent.TabIndex = 29;
+            this.txt_semesterStudent.TabIndex = 21;
             // 
             // lbl_semesterStudent
             // 
@@ -626,7 +630,7 @@
             this.txt_numberStudent.Location = new System.Drawing.Point(95, 78);
             this.txt_numberStudent.Name = "txt_numberStudent";
             this.txt_numberStudent.Size = new System.Drawing.Size(156, 20);
-            this.txt_numberStudent.TabIndex = 27;
+            this.txt_numberStudent.TabIndex = 17;
             // 
             // lbl_numberStudent
             // 
@@ -642,14 +646,14 @@
             this.txt_motherLasnameStudent.Location = new System.Drawing.Point(95, 159);
             this.txt_motherLasnameStudent.Name = "txt_motherLasnameStudent";
             this.txt_motherLasnameStudent.Size = new System.Drawing.Size(158, 20);
-            this.txt_motherLasnameStudent.TabIndex = 25;
+            this.txt_motherLasnameStudent.TabIndex = 20;
             // 
             // btn_add
             // 
             this.btn_add.Location = new System.Drawing.Point(256, 211);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(67, 23);
-            this.btn_add.TabIndex = 17;
+            this.btn_add.TabIndex = 23;
             this.btn_add.Text = "Agregar";
             this.btn_add.UseVisualStyleBackColor = true;
             // 
@@ -659,14 +663,14 @@
             this.cmbbx_typeRegister.Location = new System.Drawing.Point(93, 19);
             this.cmbbx_typeRegister.Name = "cmbbx_typeRegister";
             this.cmbbx_typeRegister.Size = new System.Drawing.Size(158, 21);
-            this.cmbbx_typeRegister.TabIndex = 17;
+            this.cmbbx_typeRegister.TabIndex = 16;
             // 
             // txt_fatherLasnameStudent
             // 
             this.txt_fatherLasnameStudent.Location = new System.Drawing.Point(95, 132);
             this.txt_fatherLasnameStudent.Name = "txt_fatherLasnameStudent";
             this.txt_fatherLasnameStudent.Size = new System.Drawing.Size(158, 20);
-            this.txt_fatherLasnameStudent.TabIndex = 24;
+            this.txt_fatherLasnameStudent.TabIndex = 19;
             // 
             // lbl_typeRegister
             // 
@@ -682,7 +686,7 @@
             this.txt_nameStudent.Location = new System.Drawing.Point(95, 104);
             this.txt_nameStudent.Name = "txt_nameStudent";
             this.txt_nameStudent.Size = new System.Drawing.Size(158, 20);
-            this.txt_nameStudent.TabIndex = 23;
+            this.txt_nameStudent.TabIndex = 18;
             // 
             // lbl_nameStudent
             // 
@@ -730,7 +734,7 @@
             this.btn_saveLoad.Location = new System.Drawing.Point(248, 55);
             this.btn_saveLoad.Name = "btn_saveLoad";
             this.btn_saveLoad.Size = new System.Drawing.Size(75, 23);
-            this.btn_saveLoad.TabIndex = 16;
+            this.btn_saveLoad.TabIndex = 15;
             this.btn_saveLoad.Text = "Guardar";
             this.btn_saveLoad.UseVisualStyleBackColor = true;
             // 
@@ -748,7 +752,7 @@
             this.txt_file.Location = new System.Drawing.Point(71, 55);
             this.txt_file.Name = "txt_file";
             this.txt_file.Size = new System.Drawing.Size(170, 20);
-            this.txt_file.TabIndex = 15;
+            this.txt_file.TabIndex = 14;
             // 
             // lbl_type
             // 
@@ -764,7 +768,7 @@
             this.btn_file.Location = new System.Drawing.Point(11, 53);
             this.btn_file.Name = "btn_file";
             this.btn_file.Size = new System.Drawing.Size(54, 23);
-            this.btn_file.TabIndex = 14;
+            this.btn_file.TabIndex = 13;
             this.btn_file.Text = "Archivo";
             this.btn_file.UseVisualStyleBackColor = true;
             // 
@@ -816,7 +820,7 @@
             this.txt_careerKey.Location = new System.Drawing.Point(78, 52);
             this.txt_careerKey.Name = "txt_careerKey";
             this.txt_careerKey.Size = new System.Drawing.Size(167, 20);
-            this.txt_careerKey.TabIndex = 44;
+            this.txt_careerKey.TabIndex = 33;
             // 
             // lbl_careerKey
             // 
@@ -889,7 +893,7 @@
             this.btn_careerSave.Location = new System.Drawing.Point(251, 49);
             this.btn_careerSave.Name = "btn_careerSave";
             this.btn_careerSave.Size = new System.Drawing.Size(75, 23);
-            this.btn_careerSave.TabIndex = 2;
+            this.btn_careerSave.TabIndex = 34;
             this.btn_careerSave.Text = "Guardar";
             this.btn_careerSave.UseVisualStyleBackColor = true;
             this.btn_careerSave.Click += new System.EventHandler(this.btn_careerSave_Click);
@@ -899,7 +903,7 @@
             this.txt_careerName.Location = new System.Drawing.Point(78, 28);
             this.txt_careerName.Name = "txt_careerName";
             this.txt_careerName.Size = new System.Drawing.Size(167, 20);
-            this.txt_careerName.TabIndex = 1;
+            this.txt_careerName.TabIndex = 32;
             // 
             // lbl_careerName
             // 
@@ -967,7 +971,7 @@
             this.btn_typeNotStudentSave.Location = new System.Drawing.Point(247, 21);
             this.btn_typeNotStudentSave.Name = "btn_typeNotStudentSave";
             this.btn_typeNotStudentSave.Size = new System.Drawing.Size(75, 23);
-            this.btn_typeNotStudentSave.TabIndex = 6;
+            this.btn_typeNotStudentSave.TabIndex = 36;
             this.btn_typeNotStudentSave.Text = "Guardar";
             this.btn_typeNotStudentSave.UseVisualStyleBackColor = true;
             this.btn_typeNotStudentSave.Click += new System.EventHandler(this.btn_typeNotStudentSave_Click);
@@ -977,7 +981,7 @@
             this.txt_typeNotStudentName.Location = new System.Drawing.Point(74, 24);
             this.txt_typeNotStudentName.Name = "txt_typeNotStudentName";
             this.txt_typeNotStudentName.Size = new System.Drawing.Size(167, 20);
-            this.txt_typeNotStudentName.TabIndex = 5;
+            this.txt_typeNotStudentName.TabIndex = 35;
             // 
             // lbl_typeNotStudentName
             // 
@@ -1045,7 +1049,7 @@
             this.btn_typeUserSave.Location = new System.Drawing.Point(247, 22);
             this.btn_typeUserSave.Name = "btn_typeUserSave";
             this.btn_typeUserSave.Size = new System.Drawing.Size(75, 23);
-            this.btn_typeUserSave.TabIndex = 6;
+            this.btn_typeUserSave.TabIndex = 38;
             this.btn_typeUserSave.Text = "Guardar";
             this.btn_typeUserSave.UseVisualStyleBackColor = true;
             this.btn_typeUserSave.Click += new System.EventHandler(this.btn_typeUserSave_Click);
@@ -1055,7 +1059,7 @@
             this.txt_typeUserName.Location = new System.Drawing.Point(74, 24);
             this.txt_typeUserName.Name = "txt_typeUserName";
             this.txt_typeUserName.Size = new System.Drawing.Size(167, 20);
-            this.txt_typeUserName.TabIndex = 5;
+            this.txt_typeUserName.TabIndex = 37;
             // 
             // lbl_typeUserName
             // 
@@ -1099,18 +1103,20 @@
             // 
             // cmbbx_typeUser
             // 
+            this.cmbbx_typeUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbbx_typeUser.FormattingEnabled = true;
             this.cmbbx_typeUser.Location = new System.Drawing.Point(103, 75);
             this.cmbbx_typeUser.Name = "cmbbx_typeUser";
             this.cmbbx_typeUser.Size = new System.Drawing.Size(156, 21);
-            this.cmbbx_typeUser.TabIndex = 43;
+            this.cmbbx_typeUser.TabIndex = 41;
             // 
             // txt_passwordUser
             // 
             this.txt_passwordUser.Location = new System.Drawing.Point(103, 49);
             this.txt_passwordUser.Name = "txt_passwordUser";
+            this.txt_passwordUser.PasswordChar = '*';
             this.txt_passwordUser.Size = new System.Drawing.Size(156, 20);
-            this.txt_passwordUser.TabIndex = 42;
+            this.txt_passwordUser.TabIndex = 40;
             // 
             // lbl_passwordUser
             // 
@@ -1126,14 +1132,14 @@
             this.txt_motherLastnameUser.Location = new System.Drawing.Point(369, 50);
             this.txt_motherLastnameUser.Name = "txt_motherLastnameUser";
             this.txt_motherLastnameUser.Size = new System.Drawing.Size(156, 20);
-            this.txt_motherLastnameUser.TabIndex = 38;
+            this.txt_motherLastnameUser.TabIndex = 43;
             // 
             // btn_userSave
             // 
             this.btn_userSave.Location = new System.Drawing.Point(369, 78);
             this.btn_userSave.Name = "btn_userSave";
             this.btn_userSave.Size = new System.Drawing.Size(67, 23);
-            this.btn_userSave.TabIndex = 32;
+            this.btn_userSave.TabIndex = 44;
             this.btn_userSave.Text = "Guardar";
             this.btn_userSave.UseVisualStyleBackColor = true;
             this.btn_userSave.Click += new System.EventHandler(this.btn_userSave_Click);
@@ -1143,14 +1149,14 @@
             this.txt_fatherLastnameUser.Location = new System.Drawing.Point(369, 23);
             this.txt_fatherLastnameUser.Name = "txt_fatherLastnameUser";
             this.txt_fatherLastnameUser.Size = new System.Drawing.Size(156, 20);
-            this.txt_fatherLastnameUser.TabIndex = 37;
+            this.txt_fatherLastnameUser.TabIndex = 42;
             // 
             // txt_nameUser
             // 
             this.txt_nameUser.Location = new System.Drawing.Point(103, 23);
             this.txt_nameUser.Name = "txt_nameUser";
             this.txt_nameUser.Size = new System.Drawing.Size(158, 20);
-            this.txt_nameUser.TabIndex = 36;
+            this.txt_nameUser.TabIndex = 39;
             // 
             // lbl_nameUser
             // 
@@ -1256,7 +1262,7 @@
             this.btn_help.Location = new System.Drawing.Point(6, 108);
             this.btn_help.Name = "btn_help";
             this.btn_help.Size = new System.Drawing.Size(157, 23);
-            this.btn_help.TabIndex = 10;
+            this.btn_help.TabIndex = 31;
             this.btn_help.Text = "Ayuda";
             this.btn_help.UseVisualStyleBackColor = true;
             // 
@@ -1265,7 +1271,7 @@
             this.btn_documentation.Location = new System.Drawing.Point(7, 78);
             this.btn_documentation.Name = "btn_documentation";
             this.btn_documentation.Size = new System.Drawing.Size(156, 23);
-            this.btn_documentation.TabIndex = 9;
+            this.btn_documentation.TabIndex = 30;
             this.btn_documentation.Text = "Documentación";
             this.btn_documentation.UseVisualStyleBackColor = true;
             // 
@@ -1274,7 +1280,7 @@
             this.btn_manual.Location = new System.Drawing.Point(6, 49);
             this.btn_manual.Name = "btn_manual";
             this.btn_manual.Size = new System.Drawing.Size(157, 23);
-            this.btn_manual.TabIndex = 8;
+            this.btn_manual.TabIndex = 29;
             this.btn_manual.Text = "Manual de Usuario";
             this.btn_manual.UseVisualStyleBackColor = true;
             // 
@@ -1283,7 +1289,7 @@
             this.btn_install.Location = new System.Drawing.Point(6, 19);
             this.btn_install.Name = "btn_install";
             this.btn_install.Size = new System.Drawing.Size(157, 23);
-            this.btn_install.TabIndex = 7;
+            this.btn_install.TabIndex = 28;
             this.btn_install.Text = "Cómo Instalar";
             this.btn_install.UseVisualStyleBackColor = true;
             // 
@@ -1305,7 +1311,7 @@
             this.btn_create.Location = new System.Drawing.Point(6, 19);
             this.btn_create.Name = "btn_create";
             this.btn_create.Size = new System.Drawing.Size(157, 23);
-            this.btn_create.TabIndex = 2;
+            this.btn_create.TabIndex = 24;
             this.btn_create.Text = "Crear Base de Datos";
             this.btn_create.UseVisualStyleBackColor = true;
             this.btn_create.Click += new System.EventHandler(this.btn_create_Click);
@@ -1315,7 +1321,7 @@
             this.btn_deleteDuplicate.Location = new System.Drawing.Point(6, 106);
             this.btn_deleteDuplicate.Name = "btn_deleteDuplicate";
             this.btn_deleteDuplicate.Size = new System.Drawing.Size(157, 23);
-            this.btn_deleteDuplicate.TabIndex = 5;
+            this.btn_deleteDuplicate.TabIndex = 27;
             this.btn_deleteDuplicate.Text = "Borrar Registros Duplicados";
             this.btn_deleteDuplicate.UseVisualStyleBackColor = true;
             // 
@@ -1324,7 +1330,7 @@
             this.btn_delete.Location = new System.Drawing.Point(6, 77);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(157, 23);
-            this.btn_delete.TabIndex = 3;
+            this.btn_delete.TabIndex = 26;
             this.btn_delete.Text = "Borrar Todos los Registros";
             this.btn_delete.UseVisualStyleBackColor = true;
             // 
@@ -1333,7 +1339,7 @@
             this.btn_drop.Location = new System.Drawing.Point(6, 48);
             this.btn_drop.Name = "btn_drop";
             this.btn_drop.Size = new System.Drawing.Size(157, 23);
-            this.btn_drop.TabIndex = 4;
+            this.btn_drop.TabIndex = 25;
             this.btn_drop.Text = "Borrar Base de Datos";
             this.btn_drop.UseVisualStyleBackColor = true;
             // 
