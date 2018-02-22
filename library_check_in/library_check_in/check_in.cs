@@ -41,15 +41,18 @@ namespace library_check_in
         /****************************************************************/
         private void frm_signIn_Load(object sender, EventArgs e)
         {
-            var conn = new SqlConnection(Connection.CONNECTION_STRING);
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM type_user";
-            da = new SqlDataAdapter(cmd);
-            da.Fill(ds, "type_user");
-            cmbbx_typeUser.DataSource = ds.Tables["type_user"];
-            cmbbx_typeUser.DisplayMember = "description";
-            cmbbx_typeUser.ValueMember = "id";
+            TypeUser typeUser = new TypeUser();
+            TypeNotStudent typeNotStudent = new TypeNotStudent();
+            Career career = new Career();
+
+            /*Combobox*/
+            typeUser.load_cmbbxTypeUser(ds, cmbbx_typeUser);
+            typeNotStudent.load_cmbbxReport(ds, cmbbx_report);
+            typeNotStudent.load_cmbbxReport(ds, cmbbx_type);
+            typeNotStudent.load_cmbbxReport(ds, cmbbx_typeRegister);
+            career.load_cmbbxCarrer(ds, cmbbx_carrer);
+            career.load_cmbbxCarrer(ds, cmbbox_careerStudent);
+
         }
 
         /****************************************************************/
@@ -154,6 +157,11 @@ namespace library_check_in
         /*  Reurnt      |                                               */
         /****************************************************************/
         private void btn_create_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
         {
 
         }

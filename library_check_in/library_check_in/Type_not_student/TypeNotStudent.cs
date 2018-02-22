@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 /*****************************************************/
 /*  Author      |   Arcelia Aguirre                  */
@@ -13,6 +15,7 @@ namespace library_check_in.Type_not_student
 {
     class TypeNotStudent
     {
+        string TABLE = "type_not_student";
         string[] paramName = new string[20];
         object[] param = new object[20];
         Connection con = new Connection();
@@ -54,14 +57,37 @@ namespace library_check_in.Type_not_student
         }
 
         /****************************************************************/
-        /*  Author      |                                               */
+        /*  Author      | Arcelia Aguirre Treviño                       */
         /*  Description | Consultar un tipo de no estudiante            */
-        /*  Date        |                                               */
+        /*  Date        | 22-02-2018                                    */
         /*  Parameters  | string type_consult                           */
         /****************************************************************/
-        public void consult(string type_consult)
+        public object consult(string type_consult)
         {
+            switch (type_consult)
+            {
+                case "L1":
+                    string command = "select * from type_not_student";
+                    paramName[0] = "";
+                    param[0] = "";
+                    return con.loadData(command, TABLE, paramName, param);
+                default:
+                    return null;
+            }
+        }
 
+        /****************************************************************/
+        /*  Author      | Arcelia Aguirre                               */
+        /*  Description | Cargar el combobox de reporte                 */
+        /*  Date        | 22-02-2018                                    */
+        /*  Parameters  | DataSet ds, ComboBox cmbbx_typeUser           */
+        /****************************************************************/
+        public void load_cmbbxReport(DataSet ds, ComboBox cmbbx_report)
+        {
+            ds = (DataSet)this.consult("L1");
+            cmbbx_report.DataSource = ds.Tables[TABLE];
+            cmbbx_report.DisplayMember = "description";
+            cmbbx_report.ValueMember = "id";
         }
     }
 }
