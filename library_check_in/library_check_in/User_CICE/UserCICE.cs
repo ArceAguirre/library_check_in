@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace library_check_in.User_CICE
 {
     class UserCICE
     {
+        string TABLE = "user_CICE";
         string[] paramName = new string[20];
         object[] param = new object[20];
         Connection con = new Connection();
@@ -62,9 +65,18 @@ namespace library_check_in.User_CICE
         /*  Date        |                                               */
         /*  Parameters  | string type_consult                           */
         /****************************************************************/
-        public void consult(string type_consult)
+        public object consult(string type_consult)
         {
-
+            switch (type_consult)
+            {
+                case "L1":
+                    string command = "select * from user_CICE";
+                    paramName[0] = "";
+                    param[0] = "";
+                    return con.loadData(command, TABLE, paramName, param);
+                default:
+                    return null;
+            }
         }
         /****************************************************************/
         /*  Author      |                                               */
@@ -81,6 +93,19 @@ namespace library_check_in.User_CICE
             param[1] = password;
             System.Data.DataTable dt = con.loadData(command, paramName, param);
             return dt;
+        }
+
+
+        /****************************************************************/
+        /*  Author      | Arcelia Aguirre                               */
+        /*  Description | Cargar el grid de usuarios de cice            */
+        /*  Date        | 22-02-2018                                    */
+        /*  Parameters  | DataSet ds, DataGridView dtgd_user            */
+        /****************************************************************/
+        public void load_dtgdUser(DataSet ds, DataGridView dtgd_user)
+        {
+            ds = (DataSet)this.consult("L1");
+            dtgd_user.DataSource = ds.Tables[0];
         }
     }
 }

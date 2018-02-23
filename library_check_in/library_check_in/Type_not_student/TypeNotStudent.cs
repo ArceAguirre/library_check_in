@@ -89,5 +89,16 @@ namespace library_check_in.Type_not_student
             cmbbx_report.DisplayMember = "description";
             cmbbx_report.ValueMember = "id";
         }
+        /****************************************************************/
+        /*  Author      | Arcelia Aguirre                               */
+        /*  Description | Cargar el grid de tipos de no estudiantes     */
+        /*  Date        | 22-02-2018                                    */
+        /*  Parameters  | DataSet ds, DataGridView dtgd_typeNotStudent  */
+        /****************************************************************/
+        public void load_dtgdTypeNotStudent(DataSet ds, DataGridView dtgd_typeNotStudent)
+        {
+            ds = (DataSet)this.consult("L1");
+            dtgd_typeNotStudent.DataSource = ds.Tables[0];
+        }
     }
 }

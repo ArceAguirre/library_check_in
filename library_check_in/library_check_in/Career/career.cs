@@ -90,5 +90,16 @@ namespace library_check_in.career
             cmbbx_carrer.DisplayMember = "career_name";
             cmbbx_carrer.ValueMember = "id";
         }
+        /****************************************************************/
+        /*  Author      | Arcelia Aguirre                               */
+        /*  Description | Cargar el grid de licenciatura                */
+        /*  Date        | 22-02-2018                                    */
+        /*  Parameters  | DataSet ds, DataGridView dtgd_Career          */
+        /****************************************************************/
+        public void load_dtgdCareer(DataSet ds, DataGridView dtgd_Career)
+        {
+            ds = (DataSet)this.consult("L1");
+            dtgd_Career.DataSource = ds.Tables[0];
+        }
     }
 }

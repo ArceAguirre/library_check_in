@@ -89,5 +89,17 @@ namespace library_check_in.Type_user
             cmbbx_typeUser.DisplayMember = "description";
             cmbbx_typeUser.ValueMember = "id";
         }
+
+        /****************************************************************/
+        /*  Author      | Arcelia Aguirre                               */
+        /*  Description | Cargar el grid de tipos de usuarios           */
+        /*  Date        | 22-02-2018                                    */
+        /*  Parameters  | DataSet ds, DataGridView dtgd_typeUser        */
+        /****************************************************************/
+        public void load_dtgdTypeUser(DataSet ds, DataGridView dtgd_typeUser)
+        {
+            ds = (DataSet)this.consult("L1");
+            dtgd_typeUser.DataSource = ds.Tables[0];
+        }
     }
 }

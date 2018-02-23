@@ -44,7 +44,7 @@ namespace library_check_in
             TypeUser typeUser = new TypeUser();
             TypeNotStudent typeNotStudent = new TypeNotStudent();
             Career career = new Career();
-
+            UserCICE userCICE = new UserCICE();
             /*Combobox*/
             typeUser.load_cmbbxTypeUser(ds, cmbbx_typeUser);
             typeNotStudent.load_cmbbxReport(ds, cmbbx_report);
@@ -52,6 +52,12 @@ namespace library_check_in
             typeNotStudent.load_cmbbxReport(ds, cmbbx_typeRegister);
             career.load_cmbbxCarrer(ds, cmbbx_carrer);
             career.load_cmbbxCarrer(ds, cmbbox_careerStudent);
+
+            /*Grid*/
+            career.load_dtgdCareer(ds, dtgd_career);
+            typeNotStudent.load_dtgdTypeNotStudent(ds, dtgd_typeNotStudent);
+            typeUser.load_dtgdTypeUser(ds, dtgd_typeUser);
+            userCICE.load_dtgdUser(ds, dtgd_user);
 
         }
 
@@ -164,6 +170,28 @@ namespace library_check_in
         private void btn_add_Click(object sender, EventArgs e)
         {
 
+        }
+
+        /****************************************************************/
+        /*  Author      |                                               */
+        /*  Description |                                               */
+        /*  Date        |                                               */
+        /*  Parameters  |                                               */
+        /*  Reurnt      |                                               */
+        /****************************************************************/
+        private void onlyNumbers(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
