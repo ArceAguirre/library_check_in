@@ -9,7 +9,6 @@ namespace library_check_in.User_CICE
 {
     class UserCICE
     {
-        string TABLE = "user_CICE";
         string[] paramName = new string[20];
         object[] param = new object[20];
         Connection con = new Connection();
@@ -25,14 +24,14 @@ namespace library_check_in.User_CICE
         {
             string command = "user_CICE_new @user_name = @nameUser, @user_password = @passwordUser, @father_last_name = @fatherLastnameUser, @mother_last_name = @motherLastnameUser, @id_type_user = @typeUser ";
             paramName[0] = "@nameUser";
-            param[0] = nameUser;
             paramName[1] = "@passwordUser";
-            param[1] = passwordUser;
             paramName[2] = "@fatherLastnameUser";
-            param[2] = fatherLastnameUser;
             paramName[3] = "@motherLastnameUser";
-            param[3] = motherLastnameUser;
             paramName[4] = "@typeUser";
+            param[0] = nameUser;
+            param[1] = passwordUser;
+            param[2] = fatherLastnameUser;
+            param[3] = motherLastnameUser;
             param[4] = typeUser;
             System.Data.DataTable dt = con.loadData(command, paramName, param);
         }
@@ -65,18 +64,17 @@ namespace library_check_in.User_CICE
         /*  Date        |                                               */
         /*  Parameters  | string type_consult                           */
         /****************************************************************/
-        public object consult(string type_consult)
+        public object consult(int id, string user_name, string type_consult)
         {
-            switch (type_consult)
-            {
-                case "L1":
-                    string command = "select * from user_CICE";
-                    paramName[0] = "";
-                    param[0] = "";
-                    return con.loadData(command, TABLE, paramName, param);
-                default:
-                    return null;
-            }
+            string command = "user_CICE_consult @id = @id, @user_name = @user_name, @type_consult = @type_consult";
+            paramName[0] = "@id";
+            paramName[1] = "@user_name";
+            paramName[2] = "@type_consult";
+            param[0] = id;
+            param[1] = user_name;
+            param[2] = type_consult;
+            return con.loadData(command, PROPS.TABLE_USER_CICE, paramName, param);
+                
         }
         /****************************************************************/
         /*  Author      |                                               */
@@ -104,8 +102,8 @@ namespace library_check_in.User_CICE
         /****************************************************************/
         public void load_dtgdUser(DataSet ds, DataGridView dtgd_user)
         {
-            ds = (DataSet)this.consult("L1");
-            dtgd_user.DataSource = ds.Tables[0];
+            ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
+            dtgd_user.DataSource = ds.Tables[PROPS.TABLE_USER_CICE];
         }
     }
 }

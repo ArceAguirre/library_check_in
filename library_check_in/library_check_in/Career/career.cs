@@ -15,7 +15,6 @@ namespace library_check_in.career
 {
     class Career
     {
-        string TABLE = "career";
         string[] paramName = new string[20];
         object[] param = new object[20];
         Connection con = new Connection();
@@ -23,15 +22,15 @@ namespace library_check_in.career
         /****************************************************************/
         /*  Author      | Arcelia Aguirre                               */
         /*  Description | Agregar una carrera                           */
-        /*  Date        |  19-02-2018                                   */
+        /*  Date        | 19-02-2018                                    */
         /*  Parameters  | string carrerName, string carrerKey           */
         /****************************************************************/
         public void save(string carrerName, string carrerKey)
         {
             string command = "career_new @career_name = @carrerName, @career_key = @carrerKey ";
             paramName[0] = "@carrerName";
-            param[0] = carrerName;
             paramName[1] = "@carrerKey";
+            param[0] = carrerName;
             param[1] = carrerKey;
             System.Data.DataTable dt = con.loadData(command, paramName, param);
         }
@@ -64,18 +63,19 @@ namespace library_check_in.career
         /*  Date        | 22-02-2018                                    */
         /*  Parameters  | string type_consult                           */
         /****************************************************************/
-        public object consult(string type_consult)
+        public object consult(int id, string career_name, string career_key, string type_consult)
         {
-            switch (type_consult)
-            {
-                case "L1":
-                    string command = "select * from career";
-                    paramName[0] = "";
-                    param[0] = "";
-                    return con.loadData(command, TABLE, paramName, param);
-                default:
-                    return null;
-            }
+            string command = "career_consult @id = @id, @career_name = @career_name, @career_key = @career_key, @type_consult = @type_consult";
+            paramName[0] = "@id";
+            paramName[1] = "@career_name";
+            paramName[2] = "@career_key";
+            paramName[3] = "@type_consult";
+            param[0] = id;
+            param[1] = career_name;
+            param[2] = career_key;
+            param[3] = type_consult;
+            return con.loadData(command, PROPS.TABLE_CAREER, paramName, param);
+               
         }
         /****************************************************************/
         /*  Author      | Arcelia Aguirre                               */
@@ -85,10 +85,10 @@ namespace library_check_in.career
         /****************************************************************/
         public void load_cmbbxCarrer(DataSet ds, ComboBox cmbbx_carrer)
         {
-            ds = (DataSet)this.consult("L1");
-            cmbbx_carrer.DataSource = ds.Tables[TABLE];
+            ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.EMPTY, PROPS.CONSULT_L1);
+            cmbbx_carrer.DataSource = ds.Tables[PROPS.TABLE_CAREER];
             cmbbx_carrer.DisplayMember = "career_name";
-            cmbbx_carrer.ValueMember = "id";
+            cmbbx_carrer.ValueMember = "id_career";
         }
         /****************************************************************/
         /*  Author      | Arcelia Aguirre                               */
@@ -98,8 +98,8 @@ namespace library_check_in.career
         /****************************************************************/
         public void load_dtgdCareer(DataSet ds, DataGridView dtgd_Career)
         {
-            ds = (DataSet)this.consult("L1");
-            dtgd_Career.DataSource = ds.Tables[0];
+            ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.EMPTY, PROPS.CONSULT_L1);
+            dtgd_Career.DataSource = ds.Tables[PROPS.TABLE_CAREER];
         }
     }
 }

@@ -15,7 +15,6 @@ namespace library_check_in.Type_not_student
 {
     class TypeNotStudent
     {
-        string TABLE = "type_not_student";
         string[] paramName = new string[20];
         object[] param = new object[20];
         Connection con = new Connection();
@@ -57,23 +56,22 @@ namespace library_check_in.Type_not_student
         }
 
         /****************************************************************/
-        /*  Author      | Arcelia Aguirre Treviño                       */
+        /*  Author      | Felipe Randolfo                               */
         /*  Description | Consultar un tipo de no estudiante            */
         /*  Date        | 22-02-2018                                    */
         /*  Parameters  | string type_consult                           */
         /****************************************************************/
-        public object consult(string type_consult)
+        public object consult(int id, string description, string type_consult)
         {
-            switch (type_consult)
-            {
-                case "L1":
-                    string command = "select * from type_not_student";
-                    paramName[0] = "";
-                    param[0] = "";
-                    return con.loadData(command, TABLE, paramName, param);
-                default:
-                    return null;
-            }
+            string command = "type_not_student_consult @id = @id, @description = @description, @type_consult = @type_consult";
+            paramName[0] = "@id";
+            paramName[1] = "@description";
+            paramName[2] = "@type_consult";
+            param[0] = id;
+            param[1] = description;
+            param[2] = type_consult;
+            return con.loadData(command, PROPS.TABLE_TYPE_NOT_STUDENT, paramName, param);
+                
         }
 
         /****************************************************************/
@@ -84,11 +82,12 @@ namespace library_check_in.Type_not_student
         /****************************************************************/
         public void load_cmbbxReport(DataSet ds, ComboBox cmbbx_report)
         {
-            ds = (DataSet)this.consult("L1");
-            cmbbx_report.DataSource = ds.Tables[TABLE];
-            cmbbx_report.DisplayMember = "description";
-            cmbbx_report.ValueMember = "id";
+            ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
+            cmbbx_report.DataSource = ds.Tables[PROPS.TABLE_TYPE_NOT_STUDENT];
+            cmbbx_report.DisplayMember = "description_typeNotStudent";
+            cmbbx_report.ValueMember = "id_typeNotStudent";
         }
+
         /****************************************************************/
         /*  Author      | Arcelia Aguirre                               */
         /*  Description | Cargar el grid de tipos de no estudiantes     */
@@ -97,8 +96,8 @@ namespace library_check_in.Type_not_student
         /****************************************************************/
         public void load_dtgdTypeNotStudent(DataSet ds, DataGridView dtgd_typeNotStudent)
         {
-            ds = (DataSet)this.consult("L1");
-            dtgd_typeNotStudent.DataSource = ds.Tables[0];
+            ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
+            dtgd_typeNotStudent.DataSource = ds.Tables[PROPS.TABLE_TYPE_NOT_STUDENT];
         }
     }
 }

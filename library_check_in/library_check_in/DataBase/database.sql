@@ -84,8 +84,14 @@ create table type_not_student(
 /*  Date        |   07-02-2018                      */
 /*  Change		|   Tipo de dato para fecha 		*/
 /****************************************************/
+/****************************************************/
+/*  Author      |   Arcelia Aguirre                 */
+/*  Date        |   23-02-2018                      */
+/*  Change		|   Se agregó el campo de numero 	*/
+/****************************************************/
 create table not_student(
 	id integer primary key not null identity,			/*id incremental*/
+	number varchar(7) not null,							/*Número del no estudiante*/
 	name varchar(50) not null,							/*Nombre*/
 	father_last_name varchar(50) not null,				/*Apellido Paterno*/
 	mother_last_name varchar(50),						/*Apellido Materno*/

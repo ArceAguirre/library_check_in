@@ -84,6 +84,7 @@ namespace library_check_in
             TypeNotStudent typeNotStudent = new TypeNotStudent();
             typeNotStudent.save(txt_typeNotStudentName.Text);
             txt_typeNotStudentName.Clear();
+            typeNotStudent.load_dtgdTypeNotStudent(ds, dtgd_typeNotStudent);
         }
 
         /****************************************************************/
@@ -111,6 +112,7 @@ namespace library_check_in
             TypeUser typeUser = new TypeUser();
             typeUser.save(txt_typeUserName.Text);
             txt_typeUserName.Clear();
+            typeUser.load_dtgdTypeUser(ds, dtgd_typeUser);
         }
 
         /****************************************************************/
@@ -136,6 +138,7 @@ namespace library_check_in
             career.save(txt_careerName.Text, txt_careerKey.Text);
             txt_careerName.Clear();
             txt_careerKey.Clear();
+            career.load_dtgdCareer(ds, dtgd_career);
         }
 
         /****************************************************************/
@@ -153,6 +156,7 @@ namespace library_check_in
             txt_passwordUser.Clear();
             txt_fatherLastnameUser.Clear();
             txt_motherLastnameUser.Clear();
+            userCICE.load_dtgdUser(ds, dtgd_user);
         }
 
         /****************************************************************/
@@ -192,6 +196,16 @@ namespace library_check_in
             {
                 e.Handled = true;
             }
+        }
+
+        private void dtgd_user_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show("grid", "asd");
+        }
+
+        private void dtgd_career_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show("grid", "asd");
         }
     }
 }
