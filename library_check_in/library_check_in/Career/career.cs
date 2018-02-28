@@ -27,34 +27,44 @@ namespace library_check_in.career
         /****************************************************************/
         public void save(string carrerName, string carrerKey)
         {
-            string command = "career_new @career_name = @carrerName, @career_key = @carrerKey ";
-            paramName[0] = "@carrerName";
-            paramName[1] = "@carrerKey";
+            string command = "career_new @career_name = @career_name, @career_key = @careerKey ";
+            paramName[0] = "@career_name";
+            paramName[1] = "@careerKey";
             param[0] = carrerName;
             param[1] = carrerKey;
             System.Data.DataTable dt = con.loadData(command, paramName, param);
         }
 
         /****************************************************************/
-        /*  Author      |                                               */
+        /*  Author      | Arcelia Aguirre                               */
         /*  Description | Modificar una carrera                         */
-        /*  Date        |                                               */
+        /*  Date        | 27-02-2018                                    */
         /*  Parameters  | int id, string carrerName, string carrerKey   */
         /****************************************************************/
         public void update(int id, string carrerName, string carrerKey)
         {
-
+            string command = "career_update @id = @id, @career_name = @career_name,	@career_key = @careerKey";
+            paramName[0] = "@id";
+            paramName[1] = "@career_name";
+            paramName[2] = "@careerKey";
+            param[0] = id;
+            param[1] = carrerName;
+            param[2] = carrerKey;
+            System.Data.DataTable dt = con.loadData(command, paramName, param);
         }
 
         /****************************************************************/
-        /*  Author      |                                               */
+        /*  Author      | Arcelia Aguirre                               */
         /*  Description | Eliminar una carrera                          */
-        /*  Date        |                                               */
+        /*  Date        | 27-02-2018                                    */
         /*  Parameters  | int id                                        */
         /****************************************************************/
         public void delete(int id)
         {
-
+            string command = "career_delete @id = @id";
+            paramName[0] = "@id";
+            param[0] = id;
+            System.Data.DataTable dt = con.loadData(command, paramName, param);
         }
 
         /****************************************************************/
