@@ -5,9 +5,9 @@
 /*  Name		|   not_student_consult				 				*/
 /*  Parameters	|   @id int											*/
 /*				|	@number varchar(7)								*/
-/*				|	@student_name varchar(250)						*/
+/*				|	@not_student_name varchar(250)					*/
 /*  Call		|   not_student_consult @id = 0,@number = '',		*/
-/*				|	@@not_student_name = '', @type_consult = ''		*/
+/*				|	@not_student_name = '', @type_consult = ''		*/
 /********************************************************************/
 create procedure not_student_consult @id int,@number varchar(7), @not_student_name varchar(250), @type_consult varchar(2)
 as
@@ -39,7 +39,7 @@ begin
         inner join type_not_student tns
 			on tns.id = ns.id_type_not_student
         where ns.active = 1 and
-            ns.name like @CONSTANT_LIKE + @student_name + @CONSTANT_LIKE;
+            ns.name like @CONSTANT_LIKE + @not_student_name + @CONSTANT_LIKE;
         return;
     end     
     

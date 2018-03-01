@@ -20,7 +20,7 @@ begin
 	set @father_last_name = ltrim(rtrim(@father_last_name));
 	set @mother_last_name = ltrim(rtrim(@mother_last_name));
 	
-	select @var_id_type_not_student = 1|id from type_not_student where id = @id_type_not_student and active = 1;
+	select @var_id_type_not_student = id from type_not_student where id = @id_type_not_student and active = 1;
 	
 	if @name = '' or @name = null or @name is null
 	begin

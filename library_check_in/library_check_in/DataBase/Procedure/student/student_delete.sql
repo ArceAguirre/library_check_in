@@ -10,7 +10,7 @@ create procedure student_delete @id int
 as
 begin
 	declare @var_id int;
-	select @var_id = 1|id from not_student where id = @id and active = 1;
+	select @var_id = id from not_student where id = @id and active = 1;
 	
 	if @var_id = '' or @var_id = null or @var_id is null or @var_id = 0
 	begin

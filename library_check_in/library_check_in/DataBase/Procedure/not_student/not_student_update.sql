@@ -58,8 +58,8 @@ begin
 			name = @name, 
 			father_last_name = @father_last_name, 
 			mother_last_name = @mother_last_name,
-			id_type_not_student = @id_type_not_student
-			updated_at getdate()
+			id_type_not_student = @id_type_not_student,
+			updated_at = getdate()
 		where id = @var_id_not_student;
 		
 		select 

@@ -26,7 +26,7 @@ begin
 	set @father_last_name = ltrim(rtrim(@father_last_name));
 	set @id_type_user = ltrim(rtrim(@id_type_user));
 	
-	select @var_id_type_user = 1|id from type_user where id = @id_type_user and active = 1;
+	select @var_id_type_user = id from type_user where id = @id_type_user and active = 1;
 	
 	select @var_id = 1|id from student where id = @id and active = 1;
 	

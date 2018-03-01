@@ -14,7 +14,7 @@ begin
 	
 	set @description = ltrim(rtrim(@description));
 	
-	select @var_id = 1|id from type_user where id = @id and active = 1;
+	select @var_id = id from type_user where id = @id and active = 1;
 	
 	if @description = '' or @description = null or @description is null
 	begin

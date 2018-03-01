@@ -24,7 +24,7 @@ begin
 	set @father_last_name = ltrim(rtrim(@father_last_name));
 	set @mother_last_name = ltrim(rtrim(@mother_last_name));
 	
-	select @var_id_type_user = 1|id from type_user where id = @id_type_user and active = 1;
+	select @var_id_type_user = id from type_user where id = @id_type_user and active = 1;
 	
 	if @user_name = '' or @user_name = null or @user_name is null
 	begin
