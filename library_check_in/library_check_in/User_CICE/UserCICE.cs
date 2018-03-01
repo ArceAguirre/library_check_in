@@ -36,15 +36,31 @@ namespace library_check_in.User_CICE
             System.Data.DataTable dt = con.loadData(command, paramName, param);
         }
 
-        /****************************************************************/
-        /*  Author      |                                               */
-        /*  Description | Modificar usuario                             */
-        /*  Date        |                                               */
-        /*  Parameters  |                                               */
-        /****************************************************************/
-        public void update()
+        /****************************************************************************************/
+        /*  Author      | Arcelia Aguirre                                                       */
+        /*  Description | Modificar usuario                                                     */
+        /*  Date        | 28-02-2018                                                            */
+        /*  Parameters  | int id,string user_name,string user_password,string user_password_old,*/
+        /*                string father_last_name, string mother_last_name, int id_type_user    */
+        /****************************************************************************************/
+        public void update(int id, string user_name, string user_password, string user_password_old, string father_last_name, string mother_last_name, int id_type_user)
         {
-
+            string command = "user_CICE_update @id = @id, @user_name = @user_name,	@user_password = @user_password, @user_password_old = @user_password_old, @father_last_name = @father_last_name, @mother_last_name = @mother_last_name, @id_type_user =  @id_type_user";
+            paramName[0] = "@id";
+            paramName[1] = "@user_name";
+            paramName[2] = "@user_password";
+            paramName[3] = "@user_password_old";
+            paramName[4] = "@father_last_name";
+            paramName[5] = "@mother_last_name";
+            paramName[6] = "@id_type_user";
+            param[0] = id;
+            param[1] = user_name;
+            param[2] = user_password;
+            param[3] = user_password_old;
+            param[4] = father_last_name;
+            param[5] = mother_last_name;
+            param[6] = id_type_user;
+            System.Data.DataTable dt = con.loadData(command, paramName, param);
         }
 
         /****************************************************************/
@@ -55,7 +71,10 @@ namespace library_check_in.User_CICE
         /****************************************************************/
         public void delete(int id)
         {
-
+            string command = "user_CICE_delete @id = @id";
+            paramName[0] = "@id";
+            param[0] = id;
+            System.Data.DataTable dt = con.loadData(command, paramName, param);
         }
 
         /****************************************************************/

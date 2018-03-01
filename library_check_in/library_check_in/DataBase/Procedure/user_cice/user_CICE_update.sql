@@ -9,11 +9,11 @@
 /*				|	@father_last_name varchar(50) not null			*/
 /*				|	@mother_last_name varchar(50)					*/
 /*				|	@id_type_user int not null						*/
-/*  Call		|   user_CICE__update @id int, @user_name = '',					*/
+/*  Call		|   user_CICE__update @id = 0, @user_name = '',		*/
 /*				|	@user_password = '', @father_last_name = '',	*/
 /*				|	@mother_last_name = '', @id_type_user = 0		*/
 /********************************************************************/
-create procedure user_CICE__update @id int, @user_name varchar(7), @user_password varchar(50),@father_last_name varchar(50),
+create procedure user_CICE_update @id int, @user_name varchar(7), @user_password varchar(50), @user_password_old varchar(50), @father_last_name varchar(50),
 	@mother_last_name varchar(50), @id_type_user int
 as
 begin
@@ -38,18 +38,18 @@ begin
             'El nombre está vacío' as error_message;
         return
 	end
-	if @father_last_name != null or @father_last_name is not null or @father_last_name != '' or @father_last_name != 0
+	if @father_last_name = null or @father_last_name is null or @father_last_name = ''
 	begin
 		select 
 			'002' as error,
 			'El apellido paterno está vacío' as error_message;
 		return;
 	end
-	if @var_password != null or @var_password is not null or @var_password != '' or @var_password != 0
+	if @var_password = null or @var_password is null or @var_password = ''
 	begin
 		select 
 			'003' as error,
-			'La contraseña paterno está vacía' as error_message;
+			'La contraseña está vacía' as error_message;
 		return;
 	end
 	if @var_id_type_user = '' or @var_id_type_user = null or @var_id_type_user is null or @var_id_type_user = 0
@@ -62,7 +62,7 @@ begin
 	
 	update user_CICE set 
 		user_name = @user_name, 
-		user_password = @user_password,
+		/*user_password = @user_password,*/
 		father_last_name = @father_last_name, 
 		mother_last_name = @mother_last_name,
 		id_type_user = @id_type_user, 

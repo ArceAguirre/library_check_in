@@ -43,9 +43,60 @@ namespace library_check_in{
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void frm_login_Load(object sender, EventArgs e)
         {
-            
+            this.txt_name.Text = "Usuario";
+            this.txt_password.Text = "password";
+        }
+
+        /****************************************************/
+        /*  Author      |   Arcelia Aguirre                 */
+        /*  Date        |   28-02-2018                      */
+        /*  Description |   Placeholder                     */
+        /****************************************************/
+        private void txt_name_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(this.txt_name.Text == "Usuario"){
+                this.txt_name.Text = "";
+            }
+        }
+
+        /****************************************************/
+        /*  Author      |   Arcelia Aguirre                 */
+        /*  Date        |   28-02-2018                      */
+        /*  Description |   Placeholder                     */
+        /****************************************************/
+        private void txt_name_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (this.txt_name.Text == "")
+            {
+                this.txt_name.Text = "Usuario";
+            }
+        }
+
+        /****************************************************/
+        /*  Author      |   Arcelia Aguirre                 */
+        /*  Date        |   28-02-2018                      */
+        /*  Description |   Placeholder                     */
+        /****************************************************/
+        private void txt_password_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (this.txt_password.Text == "password")
+            {
+                this.txt_password.Text = "";
+            }
+        }
+        /****************************************************/
+        /*  Author      |   Arcelia Aguirre                 */
+        /*  Date        |   28-02-2018                      */
+        /*  Description |   Placeholder                     */
+        /****************************************************/
+        private void txt_password_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (this.txt_password.Text == "")
+            {
+                this.txt_password.Text = "Usuario";
+            }
         }
     }
 }

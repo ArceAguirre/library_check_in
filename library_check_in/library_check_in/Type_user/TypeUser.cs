@@ -34,27 +34,34 @@ namespace library_check_in.Type_user
         }
 
         /****************************************************************/
-        /*  Author      |                                               */
+        /*  Author      | Arcelia Aguirre Treviño                       */
         /*  Description | Modificar un Tipo de Usuario                  */
-        /*  Date        |                                               */
-        /*  Parameters  |                                               */
+        /*  Date        | 28-02-2018                                    */
+        /*  Parameters  | int id, string description                    */
         /****************************************************************/
-        public void update()
+        public void update(int id, string description)
         {
-
+            string command = "type_user_update @id =  @id, @description = @description";
+            paramName[0] = "@id";
+            paramName[1] = "@description";
+            param[0] = id;
+            param[1] = description;
+            System.Data.DataTable dt = con.loadData(command, paramName, param);
         }
 
         /****************************************************************/
-        /*  Author      |                                               */
+        /*  Author      | Arcelia Aguirre Treviño                       */
         /*  Description | Eliminar un Tipo de Usuario                   */
-        /*  Date        |                                               */
+        /*  Date        | 28-02-2018                                    */
         /*  Parameters  | int id                                        */
         /****************************************************************/
         public void delete(int id)
         {
-
+            string command = "type_user_delete @id = @id";
+            paramName[0] = "@id";
+            param[0] = id;
+            System.Data.DataTable dt = con.loadData(command, paramName, param);
         }
-
         /****************************************************************/
         /*  Author      | Arcelia Aguirre Treviño                       */
         /*  Description | Consultar un Tipo de Usuario                  */

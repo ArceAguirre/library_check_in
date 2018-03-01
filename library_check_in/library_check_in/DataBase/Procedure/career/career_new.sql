@@ -15,7 +15,7 @@ begin
 	set @career_name = ltrim(rtrim(@career_name));
 	set @career_key = ltrim(rtrim(@career_key));
 	
-	select @var_key = 1|id from career where career_key = @career_key and active = 1;
+	select top 1 @var_key = id from career where career_key = @career_key and active = 1;
 	
 	if @career_name = '' or @career_name = null or @career_name is null
 	begin

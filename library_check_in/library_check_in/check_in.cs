@@ -77,9 +77,13 @@ namespace library_check_in
         /****************************************************************/
         private void btn_typeNotStudentSave_Click(object sender, EventArgs e)
         {
+            TextBox[] component = { txt_typeNotStudentName, txt_idTypeNotStudent };
             TypeNotStudent typeNotStudent = new TypeNotStudent();
-            typeNotStudent.save(txt_typeNotStudentName.Text);
-            txt_typeNotStudentName.Clear();
+            if (txt_idTypeNotStudent.Text == PROPS.EMPTY)
+                typeNotStudent.save(txt_typeNotStudentName.Text);
+            else
+                typeNotStudent.update(Int32.Parse(txt_idTypeNotStudent.Text), txt_typeNotStudentName.Text);
+            PROPS.clear(component);
             typeNotStudent.load_dtgdTypeNotStudent(ds, dtgd_typeNotStudent);
         }
 
@@ -103,9 +107,14 @@ namespace library_check_in
         /****************************************************************/
         private void btn_typeUserSave_Click(object sender, EventArgs e)
         {
+            TextBox[] component = { txt_idTypeUser, txt_typeUserName };
             TypeUser typeUser = new TypeUser();
-            typeUser.save(txt_typeUserName.Text);
-            txt_typeUserName.Clear();
+
+            if (txt_idTypeUser.Text == PROPS.EMPTY)
+                typeUser.save(txt_typeUserName.Text);
+            else
+                typeUser.update(Int32.Parse(txt_idTypeUser.Text), txt_typeUserName.Text);
+            PROPS.clear(component);
             typeUser.load_dtgdTypeUser(ds, dtgd_typeUser);
         }
 
@@ -127,19 +136,13 @@ namespace library_check_in
         /****************************************************************/
         private void btn_careerSave_Click(object sender, EventArgs e)
         {
+            TextBox[] component = { txt_idCareer, txt_careerName, txt_careerKey };
             Career career = new Career();
-
             if (txt_idCareer.Text == PROPS.EMPTY)
-            {
                 career.save(txt_careerName.Text, txt_careerKey.Text);
-            }
             else
-            {
                 career.update(Int32.Parse(txt_idCareer.Text), txt_careerName.Text, txt_careerKey.Text);
-            }
-            txt_idCareer.Clear();
-            txt_careerName.Clear();
-            txt_careerKey.Clear();
+            PROPS.clear(component);
             career.load_dtgdCareer(ds, dtgd_career);
         }
 
@@ -151,13 +154,13 @@ namespace library_check_in
         /****************************************************************/
         private void btn_userSave_Click(object sender, EventArgs e)
         {
+            TextBox[] component = { txt_idUser, txt_nameUser, txt_passwordUser, txt_fatherLastnameUser, txt_motherLastnameUser };
             UserCICE userCICE = new UserCICE();
-            userCICE.save(txt_nameUser.Text, txt_passwordUser.Text, txt_fatherLastnameUser.Text, 
-            txt_motherLastnameUser.Text, Int32.Parse(cmbbx_typeUser.SelectedValue.ToString()));
-            txt_nameUser.Clear();
-            txt_passwordUser.Clear();
-            txt_fatherLastnameUser.Clear();
-            txt_motherLastnameUser.Clear();
+            if (txt_idUser.Text == PROPS.EMPTY)
+                userCICE.save(txt_nameUser.Text, txt_passwordUser.Text, txt_fatherLastnameUser.Text, txt_motherLastnameUser.Text, Int32.Parse(cmbbx_typeUser.SelectedValue.ToString()));
+            else
+                userCICE.update(Int32.Parse(txt_idUser.Text), txt_nameUser.Text, txt_passwordUser.Text, PROPS.EMPTY, txt_fatherLastnameUser.Text, txt_motherLastnameUser.Text, Int32.Parse(cmbbx_typeUser.SelectedValue.ToString()));
+            PROPS.clear(component);
             userCICE.load_dtgdUser(ds, dtgd_user);
         }
 
@@ -177,30 +180,36 @@ namespace library_check_in
 
         }
 
+        
+
         /****************************************************************/
         /*  Author      | Arcelia Aguirre                               */
-        /*  Description | El campo solo acepta caracteres númericos     */
-        /*  Date        | 23-02-2018                                    */
-        /*  Parameters  | object sender, KeyPressEventArgs e            */
+        /*  Description | Datos para eliminar y modificar               */
+        /*  Date        | -02-2018                                    */
+        /*  Parameters  | object sender, DataGridViewCellEventArgs e    */
         /****************************************************************/
-        private void onlyNumbers(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
         private void dtgd_user_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show("grid", "asd");
+            TextBox[] component = { txt_idUser, txt_nameUser, txt_passwordUser, txt_fatherLastnameUser, txt_motherLastnameUser };
+            UserCICE userCICE = new UserCICE();
+            PROPS.clear(component);
+            if (this.dtgd_user.Columns[e.ColumnIndex].Name.Equals("delete_user"))
+            {
+                if (MessageBox.Show("¿Seguro que quieres borrar el Usuario?", "Borrar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    userCICE.delete(Int32.Parse(dtgd_user.CurrentRow.Cells["id_user"].Value.ToString()));
+                }
+                userCICE.load_dtgdUser(ds, dtgd_user);
+                return;
+            }
+            else if (this.dtgd_user.Columns[e.ColumnIndex].Name.Equals("edit_user"))
+            {
+                txt_idUser.Text = dtgd_user.CurrentRow.Cells["id_user"].Value.ToString();
+                txt_nameUser.Text = dtgd_user.CurrentRow.Cells["name_user"].Value.ToString();
+                cmbbx_typeUser.SelectedValue = Int32.Parse(dtgd_user.CurrentRow.Cells["id_type_user"].Value.ToString());
+                txt_fatherLastnameUser.Text = dtgd_user.CurrentRow.Cells["fatherLastName_user"].Value.ToString();
+                txt_motherLastnameUser.Text = dtgd_user.CurrentRow.Cells["motherLastName_user"].Value.ToString();
+            }
         }
 
         /****************************************************************/
@@ -211,11 +220,9 @@ namespace library_check_in
         /****************************************************************/
         private void dtgd_career_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            TextBox[] component = { txt_idCareer, txt_careerName, txt_careerKey };
             Career career = new Career();
-            txt_idCareer.Text = PROPS.EMPTY;
-            txt_careerName.Text = PROPS.EMPTY;
-            txt_careerKey.Text = PROPS.EMPTY;
-
+            PROPS.clear(component);
             if (this.dtgd_career.Columns[e.ColumnIndex].Name.Equals("delete_carrer"))
             {
                 if (MessageBox.Show("¿Seguro que quieres borrar la Licenciatura?", "Borrar", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -223,13 +230,76 @@ namespace library_check_in
                     career.delete(Int32.Parse(dtgd_career.CurrentRow.Cells["id_career"].Value.ToString()));
                 }
                 career.load_dtgdCareer(ds, dtgd_career);
-                return;   
-            }else if (this.dtgd_career.Columns[e.ColumnIndex].Name.Equals("edit_carrer"))
+                return;
+            }
+            else if (this.dtgd_career.Columns[e.ColumnIndex].Name.Equals("edit_carrer"))
             {
                 txt_idCareer.Text = dtgd_career.CurrentRow.Cells["id_career"].Value.ToString();
                 txt_careerName.Text = dtgd_career.CurrentRow.Cells["career_name"].Value.ToString();
                 txt_careerKey.Text = dtgd_career.CurrentRow.Cells["career_key"].Value.ToString();
             }
+        }
+
+        private void dtgd_typeNotStudent_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TextBox[] component = { txt_idTypeNotStudent, txt_typeNotStudentName};
+            TypeNotStudent typeNotStudent = new TypeNotStudent();
+            PROPS.clear(component);
+
+            if (this.dtgd_typeNotStudent.Columns[e.ColumnIndex].Name.Equals("delete_userNotStudent"))
+            {
+                if (MessageBox.Show("¿Seguro que quieres borrar elTtipo de No Estudiate?", "Borrar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    typeNotStudent.delete(Int32.Parse(dtgd_typeNotStudent.CurrentRow.Cells["id_typeNotStudent"].Value.ToString()));
+                }
+                typeNotStudent.load_dtgdTypeNotStudent(ds, dtgd_typeNotStudent);
+                return;
+            }
+            else if (this.dtgd_typeNotStudent.Columns[e.ColumnIndex].Name.Equals("edit_typeNotStudent"))
+            {
+                txt_idTypeNotStudent.Text = dtgd_typeNotStudent.CurrentRow.Cells["id_typeNotStudent"].Value.ToString();
+                txt_typeNotStudentName.Text = dtgd_typeNotStudent.CurrentRow.Cells["description_typeNotStudent"].Value.ToString();
+            }
+        }
+
+        private void dtgd_typeUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TextBox[] component = { txt_idTypeUser, txt_typeUserName };
+            TypeUser typeUser = new TypeUser();
+            PROPS.clear(component);
+
+            if (this.dtgd_typeUser.Columns[e.ColumnIndex].Name.Equals("delete_typeUser"))
+            {
+                if (MessageBox.Show("¿Seguro que quieres borrar el Tipo de Usuario?", "Borrar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    typeUser.delete(Int32.Parse(dtgd_typeUser.CurrentRow.Cells["id_typeUser"].Value.ToString()));
+                }
+                typeUser.load_dtgdTypeUser(ds, dtgd_typeUser);
+                    return;
+            }
+            else if (this.dtgd_typeUser.Columns[e.ColumnIndex].Name.Equals("edit_typeUser"))
+            {
+                txt_idTypeUser.Text = dtgd_typeUser.CurrentRow.Cells["id_typeUser"].Value.ToString();
+                txt_typeUserName.Text = dtgd_typeUser.CurrentRow.Cells["description_typeUser"].Value.ToString();
+            }
+        }
+
+        private void btn_careerCancel_Click(object sender, EventArgs e)
+        {
+            TextBox[] component = { txt_idCareer, txt_careerName, txt_careerKey };
+            PROPS.clear(component);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TextBox[] component = { txt_typeNotStudentName, txt_idTypeNotStudent};
+            PROPS.clear(component);
+        }
+
+        private void btn_typeUserCancel_Click(object sender, EventArgs e)
+        {
+            TextBox[] component = { txt_idTypeUser, txt_typeUserName };
+            PROPS.clear(component);
         }
     }
 }

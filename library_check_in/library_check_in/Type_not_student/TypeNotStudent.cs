@@ -34,25 +34,33 @@ namespace library_check_in.Type_not_student
         }
 
         /****************************************************************/
-        /*  Author      |                                               */
+        /*  Author      | Arcelia Aguirre                               */
         /*  Description | Modificar un tipo de no estudiante            */
-        /*  Date        |                                               */
-        /*  Parameters  |                                               */
+        /*  Date        | 28-02-2018                                    */
+        /*  Parameters  | int id, string description                    */
         /****************************************************************/
-        public void update()
+        public void update(int id, string description)
         {
-
+            string command = "type_not_student_update @id = @id , @description = @description";
+            paramName[0] = "@id";
+            paramName[1] = "@description";
+            param[0] = id;
+            param[1] = description;
+            System.Data.DataTable dt = con.loadData(command, paramName, param);
         }
 
         /****************************************************************/
-        /*  Author      |                                               */
+        /*  Author      | Arcelia Aguirre                               */
         /*  Description | Eliminar un tipo de no estudiante             */
-        /*  Date        |                                               */
+        /*  Date        | 28-02-2018                                    */
         /*  Parameters  | int id                                        */
         /****************************************************************/
         public void delete(int id)
         {
-
+            string command = "type_not_student_delete @id = @id";
+            paramName[0] = "@id";
+            param[0] = id;
+            System.Data.DataTable dt = con.loadData(command, paramName, param);
         }
 
         /****************************************************************/

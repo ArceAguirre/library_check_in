@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 
 /****************************************************/
-/*  Author      |   Arcelia Aguirre                 */
+/*  Author      |   Felipe Randolfo                 */
 /*  Date        |   02-02-2018                      */
 /*  Description |   Clase para conexión a la base   */
 /*                  de datos                        */

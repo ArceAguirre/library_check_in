@@ -11,7 +11,7 @@ as
 begin
 	declare @var_id integer;
 	
-	select @var_id = 1|id from career where id = @id and active = 1;
+	select top 1 @var_id = id from career where id = @id and active = 1;
 	
 	if @var_id = null or @var_id is null or @var_id = '' or @var_id = 0
 	begin
