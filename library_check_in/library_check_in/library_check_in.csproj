@@ -51,6 +51,7 @@
       <DependentUpon>check_in.cs</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
+    <Compile Include="DataBaseSettings.cs" />
     <Compile Include="frm_login.cs">
       <SubType>Form</SubType>
     </Compile>

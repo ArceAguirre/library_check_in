@@ -105,7 +105,7 @@
             this.txt_careerName = new System.Windows.Forms.TextBox();
             this.lbl_careerName = new System.Windows.Forms.Label();
             this.tbpg_typeNotStudent = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_typeNotStudentCancel = new System.Windows.Forms.Button();
             this.txt_idTypeNotStudent = new System.Windows.Forms.TextBox();
             this.dtgd_typeNotStudent = new System.Windows.Forms.DataGridView();
             this.id_typeNotStudent = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -116,6 +116,7 @@
             this.txt_typeNotStudentName = new System.Windows.Forms.TextBox();
             this.lbl_typeNotStudentName = new System.Windows.Forms.Label();
             this.tbpg_typeUser = new System.Windows.Forms.TabPage();
+            this.btn_typeUserCancel = new System.Windows.Forms.Button();
             this.txt_idTypeUser = new System.Windows.Forms.TextBox();
             this.dtgd_typeUser = new System.Windows.Forms.DataGridView();
             this.id_typeUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -126,6 +127,7 @@
             this.txt_typeUserName = new System.Windows.Forms.TextBox();
             this.lbl_typeUserName = new System.Windows.Forms.Label();
             this.tbpg_userCICE = new System.Windows.Forms.TabPage();
+            this.btn_userCancel = new System.Windows.Forms.Button();
             this.txt_idUser = new System.Windows.Forms.TextBox();
             this.lbl_typeUser = new System.Windows.Forms.Label();
             this.cmbbx_typeUser = new System.Windows.Forms.ComboBox();
@@ -139,17 +141,6 @@
             this.lbl_motherLastnameUser = new System.Windows.Forms.Label();
             this.lbl_fatherLastnameUser = new System.Windows.Forms.Label();
             this.dtgd_user = new System.Windows.Forms.DataGridView();
-            this.grpbx_info = new System.Windows.Forms.GroupBox();
-            this.btn_help = new System.Windows.Forms.Button();
-            this.btn_documentation = new System.Windows.Forms.Button();
-            this.btn_manual = new System.Windows.Forms.Button();
-            this.btn_install = new System.Windows.Forms.Button();
-            this.grpbx_database = new System.Windows.Forms.GroupBox();
-            this.btn_create = new System.Windows.Forms.Button();
-            this.btn_deleteDuplicate = new System.Windows.Forms.Button();
-            this.btn_delete = new System.Windows.Forms.Button();
-            this.btn_drop = new System.Windows.Forms.Button();
-            this.btn_typeUserCancel = new System.Windows.Forms.Button();
             this.id_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fatherLastName_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -158,6 +149,17 @@
             this.description_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edit_user = new System.Windows.Forms.DataGridViewButtonColumn();
             this.delete_user = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.grpbx_info = new System.Windows.Forms.GroupBox();
+            this.btn_help = new System.Windows.Forms.Button();
+            this.btn_documentation = new System.Windows.Forms.Button();
+            this.btn_manual = new System.Windows.Forms.Button();
+            this.btn_install = new System.Windows.Forms.Button();
+            this.grpbx_database = new System.Windows.Forms.GroupBox();
+            this.btn_seeder = new System.Windows.Forms.Button();
+            this.btn_create = new System.Windows.Forms.Button();
+            this.btn_deleteDuplicate = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_drop = new System.Windows.Forms.Button();
             this.tblctl_signIn.SuspendLayout();
             this.tbpg_signIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -234,7 +236,6 @@
             this.txt_number.Size = new System.Drawing.Size(234, 20);
             this.txt_number.TabIndex = 1;
             this.txt_number.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt_number.KeyPress += new System.Windows.Forms.KeyPressEventHandler(PROPS.onlyNumbers);
             // 
             // lbl_number
             // 
@@ -414,7 +415,6 @@
             this.txt_semester.Size = new System.Drawing.Size(100, 20);
             this.txt_semester.TabIndex = 9;
             this.txt_semester.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt_semester.KeyPress += new System.Windows.Forms.KeyPressEventHandler(PROPS.onlyNumbers);
             // 
             // cmbbx_carrer
             // 
@@ -643,7 +643,6 @@
             this.txt_semesterStudent.Size = new System.Drawing.Size(156, 20);
             this.txt_semesterStudent.TabIndex = 21;
             this.txt_semesterStudent.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt_semesterStudent.KeyPress += new System.Windows.Forms.KeyPressEventHandler(PROPS.onlyNumbers);
             // 
             // lbl_semesterStudent
             // 
@@ -662,7 +661,6 @@
             this.txt_numberStudent.Size = new System.Drawing.Size(158, 20);
             this.txt_numberStudent.TabIndex = 17;
             this.txt_numberStudent.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt_numberStudent.KeyPress += new System.Windows.Forms.KeyPressEventHandler(PROPS.onlyNumbers);
             // 
             // lbl_numberStudent
             // 
@@ -992,7 +990,7 @@
             // tbpg_typeNotStudent
             // 
             this.tbpg_typeNotStudent.BackColor = System.Drawing.Color.Transparent;
-            this.tbpg_typeNotStudent.Controls.Add(this.button1);
+            this.tbpg_typeNotStudent.Controls.Add(this.btn_typeNotStudentCancel);
             this.tbpg_typeNotStudent.Controls.Add(this.txt_idTypeNotStudent);
             this.tbpg_typeNotStudent.Controls.Add(this.dtgd_typeNotStudent);
             this.tbpg_typeNotStudent.Controls.Add(this.btn_typeNotStudentSave);
@@ -1005,19 +1003,19 @@
             this.tbpg_typeNotStudent.TabIndex = 1;
             this.tbpg_typeNotStudent.Text = "Tipos de No Estudiantes";
             // 
-            // button1
+            // btn_typeNotStudentCancel
             // 
-            this.button1.Location = new System.Drawing.Point(328, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 46;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_typeNotStudentCancel.Location = new System.Drawing.Point(328, 23);
+            this.btn_typeNotStudentCancel.Name = "btn_typeNotStudentCancel";
+            this.btn_typeNotStudentCancel.Size = new System.Drawing.Size(75, 23);
+            this.btn_typeNotStudentCancel.TabIndex = 46;
+            this.btn_typeNotStudentCancel.Text = "Cancelar";
+            this.btn_typeNotStudentCancel.UseVisualStyleBackColor = true;
+            this.btn_typeNotStudentCancel.Click += new System.EventHandler(this.btn_typeNotStudentCancel_Click);
             // 
             // txt_idTypeNotStudent
             // 
-            this.txt_idTypeNotStudent.Location = new System.Drawing.Point(409, 24);
+            this.txt_idTypeNotStudent.Location = new System.Drawing.Point(409, 25);
             this.txt_idTypeNotStudent.Name = "txt_idTypeNotStudent";
             this.txt_idTypeNotStudent.Size = new System.Drawing.Size(74, 20);
             this.txt_idTypeNotStudent.TabIndex = 45;
@@ -1074,7 +1072,7 @@
             // 
             // btn_typeNotStudentSave
             // 
-            this.btn_typeNotStudentSave.Location = new System.Drawing.Point(247, 22);
+            this.btn_typeNotStudentSave.Location = new System.Drawing.Point(247, 23);
             this.btn_typeNotStudentSave.Name = "btn_typeNotStudentSave";
             this.btn_typeNotStudentSave.Size = new System.Drawing.Size(75, 23);
             this.btn_typeNotStudentSave.TabIndex = 36;
@@ -1114,6 +1112,16 @@
             this.tbpg_typeUser.Size = new System.Drawing.Size(863, 705);
             this.tbpg_typeUser.TabIndex = 2;
             this.tbpg_typeUser.Text = "Tipos de Usuario";
+            // 
+            // btn_typeUserCancel
+            // 
+            this.btn_typeUserCancel.Location = new System.Drawing.Point(328, 23);
+            this.btn_typeUserCancel.Name = "btn_typeUserCancel";
+            this.btn_typeUserCancel.Size = new System.Drawing.Size(75, 23);
+            this.btn_typeUserCancel.TabIndex = 48;
+            this.btn_typeUserCancel.Text = "Cancelar";
+            this.btn_typeUserCancel.UseVisualStyleBackColor = true;
+            this.btn_typeUserCancel.Click += new System.EventHandler(this.btn_typeUserCancel_Click);
             // 
             // txt_idTypeUser
             // 
@@ -1174,7 +1182,7 @@
             // 
             // btn_typeUserSave
             // 
-            this.btn_typeUserSave.Location = new System.Drawing.Point(247, 22);
+            this.btn_typeUserSave.Location = new System.Drawing.Point(247, 23);
             this.btn_typeUserSave.Name = "btn_typeUserSave";
             this.btn_typeUserSave.Size = new System.Drawing.Size(75, 23);
             this.btn_typeUserSave.TabIndex = 38;
@@ -1202,6 +1210,7 @@
             // tbpg_userCICE
             // 
             this.tbpg_userCICE.BackColor = System.Drawing.Color.Transparent;
+            this.tbpg_userCICE.Controls.Add(this.btn_userCancel);
             this.tbpg_userCICE.Controls.Add(this.txt_idUser);
             this.tbpg_userCICE.Controls.Add(this.lbl_typeUser);
             this.tbpg_userCICE.Controls.Add(this.cmbbx_typeUser);
@@ -1222,9 +1231,19 @@
             this.tbpg_userCICE.TabIndex = 3;
             this.tbpg_userCICE.Text = "Usuarios";
             // 
+            // btn_userCancel
+            // 
+            this.btn_userCancel.Location = new System.Drawing.Point(386, 75);
+            this.btn_userCancel.Name = "btn_userCancel";
+            this.btn_userCancel.Size = new System.Drawing.Size(67, 23);
+            this.btn_userCancel.TabIndex = 46;
+            this.btn_userCancel.Text = "Cancelar";
+            this.btn_userCancel.UseVisualStyleBackColor = true;
+            this.btn_userCancel.Click += new System.EventHandler(this.btn_userCancel_Click);
+            // 
             // txt_idUser
             // 
-            this.txt_idUser.Location = new System.Drawing.Point(369, 76);
+            this.txt_idUser.Location = new System.Drawing.Point(282, 75);
             this.txt_idUser.Name = "txt_idUser";
             this.txt_idUser.Size = new System.Drawing.Size(83, 20);
             this.txt_idUser.TabIndex = 45;
@@ -1348,115 +1367,6 @@
             this.dtgd_user.TabIndex = 7;
             this.dtgd_user.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgd_user_CellContentClick);
             // 
-            // grpbx_info
-            // 
-            this.grpbx_info.Controls.Add(this.btn_help);
-            this.grpbx_info.Controls.Add(this.btn_documentation);
-            this.grpbx_info.Controls.Add(this.btn_manual);
-            this.grpbx_info.Controls.Add(this.btn_install);
-            this.grpbx_info.Location = new System.Drawing.Point(18, 165);
-            this.grpbx_info.Name = "grpbx_info";
-            this.grpbx_info.Size = new System.Drawing.Size(173, 149);
-            this.grpbx_info.TabIndex = 7;
-            this.grpbx_info.TabStop = false;
-            this.grpbx_info.Text = "Información";
-            // 
-            // btn_help
-            // 
-            this.btn_help.Location = new System.Drawing.Point(6, 108);
-            this.btn_help.Name = "btn_help";
-            this.btn_help.Size = new System.Drawing.Size(157, 23);
-            this.btn_help.TabIndex = 31;
-            this.btn_help.Text = "Ayuda";
-            this.btn_help.UseVisualStyleBackColor = true;
-            // 
-            // btn_documentation
-            // 
-            this.btn_documentation.Location = new System.Drawing.Point(6, 78);
-            this.btn_documentation.Name = "btn_documentation";
-            this.btn_documentation.Size = new System.Drawing.Size(156, 23);
-            this.btn_documentation.TabIndex = 30;
-            this.btn_documentation.Text = "Documentación";
-            this.btn_documentation.UseVisualStyleBackColor = true;
-            // 
-            // btn_manual
-            // 
-            this.btn_manual.Location = new System.Drawing.Point(6, 49);
-            this.btn_manual.Name = "btn_manual";
-            this.btn_manual.Size = new System.Drawing.Size(157, 23);
-            this.btn_manual.TabIndex = 29;
-            this.btn_manual.Text = "Manual de Usuario";
-            this.btn_manual.UseVisualStyleBackColor = true;
-            // 
-            // btn_install
-            // 
-            this.btn_install.Location = new System.Drawing.Point(6, 19);
-            this.btn_install.Name = "btn_install";
-            this.btn_install.Size = new System.Drawing.Size(157, 23);
-            this.btn_install.TabIndex = 28;
-            this.btn_install.Text = "Cómo Instalar";
-            this.btn_install.UseVisualStyleBackColor = true;
-            // 
-            // grpbx_database
-            // 
-            this.grpbx_database.Controls.Add(this.btn_create);
-            this.grpbx_database.Controls.Add(this.btn_deleteDuplicate);
-            this.grpbx_database.Controls.Add(this.btn_delete);
-            this.grpbx_database.Controls.Add(this.btn_drop);
-            this.grpbx_database.Location = new System.Drawing.Point(18, 18);
-            this.grpbx_database.Name = "grpbx_database";
-            this.grpbx_database.Size = new System.Drawing.Size(173, 141);
-            this.grpbx_database.TabIndex = 6;
-            this.grpbx_database.TabStop = false;
-            this.grpbx_database.Text = "Base de Datos";
-            // 
-            // btn_create
-            // 
-            this.btn_create.Location = new System.Drawing.Point(6, 19);
-            this.btn_create.Name = "btn_create";
-            this.btn_create.Size = new System.Drawing.Size(157, 23);
-            this.btn_create.TabIndex = 24;
-            this.btn_create.Text = "Crear Base de Datos";
-            this.btn_create.UseVisualStyleBackColor = true;
-            this.btn_create.Click += new System.EventHandler(this.btn_create_Click);
-            // 
-            // btn_deleteDuplicate
-            // 
-            this.btn_deleteDuplicate.Location = new System.Drawing.Point(6, 106);
-            this.btn_deleteDuplicate.Name = "btn_deleteDuplicate";
-            this.btn_deleteDuplicate.Size = new System.Drawing.Size(157, 23);
-            this.btn_deleteDuplicate.TabIndex = 27;
-            this.btn_deleteDuplicate.Text = "Borrar Registros Duplicados";
-            this.btn_deleteDuplicate.UseVisualStyleBackColor = true;
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.Location = new System.Drawing.Point(6, 77);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(157, 23);
-            this.btn_delete.TabIndex = 26;
-            this.btn_delete.Text = "Borrar Todos los Registros";
-            this.btn_delete.UseVisualStyleBackColor = true;
-            // 
-            // btn_drop
-            // 
-            this.btn_drop.Location = new System.Drawing.Point(6, 48);
-            this.btn_drop.Name = "btn_drop";
-            this.btn_drop.Size = new System.Drawing.Size(157, 23);
-            this.btn_drop.TabIndex = 25;
-            this.btn_drop.Text = "Borrar Base de Datos";
-            this.btn_drop.UseVisualStyleBackColor = true;
-            // 
-            // btn_typeUserCancel
-            // 
-            this.btn_typeUserCancel.Location = new System.Drawing.Point(328, 23);
-            this.btn_typeUserCancel.Name = "btn_typeUserCancel";
-            this.btn_typeUserCancel.Size = new System.Drawing.Size(75, 23);
-            this.btn_typeUserCancel.TabIndex = 48;
-            this.btn_typeUserCancel.Text = "Cancelar";
-            this.btn_typeUserCancel.UseVisualStyleBackColor = true;
-            this.btn_typeUserCancel.Click += new System.EventHandler(this.btn_typeUserCancel_Click);
-            // 
             // id_user
             // 
             this.id_user.DataPropertyName = "id_user";
@@ -1517,6 +1427,118 @@
             this.delete_user.ReadOnly = true;
             this.delete_user.Text = "Eliminar";
             this.delete_user.UseColumnTextForButtonValue = true;
+            // 
+            // grpbx_info
+            // 
+            this.grpbx_info.Controls.Add(this.btn_help);
+            this.grpbx_info.Controls.Add(this.btn_documentation);
+            this.grpbx_info.Controls.Add(this.btn_manual);
+            this.grpbx_info.Controls.Add(this.btn_install);
+            this.grpbx_info.Location = new System.Drawing.Point(18, 198);
+            this.grpbx_info.Name = "grpbx_info";
+            this.grpbx_info.Size = new System.Drawing.Size(173, 149);
+            this.grpbx_info.TabIndex = 7;
+            this.grpbx_info.TabStop = false;
+            this.grpbx_info.Text = "Información";
+            // 
+            // btn_help
+            // 
+            this.btn_help.Location = new System.Drawing.Point(6, 108);
+            this.btn_help.Name = "btn_help";
+            this.btn_help.Size = new System.Drawing.Size(157, 23);
+            this.btn_help.TabIndex = 31;
+            this.btn_help.Text = "Ayuda";
+            this.btn_help.UseVisualStyleBackColor = true;
+            // 
+            // btn_documentation
+            // 
+            this.btn_documentation.Location = new System.Drawing.Point(6, 78);
+            this.btn_documentation.Name = "btn_documentation";
+            this.btn_documentation.Size = new System.Drawing.Size(156, 23);
+            this.btn_documentation.TabIndex = 30;
+            this.btn_documentation.Text = "Documentación";
+            this.btn_documentation.UseVisualStyleBackColor = true;
+            // 
+            // btn_manual
+            // 
+            this.btn_manual.Location = new System.Drawing.Point(6, 49);
+            this.btn_manual.Name = "btn_manual";
+            this.btn_manual.Size = new System.Drawing.Size(157, 23);
+            this.btn_manual.TabIndex = 29;
+            this.btn_manual.Text = "Manual de Usuario";
+            this.btn_manual.UseVisualStyleBackColor = true;
+            // 
+            // btn_install
+            // 
+            this.btn_install.Location = new System.Drawing.Point(6, 19);
+            this.btn_install.Name = "btn_install";
+            this.btn_install.Size = new System.Drawing.Size(157, 23);
+            this.btn_install.TabIndex = 28;
+            this.btn_install.Text = "Cómo Instalar";
+            this.btn_install.UseVisualStyleBackColor = true;
+            // 
+            // grpbx_database
+            // 
+            this.grpbx_database.Controls.Add(this.btn_seeder);
+            this.grpbx_database.Controls.Add(this.btn_create);
+            this.grpbx_database.Controls.Add(this.btn_deleteDuplicate);
+            this.grpbx_database.Controls.Add(this.btn_delete);
+            this.grpbx_database.Controls.Add(this.btn_drop);
+            this.grpbx_database.Location = new System.Drawing.Point(18, 18);
+            this.grpbx_database.Name = "grpbx_database";
+            this.grpbx_database.Size = new System.Drawing.Size(173, 174);
+            this.grpbx_database.TabIndex = 6;
+            this.grpbx_database.TabStop = false;
+            this.grpbx_database.Text = "Base de Datos";
+            // 
+            // btn_seeder
+            // 
+            this.btn_seeder.Location = new System.Drawing.Point(6, 48);
+            this.btn_seeder.Name = "btn_seeder";
+            this.btn_seeder.Size = new System.Drawing.Size(157, 23);
+            this.btn_seeder.TabIndex = 28;
+            this.btn_seeder.Text = "Crear Datos Iniciales";
+            this.btn_seeder.UseVisualStyleBackColor = true;
+            this.btn_seeder.Click += new System.EventHandler(this.btn_seeder_Click);
+            // 
+            // btn_create
+            // 
+            this.btn_create.Enabled = false;
+            this.btn_create.Location = new System.Drawing.Point(6, 19);
+            this.btn_create.Name = "btn_create";
+            this.btn_create.Size = new System.Drawing.Size(157, 23);
+            this.btn_create.TabIndex = 24;
+            this.btn_create.Text = "Crear Base de Datos";
+            this.btn_create.UseVisualStyleBackColor = true;
+            this.btn_create.Click += new System.EventHandler(this.btn_create_Click);
+            // 
+            // btn_deleteDuplicate
+            // 
+            this.btn_deleteDuplicate.Location = new System.Drawing.Point(5, 135);
+            this.btn_deleteDuplicate.Name = "btn_deleteDuplicate";
+            this.btn_deleteDuplicate.Size = new System.Drawing.Size(157, 23);
+            this.btn_deleteDuplicate.TabIndex = 27;
+            this.btn_deleteDuplicate.Text = "Borrar Registros Duplicados";
+            this.btn_deleteDuplicate.UseVisualStyleBackColor = true;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Location = new System.Drawing.Point(5, 106);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(157, 23);
+            this.btn_delete.TabIndex = 26;
+            this.btn_delete.Text = "Borrar Todos los Registros";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            // 
+            // btn_drop
+            // 
+            this.btn_drop.Location = new System.Drawing.Point(6, 77);
+            this.btn_drop.Name = "btn_drop";
+            this.btn_drop.Size = new System.Drawing.Size(157, 23);
+            this.btn_drop.TabIndex = 25;
+            this.btn_drop.Text = "Borrar Base de Datos";
+            this.btn_drop.UseVisualStyleBackColor = true;
+            this.btn_drop.Click += new System.EventHandler(this.btn_drop_Click);
             // 
             // frm_signIn
             // 
@@ -1686,7 +1708,7 @@
         private System.Windows.Forms.DataGridViewButtonColumn delete_carrer;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_careerCancel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_typeNotStudentCancel;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_typeUser;
         private System.Windows.Forms.DataGridViewTextBoxColumn description_typeUser;
         private System.Windows.Forms.DataGridViewButtonColumn edit_typeUser;
@@ -1700,5 +1722,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn description_user;
         private System.Windows.Forms.DataGridViewButtonColumn edit_user;
         private System.Windows.Forms.DataGridViewButtonColumn delete_user;
+        private System.Windows.Forms.Button btn_userCancel;
+        private System.Windows.Forms.Button btn_seeder;
     }
 }

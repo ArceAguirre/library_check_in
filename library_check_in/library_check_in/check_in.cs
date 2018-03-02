@@ -57,6 +57,12 @@ namespace library_check_in
             typeUser.load_dtgdTypeUser(ds, dtgd_typeUser);
             userCICE.load_dtgdUser(ds, dtgd_user);
 
+
+            
+            /*DataBase*/
+            DataBaseSettings dataBaseSettings = new DataBaseSettings();
+            btn_create.Enabled = dataBaseSettings.ifExist().Rows.Count == 0 ? true : false;
+            btn_drop.Enabled = !btn_create.Enabled;
         }
 
         /****************************************************************/
@@ -164,28 +170,15 @@ namespace library_check_in
             userCICE.load_dtgdUser(ds, dtgd_user);
         }
 
-        /****************************************************************/
-        /*  Author      |                                               */
-        /*  Description |                                               */
-        /*  Date        |                                               */
-        /*  Parameters  |                                               */
-        /****************************************************************/
-        private void btn_create_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_add_Click(object sender, EventArgs e)
         {
 
         }
-
         
-
         /****************************************************************/
         /*  Author      | Arcelia Aguirre                               */
-        /*  Description | Datos para eliminar y modificar               */
-        /*  Date        | -02-2018                                    */
+        /*  Description | Datos para eliminar y modificar usuarios      */
+        /*  Date        | 28-02-2018                                    */
         /*  Parameters  | object sender, DataGridViewCellEventArgs e    */
         /****************************************************************/
         private void dtgd_user_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -214,7 +207,7 @@ namespace library_check_in
 
         /****************************************************************/
         /*  Author      | Arcelia Aguirre                               */
-        /*  Description | Datos para eliminar y modificar               */
+        /*  Description | Datos para eliminar y modificar carreras      */
         /*  Date        | 27-02-2018                                    */
         /*  Parameters  | object sender, DataGridViewCellEventArgs e    */
         /****************************************************************/
@@ -240,6 +233,13 @@ namespace library_check_in
             }
         }
 
+        /****************************************************************/
+        /*  Author      | Arcelia Aguirre                               */
+        /*  Description | Datos para eliminar y modificar typos de no   */
+        /*                estudiantes                                   */
+        /*  Date        | 27-02-2018                                    */
+        /*  Parameters  | object sender, DataGridViewCellEventArgs e    */
+        /****************************************************************/
         private void dtgd_typeNotStudent_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             TextBox[] component = { txt_idTypeNotStudent, txt_typeNotStudentName};
@@ -248,7 +248,7 @@ namespace library_check_in
 
             if (this.dtgd_typeNotStudent.Columns[e.ColumnIndex].Name.Equals("delete_userNotStudent"))
             {
-                if (MessageBox.Show("¿Seguro que quieres borrar elTtipo de No Estudiate?", "Borrar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("¿Seguro que quieres borrar el Tipo de No Estudiate?", "Borrar", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     typeNotStudent.delete(Int32.Parse(dtgd_typeNotStudent.CurrentRow.Cells["id_typeNotStudent"].Value.ToString()));
                 }
@@ -261,7 +261,12 @@ namespace library_check_in
                 txt_typeNotStudentName.Text = dtgd_typeNotStudent.CurrentRow.Cells["description_typeNotStudent"].Value.ToString();
             }
         }
-
+        /****************************************************************/
+        /*  Author      | Arcelia Aguirre                               */
+        /*  Description | Datos para eliminar y modificar Tipo Usuario  */
+        /*  Date        | 27-02-2018                                    */
+        /*  Parameters  | object sender, DataGridViewCellEventArgs e    */
+        /****************************************************************/
         private void dtgd_typeUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             TextBox[] component = { txt_idTypeUser, txt_typeUserName };
@@ -284,22 +289,85 @@ namespace library_check_in
             }
         }
 
+        /****************************************************************/
+        /*  Author      | Arcelia Aguirre                               */
+        /*  Description | Limpiar campos de Licenciatura                */
+        /*  Date        | 27-02-2018                                    */
+        /*  Parameters  | object sender, DataGridViewCellEventArgs e    */
+        /****************************************************************/
         private void btn_careerCancel_Click(object sender, EventArgs e)
         {
             TextBox[] component = { txt_idCareer, txt_careerName, txt_careerKey };
             PROPS.clear(component);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        /****************************************************************/
+        /*  Author      | Arcelia Aguirre                               */
+        /*  Description | Limpiar campos de tipos de no estudiantes     */
+        /*  Date        | 27-02-2018                                    */
+        /*  Parameters  | object sender, DataGridViewCellEventArgs e    */
+        /****************************************************************/
+        private void btn_typeNotStudentCancel_Click(object sender, EventArgs e)
         {
-            TextBox[] component = { txt_typeNotStudentName, txt_idTypeNotStudent};
+            TextBox[] component = { txt_typeNotStudentName, txt_idTypeNotStudent };
             PROPS.clear(component);
         }
 
+        /****************************************************************/
+        /*  Author      | Arcelia Aguirre                               */
+        /*  Description | Limpiar campos de Tipos de Usuarios           */
+        /*  Date        | 27-02-2018                                    */
+        /*  Parameters  | object sender, DataGridViewCellEventArgs e    */
+        /****************************************************************/
         private void btn_typeUserCancel_Click(object sender, EventArgs e)
         {
             TextBox[] component = { txt_idTypeUser, txt_typeUserName };
             PROPS.clear(component);
+        }
+
+        /****************************************************************/
+        /*  Author      | Arcelia Aguirre                               */
+        /*  Description | Limpiar campos de Usuarios                    */
+        /*  Date        | 01-03-2018                                    */
+        /*  Parameters  | object sender, DataGridViewCellEventArgs e    */
+        /****************************************************************/
+        private void btn_userCancel_Click(object sender, EventArgs e)
+        {
+            TextBox[] component = { txt_idUser, txt_nameUser, txt_passwordUser, txt_fatherLastnameUser, txt_motherLastnameUser };
+            PROPS.clear(component);
+        }
+
+        /****************************************************************/
+        /*  Author      | Arcelia Aguirre                               */
+        /*  Description | Crear la Base de Datos                        */
+        /*  Date        | 01-03-2018                                    */
+        /*  Parameters  | object sender, EventArgs e                    */
+        /****************************************************************/
+        private void btn_create_Click(object sender, EventArgs e)
+        {
+            DataBaseSettings dataBaseSettings = new DataBaseSettings();
+            dataBaseSettings.createDataBase();
+            btn_create.Enabled = dataBaseSettings.ifExist().Rows.Count == 0 ? true : false;
+            btn_drop.Enabled = !btn_create.Enabled;
+        }
+
+        /****************************************************************/
+        /*  Author      | Arcelia Aguirre                               */
+        /*  Description | Borrar la Base de Datos                       */
+        /*  Date        | 01-03-2018                                    */
+        /*  Parameters  | object sender, DataGridViewCellEventArgs e    */
+        /****************************************************************/
+        private void btn_drop_Click(object sender, EventArgs e)
+        {
+            DataBaseSettings dataBaseSettings = new DataBaseSettings();
+            dataBaseSettings.deleteDataBase();
+            btn_create.Enabled = dataBaseSettings.ifExist().Rows.Count == 0 ? true : false;
+            btn_drop.Enabled = !btn_create.Enabled;
+        }
+
+        private void btn_seeder_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
