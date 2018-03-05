@@ -45,7 +45,7 @@ begin
             'El nombre está vacío' as error_message;
         return
 	end
-	if @student_father_last_name != null or @student_father_last_name is not null or @student_father_last_name != '' or @student_father_last_name != 0
+	if @student_father_last_name = null or @student_father_last_name is null or @student_father_last_name = '' or @student_father_last_name = 0
 	begin
 		select 
 			'003' as error,
