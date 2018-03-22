@@ -10,7 +10,7 @@
 /*					@student_mother_last_name varchar(50)			*/
 /*					@semester int not null							*/
 /*					@id_career int not null							*/
-/*  Call		|   student_update @number = '', @student_name = '',	*/
+/*  Call		|   student_update @number = '', @student_name = '',*/
 /*					@student_father_last_name = '',					*/
 /*					@student_mother_last_name = '', @semester = 0,	*/
 /*					@id_career = 0									*/
@@ -45,7 +45,7 @@ begin
             'El nombre está vacío' as error_message;
         return
 	end
-	if @student_father_last_name = null or @student_father_last_name is null or @student_father_last_name = '' or @student_father_last_name = 0
+	if @student_father_last_name = null or @student_father_last_name is null or @student_father_last_name = ''
 	begin
 		select 
 			'003' as error,

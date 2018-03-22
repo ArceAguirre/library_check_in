@@ -15,5 +15,15 @@ namespace library_check_in
         {
             InitializeComponent();
         }
+
+        private void frm_report_Load(object sender, EventArgs e)
+        {
+            InitializeComponent();
+            var pos = this.PointToScreen(lbl_number.Location);
+            pos = ptrbx_CICE.PointToClient(pos);
+            lbl_number.Parent = ptrbx_CICE;
+            lbl_number.Location = pos;
+            lbl_number.BackColor = Color.Transparent;
+        }
     }
 }

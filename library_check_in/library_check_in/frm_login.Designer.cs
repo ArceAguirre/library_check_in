@@ -37,6 +37,7 @@
             this.img_logoUANL = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_password = new System.Windows.Forms.TextBox();
+            this.cbtn_closeLogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,6 +131,20 @@
             this.txt_password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_password_KeyPress);
             this.txt_password.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_password_KeyUp);
             // 
+            // cbtn_closeLogin
+            // 
+            this.cbtn_closeLogin.BackColor = System.Drawing.Color.Maroon;
+            this.cbtn_closeLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbtn_closeLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbtn_closeLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbtn_closeLogin.Location = new System.Drawing.Point(325, 12);
+            this.cbtn_closeLogin.Name = "cbtn_closeLogin";
+            this.cbtn_closeLogin.Size = new System.Drawing.Size(27, 23);
+            this.cbtn_closeLogin.TabIndex = 33;
+            this.cbtn_closeLogin.Text = "X";
+            this.cbtn_closeLogin.UseVisualStyleBackColor = false;
+            this.cbtn_closeLogin.Click += new System.EventHandler(this.cbtn_closeLogin_Click);
+            // 
             // frm_login
             // 
             this.AcceptButton = this.btn_login;
@@ -138,6 +153,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(364, 742);
+            this.Controls.Add(this.cbtn_closeLogin);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.txt_password);
             this.Controls.Add(this.txt_name);
@@ -146,6 +162,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.img_logoFCFM);
             this.Controls.Add(this.img_logoUANL);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -170,6 +187,7 @@
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txt_password;
+        private System.Windows.Forms.Button cbtn_closeLogin;
     }
 }
 

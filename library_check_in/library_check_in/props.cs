@@ -13,13 +13,16 @@ namespace library_check_in
 
         public static string CONSULT_L1 = "L1";
         public static string CONSULT_L2 = "L2";
+        public static string CONSULT_L3 = "L3";
         public static string CONSULT_C1 = "C1";
 
         public static string TABLE_CAREER = "career";
         public static string TABLE_TYPE_NOT_STUDENT = "type_not_student";
         public static string TABLE_TYPE_USER = "type_user";
         public static string TABLE_USER_CICE = "user_CICE";
-         
+        public static string TABLE_STUDENT = "student";
+        public static string TABLE_NOT_STUDENT = "not_student";
+
         /****************************************************************/
         /*  Author      | Arcelia Aguirre                               */
         /*  Description | Limpiar TextBox                               */

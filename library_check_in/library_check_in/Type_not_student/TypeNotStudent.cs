@@ -79,7 +79,6 @@ namespace library_check_in.Type_not_student
             param[1] = description;
             param[2] = type_consult;
             return con.loadData(command, PROPS.TABLE_TYPE_NOT_STUDENT, paramName, param);
-                
         }
 
         /****************************************************************/
@@ -89,6 +88,14 @@ namespace library_check_in.Type_not_student
         /*  Parameters  | DataSet ds, ComboBox cmbbx_typeUser           */
         /****************************************************************/
         public void load_cmbbxReport(DataSet ds, ComboBox cmbbx_report)
+        {
+            ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
+            cmbbx_report.DataSource = ds.Tables[PROPS.TABLE_TYPE_NOT_STUDENT];
+            cmbbx_report.DisplayMember = "description_typeNotStudent";
+            cmbbx_report.ValueMember = "id_typeNotStudent";
+        }
+
+        public void load_cmbbxReport(DataSet ds, ComboBox cmbbx_report, int a)
         {
             ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
             cmbbx_report.DataSource = ds.Tables[PROPS.TABLE_TYPE_NOT_STUDENT];

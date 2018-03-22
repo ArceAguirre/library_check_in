@@ -11,6 +11,7 @@ using library_check_in.career;
 using library_check_in.Type_not_student;
 using library_check_in.Type_user;
 using library_check_in.User_CICE;
+using library_check_in.Not_student;
 
 namespace library_check_in
 {
@@ -43,6 +44,7 @@ namespace library_check_in
             TypeNotStudent typeNotStudent = new TypeNotStudent();
             Career career = new Career();
             UserCICE userCICE = new UserCICE();
+            Student.Student student = new Student.Student();
             /*Combobox*/
             typeUser.load_cmbbxTypeUser(ds, cmbbx_typeUser);
             typeNotStudent.load_cmbbxReport(ds, cmbbx_report);
@@ -50,15 +52,18 @@ namespace library_check_in
             typeNotStudent.load_cmbbxReport(ds, cmbbx_typeRegister);
             career.load_cmbbxCarrer(ds, cmbbx_carrer);
             career.load_cmbbxCarrer(ds, cmbbox_careerStudent);
-
+            DataTable dt = cmbbx_typeRegister.DataSource as DataTable;
+            DataRow row = dt.NewRow();
+            row["description_typeNotStudent"] = "Alumno";
+            dt.Rows.Add(row);
+            cmbbx_typeRegister.SelectedIndex = cmbbx_typeRegister.Items.Count - 1;
             /*Grid*/
             career.load_dtgdCareer(ds, dtgd_career);
             typeNotStudent.load_dtgdTypeNotStudent(ds, dtgd_typeNotStudent);
             typeUser.load_dtgdTypeUser(ds, dtgd_typeUser);
             userCICE.load_dtgdUser(ds, dtgd_user);
+            student.load_dtgdStudent(ds, dtgd_student);
 
-
-            
             /*DataBase*/
             DataBaseSettings dataBaseSettings = new DataBaseSettings();
             btn_create.Enabled = dataBaseSettings.ifExist().Rows.Count == 0 ? true : false;
@@ -170,9 +175,35 @@ namespace library_check_in
             userCICE.load_dtgdUser(ds, dtgd_user);
         }
 
+        /****************************************************************/
+        /*  Author      | Juan Pablo Espinoza                           */
+        /*  Description | Agregar un estudiante                         */
+        /*  Date        | 08-03-2018                                    */
+        /*  Parameters  | object sender, EventArgs e                    */
+        /****************************************************************/
         private void btn_add_Click(object sender, EventArgs e)
         {
-
+            TextBox[] component = { txt_idStudent, txt_numberStudent, txt_nameStudent, txt_fatherLasnameStudent, txt_motherLasnameStudent, txt_semesterStudent, };
+           
+            if (cmbbx_typeRegister.Items.Count != cmbbx_typeRegister.SelectedIndex + 1 && cmbbx_typeRegister.SelectedValue is int)
+            {
+                NotStudent notStudent = new NotStudent();
+                if (txt_idStudent.Text == PROPS.EMPTY)
+                    notStudent.save(txt_numberStudent.Text, txt_nameStudent.Text, txt_fatherLasnameStudent.Text, txt_motherLasnameStudent.Text,Int32.Parse(cmbbx_typeRegister.SelectedValue.ToString()));
+                else
+                    notStudent.update(Int32.Parse(txt_idStudent.Text), txt_numberStudent.Text, txt_nameStudent.Text, txt_fatherLasnameStudent.Text, txt_motherLasnameStudent.Text, Int32.Parse(cmbbx_typeRegister.SelectedValue.ToString()));
+                notStudent.load_dtgdStudent(ds, dtgd_student, cmbbx_typeRegister);
+            }
+            else
+            {
+                Student.Student student = new Student.Student();
+                if (txt_idStudent.Text == PROPS.EMPTY)
+                    student.save(txt_numberStudent.Text, txt_nameStudent.Text, txt_fatherLasnameStudent.Text, txt_motherLasnameStudent.Text, txt_semesterStudent.Text, Int32.Parse(cmbbox_careerStudent.SelectedValue.ToString()));
+                else
+                    student.update(Int32.Parse(txt_idStudent.Text), txt_numberStudent.Text, txt_nameStudent.Text, txt_fatherLasnameStudent.Text, txt_motherLasnameStudent.Text, txt_semesterStudent.Text, Int32.Parse(cmbbox_careerStudent.SelectedValue.ToString()));
+                student.load_dtgdStudent(ds, dtgd_student);
+            }
+            PROPS.clear(component);
         }
         
         /****************************************************************/
@@ -353,9 +384,9 @@ namespace library_check_in
 
         /****************************************************************/
         /*  Author      | Arcelia Aguirre                               */
-        /*  Description | Borrar la Base de Datos                       */
-        /*  Date        | 01-03-2018                                    */
-        /*  Parameters  | object sender, DataGridViewCellEventArgs e    */
+        /*  Description | Agregar un usuario                            */
+        /*  Date        | 23-02-2018                                    */
+        /*  Parameters  | object sender, EventArgs e                    */
         /****************************************************************/
         private void btn_drop_Click(object sender, EventArgs e)
         {
@@ -369,5 +400,197 @@ namespace library_check_in
         {
 
         }
+
+        /****************************************************************/
+        /*  Author      | Juan Pablo Espiniza                           */
+        /*  Description | Eliminar estudiante                           */
+        /*  Date        | 08-03-2018                                    */
+        /*  Parameters  | object sender, EventArgs e                    */
+        /****************************************************************/
+        private void dtgd_student_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TextBox[] component = { txt_idStudent, txt_numberStudent, txt_nameStudent, txt_fatherLasnameStudent, txt_motherLasnameStudent, txt_semesterStudent };
+            Student.Student student = new Student.Student();
+            PROPS.clear(component);
+            if (this.dtgd_student.Columns[e.ColumnIndex].Name.Equals("delete_student"))
+            {
+                if (MessageBox.Show("¿Seguro que quieres borrar el Estudiante?", "Borrar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    student.delete(Int32.Parse(dtgd_student.CurrentRow.Cells["id_student"].Value.ToString()));
+                }
+                student.load_dtgdStudent(ds, dtgd_student);
+                return;
+            }
+            else if (this.dtgd_student.Columns[e.ColumnIndex].Name.Equals("edit_student"))
+            {
+                if (cmbbx_typeRegister.Items.Count != cmbbx_typeRegister.SelectedIndex + 1 && cmbbx_typeRegister.SelectedValue is int)
+                {
+                    txt_semesterStudent.Enabled = false;
+                    cmbbox_careerStudent.Enabled = false;
+                    txt_idStudent.Text = dtgd_student.CurrentRow.Cells["id_student"].Value.ToString();
+                    txt_numberStudent.Text = dtgd_student.CurrentRow.Cells["number"].Value.ToString();
+                    txt_nameStudent.Text = dtgd_student.CurrentRow.Cells["name"].Value.ToString();
+                    txt_fatherLasnameStudent.Text = dtgd_student.CurrentRow.Cells["father_last_name"].Value.ToString();
+                    txt_motherLasnameStudent.Text = dtgd_student.CurrentRow.Cells["mother_last_name"].Value.ToString();
+                    cmbbox_careerStudent.SelectedValue = 0;
+                }
+                else
+                {
+                    txt_semesterStudent.Enabled = true;
+                    cmbbox_careerStudent.Enabled = true;
+                    txt_idStudent.Text = dtgd_student.CurrentRow.Cells["id_student"].Value.ToString();
+                    txt_numberStudent.Text = dtgd_student.CurrentRow.Cells["number"].Value.ToString();
+                    txt_nameStudent.Text = dtgd_student.CurrentRow.Cells["student_name"].Value.ToString();
+                    txt_fatherLasnameStudent.Text = dtgd_student.CurrentRow.Cells["student_father_last_name"].Value.ToString();
+                    txt_motherLasnameStudent.Text = dtgd_student.CurrentRow.Cells["student_mother_last_name"].Value.ToString();
+                    txt_semesterStudent.Text = dtgd_student.CurrentRow.Cells["semester"].Value.ToString();
+                    cmbbox_careerStudent.SelectedValue = Int32.Parse(dtgd_student.CurrentRow.Cells["id_career"].Value.ToString());
+                }
+            }
+                
+        }
+
+        /****************************************************/
+        /*  Author      |   Arcelia Aguirre                 */
+        /*  Date        |   09-03-2018                      */
+        /*  Description |   Función para cerrar el form     */
+        /*  Parameteres |   object sender, EventArgs e      */
+        /****************************************************/
+        private void cbtn_closeCheck_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        /****************************************************/
+        /*  Author      |   Arcelia Aguirre                 */
+        /*  Date        |   09-03-2018                      */
+        /*  Description |   Función al cambiar el combobox  */
+        /*  Parameteres |   object sender, EventArgs e      */
+        /****************************************************/
+        private void cmbbx_typeRegister_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TextBox[] component = { txt_idStudent, txt_numberStudent, txt_nameStudent, txt_fatherLasnameStudent, txt_motherLasnameStudent, txt_semesterStudent };
+            PROPS.clear(component);
+            if(cmbbox_careerStudent.Items.Count > 0)
+            {
+                cmbbox_careerStudent.SelectedIndex = 0;
+            }
+            if (cmbbx_typeRegister.Items.Count != cmbbx_typeRegister.SelectedIndex + 1 && cmbbx_typeRegister.SelectedValue is int)
+            {
+                txt_semesterStudent.Enabled = false;
+                cmbbox_careerStudent.Enabled = false;
+                NotStudent notStudent = new NotStudent();
+                notStudent.load_dtgdStudent(ds, dtgd_student, cmbbx_typeRegister);
+            }
+            else
+            {
+                txt_semesterStudent.Enabled = true;
+                cmbbox_careerStudent.Enabled = true;
+                Student.Student student = new Student.Student();
+                student.load_dtgdStudent(ds, dtgd_student);
+            }
+        }
+
+        /****************************************************/
+        /*  Author      |   Juan Pablo Espinoza             */
+        /*  Date        |   13-03-2018                      */
+        /*  Description |   Bontón de Ayuda                 */
+        /*  Parameteres |   object sender, EventArgs e      */
+        /****************************************************/
+        private void btn_help_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Contacta a este correo: arce.aguirre.trevino@gmail.com ", "Ayuda");
+        }
+
+        /****************************************************/
+        /*  Author      |   Arcelia Aguirre                 */
+        /*  Date        |   21-03-2018                      */
+        /*  Description |   Acceder a la biblioteca         */
+        /*  Parameteres |   object sender, EventArgs e      */
+        /****************************************************/
+        private void txt_number_Enter(object sender, EventArgs e)
+        {
+            //TextBox[] component = { txt_number, txt_name, txt_numberData, txt_career, txt_signInDate };
+            //Access.Access access = new Access.Access();
+            //access.save(txt_number.Text, txt_number.Text);
+            //PROPS.clear(component);
+        }
+
+        /****************************************************/
+        /*  Author      |   Arcelia Aguirre                 */
+        /*  Date        |   21-03-2018                      */
+        /*  Description |   Acceder a la biblioteca         */
+        /*  Parameteres |   object sender, EventArgs e      */
+        /****************************************************/
+
+        static System.Windows.Forms.Timer myTimer = new System.Windows.Forms.Timer();
+        static int alarmCounter = 1;
+        static bool exitFlag = false;
+
+        private void txt_number_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txt_number.TextLength == 7)
+                {
+                    TextBox[] component = { txt_number, txt_name, txt_numberData, txt_career, txt_signInDate };
+                    Access.Access access = new Access.Access();
+                    DataTable dt = access.save(txt_number.Text, txt_number.Text);
+                    try
+                    {
+                        txt_numberData.Text = dt.Rows[0]["number"].ToString();
+                        txt_number.Text = dt.Rows[0]["number"].ToString();
+                        txt_name.Text = dt.Rows[0]["student_name"].ToString() + " " + dt.Rows[0]["student_father_last_name"].ToString() + " " + dt.Rows[0]["student_mother_last_name"].ToString();
+                        string semestre = dt.Rows[0]["semester"].ToString();
+                        txt_career.Text = dt.Rows[0]["career_name"].ToString();
+                        txt_signInDate.Text = dt.Rows[0]["signInDate"].ToString();
+                    }
+                    catch (Exception ex)
+                    {
+                        txt_numberData.Text = dt.Rows[0]["number"].ToString();
+                        txt_number.Text = dt.Rows[0]["number"].ToString();
+                        txt_name.Text = dt.Rows[0]["name"].ToString() + " " + dt.Rows[0]["father_last_name"].ToString() + " " + dt.Rows[0]["mother_last_name"].ToString();
+                        string semestre = dt.Rows[0]["semester"].ToString();
+                        txt_career.Text = dt.Rows[0]["description"].ToString();
+                        txt_signInDate.Text = dt.Rows[0]["signInDate"].ToString();
+                    }
+
+                    myTimer.Tick += new EventHandler(TimerEventProcessor);
+                    myTimer.Interval = 2000;
+                    myTimer.Start();
+
+                    if (exitFlag)
+                    {
+                        PROPS.clear(component);
+                    }
+                   
+                }
+            }
+                
+        }
+
+        private static void TimerEventProcessor(Object myObject,
+                                           EventArgs myEventArgs)
+        {
+            myTimer.Stop();
+
+            if(MessageBox.Show("Continue running?", "Count is: " + alarmCounter, MessageBoxButtons.YesNo) == DialogResult.Yes){
+
+            }
+                //// Displays a message box asking whether to continue running the timer.
+                //if (MessageBox.Show("Continue running?", "Count is: " + alarmCounter,
+                //   MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //{
+                //    // Restarts the timer and increments the counter.
+                //    alarmCounter += 1;
+                //    myTimer.Enabled = true;
+                //}
+                //else
+                //{
+                // Stops the timer.
+                exitFlag = true;
+            //}
+        }
+
     }
 }

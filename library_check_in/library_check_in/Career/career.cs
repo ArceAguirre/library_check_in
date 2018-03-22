@@ -32,7 +32,7 @@ namespace library_check_in.career
             paramName[1] = "@careerKey";
             param[0] = carrerName;
             param[1] = carrerKey;
-            System.Data.DataTable dt = con.loadData(command, paramName, param);
+            DataTable dt = con.loadData(command, paramName, param);
         }
 
         /****************************************************************/
@@ -50,7 +50,7 @@ namespace library_check_in.career
             param[0] = id;
             param[1] = carrerName;
             param[2] = carrerKey;
-            System.Data.DataTable dt = con.loadData(command, paramName, param);
+            DataTable dt = con.loadData(command, paramName, param);
         }
 
         /****************************************************************/
@@ -64,7 +64,7 @@ namespace library_check_in.career
             string command = "career_delete @id = @id";
             paramName[0] = "@id";
             param[0] = id;
-            System.Data.DataTable dt = con.loadData(command, paramName, param);
+            DataTable dt = con.loadData(command, paramName, param);
         }
 
         /****************************************************************/

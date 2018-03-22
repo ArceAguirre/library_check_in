@@ -143,3 +143,19 @@ create table user_CICE(
 	active bit default 1								/*Registro activo*/
 	foreign key(id_type_user) references type_user(id)
 );
+
+/****************************************************/
+/*  Author      |   Arcelia Aguirre                 */
+/*  Date        |   15-03-2018                      */
+/*  Change		|   Entrada a la biblioteca 		*/
+/****************************************************/
+create table access(
+	id integer primary key not null identity,			/*id incremental*/
+	id_student int,							/*Estudiante que ingresa*/
+	id_not_student int,						/*No estudiante que ingresa*/
+	created_at datetime default getdate() not null,		/*Fecha de creación del registro*/
+	updated_at datetime default getdate() not null,		/*Fecha de ultima modificación*/
+	active bit default 1								/*Registro activo*/
+	foreign key(id_student) references student(id),
+	foreign key(id_not_student) references not_student(id)
+);

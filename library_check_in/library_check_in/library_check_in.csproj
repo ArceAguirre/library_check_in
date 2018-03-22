@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Access\Access.cs" />
     <Compile Include="Career\Career.cs" />
     <Compile Include="check_in.cs">
       <SubType>Form</SubType>
