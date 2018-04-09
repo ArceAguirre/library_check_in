@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 
 /****************************************************/
-/*  Author      |   Felipe Randolfo                 */
+/*  Author      |   Arcelia Aguirre                 */
 /*  Date        |   02-02-2018                      */
 /*  Description |   Clase para conexión a la base   */
 /*                  de datos                        */
@@ -28,8 +28,16 @@ namespace library_check_in
 
         public Connection() { }
 
-
-        public System.Data.DataTable loadData(string command, string[] paramName, object[] param)
+        /*************************************************************/
+        /*  Author      |   Arcelia Aguirre                          */
+        /*  Date        |   02-02-2018                               */
+        /*  Description |   Ejecutar un comando                      */
+        /*  Parameters  |   string command Query                     */
+        /*                  string[] paramName, nombre del parámetro */
+        /*                  object[] param valor del parámetro       */
+        /*  Return      |   DataTable dt                             */
+        /*************************************************************/
+        public DataTable loadData(string command, string[] paramName, object[] param)
         {
             SqlConnection conn = new SqlConnection(Connection.CONNECTION_STRING);
             SqlCommand cmd = new SqlCommand(command, conn);
@@ -41,12 +49,24 @@ namespace library_check_in
                 }
                 else{break;}
             }
-            
-            System.Data.DataTable dt = new System.Data.DataTable();
+            DataTable dt = new DataTable();
             SqlDataAdapter adapt = new SqlDataAdapter(cmd);
             adapt.Fill(dt);
+            conn.Open();
+            //cmd.ExecuteNonQuery();
+            conn.Close();
             return dt;
         }
+        /*************************************************************/
+        /*  Author      |   Arcelia Aguirre                          */
+        /*  Date        |   02-02-2018                               */
+        /*  Description |   Ejecutar un comando                      */
+        /*  Parameters  |   string command Query                     */
+        /*                  string table Tabla que ejecuta           */
+        /*                  string[] paramName, nombre del parámetro */
+        /*                  object[] param valor del parámetro       */
+        /*  Return      |   DataSet dt                               */
+        /*************************************************************/
         public DataSet loadData(string command, string table, string[] paramName, object[] param)
         {
             SqlConnection conn = new SqlConnection(Connection.CONNECTION_STRING);
@@ -60,11 +80,13 @@ namespace library_check_in
                 }
                 else { break; }
             }
-
-            System.Data.DataTable dt = new System.Data.DataTable();
+            DataTable dt = new DataTable();
             SqlDataAdapter adapt = new SqlDataAdapter(cmd);
             adapt = new SqlDataAdapter(cmd);
             adapt.Fill(ds, table);
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
             return ds;
         }
     }

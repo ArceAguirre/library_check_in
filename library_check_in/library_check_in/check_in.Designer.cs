@@ -59,8 +59,6 @@
             this.lbl_reporte = new System.Windows.Forms.Label();
             this.tbpg_dataUp = new System.Windows.Forms.TabPage();
             this.dtgd_student = new System.Windows.Forms.DataGridView();
-            this.edit_student = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.delete_student = new System.Windows.Forms.DataGridViewButtonColumn();
             this.lbl_register = new System.Windows.Forms.Label();
             this.grpbx_unique = new System.Windows.Forms.GroupBox();
             this.txt_idStudent = new System.Windows.Forms.TextBox();
@@ -93,11 +91,6 @@
             this.txt_careerKey = new System.Windows.Forms.TextBox();
             this.lbl_careerKey = new System.Windows.Forms.Label();
             this.dtgd_career = new System.Windows.Forms.DataGridView();
-            this.id_career = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.career_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.career_key = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edit_carrer = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.delete_carrer = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btn_careerSave = new System.Windows.Forms.Button();
             this.txt_careerName = new System.Windows.Forms.TextBox();
             this.lbl_careerName = new System.Windows.Forms.Label();
@@ -105,10 +98,6 @@
             this.btn_typeNotStudentCancel = new System.Windows.Forms.Button();
             this.txt_idTypeNotStudent = new System.Windows.Forms.TextBox();
             this.dtgd_typeNotStudent = new System.Windows.Forms.DataGridView();
-            this.id_typeNotStudent = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description_typeNotStudent = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edit_typeNotStudent = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.delete_userNotStudent = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btn_typeNotStudentSave = new System.Windows.Forms.Button();
             this.txt_typeNotStudentName = new System.Windows.Forms.TextBox();
             this.lbl_typeNotStudentName = new System.Windows.Forms.Label();
@@ -116,10 +105,6 @@
             this.btn_typeUserCancel = new System.Windows.Forms.Button();
             this.txt_idTypeUser = new System.Windows.Forms.TextBox();
             this.dtgd_typeUser = new System.Windows.Forms.DataGridView();
-            this.id_typeUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description_typeUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edit_typeUser = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.delete_typeUser = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btn_typeUserSave = new System.Windows.Forms.Button();
             this.txt_typeUserName = new System.Windows.Forms.TextBox();
             this.lbl_typeUserName = new System.Windows.Forms.Label();
@@ -138,14 +123,6 @@
             this.lbl_motherLastnameUser = new System.Windows.Forms.Label();
             this.lbl_fatherLastnameUser = new System.Windows.Forms.Label();
             this.dtgd_user = new System.Windows.Forms.DataGridView();
-            this.id_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fatherLastName_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.motherLastName_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_type_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edit_user = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.delete_user = new System.Windows.Forms.DataGridViewButtonColumn();
             this.grpbx_info = new System.Windows.Forms.GroupBox();
             this.btn_help = new System.Windows.Forms.Button();
             this.btn_documentation = new System.Windows.Forms.Button();
@@ -158,6 +135,38 @@
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_drop = new System.Windows.Forms.Button();
             this.cbtn_closeCheck = new System.Windows.Forms.Button();
+            this.id_typeNotStudent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description_typeNotStudent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edit_typeNotStudent = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.delete_userNotStudent = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.id_typeUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description_typeUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edit_typeUser = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.delete_typeUser = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.id_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fatherLastName_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.motherLastName_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_type_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edit_user = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.delete_user = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.edit_student = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.delete_student = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.id_student = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.student_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.student_father_last_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.student_mother_last_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.semester = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_career_student = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.career_name_student = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.career_key_student = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_career = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.career_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.career_key = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edit_carrer = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.delete_carrer = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tblctl_signIn.SuspendLayout();
             this.tbpg_signIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptrbx_CICE)).BeginInit();
@@ -511,27 +520,22 @@
             this.dtgd_student.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgd_student.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.edit_student,
-            this.delete_student});
+            this.delete_student,
+            this.id_student,
+            this.number,
+            this.student_name,
+            this.student_father_last_name,
+            this.student_mother_last_name,
+            this.semester,
+            this.id_career_student,
+            this.career_name_student,
+            this.career_key_student});
             this.dtgd_student.Location = new System.Drawing.Point(356, 32);
             this.dtgd_student.Name = "dtgd_student";
-            this.dtgd_student.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtgd_student.RowHeadersVisible = false;
             this.dtgd_student.Size = new System.Drawing.Size(740, 751);
             this.dtgd_student.TabIndex = 23;
             this.dtgd_student.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgd_student_CellContentClick);
-            // 
-            // edit_student
-            // 
-            this.edit_student.HeaderText = "Editar";
-            this.edit_student.Name = "edit_student";
-            this.edit_student.Text = "Editar";
-            this.edit_student.UseColumnTextForButtonValue = true;
-            // 
-            // delete_student
-            // 
-            this.delete_student.HeaderText = "Eliminar";
-            this.delete_student.Name = "delete_student";
-            this.delete_student.Text = "Eliminar";
-            this.delete_student.UseColumnTextForButtonValue = true;
             // 
             // lbl_register
             // 
@@ -874,50 +878,6 @@
             this.dtgd_career.TabIndex = 3;
             this.dtgd_career.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgd_career_CellContentClick);
             // 
-            // id_career
-            // 
-            this.id_career.DataPropertyName = "id_career";
-            this.id_career.Frozen = true;
-            this.id_career.HeaderText = "ID";
-            this.id_career.Name = "id_career";
-            this.id_career.ReadOnly = true;
-            // 
-            // career_name
-            // 
-            this.career_name.DataPropertyName = "career_name";
-            this.career_name.Frozen = true;
-            this.career_name.HeaderText = "Nombre";
-            this.career_name.MaxInputLength = 250;
-            this.career_name.Name = "career_name";
-            this.career_name.ReadOnly = true;
-            // 
-            // career_key
-            // 
-            this.career_key.DataPropertyName = "career_key";
-            this.career_key.Frozen = true;
-            this.career_key.HeaderText = "Clave";
-            this.career_key.MaxInputLength = 6;
-            this.career_key.Name = "career_key";
-            this.career_key.ReadOnly = true;
-            // 
-            // edit_carrer
-            // 
-            this.edit_carrer.DataPropertyName = "edit_carrer";
-            this.edit_carrer.HeaderText = "Editar";
-            this.edit_carrer.Name = "edit_carrer";
-            this.edit_carrer.Text = "Editar";
-            this.edit_carrer.ToolTipText = "Editar";
-            this.edit_carrer.UseColumnTextForButtonValue = true;
-            // 
-            // delete_carrer
-            // 
-            this.delete_carrer.DataPropertyName = "delete_carrer";
-            this.delete_carrer.HeaderText = "Borrar";
-            this.delete_carrer.Name = "delete_carrer";
-            this.delete_carrer.ReadOnly = true;
-            this.delete_carrer.Text = "Borrar";
-            this.delete_carrer.UseColumnTextForButtonValue = true;
-            // 
             // btn_careerSave
             // 
             this.btn_careerSave.Location = new System.Drawing.Point(251, 51);
@@ -998,38 +958,6 @@
             this.dtgd_typeNotStudent.TabIndex = 7;
             this.dtgd_typeNotStudent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgd_typeNotStudent_CellContentClick);
             // 
-            // id_typeNotStudent
-            // 
-            this.id_typeNotStudent.DataPropertyName = "id_typeNotStudent";
-            this.id_typeNotStudent.HeaderText = "ID";
-            this.id_typeNotStudent.Name = "id_typeNotStudent";
-            this.id_typeNotStudent.ReadOnly = true;
-            // 
-            // description_typeNotStudent
-            // 
-            this.description_typeNotStudent.DataPropertyName = "description_typeNotStudent";
-            this.description_typeNotStudent.HeaderText = "Descripcion";
-            this.description_typeNotStudent.Name = "description_typeNotStudent";
-            this.description_typeNotStudent.ReadOnly = true;
-            // 
-            // edit_typeNotStudent
-            // 
-            this.edit_typeNotStudent.DataPropertyName = "edit_typeNotStudent";
-            this.edit_typeNotStudent.HeaderText = "Editar";
-            this.edit_typeNotStudent.Name = "edit_typeNotStudent";
-            this.edit_typeNotStudent.ReadOnly = true;
-            this.edit_typeNotStudent.Text = "Editar";
-            this.edit_typeNotStudent.UseColumnTextForButtonValue = true;
-            // 
-            // delete_userNotStudent
-            // 
-            this.delete_userNotStudent.DataPropertyName = "delete_userNotStudent";
-            this.delete_userNotStudent.HeaderText = "Eliminar";
-            this.delete_userNotStudent.Name = "delete_userNotStudent";
-            this.delete_userNotStudent.ReadOnly = true;
-            this.delete_userNotStudent.Text = "Eliminar";
-            this.delete_userNotStudent.UseColumnTextForButtonValue = true;
-            // 
             // btn_typeNotStudentSave
             // 
             this.btn_typeNotStudentSave.Location = new System.Drawing.Point(247, 23);
@@ -1109,38 +1037,6 @@
             this.dtgd_typeUser.Size = new System.Drawing.Size(815, 614);
             this.dtgd_typeUser.TabIndex = 7;
             this.dtgd_typeUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgd_typeUser_CellContentClick);
-            // 
-            // id_typeUser
-            // 
-            this.id_typeUser.DataPropertyName = "id_typeUser";
-            this.id_typeUser.HeaderText = "ID";
-            this.id_typeUser.Name = "id_typeUser";
-            this.id_typeUser.ReadOnly = true;
-            // 
-            // description_typeUser
-            // 
-            this.description_typeUser.DataPropertyName = "description_typeUser";
-            this.description_typeUser.HeaderText = "Descripcion";
-            this.description_typeUser.Name = "description_typeUser";
-            this.description_typeUser.ReadOnly = true;
-            // 
-            // edit_typeUser
-            // 
-            this.edit_typeUser.DataPropertyName = "edit_typeUser";
-            this.edit_typeUser.HeaderText = "Editar";
-            this.edit_typeUser.Name = "edit_typeUser";
-            this.edit_typeUser.ReadOnly = true;
-            this.edit_typeUser.Text = "Editar";
-            this.edit_typeUser.UseColumnTextForButtonValue = true;
-            // 
-            // delete_typeUser
-            // 
-            this.delete_typeUser.DataPropertyName = "delete_typeUser";
-            this.delete_typeUser.HeaderText = "Eliminar";
-            this.delete_typeUser.Name = "delete_typeUser";
-            this.delete_typeUser.ReadOnly = true;
-            this.delete_typeUser.Text = "Eliminar";
-            this.delete_typeUser.UseColumnTextForButtonValue = true;
             // 
             // btn_typeUserSave
             // 
@@ -1331,67 +1227,6 @@
             this.dtgd_user.TabIndex = 7;
             this.dtgd_user.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgd_user_CellContentClick);
             // 
-            // id_user
-            // 
-            this.id_user.DataPropertyName = "id_user";
-            this.id_user.HeaderText = "ID";
-            this.id_user.Name = "id_user";
-            this.id_user.ReadOnly = true;
-            // 
-            // name_user
-            // 
-            this.name_user.DataPropertyName = "name_user";
-            this.name_user.HeaderText = "Nombre";
-            this.name_user.Name = "name_user";
-            this.name_user.ReadOnly = true;
-            // 
-            // fatherLastName_user
-            // 
-            this.fatherLastName_user.DataPropertyName = "fatherLastName_user";
-            this.fatherLastName_user.HeaderText = "Apellido paterno";
-            this.fatherLastName_user.Name = "fatherLastName_user";
-            this.fatherLastName_user.ReadOnly = true;
-            // 
-            // motherLastName_user
-            // 
-            this.motherLastName_user.DataPropertyName = "motherLastName_user";
-            this.motherLastName_user.HeaderText = "Apellido materno";
-            this.motherLastName_user.Name = "motherLastName_user";
-            this.motherLastName_user.ReadOnly = true;
-            // 
-            // id_type_user
-            // 
-            this.id_type_user.DataPropertyName = "id_type_user";
-            this.id_type_user.HeaderText = "ID Tipo de usuario";
-            this.id_type_user.Name = "id_type_user";
-            this.id_type_user.ReadOnly = true;
-            this.id_type_user.Visible = false;
-            // 
-            // description_user
-            // 
-            this.description_user.DataPropertyName = "description_user";
-            this.description_user.HeaderText = "Descripcion";
-            this.description_user.Name = "description_user";
-            this.description_user.ReadOnly = true;
-            // 
-            // edit_user
-            // 
-            this.edit_user.DataPropertyName = "edit_user";
-            this.edit_user.HeaderText = "Editar";
-            this.edit_user.Name = "edit_user";
-            this.edit_user.ReadOnly = true;
-            this.edit_user.Text = "Editar";
-            this.edit_user.UseColumnTextForButtonValue = true;
-            // 
-            // delete_user
-            // 
-            this.delete_user.DataPropertyName = "delete_user";
-            this.delete_user.HeaderText = "Eliminar";
-            this.delete_user.Name = "delete_user";
-            this.delete_user.ReadOnly = true;
-            this.delete_user.Text = "Eliminar";
-            this.delete_user.UseColumnTextForButtonValue = true;
-            // 
             // grpbx_info
             // 
             this.grpbx_info.Controls.Add(this.btn_help);
@@ -1518,6 +1353,271 @@
             this.cbtn_closeCheck.Text = "X";
             this.cbtn_closeCheck.UseVisualStyleBackColor = false;
             this.cbtn_closeCheck.Click += new System.EventHandler(this.cbtn_closeCheck_Click);
+            // 
+            // id_typeNotStudent
+            // 
+            this.id_typeNotStudent.DataPropertyName = "id_typeNotStudent";
+            this.id_typeNotStudent.HeaderText = "ID";
+            this.id_typeNotStudent.Name = "id_typeNotStudent";
+            this.id_typeNotStudent.ReadOnly = true;
+            // 
+            // description_typeNotStudent
+            // 
+            this.description_typeNotStudent.DataPropertyName = "description_typeNotStudent";
+            this.description_typeNotStudent.HeaderText = "Descripcion";
+            this.description_typeNotStudent.Name = "description_typeNotStudent";
+            this.description_typeNotStudent.ReadOnly = true;
+            // 
+            // edit_typeNotStudent
+            // 
+            this.edit_typeNotStudent.DataPropertyName = "edit_typeNotStudent";
+            this.edit_typeNotStudent.HeaderText = "Editar";
+            this.edit_typeNotStudent.Name = "edit_typeNotStudent";
+            this.edit_typeNotStudent.ReadOnly = true;
+            this.edit_typeNotStudent.Text = "Editar";
+            this.edit_typeNotStudent.UseColumnTextForButtonValue = true;
+            this.edit_typeNotStudent.Width = 75;
+            // 
+            // delete_userNotStudent
+            // 
+            this.delete_userNotStudent.DataPropertyName = "delete_userNotStudent";
+            this.delete_userNotStudent.HeaderText = "Eliminar";
+            this.delete_userNotStudent.Name = "delete_userNotStudent";
+            this.delete_userNotStudent.ReadOnly = true;
+            this.delete_userNotStudent.Text = "Eliminar";
+            this.delete_userNotStudent.UseColumnTextForButtonValue = true;
+            this.delete_userNotStudent.Width = 75;
+            // 
+            // id_typeUser
+            // 
+            this.id_typeUser.DataPropertyName = "id_typeUser";
+            this.id_typeUser.HeaderText = "ID";
+            this.id_typeUser.Name = "id_typeUser";
+            this.id_typeUser.ReadOnly = true;
+            // 
+            // description_typeUser
+            // 
+            this.description_typeUser.DataPropertyName = "description_typeUser";
+            this.description_typeUser.HeaderText = "Descripcion";
+            this.description_typeUser.Name = "description_typeUser";
+            this.description_typeUser.ReadOnly = true;
+            // 
+            // edit_typeUser
+            // 
+            this.edit_typeUser.DataPropertyName = "edit_typeUser";
+            this.edit_typeUser.HeaderText = "Editar";
+            this.edit_typeUser.Name = "edit_typeUser";
+            this.edit_typeUser.ReadOnly = true;
+            this.edit_typeUser.Text = "Editar";
+            this.edit_typeUser.UseColumnTextForButtonValue = true;
+            this.edit_typeUser.Width = 75;
+            // 
+            // delete_typeUser
+            // 
+            this.delete_typeUser.DataPropertyName = "delete_typeUser";
+            this.delete_typeUser.HeaderText = "Eliminar";
+            this.delete_typeUser.Name = "delete_typeUser";
+            this.delete_typeUser.ReadOnly = true;
+            this.delete_typeUser.Text = "Eliminar";
+            this.delete_typeUser.UseColumnTextForButtonValue = true;
+            this.delete_typeUser.Width = 75;
+            // 
+            // id_user
+            // 
+            this.id_user.DataPropertyName = "id_user";
+            this.id_user.HeaderText = "ID";
+            this.id_user.Name = "id_user";
+            this.id_user.ReadOnly = true;
+            // 
+            // name_user
+            // 
+            this.name_user.DataPropertyName = "name_user";
+            this.name_user.HeaderText = "Nombre";
+            this.name_user.Name = "name_user";
+            this.name_user.ReadOnly = true;
+            // 
+            // fatherLastName_user
+            // 
+            this.fatherLastName_user.DataPropertyName = "fatherLastName_user";
+            this.fatherLastName_user.HeaderText = "Apellido paterno";
+            this.fatherLastName_user.Name = "fatherLastName_user";
+            this.fatherLastName_user.ReadOnly = true;
+            // 
+            // motherLastName_user
+            // 
+            this.motherLastName_user.DataPropertyName = "motherLastName_user";
+            this.motherLastName_user.HeaderText = "Apellido materno";
+            this.motherLastName_user.Name = "motherLastName_user";
+            this.motherLastName_user.ReadOnly = true;
+            // 
+            // id_type_user
+            // 
+            this.id_type_user.DataPropertyName = "id_type_user";
+            this.id_type_user.HeaderText = "ID Tipo de usuario";
+            this.id_type_user.Name = "id_type_user";
+            this.id_type_user.ReadOnly = true;
+            this.id_type_user.Visible = false;
+            // 
+            // description_user
+            // 
+            this.description_user.DataPropertyName = "description_user";
+            this.description_user.HeaderText = "Descripcion";
+            this.description_user.Name = "description_user";
+            this.description_user.ReadOnly = true;
+            // 
+            // edit_user
+            // 
+            this.edit_user.DataPropertyName = "edit_user";
+            this.edit_user.HeaderText = "Editar";
+            this.edit_user.Name = "edit_user";
+            this.edit_user.ReadOnly = true;
+            this.edit_user.Text = "Editar";
+            this.edit_user.UseColumnTextForButtonValue = true;
+            this.edit_user.Width = 75;
+            // 
+            // delete_user
+            // 
+            this.delete_user.DataPropertyName = "delete_user";
+            this.delete_user.HeaderText = "Eliminar";
+            this.delete_user.Name = "delete_user";
+            this.delete_user.ReadOnly = true;
+            this.delete_user.Text = "Eliminar";
+            this.delete_user.UseColumnTextForButtonValue = true;
+            this.delete_user.Width = 75;
+            // 
+            // edit_student
+            // 
+            this.edit_student.HeaderText = "Editar";
+            this.edit_student.Name = "edit_student";
+            this.edit_student.Text = "Editar";
+            this.edit_student.UseColumnTextForButtonValue = true;
+            this.edit_student.Width = 75;
+            // 
+            // delete_student
+            // 
+            this.delete_student.HeaderText = "Eliminar";
+            this.delete_student.Name = "delete_student";
+            this.delete_student.Text = "Eliminar";
+            this.delete_student.UseColumnTextForButtonValue = true;
+            this.delete_student.Width = 75;
+            // 
+            // id_student
+            // 
+            this.id_student.DataPropertyName = "id_student";
+            this.id_student.HeaderText = "ID";
+            this.id_student.Name = "id_student";
+            this.id_student.ReadOnly = true;
+            this.id_student.Width = 50;
+            // 
+            // number
+            // 
+            this.number.DataPropertyName = "number";
+            this.number.HeaderText = "Matricula";
+            this.number.Name = "number";
+            this.number.ReadOnly = true;
+            this.number.Width = 75;
+            // 
+            // student_name
+            // 
+            this.student_name.DataPropertyName = "student_name";
+            this.student_name.HeaderText = "Nombre";
+            this.student_name.Name = "student_name";
+            this.student_name.ReadOnly = true;
+            // 
+            // student_father_last_name
+            // 
+            this.student_father_last_name.DataPropertyName = "student_father_last_name";
+            this.student_father_last_name.FillWeight = 150F;
+            this.student_father_last_name.HeaderText = "Apellido paterno";
+            this.student_father_last_name.Name = "student_father_last_name";
+            this.student_father_last_name.ReadOnly = true;
+            // 
+            // student_mother_last_name
+            // 
+            this.student_mother_last_name.DataPropertyName = "student_mother_last_name";
+            this.student_mother_last_name.HeaderText = "Apellido materno";
+            this.student_mother_last_name.Name = "student_mother_last_name";
+            this.student_mother_last_name.ReadOnly = true;
+            // 
+            // semester
+            // 
+            this.semester.DataPropertyName = "semester";
+            this.semester.HeaderText = "Semestre";
+            this.semester.Name = "semester";
+            this.semester.ReadOnly = true;
+            this.semester.Width = 75;
+            // 
+            // id_career_student
+            // 
+            this.id_career_student.DataPropertyName = "id_career_student";
+            this.id_career_student.HeaderText = "ID Carrera";
+            this.id_career_student.Name = "id_career_student";
+            this.id_career_student.ReadOnly = true;
+            this.id_career_student.Width = 50;
+            // 
+            // career_name_student
+            // 
+            this.career_name_student.DataPropertyName = "career_name_student";
+            this.career_name_student.HeaderText = "Carrera";
+            this.career_name_student.Name = "career_name_student";
+            this.career_name_student.ReadOnly = true;
+            // 
+            // career_key_student
+            // 
+            this.career_key_student.DataPropertyName = "career_key_student";
+            this.career_key_student.HeaderText = "Clave carrera";
+            this.career_key_student.Name = "career_key_student";
+            this.career_key_student.ReadOnly = true;
+            this.career_key_student.Width = 50;
+            // 
+            // id_career
+            // 
+            this.id_career.DataPropertyName = "id_career";
+            this.id_career.Frozen = true;
+            this.id_career.HeaderText = "ID";
+            this.id_career.Name = "id_career";
+            this.id_career.ReadOnly = true;
+            this.id_career.Width = 50;
+            // 
+            // career_name
+            // 
+            this.career_name.DataPropertyName = "career_name";
+            this.career_name.Frozen = true;
+            this.career_name.HeaderText = "Nombre";
+            this.career_name.MaxInputLength = 250;
+            this.career_name.Name = "career_name";
+            this.career_name.ReadOnly = true;
+            this.career_name.Width = 300;
+            // 
+            // career_key
+            // 
+            this.career_key.DataPropertyName = "career_key";
+            this.career_key.Frozen = true;
+            this.career_key.HeaderText = "Clave";
+            this.career_key.MaxInputLength = 6;
+            this.career_key.Name = "career_key";
+            this.career_key.ReadOnly = true;
+            this.career_key.Width = 50;
+            // 
+            // edit_carrer
+            // 
+            this.edit_carrer.DataPropertyName = "edit_carrer";
+            this.edit_carrer.HeaderText = "Editar";
+            this.edit_carrer.Name = "edit_carrer";
+            this.edit_carrer.Text = "Editar";
+            this.edit_carrer.ToolTipText = "Editar";
+            this.edit_carrer.UseColumnTextForButtonValue = true;
+            this.edit_carrer.Width = 75;
+            // 
+            // delete_carrer
+            // 
+            this.delete_carrer.DataPropertyName = "delete_carrer";
+            this.delete_carrer.HeaderText = "Borrar";
+            this.delete_carrer.Name = "delete_carrer";
+            this.delete_carrer.ReadOnly = true;
+            this.delete_carrer.Text = "Borrar";
+            this.delete_carrer.UseColumnTextForButtonValue = true;
+            this.delete_carrer.Width = 75;
             // 
             // frm_signIn
             // 
@@ -1661,27 +1761,27 @@
         private System.Windows.Forms.Label lbl_typeUser;
         private System.Windows.Forms.ComboBox cmbbx_typeUser;
         private System.Windows.Forms.ComboBox cmbbox_careerStudent;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_typeNotStudent;
-        private System.Windows.Forms.DataGridViewTextBoxColumn description_typeNotStudent;
-        private System.Windows.Forms.DataGridViewButtonColumn edit_typeNotStudent;
-        private System.Windows.Forms.DataGridViewButtonColumn delete_userNotStudent;
         private System.Windows.Forms.TextBox txt_idCareer;
         private System.Windows.Forms.TextBox txt_idTypeNotStudent;
         private System.Windows.Forms.TextBox txt_idTypeUser;
         private System.Windows.Forms.TextBox txt_idUser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_career;
-        private System.Windows.Forms.DataGridViewTextBoxColumn career_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn career_key;
-        private System.Windows.Forms.DataGridViewButtonColumn edit_carrer;
-        private System.Windows.Forms.DataGridViewButtonColumn delete_carrer;
         private System.Windows.Forms.PictureBox ptrbx_CICE;
         private System.Windows.Forms.Button btn_careerCancel;
         private System.Windows.Forms.Button btn_typeNotStudentCancel;
+        private System.Windows.Forms.Button btn_typeUserCancel;
+        private System.Windows.Forms.Button btn_userCancel;
+        private System.Windows.Forms.Button btn_seeder;
+        private System.Windows.Forms.DataGridView dtgd_student;
+        private System.Windows.Forms.TextBox txt_idStudent;
+        private System.Windows.Forms.Button cbtn_closeCheck;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_typeNotStudent;
+        private System.Windows.Forms.DataGridViewTextBoxColumn description_typeNotStudent;
+        private System.Windows.Forms.DataGridViewButtonColumn edit_typeNotStudent;
+        private System.Windows.Forms.DataGridViewButtonColumn delete_userNotStudent;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_typeUser;
         private System.Windows.Forms.DataGridViewTextBoxColumn description_typeUser;
         private System.Windows.Forms.DataGridViewButtonColumn edit_typeUser;
         private System.Windows.Forms.DataGridViewButtonColumn delete_typeUser;
-        private System.Windows.Forms.Button btn_typeUserCancel;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_user;
         private System.Windows.Forms.DataGridViewTextBoxColumn name_user;
         private System.Windows.Forms.DataGridViewTextBoxColumn fatherLastName_user;
@@ -1690,12 +1790,21 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn description_user;
         private System.Windows.Forms.DataGridViewButtonColumn edit_user;
         private System.Windows.Forms.DataGridViewButtonColumn delete_user;
-        private System.Windows.Forms.Button btn_userCancel;
-        private System.Windows.Forms.Button btn_seeder;
-        private System.Windows.Forms.DataGridView dtgd_student;
-        private System.Windows.Forms.TextBox txt_idStudent;
         private System.Windows.Forms.DataGridViewButtonColumn edit_student;
         private System.Windows.Forms.DataGridViewButtonColumn delete_student;
-        private System.Windows.Forms.Button cbtn_closeCheck;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_student;
+        private System.Windows.Forms.DataGridViewTextBoxColumn number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn student_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn student_father_last_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn student_mother_last_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn semester;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_career_student;
+        private System.Windows.Forms.DataGridViewTextBoxColumn career_name_student;
+        private System.Windows.Forms.DataGridViewTextBoxColumn career_key_student;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_career;
+        private System.Windows.Forms.DataGridViewTextBoxColumn career_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn career_key;
+        private System.Windows.Forms.DataGridViewButtonColumn edit_carrer;
+        private System.Windows.Forms.DataGridViewButtonColumn delete_carrer;
     }
 }
