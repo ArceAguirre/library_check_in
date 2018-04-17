@@ -46,23 +46,21 @@ namespace library_check_in{
             UserCICE userCICE = new UserCICE();
 
             /*Validación*/
-            if (txt_name.Text == "")
-            {
-                MessageBox.Show("El nombre no puede estar vacío");
+            TextBox[] component = { txt_name, txt_password };
+            if (!PROPS.emptyTextBox(component))
                 return;
-            }
 
-            dt =  userCICE.login(txt_name.Text, txt_password.Text);
-            if (dt != null)
-            {
-                if (dt.Rows.Count == 0)
-                    MessageBox.Show("Usuario o Password Incorrectos");
-                else
-                {
-                    frm_signIn frm_checkIn = new frm_signIn();
-                    frm_checkIn.Show();
-                }
-            }
+            //dt =  userCICE.login(txt_name.Text, txt_password.Text);
+            //if (dt != null)
+            //{
+            //    if (dt.Rows.Count == 0)
+            //        MessageBox.Show("Usuario o Password Incorrectos");
+            //    else
+            //    {
+            //        frm_signIn frm_checkIn = new frm_signIn();
+            //        frm_checkIn.Show();
+            //    }
+            //}
             /*Quitar*/
             frm_signIn frm_checkIn2 = new frm_signIn();
             frm_checkIn2.Show();
@@ -86,8 +84,8 @@ namespace library_check_in{
          */
         private void txt_name_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(this.txt_name.Text == "Usuario")
-                this.txt_name.Text = "";
+            //if(this.txt_name.Text == "Usuario")
+            //    this.txt_name.Text = "";
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -97,8 +95,8 @@ namespace library_check_in{
          */
         private void txt_name_KeyUp(object sender, KeyEventArgs e)
         {
-            if (this.txt_name.Text == "")
-                this.txt_name.Text = "Usuario";
+            //if (this.txt_name.Text == "")
+            //    this.txt_name.Text = "Usuario";
         }
         /**
          *  Author      | Arcelia Aguirre

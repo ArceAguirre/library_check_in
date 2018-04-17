@@ -4,13 +4,12 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
-
-/****************************************************/
-/*  Author      |   Arcelia Aguirre                 */
-/*  Date        |   02-02-2018                      */
-/*  Description |   Clase para conexión a la base   */
-/*                  de datos                        */
-/****************************************************/
+using System.Windows.Forms;
+/**
+*  Author      | Arcelia Aguirre                 
+*  Date        | 02-02-2018                      
+*  Description | Clase para conexión a la base de datos                        
+*/
 namespace library_check_in
 {
     class Connection{
@@ -27,51 +26,55 @@ namespace library_check_in
             ";Network Library=DBMSSOCN";
 
         public Connection() { }
-
-        /*************************************************************/
-        /*  Author      |   Arcelia Aguirre                          */
-        /*  Date        |   02-02-2018                               */
-        /*  Description |   Ejecutar un comando                      */
-        /*  Parameters  |   string command Query                     */
-        /*                  string[] paramName, nombre del parámetro */
-        /*                  object[] param valor del parámetro       */
-        /*  Return      |   DataTable dt                             */
-        /*************************************************************/
+        /**
+         *  Author      |   Arcelia Aguirre
+         *  Date        |   02-02-2018
+         *  Description |   Ejecutar un comando
+         *  Parameters  |   string command, string[] paramName, object[] param valor del parámetro
+         *  Return      |   DataTable dt
+         */
         public DataTable loadData(string command, string[] paramName, object[] param)
         {
             SqlConnection conn = new SqlConnection(Connection.CONNECTION_STRING);
             SqlCommand cmd = new SqlCommand(command, conn);
+            DataTable dt = new DataTable();
             for (int i = 0; i < paramName.Length; i++)
             {
                 if (paramName[i] != null && param[i] != null)
                 {
                     cmd.Parameters.AddWithValue(paramName[i].ToString(), param[i]);
                 }
-                else{break;}
+                else
+                    break;
             }
-            DataTable dt = new DataTable();
             SqlDataAdapter adapt = new SqlDataAdapter(cmd);
-            adapt.Fill(dt);
-            conn.Open();
-            //cmd.ExecuteNonQuery();
-            conn.Close();
-            return dt;
+            try
+            {
+                adapt.Fill(dt);
+                conn.Open();
+                conn.Close();
+                return dt;
+            }
+            catch
+            {
+                PROPS.messageError("");
+                return null;
+            }
         }
-        /*************************************************************/
-        /*  Author      |   Arcelia Aguirre                          */
-        /*  Date        |   02-02-2018                               */
-        /*  Description |   Ejecutar un comando                      */
-        /*  Parameters  |   string command Query                     */
-        /*                  string table Tabla que ejecuta           */
-        /*                  string[] paramName, nombre del parámetro */
-        /*                  object[] param valor del parámetro       */
-        /*  Return      |   DataSet dt                               */
-        /*************************************************************/
+        /**
+         *  Author      |   Arcelia Aguirre
+         *  Date        |   02-02-2018
+         *  Description |   Ejecutar un comando
+         *  Parameters  |   string command, string table, string[] paramName, object[] param valor del parámetro
+         *  Return      |   DataSet dt
+         */
         public DataSet loadData(string command, string table, string[] paramName, object[] param)
         {
             SqlConnection conn = new SqlConnection(Connection.CONNECTION_STRING);
             SqlCommand cmd = new SqlCommand(command, conn);
             DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+
             for (int i = 0; i < paramName.Length; i++)
             {
                 if (paramName[i] != null && param[i] != null)
@@ -80,14 +83,21 @@ namespace library_check_in
                 }
                 else { break; }
             }
-            DataTable dt = new DataTable();
             SqlDataAdapter adapt = new SqlDataAdapter(cmd);
             adapt = new SqlDataAdapter(cmd);
-            adapt.Fill(ds, table);
-            conn.Open();
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            return ds;
+            try
+            {
+                adapt.Fill(ds, table);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return ds;
+            }
+            catch
+            {
+                PROPS.messageError("");
+                return null;
+            }
         }
     }
 }

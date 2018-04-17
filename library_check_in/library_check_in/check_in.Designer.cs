@@ -59,8 +59,20 @@
             this.lbl_reporte = new System.Windows.Forms.Label();
             this.tbpg_dataUp = new System.Windows.Forms.TabPage();
             this.dtgd_student = new System.Windows.Forms.DataGridView();
+            this.edit_student = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.delete_student = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.id_student = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.student_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.student_father_last_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.student_mother_last_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.semester = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_career_student = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.career_name_student = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.career_key_student = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbl_register = new System.Windows.Forms.Label();
             this.grpbx_unique = new System.Windows.Forms.GroupBox();
+            this.btn_cancel = new System.Windows.Forms.Button();
             this.txt_idStudent = new System.Windows.Forms.TextBox();
             this.cmbbox_careerStudent = new System.Windows.Forms.ComboBox();
             this.lbl_careerStudent = new System.Windows.Forms.Label();
@@ -78,6 +90,7 @@
             this.lbl_motherLastnameStudent = new System.Windows.Forms.Label();
             this.lbl_fatherLastnameStudent = new System.Windows.Forms.Label();
             this.grpbx_load = new System.Windows.Forms.GroupBox();
+            this.btn_cancelLoad = new System.Windows.Forms.Button();
             this.btn_saveLoad = new System.Windows.Forms.Button();
             this.cmbbx_type = new System.Windows.Forms.ComboBox();
             this.txt_file = new System.Windows.Forms.TextBox();
@@ -91,6 +104,11 @@
             this.txt_careerKey = new System.Windows.Forms.TextBox();
             this.lbl_careerKey = new System.Windows.Forms.Label();
             this.dtgd_career = new System.Windows.Forms.DataGridView();
+            this.id_career = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.career_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.career_key = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edit_carrer = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.delete_carrer = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btn_careerSave = new System.Windows.Forms.Button();
             this.txt_careerName = new System.Windows.Forms.TextBox();
             this.lbl_careerName = new System.Windows.Forms.Label();
@@ -98,6 +116,10 @@
             this.btn_typeNotStudentCancel = new System.Windows.Forms.Button();
             this.txt_idTypeNotStudent = new System.Windows.Forms.TextBox();
             this.dtgd_typeNotStudent = new System.Windows.Forms.DataGridView();
+            this.id_typeNotStudent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description_typeNotStudent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edit_typeNotStudent = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.delete_userNotStudent = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btn_typeNotStudentSave = new System.Windows.Forms.Button();
             this.txt_typeNotStudentName = new System.Windows.Forms.TextBox();
             this.lbl_typeNotStudentName = new System.Windows.Forms.Label();
@@ -105,6 +127,10 @@
             this.btn_typeUserCancel = new System.Windows.Forms.Button();
             this.txt_idTypeUser = new System.Windows.Forms.TextBox();
             this.dtgd_typeUser = new System.Windows.Forms.DataGridView();
+            this.id_typeUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description_typeUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edit_typeUser = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.delete_typeUser = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btn_typeUserSave = new System.Windows.Forms.Button();
             this.txt_typeUserName = new System.Windows.Forms.TextBox();
             this.lbl_typeUserName = new System.Windows.Forms.Label();
@@ -123,6 +149,14 @@
             this.lbl_motherLastnameUser = new System.Windows.Forms.Label();
             this.lbl_fatherLastnameUser = new System.Windows.Forms.Label();
             this.dtgd_user = new System.Windows.Forms.DataGridView();
+            this.id_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fatherLastName_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.motherLastName_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_type_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edit_user = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.delete_user = new System.Windows.Forms.DataGridViewButtonColumn();
             this.grpbx_info = new System.Windows.Forms.GroupBox();
             this.btn_help = new System.Windows.Forms.Button();
             this.btn_documentation = new System.Windows.Forms.Button();
@@ -135,38 +169,6 @@
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_drop = new System.Windows.Forms.Button();
             this.cbtn_closeCheck = new System.Windows.Forms.Button();
-            this.id_typeNotStudent = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description_typeNotStudent = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edit_typeNotStudent = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.delete_userNotStudent = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.id_typeUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description_typeUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edit_typeUser = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.delete_typeUser = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.id_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fatherLastName_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.motherLastName_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_type_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edit_user = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.delete_user = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.edit_student = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.delete_student = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.id_student = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.student_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.student_father_last_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.student_mother_last_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.semester = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_career_student = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.career_name_student = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.career_key_student = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_career = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.career_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.career_key = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edit_carrer = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.delete_carrer = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tblctl_signIn.SuspendLayout();
             this.tbpg_signIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptrbx_CICE)).BeginInit();
@@ -232,6 +234,7 @@
             // 
             // txt_number
             // 
+            this.txt_number.AccessibleName = "Matrícula";
             this.txt_number.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_number.Location = new System.Drawing.Point(174, 550);
             this.txt_number.MaxLength = 7;
@@ -265,6 +268,7 @@
             // 
             // txt_signInDate
             // 
+            this.txt_signInDate.AccessibleName = "Fecha de Entrada";
             this.txt_signInDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_signInDate.Location = new System.Drawing.Point(794, 434);
             this.txt_signInDate.Name = "txt_signInDate";
@@ -275,6 +279,7 @@
             // 
             // txt_career
             // 
+            this.txt_career.AccessibleName = "Carrera";
             this.txt_career.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_career.Location = new System.Drawing.Point(794, 408);
             this.txt_career.MaxLength = 250;
@@ -286,6 +291,7 @@
             // 
             // txt_numberData
             // 
+            this.txt_numberData.AccessibleName = "Matrícula";
             this.txt_numberData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_numberData.Location = new System.Drawing.Point(794, 382);
             this.txt_numberData.MaxLength = 7;
@@ -297,6 +303,7 @@
             // 
             // txt_name
             // 
+            this.txt_name.AccessibleName = "Nombre";
             this.txt_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_name.Location = new System.Drawing.Point(794, 356);
             this.txt_name.MaxLength = 50;
@@ -368,6 +375,7 @@
             // 
             // btn_excel
             // 
+            this.btn_excel.AccessibleName = "Excel";
             this.btn_excel.Location = new System.Drawing.Point(162, 239);
             this.btn_excel.Name = "btn_excel";
             this.btn_excel.Size = new System.Drawing.Size(75, 23);
@@ -415,6 +423,7 @@
             // 
             // txt_semester
             // 
+            this.txt_semester.AccessibleName = "Semestre";
             this.txt_semester.Location = new System.Drawing.Point(86, 208);
             this.txt_semester.MaxLength = 2;
             this.txt_semester.Name = "txt_semester";
@@ -424,6 +433,7 @@
             // 
             // cmbbx_carrer
             // 
+            this.cmbbx_carrer.AccessibleName = "Carrera";
             this.cmbbx_carrer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbbx_carrer.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cmbbx_carrer.FormattingEnabled = true;
@@ -435,6 +445,7 @@
             // 
             // cmbbx_report
             // 
+            this.cmbbx_report.AccessibleName = "Reporte";
             this.cmbbx_report.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbbx_report.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cmbbx_report.FormattingEnabled = true;
@@ -446,6 +457,7 @@
             // 
             // btn_generate
             // 
+            this.btn_generate.AccessibleName = "Generar";
             this.btn_generate.Location = new System.Drawing.Point(243, 239);
             this.btn_generate.Name = "btn_generate";
             this.btn_generate.Size = new System.Drawing.Size(75, 23);
@@ -456,6 +468,7 @@
             // 
             // dttmpk_finalDate
             // 
+            this.dttmpk_finalDate.AccessibleName = "Fecha Fin";
             this.dttmpk_finalDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dttmpk_finalDate.Location = new System.Drawing.Point(236, 127);
             this.dttmpk_finalDate.Name = "dttmpk_finalDate";
@@ -464,6 +477,7 @@
             // 
             // dttmpk_initialDate
             // 
+            this.dttmpk_initialDate.AccessibleName = "Fecha Inicial";
             this.dttmpk_initialDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dttmpk_initialDate.Location = new System.Drawing.Point(86, 127);
             this.dttmpk_initialDate.Name = "dttmpk_initialDate";
@@ -486,7 +500,7 @@
             this.lbl_initalDate.Name = "lbl_initalDate";
             this.lbl_initalDate.Size = new System.Drawing.Size(65, 13);
             this.lbl_initalDate.TabIndex = 2;
-            this.lbl_initalDate.Text = "Fecha Inical";
+            this.lbl_initalDate.Text = "Fecha Inicio";
             // 
             // lbl_reporte
             // 
@@ -536,954 +550,6 @@
             this.dtgd_student.Size = new System.Drawing.Size(740, 751);
             this.dtgd_student.TabIndex = 23;
             this.dtgd_student.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgd_student_CellContentClick);
-            // 
-            // lbl_register
-            // 
-            this.lbl_register.AutoSize = true;
-            this.lbl_register.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_register.Location = new System.Drawing.Point(124, 32);
-            this.lbl_register.Name = "lbl_register";
-            this.lbl_register.Size = new System.Drawing.Size(116, 31);
-            this.lbl_register.TabIndex = 18;
-            this.lbl_register.Text = "Registro";
-            // 
-            // grpbx_unique
-            // 
-            this.grpbx_unique.Controls.Add(this.txt_idStudent);
-            this.grpbx_unique.Controls.Add(this.cmbbox_careerStudent);
-            this.grpbx_unique.Controls.Add(this.lbl_careerStudent);
-            this.grpbx_unique.Controls.Add(this.txt_semesterStudent);
-            this.grpbx_unique.Controls.Add(this.lbl_semesterStudent);
-            this.grpbx_unique.Controls.Add(this.txt_numberStudent);
-            this.grpbx_unique.Controls.Add(this.lbl_numberStudent);
-            this.grpbx_unique.Controls.Add(this.txt_motherLasnameStudent);
-            this.grpbx_unique.Controls.Add(this.btn_add);
-            this.grpbx_unique.Controls.Add(this.cmbbx_typeRegister);
-            this.grpbx_unique.Controls.Add(this.txt_fatherLasnameStudent);
-            this.grpbx_unique.Controls.Add(this.lbl_typeRegister);
-            this.grpbx_unique.Controls.Add(this.txt_nameStudent);
-            this.grpbx_unique.Controls.Add(this.lbl_nameStudent);
-            this.grpbx_unique.Controls.Add(this.lbl_motherLastnameStudent);
-            this.grpbx_unique.Controls.Add(this.lbl_fatherLastnameStudent);
-            this.grpbx_unique.Location = new System.Drawing.Point(17, 235);
-            this.grpbx_unique.Name = "grpbx_unique";
-            this.grpbx_unique.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.grpbx_unique.Size = new System.Drawing.Size(333, 239);
-            this.grpbx_unique.TabIndex = 17;
-            this.grpbx_unique.TabStop = false;
-            this.grpbx_unique.Text = "Registro";
-            // 
-            // txt_idStudent
-            // 
-            this.txt_idStudent.Location = new System.Drawing.Point(93, 46);
-            this.txt_idStudent.Name = "txt_idStudent";
-            this.txt_idStudent.Size = new System.Drawing.Size(64, 20);
-            this.txt_idStudent.TabIndex = 34;
-            this.txt_idStudent.Visible = false;
-            // 
-            // cmbbox_careerStudent
-            // 
-            this.cmbbox_careerStudent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbbox_careerStudent.FormattingEnabled = true;
-            this.cmbbox_careerStudent.Location = new System.Drawing.Point(93, 206);
-            this.cmbbox_careerStudent.Name = "cmbbox_careerStudent";
-            this.cmbbox_careerStudent.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbbox_careerStudent.Size = new System.Drawing.Size(158, 21);
-            this.cmbbox_careerStudent.TabIndex = 31;
-            // 
-            // lbl_careerStudent
-            // 
-            this.lbl_careerStudent.AutoSize = true;
-            this.lbl_careerStudent.Location = new System.Drawing.Point(28, 209);
-            this.lbl_careerStudent.Name = "lbl_careerStudent";
-            this.lbl_careerStudent.Size = new System.Drawing.Size(65, 13);
-            this.lbl_careerStudent.TabIndex = 30;
-            this.lbl_careerStudent.Text = "Licenciatura";
-            // 
-            // txt_semesterStudent
-            // 
-            this.txt_semesterStudent.Location = new System.Drawing.Point(93, 179);
-            this.txt_semesterStudent.MaxLength = 2;
-            this.txt_semesterStudent.Name = "txt_semesterStudent";
-            this.txt_semesterStudent.Size = new System.Drawing.Size(158, 20);
-            this.txt_semesterStudent.TabIndex = 21;
-            // 
-            // lbl_semesterStudent
-            // 
-            this.lbl_semesterStudent.AutoSize = true;
-            this.lbl_semesterStudent.Location = new System.Drawing.Point(42, 182);
-            this.lbl_semesterStudent.Name = "lbl_semesterStudent";
-            this.lbl_semesterStudent.Size = new System.Drawing.Size(51, 13);
-            this.lbl_semesterStudent.TabIndex = 28;
-            this.lbl_semesterStudent.Text = "Semestre";
-            // 
-            // txt_numberStudent
-            // 
-            this.txt_numberStudent.Location = new System.Drawing.Point(93, 72);
-            this.txt_numberStudent.MaxLength = 7;
-            this.txt_numberStudent.Name = "txt_numberStudent";
-            this.txt_numberStudent.Size = new System.Drawing.Size(158, 20);
-            this.txt_numberStudent.TabIndex = 17;
-            // 
-            // lbl_numberStudent
-            // 
-            this.lbl_numberStudent.AutoSize = true;
-            this.lbl_numberStudent.Location = new System.Drawing.Point(41, 75);
-            this.lbl_numberStudent.Name = "lbl_numberStudent";
-            this.lbl_numberStudent.Size = new System.Drawing.Size(52, 13);
-            this.lbl_numberStudent.TabIndex = 26;
-            this.lbl_numberStudent.Text = "Matrícula";
-            // 
-            // txt_motherLasnameStudent
-            // 
-            this.txt_motherLasnameStudent.Location = new System.Drawing.Point(93, 153);
-            this.txt_motherLasnameStudent.MaxLength = 50;
-            this.txt_motherLasnameStudent.Name = "txt_motherLasnameStudent";
-            this.txt_motherLasnameStudent.Size = new System.Drawing.Size(158, 20);
-            this.txt_motherLasnameStudent.TabIndex = 20;
-            // 
-            // btn_add
-            // 
-            this.btn_add.Location = new System.Drawing.Point(256, 205);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(67, 23);
-            this.btn_add.TabIndex = 23;
-            this.btn_add.Text = "Guardar";
-            this.btn_add.UseVisualStyleBackColor = true;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
-            // cmbbx_typeRegister
-            // 
-            this.cmbbx_typeRegister.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbbx_typeRegister.FormattingEnabled = true;
-            this.cmbbx_typeRegister.Location = new System.Drawing.Point(93, 19);
-            this.cmbbx_typeRegister.Name = "cmbbx_typeRegister";
-            this.cmbbx_typeRegister.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbbx_typeRegister.Size = new System.Drawing.Size(158, 21);
-            this.cmbbx_typeRegister.TabIndex = 16;
-            this.cmbbx_typeRegister.SelectedIndexChanged += new System.EventHandler(this.cmbbx_typeRegister_SelectedIndexChanged);
-            // 
-            // txt_fatherLasnameStudent
-            // 
-            this.txt_fatherLasnameStudent.Location = new System.Drawing.Point(93, 126);
-            this.txt_fatherLasnameStudent.MaxLength = 50;
-            this.txt_fatherLasnameStudent.Name = "txt_fatherLasnameStudent";
-            this.txt_fatherLasnameStudent.Size = new System.Drawing.Size(158, 20);
-            this.txt_fatherLasnameStudent.TabIndex = 19;
-            // 
-            // lbl_typeRegister
-            // 
-            this.lbl_typeRegister.AutoSize = true;
-            this.lbl_typeRegister.Location = new System.Drawing.Point(65, 22);
-            this.lbl_typeRegister.Name = "lbl_typeRegister";
-            this.lbl_typeRegister.Size = new System.Drawing.Size(28, 13);
-            this.lbl_typeRegister.TabIndex = 18;
-            this.lbl_typeRegister.Text = "Tipo";
-            // 
-            // txt_nameStudent
-            // 
-            this.txt_nameStudent.Location = new System.Drawing.Point(93, 98);
-            this.txt_nameStudent.MaxLength = 50;
-            this.txt_nameStudent.Name = "txt_nameStudent";
-            this.txt_nameStudent.Size = new System.Drawing.Size(158, 20);
-            this.txt_nameStudent.TabIndex = 18;
-            // 
-            // lbl_nameStudent
-            // 
-            this.lbl_nameStudent.AutoSize = true;
-            this.lbl_nameStudent.Location = new System.Drawing.Point(49, 101);
-            this.lbl_nameStudent.Name = "lbl_nameStudent";
-            this.lbl_nameStudent.Size = new System.Drawing.Size(44, 13);
-            this.lbl_nameStudent.TabIndex = 20;
-            this.lbl_nameStudent.Text = "Nombre";
-            // 
-            // lbl_motherLastnameStudent
-            // 
-            this.lbl_motherLastnameStudent.AutoSize = true;
-            this.lbl_motherLastnameStudent.Location = new System.Drawing.Point(7, 156);
-            this.lbl_motherLastnameStudent.Name = "lbl_motherLastnameStudent";
-            this.lbl_motherLastnameStudent.Size = new System.Drawing.Size(86, 13);
-            this.lbl_motherLastnameStudent.TabIndex = 22;
-            this.lbl_motherLastnameStudent.Text = "Apellido Materno";
-            // 
-            // lbl_fatherLastnameStudent
-            // 
-            this.lbl_fatherLastnameStudent.AutoSize = true;
-            this.lbl_fatherLastnameStudent.Location = new System.Drawing.Point(9, 129);
-            this.lbl_fatherLastnameStudent.Name = "lbl_fatherLastnameStudent";
-            this.lbl_fatherLastnameStudent.Size = new System.Drawing.Size(84, 13);
-            this.lbl_fatherLastnameStudent.TabIndex = 21;
-            this.lbl_fatherLastnameStudent.Text = "Apellido Paterno";
-            // 
-            // grpbx_load
-            // 
-            this.grpbx_load.Controls.Add(this.btn_saveLoad);
-            this.grpbx_load.Controls.Add(this.cmbbx_type);
-            this.grpbx_load.Controls.Add(this.txt_file);
-            this.grpbx_load.Controls.Add(this.lbl_type);
-            this.grpbx_load.Controls.Add(this.btn_file);
-            this.grpbx_load.Location = new System.Drawing.Point(17, 100);
-            this.grpbx_load.Name = "grpbx_load";
-            this.grpbx_load.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.grpbx_load.Size = new System.Drawing.Size(333, 84);
-            this.grpbx_load.TabIndex = 16;
-            this.grpbx_load.TabStop = false;
-            this.grpbx_load.Text = "Carga con Archivo";
-            // 
-            // btn_saveLoad
-            // 
-            this.btn_saveLoad.Location = new System.Drawing.Point(256, 54);
-            this.btn_saveLoad.Name = "btn_saveLoad";
-            this.btn_saveLoad.Size = new System.Drawing.Size(67, 23);
-            this.btn_saveLoad.TabIndex = 15;
-            this.btn_saveLoad.Text = "Guardar";
-            this.btn_saveLoad.UseVisualStyleBackColor = true;
-            // 
-            // cmbbx_type
-            // 
-            this.cmbbx_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbbx_type.FormattingEnabled = true;
-            this.cmbbx_type.Location = new System.Drawing.Point(93, 28);
-            this.cmbbx_type.Name = "cmbbx_type";
-            this.cmbbx_type.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbbx_type.Size = new System.Drawing.Size(160, 21);
-            this.cmbbx_type.TabIndex = 12;
-            // 
-            // txt_file
-            // 
-            this.txt_file.Enabled = false;
-            this.txt_file.Location = new System.Drawing.Point(93, 56);
-            this.txt_file.Name = "txt_file";
-            this.txt_file.Size = new System.Drawing.Size(160, 20);
-            this.txt_file.TabIndex = 14;
-            this.txt_file.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // lbl_type
-            // 
-            this.lbl_type.AutoSize = true;
-            this.lbl_type.Location = new System.Drawing.Point(65, 31);
-            this.lbl_type.Name = "lbl_type";
-            this.lbl_type.Size = new System.Drawing.Size(28, 13);
-            this.lbl_type.TabIndex = 13;
-            this.lbl_type.Text = "Tipo";
-            // 
-            // btn_file
-            // 
-            this.btn_file.Location = new System.Drawing.Point(36, 54);
-            this.btn_file.Name = "btn_file";
-            this.btn_file.Size = new System.Drawing.Size(54, 23);
-            this.btn_file.TabIndex = 13;
-            this.btn_file.Text = "Archivo";
-            this.btn_file.UseVisualStyleBackColor = true;
-            // 
-            // tblctl_settings
-            // 
-            this.tblctl_settings.BackColor = System.Drawing.Color.Transparent;
-            this.tblctl_settings.Controls.Add(this.tbctl_form);
-            this.tblctl_settings.Controls.Add(this.grpbx_info);
-            this.tblctl_settings.Controls.Add(this.grpbx_database);
-            this.tblctl_settings.Location = new System.Drawing.Point(4, 4);
-            this.tblctl_settings.Name = "tblctl_settings";
-            this.tblctl_settings.Padding = new System.Windows.Forms.Padding(3);
-            this.tblctl_settings.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tblctl_settings.Size = new System.Drawing.Size(1115, 801);
-            this.tblctl_settings.TabIndex = 3;
-            this.tblctl_settings.Text = "Configuración";
-            // 
-            // tbctl_form
-            // 
-            this.tbctl_form.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tbctl_form.Controls.Add(this.tbpg_career);
-            this.tbctl_form.Controls.Add(this.tbpg_typeNotStudent);
-            this.tbctl_form.Controls.Add(this.tbpg_typeUser);
-            this.tbctl_form.Controls.Add(this.tbpg_userCICE);
-            this.tbctl_form.Location = new System.Drawing.Point(213, 18);
-            this.tbctl_form.Name = "tbctl_form";
-            this.tbctl_form.SelectedIndex = 0;
-            this.tbctl_form.Size = new System.Drawing.Size(871, 734);
-            this.tbctl_form.TabIndex = 8;
-            // 
-            // tbpg_career
-            // 
-            this.tbpg_career.BackColor = System.Drawing.Color.Transparent;
-            this.tbpg_career.Controls.Add(this.btn_careerCancel);
-            this.tbpg_career.Controls.Add(this.txt_idCareer);
-            this.tbpg_career.Controls.Add(this.txt_careerKey);
-            this.tbpg_career.Controls.Add(this.lbl_careerKey);
-            this.tbpg_career.Controls.Add(this.dtgd_career);
-            this.tbpg_career.Controls.Add(this.btn_careerSave);
-            this.tbpg_career.Controls.Add(this.txt_careerName);
-            this.tbpg_career.Controls.Add(this.lbl_careerName);
-            this.tbpg_career.Location = new System.Drawing.Point(4, 25);
-            this.tbpg_career.Name = "tbpg_career";
-            this.tbpg_career.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpg_career.Size = new System.Drawing.Size(863, 705);
-            this.tbpg_career.TabIndex = 0;
-            this.tbpg_career.Text = "Licenciatura";
-            // 
-            // btn_careerCancel
-            // 
-            this.btn_careerCancel.Location = new System.Drawing.Point(332, 51);
-            this.btn_careerCancel.Name = "btn_careerCancel";
-            this.btn_careerCancel.Size = new System.Drawing.Size(75, 23);
-            this.btn_careerCancel.TabIndex = 45;
-            this.btn_careerCancel.Text = "Cancelar";
-            this.btn_careerCancel.UseVisualStyleBackColor = true;
-            this.btn_careerCancel.Click += new System.EventHandler(this.btn_careerCancel_Click);
-            // 
-            // txt_idCareer
-            // 
-            this.txt_idCareer.Enabled = false;
-            this.txt_idCareer.Location = new System.Drawing.Point(252, 28);
-            this.txt_idCareer.Name = "txt_idCareer";
-            this.txt_idCareer.Size = new System.Drawing.Size(74, 20);
-            this.txt_idCareer.TabIndex = 44;
-            this.txt_idCareer.Visible = false;
-            // 
-            // txt_careerKey
-            // 
-            this.txt_careerKey.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_careerKey.Location = new System.Drawing.Point(78, 53);
-            this.txt_careerKey.MaxLength = 6;
-            this.txt_careerKey.Name = "txt_careerKey";
-            this.txt_careerKey.Size = new System.Drawing.Size(167, 20);
-            this.txt_careerKey.TabIndex = 33;
-            // 
-            // lbl_careerKey
-            // 
-            this.lbl_careerKey.AutoSize = true;
-            this.lbl_careerKey.Location = new System.Drawing.Point(38, 57);
-            this.lbl_careerKey.Name = "lbl_careerKey";
-            this.lbl_careerKey.Size = new System.Drawing.Size(34, 13);
-            this.lbl_careerKey.TabIndex = 43;
-            this.lbl_careerKey.Text = "Clave";
-            // 
-            // dtgd_career
-            // 
-            this.dtgd_career.AllowUserToAddRows = false;
-            this.dtgd_career.AllowUserToDeleteRows = false;
-            this.dtgd_career.AllowUserToResizeRows = false;
-            this.dtgd_career.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgd_career.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_career,
-            this.career_name,
-            this.career_key,
-            this.edit_carrer,
-            this.delete_carrer});
-            this.dtgd_career.Location = new System.Drawing.Point(28, 81);
-            this.dtgd_career.Name = "dtgd_career";
-            this.dtgd_career.RowHeadersVisible = false;
-            this.dtgd_career.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dtgd_career.Size = new System.Drawing.Size(815, 603);
-            this.dtgd_career.TabIndex = 3;
-            this.dtgd_career.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgd_career_CellContentClick);
-            // 
-            // btn_careerSave
-            // 
-            this.btn_careerSave.Location = new System.Drawing.Point(251, 51);
-            this.btn_careerSave.Name = "btn_careerSave";
-            this.btn_careerSave.Size = new System.Drawing.Size(75, 23);
-            this.btn_careerSave.TabIndex = 34;
-            this.btn_careerSave.Text = "Guardar";
-            this.btn_careerSave.UseVisualStyleBackColor = true;
-            this.btn_careerSave.Click += new System.EventHandler(this.btn_careerSave_Click);
-            // 
-            // txt_careerName
-            // 
-            this.txt_careerName.Location = new System.Drawing.Point(78, 28);
-            this.txt_careerName.MaxLength = 250;
-            this.txt_careerName.Name = "txt_careerName";
-            this.txt_careerName.Size = new System.Drawing.Size(167, 20);
-            this.txt_careerName.TabIndex = 32;
-            // 
-            // lbl_careerName
-            // 
-            this.lbl_careerName.AutoSize = true;
-            this.lbl_careerName.Location = new System.Drawing.Point(28, 33);
-            this.lbl_careerName.Name = "lbl_careerName";
-            this.lbl_careerName.Size = new System.Drawing.Size(44, 13);
-            this.lbl_careerName.TabIndex = 0;
-            this.lbl_careerName.Text = "Nombre";
-            // 
-            // tbpg_typeNotStudent
-            // 
-            this.tbpg_typeNotStudent.BackColor = System.Drawing.Color.Transparent;
-            this.tbpg_typeNotStudent.Controls.Add(this.btn_typeNotStudentCancel);
-            this.tbpg_typeNotStudent.Controls.Add(this.txt_idTypeNotStudent);
-            this.tbpg_typeNotStudent.Controls.Add(this.dtgd_typeNotStudent);
-            this.tbpg_typeNotStudent.Controls.Add(this.btn_typeNotStudentSave);
-            this.tbpg_typeNotStudent.Controls.Add(this.txt_typeNotStudentName);
-            this.tbpg_typeNotStudent.Controls.Add(this.lbl_typeNotStudentName);
-            this.tbpg_typeNotStudent.Location = new System.Drawing.Point(4, 25);
-            this.tbpg_typeNotStudent.Name = "tbpg_typeNotStudent";
-            this.tbpg_typeNotStudent.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpg_typeNotStudent.Size = new System.Drawing.Size(863, 705);
-            this.tbpg_typeNotStudent.TabIndex = 1;
-            this.tbpg_typeNotStudent.Text = "Tipos de No Estudiantes";
-            // 
-            // btn_typeNotStudentCancel
-            // 
-            this.btn_typeNotStudentCancel.Location = new System.Drawing.Point(328, 23);
-            this.btn_typeNotStudentCancel.Name = "btn_typeNotStudentCancel";
-            this.btn_typeNotStudentCancel.Size = new System.Drawing.Size(75, 23);
-            this.btn_typeNotStudentCancel.TabIndex = 46;
-            this.btn_typeNotStudentCancel.Text = "Cancelar";
-            this.btn_typeNotStudentCancel.UseVisualStyleBackColor = true;
-            this.btn_typeNotStudentCancel.Click += new System.EventHandler(this.btn_typeNotStudentCancel_Click);
-            // 
-            // txt_idTypeNotStudent
-            // 
-            this.txt_idTypeNotStudent.Enabled = false;
-            this.txt_idTypeNotStudent.Location = new System.Drawing.Point(409, 25);
-            this.txt_idTypeNotStudent.Name = "txt_idTypeNotStudent";
-            this.txt_idTypeNotStudent.Size = new System.Drawing.Size(74, 20);
-            this.txt_idTypeNotStudent.TabIndex = 45;
-            this.txt_idTypeNotStudent.Visible = false;
-            // 
-            // dtgd_typeNotStudent
-            // 
-            this.dtgd_typeNotStudent.AllowUserToAddRows = false;
-            this.dtgd_typeNotStudent.AllowUserToDeleteRows = false;
-            this.dtgd_typeNotStudent.AllowUserToResizeRows = false;
-            this.dtgd_typeNotStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgd_typeNotStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_typeNotStudent,
-            this.description_typeNotStudent,
-            this.edit_typeNotStudent,
-            this.delete_userNotStudent});
-            this.dtgd_typeNotStudent.Location = new System.Drawing.Point(24, 66);
-            this.dtgd_typeNotStudent.Name = "dtgd_typeNotStudent";
-            this.dtgd_typeNotStudent.RowHeadersVisible = false;
-            this.dtgd_typeNotStudent.Size = new System.Drawing.Size(815, 614);
-            this.dtgd_typeNotStudent.TabIndex = 7;
-            this.dtgd_typeNotStudent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgd_typeNotStudent_CellContentClick);
-            // 
-            // btn_typeNotStudentSave
-            // 
-            this.btn_typeNotStudentSave.Location = new System.Drawing.Point(247, 23);
-            this.btn_typeNotStudentSave.Name = "btn_typeNotStudentSave";
-            this.btn_typeNotStudentSave.Size = new System.Drawing.Size(75, 23);
-            this.btn_typeNotStudentSave.TabIndex = 36;
-            this.btn_typeNotStudentSave.Text = "Guardar";
-            this.btn_typeNotStudentSave.UseVisualStyleBackColor = true;
-            this.btn_typeNotStudentSave.Click += new System.EventHandler(this.btn_typeNotStudentSave_Click);
-            // 
-            // txt_typeNotStudentName
-            // 
-            this.txt_typeNotStudentName.Location = new System.Drawing.Point(74, 25);
-            this.txt_typeNotStudentName.MaxLength = 250;
-            this.txt_typeNotStudentName.Name = "txt_typeNotStudentName";
-            this.txt_typeNotStudentName.Size = new System.Drawing.Size(167, 20);
-            this.txt_typeNotStudentName.TabIndex = 35;
-            // 
-            // lbl_typeNotStudentName
-            // 
-            this.lbl_typeNotStudentName.AutoSize = true;
-            this.lbl_typeNotStudentName.Location = new System.Drawing.Point(24, 28);
-            this.lbl_typeNotStudentName.Name = "lbl_typeNotStudentName";
-            this.lbl_typeNotStudentName.Size = new System.Drawing.Size(44, 13);
-            this.lbl_typeNotStudentName.TabIndex = 4;
-            this.lbl_typeNotStudentName.Text = "Nombre";
-            // 
-            // tbpg_typeUser
-            // 
-            this.tbpg_typeUser.BackColor = System.Drawing.Color.Transparent;
-            this.tbpg_typeUser.Controls.Add(this.btn_typeUserCancel);
-            this.tbpg_typeUser.Controls.Add(this.txt_idTypeUser);
-            this.tbpg_typeUser.Controls.Add(this.dtgd_typeUser);
-            this.tbpg_typeUser.Controls.Add(this.btn_typeUserSave);
-            this.tbpg_typeUser.Controls.Add(this.txt_typeUserName);
-            this.tbpg_typeUser.Controls.Add(this.lbl_typeUserName);
-            this.tbpg_typeUser.Location = new System.Drawing.Point(4, 25);
-            this.tbpg_typeUser.Name = "tbpg_typeUser";
-            this.tbpg_typeUser.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpg_typeUser.Size = new System.Drawing.Size(863, 705);
-            this.tbpg_typeUser.TabIndex = 2;
-            this.tbpg_typeUser.Text = "Tipos de Usuario";
-            // 
-            // btn_typeUserCancel
-            // 
-            this.btn_typeUserCancel.Location = new System.Drawing.Point(328, 23);
-            this.btn_typeUserCancel.Name = "btn_typeUserCancel";
-            this.btn_typeUserCancel.Size = new System.Drawing.Size(75, 23);
-            this.btn_typeUserCancel.TabIndex = 48;
-            this.btn_typeUserCancel.Text = "Cancelar";
-            this.btn_typeUserCancel.UseVisualStyleBackColor = true;
-            this.btn_typeUserCancel.Click += new System.EventHandler(this.btn_typeUserCancel_Click);
-            // 
-            // txt_idTypeUser
-            // 
-            this.txt_idTypeUser.Enabled = false;
-            this.txt_idTypeUser.Location = new System.Drawing.Point(409, 24);
-            this.txt_idTypeUser.Name = "txt_idTypeUser";
-            this.txt_idTypeUser.Size = new System.Drawing.Size(74, 20);
-            this.txt_idTypeUser.TabIndex = 45;
-            this.txt_idTypeUser.Visible = false;
-            // 
-            // dtgd_typeUser
-            // 
-            this.dtgd_typeUser.AllowUserToAddRows = false;
-            this.dtgd_typeUser.AllowUserToDeleteRows = false;
-            this.dtgd_typeUser.AllowUserToResizeRows = false;
-            this.dtgd_typeUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgd_typeUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_typeUser,
-            this.description_typeUser,
-            this.edit_typeUser,
-            this.delete_typeUser});
-            this.dtgd_typeUser.Location = new System.Drawing.Point(24, 66);
-            this.dtgd_typeUser.Name = "dtgd_typeUser";
-            this.dtgd_typeUser.RowHeadersVisible = false;
-            this.dtgd_typeUser.Size = new System.Drawing.Size(815, 614);
-            this.dtgd_typeUser.TabIndex = 7;
-            this.dtgd_typeUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgd_typeUser_CellContentClick);
-            // 
-            // btn_typeUserSave
-            // 
-            this.btn_typeUserSave.Location = new System.Drawing.Point(247, 23);
-            this.btn_typeUserSave.Name = "btn_typeUserSave";
-            this.btn_typeUserSave.Size = new System.Drawing.Size(75, 23);
-            this.btn_typeUserSave.TabIndex = 38;
-            this.btn_typeUserSave.Text = "Guardar";
-            this.btn_typeUserSave.UseVisualStyleBackColor = true;
-            this.btn_typeUserSave.Click += new System.EventHandler(this.btn_typeUserSave_Click);
-            // 
-            // txt_typeUserName
-            // 
-            this.txt_typeUserName.Location = new System.Drawing.Point(74, 24);
-            this.txt_typeUserName.MaxLength = 250;
-            this.txt_typeUserName.Name = "txt_typeUserName";
-            this.txt_typeUserName.Size = new System.Drawing.Size(167, 20);
-            this.txt_typeUserName.TabIndex = 37;
-            // 
-            // lbl_typeUserName
-            // 
-            this.lbl_typeUserName.AutoSize = true;
-            this.lbl_typeUserName.Location = new System.Drawing.Point(24, 29);
-            this.lbl_typeUserName.Name = "lbl_typeUserName";
-            this.lbl_typeUserName.Size = new System.Drawing.Size(44, 13);
-            this.lbl_typeUserName.TabIndex = 4;
-            this.lbl_typeUserName.Text = "Nombre";
-            // 
-            // tbpg_userCICE
-            // 
-            this.tbpg_userCICE.BackColor = System.Drawing.Color.Transparent;
-            this.tbpg_userCICE.Controls.Add(this.btn_userCancel);
-            this.tbpg_userCICE.Controls.Add(this.txt_idUser);
-            this.tbpg_userCICE.Controls.Add(this.lbl_typeUser);
-            this.tbpg_userCICE.Controls.Add(this.cmbbx_typeUser);
-            this.tbpg_userCICE.Controls.Add(this.txt_passwordUser);
-            this.tbpg_userCICE.Controls.Add(this.lbl_passwordUser);
-            this.tbpg_userCICE.Controls.Add(this.txt_motherLastnameUser);
-            this.tbpg_userCICE.Controls.Add(this.btn_userSave);
-            this.tbpg_userCICE.Controls.Add(this.txt_fatherLastnameUser);
-            this.tbpg_userCICE.Controls.Add(this.txt_nameUser);
-            this.tbpg_userCICE.Controls.Add(this.lbl_nameUser);
-            this.tbpg_userCICE.Controls.Add(this.lbl_motherLastnameUser);
-            this.tbpg_userCICE.Controls.Add(this.lbl_fatherLastnameUser);
-            this.tbpg_userCICE.Controls.Add(this.dtgd_user);
-            this.tbpg_userCICE.Location = new System.Drawing.Point(4, 25);
-            this.tbpg_userCICE.Name = "tbpg_userCICE";
-            this.tbpg_userCICE.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpg_userCICE.Size = new System.Drawing.Size(863, 705);
-            this.tbpg_userCICE.TabIndex = 3;
-            this.tbpg_userCICE.Text = "Usuarios";
-            // 
-            // btn_userCancel
-            // 
-            this.btn_userCancel.Location = new System.Drawing.Point(386, 74);
-            this.btn_userCancel.Name = "btn_userCancel";
-            this.btn_userCancel.Size = new System.Drawing.Size(67, 23);
-            this.btn_userCancel.TabIndex = 46;
-            this.btn_userCancel.Text = "Cancelar";
-            this.btn_userCancel.UseVisualStyleBackColor = true;
-            this.btn_userCancel.Click += new System.EventHandler(this.btn_userCancel_Click);
-            // 
-            // txt_idUser
-            // 
-            this.txt_idUser.Enabled = false;
-            this.txt_idUser.Location = new System.Drawing.Point(282, 75);
-            this.txt_idUser.Name = "txt_idUser";
-            this.txt_idUser.Size = new System.Drawing.Size(83, 20);
-            this.txt_idUser.TabIndex = 45;
-            this.txt_idUser.Visible = false;
-            // 
-            // lbl_typeUser
-            // 
-            this.lbl_typeUser.AutoSize = true;
-            this.lbl_typeUser.Location = new System.Drawing.Point(17, 78);
-            this.lbl_typeUser.Name = "lbl_typeUser";
-            this.lbl_typeUser.Size = new System.Drawing.Size(80, 13);
-            this.lbl_typeUser.TabIndex = 44;
-            this.lbl_typeUser.Text = "Tipo de usuario";
-            // 
-            // cmbbx_typeUser
-            // 
-            this.cmbbx_typeUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbbx_typeUser.FormattingEnabled = true;
-            this.cmbbx_typeUser.Location = new System.Drawing.Point(103, 75);
-            this.cmbbx_typeUser.Name = "cmbbx_typeUser";
-            this.cmbbx_typeUser.Size = new System.Drawing.Size(158, 21);
-            this.cmbbx_typeUser.TabIndex = 41;
-            // 
-            // txt_passwordUser
-            // 
-            this.txt_passwordUser.Location = new System.Drawing.Point(103, 49);
-            this.txt_passwordUser.MaxLength = 50;
-            this.txt_passwordUser.Name = "txt_passwordUser";
-            this.txt_passwordUser.PasswordChar = '*';
-            this.txt_passwordUser.Size = new System.Drawing.Size(158, 20);
-            this.txt_passwordUser.TabIndex = 40;
-            // 
-            // lbl_passwordUser
-            // 
-            this.lbl_passwordUser.AutoSize = true;
-            this.lbl_passwordUser.Location = new System.Drawing.Point(36, 53);
-            this.lbl_passwordUser.Name = "lbl_passwordUser";
-            this.lbl_passwordUser.Size = new System.Drawing.Size(61, 13);
-            this.lbl_passwordUser.TabIndex = 41;
-            this.lbl_passwordUser.Text = "Contraseña";
-            // 
-            // txt_motherLastnameUser
-            // 
-            this.txt_motherLastnameUser.Location = new System.Drawing.Point(369, 49);
-            this.txt_motherLastnameUser.MaxLength = 50;
-            this.txt_motherLastnameUser.Name = "txt_motherLastnameUser";
-            this.txt_motherLastnameUser.Size = new System.Drawing.Size(156, 20);
-            this.txt_motherLastnameUser.TabIndex = 43;
-            // 
-            // btn_userSave
-            // 
-            this.btn_userSave.Location = new System.Drawing.Point(459, 74);
-            this.btn_userSave.Name = "btn_userSave";
-            this.btn_userSave.Size = new System.Drawing.Size(67, 23);
-            this.btn_userSave.TabIndex = 44;
-            this.btn_userSave.Text = "Guardar";
-            this.btn_userSave.UseVisualStyleBackColor = true;
-            this.btn_userSave.Click += new System.EventHandler(this.btn_userSave_Click);
-            // 
-            // txt_fatherLastnameUser
-            // 
-            this.txt_fatherLastnameUser.Location = new System.Drawing.Point(369, 23);
-            this.txt_fatherLastnameUser.MaxLength = 50;
-            this.txt_fatherLastnameUser.Name = "txt_fatherLastnameUser";
-            this.txt_fatherLastnameUser.Size = new System.Drawing.Size(156, 20);
-            this.txt_fatherLastnameUser.TabIndex = 42;
-            // 
-            // txt_nameUser
-            // 
-            this.txt_nameUser.Location = new System.Drawing.Point(103, 23);
-            this.txt_nameUser.MaxLength = 50;
-            this.txt_nameUser.Name = "txt_nameUser";
-            this.txt_nameUser.Size = new System.Drawing.Size(158, 20);
-            this.txt_nameUser.TabIndex = 39;
-            // 
-            // lbl_nameUser
-            // 
-            this.lbl_nameUser.AutoSize = true;
-            this.lbl_nameUser.Location = new System.Drawing.Point(53, 26);
-            this.lbl_nameUser.Name = "lbl_nameUser";
-            this.lbl_nameUser.Size = new System.Drawing.Size(44, 13);
-            this.lbl_nameUser.TabIndex = 33;
-            this.lbl_nameUser.Text = "Nombre";
-            // 
-            // lbl_motherLastnameUser
-            // 
-            this.lbl_motherLastnameUser.AutoSize = true;
-            this.lbl_motherLastnameUser.Location = new System.Drawing.Point(279, 53);
-            this.lbl_motherLastnameUser.Name = "lbl_motherLastnameUser";
-            this.lbl_motherLastnameUser.Size = new System.Drawing.Size(86, 13);
-            this.lbl_motherLastnameUser.TabIndex = 35;
-            this.lbl_motherLastnameUser.Text = "Apellido Materno";
-            // 
-            // lbl_fatherLastnameUser
-            // 
-            this.lbl_fatherLastnameUser.AutoSize = true;
-            this.lbl_fatherLastnameUser.Location = new System.Drawing.Point(279, 26);
-            this.lbl_fatherLastnameUser.Name = "lbl_fatherLastnameUser";
-            this.lbl_fatherLastnameUser.Size = new System.Drawing.Size(84, 13);
-            this.lbl_fatherLastnameUser.TabIndex = 34;
-            this.lbl_fatherLastnameUser.Text = "Apellido Paterno";
-            // 
-            // dtgd_user
-            // 
-            this.dtgd_user.AllowUserToAddRows = false;
-            this.dtgd_user.AllowUserToDeleteRows = false;
-            this.dtgd_user.AllowUserToResizeRows = false;
-            this.dtgd_user.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgd_user.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_user,
-            this.name_user,
-            this.fatherLastName_user,
-            this.motherLastName_user,
-            this.id_type_user,
-            this.description_user,
-            this.edit_user,
-            this.delete_user});
-            this.dtgd_user.Location = new System.Drawing.Point(24, 122);
-            this.dtgd_user.Name = "dtgd_user";
-            this.dtgd_user.RowHeadersVisible = false;
-            this.dtgd_user.Size = new System.Drawing.Size(815, 558);
-            this.dtgd_user.TabIndex = 7;
-            this.dtgd_user.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgd_user_CellContentClick);
-            // 
-            // grpbx_info
-            // 
-            this.grpbx_info.Controls.Add(this.btn_help);
-            this.grpbx_info.Controls.Add(this.btn_documentation);
-            this.grpbx_info.Controls.Add(this.btn_manual);
-            this.grpbx_info.Controls.Add(this.btn_install);
-            this.grpbx_info.Location = new System.Drawing.Point(18, 198);
-            this.grpbx_info.Name = "grpbx_info";
-            this.grpbx_info.Size = new System.Drawing.Size(173, 149);
-            this.grpbx_info.TabIndex = 7;
-            this.grpbx_info.TabStop = false;
-            this.grpbx_info.Text = "Información";
-            // 
-            // btn_help
-            // 
-            this.btn_help.Location = new System.Drawing.Point(6, 108);
-            this.btn_help.Name = "btn_help";
-            this.btn_help.Size = new System.Drawing.Size(157, 23);
-            this.btn_help.TabIndex = 31;
-            this.btn_help.Text = "Ayuda";
-            this.btn_help.UseVisualStyleBackColor = true;
-            this.btn_help.Click += new System.EventHandler(this.btn_help_Click);
-            // 
-            // btn_documentation
-            // 
-            this.btn_documentation.Location = new System.Drawing.Point(6, 78);
-            this.btn_documentation.Name = "btn_documentation";
-            this.btn_documentation.Size = new System.Drawing.Size(157, 23);
-            this.btn_documentation.TabIndex = 30;
-            this.btn_documentation.Text = "Documentación";
-            this.btn_documentation.UseVisualStyleBackColor = true;
-            // 
-            // btn_manual
-            // 
-            this.btn_manual.Location = new System.Drawing.Point(6, 49);
-            this.btn_manual.Name = "btn_manual";
-            this.btn_manual.Size = new System.Drawing.Size(157, 23);
-            this.btn_manual.TabIndex = 29;
-            this.btn_manual.Text = "Manual de Usuario";
-            this.btn_manual.UseVisualStyleBackColor = true;
-            // 
-            // btn_install
-            // 
-            this.btn_install.Location = new System.Drawing.Point(6, 19);
-            this.btn_install.Name = "btn_install";
-            this.btn_install.Size = new System.Drawing.Size(157, 23);
-            this.btn_install.TabIndex = 28;
-            this.btn_install.Text = "Cómo Instalar";
-            this.btn_install.UseVisualStyleBackColor = true;
-            // 
-            // grpbx_database
-            // 
-            this.grpbx_database.Controls.Add(this.btn_seeder);
-            this.grpbx_database.Controls.Add(this.btn_create);
-            this.grpbx_database.Controls.Add(this.btn_deleteDuplicate);
-            this.grpbx_database.Controls.Add(this.btn_delete);
-            this.grpbx_database.Controls.Add(this.btn_drop);
-            this.grpbx_database.Location = new System.Drawing.Point(18, 18);
-            this.grpbx_database.Name = "grpbx_database";
-            this.grpbx_database.Size = new System.Drawing.Size(173, 174);
-            this.grpbx_database.TabIndex = 6;
-            this.grpbx_database.TabStop = false;
-            this.grpbx_database.Text = "Base de Datos";
-            // 
-            // btn_seeder
-            // 
-            this.btn_seeder.Location = new System.Drawing.Point(6, 48);
-            this.btn_seeder.Name = "btn_seeder";
-            this.btn_seeder.Size = new System.Drawing.Size(157, 23);
-            this.btn_seeder.TabIndex = 28;
-            this.btn_seeder.Text = "Crear Datos Iniciales";
-            this.btn_seeder.UseVisualStyleBackColor = true;
-            this.btn_seeder.Click += new System.EventHandler(this.btn_seeder_Click);
-            // 
-            // btn_create
-            // 
-            this.btn_create.Enabled = false;
-            this.btn_create.Location = new System.Drawing.Point(6, 19);
-            this.btn_create.Name = "btn_create";
-            this.btn_create.Size = new System.Drawing.Size(157, 23);
-            this.btn_create.TabIndex = 24;
-            this.btn_create.Text = "Crear Base de Datos";
-            this.btn_create.UseVisualStyleBackColor = true;
-            this.btn_create.Click += new System.EventHandler(this.btn_create_Click);
-            // 
-            // btn_deleteDuplicate
-            // 
-            this.btn_deleteDuplicate.Location = new System.Drawing.Point(6, 135);
-            this.btn_deleteDuplicate.Name = "btn_deleteDuplicate";
-            this.btn_deleteDuplicate.Size = new System.Drawing.Size(157, 23);
-            this.btn_deleteDuplicate.TabIndex = 27;
-            this.btn_deleteDuplicate.Text = "Borrar Registros Duplicados";
-            this.btn_deleteDuplicate.UseVisualStyleBackColor = true;
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.Location = new System.Drawing.Point(6, 106);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(157, 23);
-            this.btn_delete.TabIndex = 26;
-            this.btn_delete.Text = "Borrar Todos los Registros";
-            this.btn_delete.UseVisualStyleBackColor = true;
-            // 
-            // btn_drop
-            // 
-            this.btn_drop.Location = new System.Drawing.Point(6, 77);
-            this.btn_drop.Name = "btn_drop";
-            this.btn_drop.Size = new System.Drawing.Size(157, 23);
-            this.btn_drop.TabIndex = 25;
-            this.btn_drop.Text = "Borrar Base de Datos";
-            this.btn_drop.UseVisualStyleBackColor = true;
-            this.btn_drop.Click += new System.EventHandler(this.btn_drop_Click);
-            // 
-            // cbtn_closeCheck
-            // 
-            this.cbtn_closeCheck.BackColor = System.Drawing.Color.Maroon;
-            this.cbtn_closeCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbtn_closeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbtn_closeCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cbtn_closeCheck.Location = new System.Drawing.Point(1093, 8);
-            this.cbtn_closeCheck.Name = "cbtn_closeCheck";
-            this.cbtn_closeCheck.Size = new System.Drawing.Size(27, 23);
-            this.cbtn_closeCheck.TabIndex = 34;
-            this.cbtn_closeCheck.Text = "X";
-            this.cbtn_closeCheck.UseVisualStyleBackColor = false;
-            this.cbtn_closeCheck.Click += new System.EventHandler(this.cbtn_closeCheck_Click);
-            // 
-            // id_typeNotStudent
-            // 
-            this.id_typeNotStudent.DataPropertyName = "id_typeNotStudent";
-            this.id_typeNotStudent.HeaderText = "ID";
-            this.id_typeNotStudent.Name = "id_typeNotStudent";
-            this.id_typeNotStudent.ReadOnly = true;
-            // 
-            // description_typeNotStudent
-            // 
-            this.description_typeNotStudent.DataPropertyName = "description_typeNotStudent";
-            this.description_typeNotStudent.HeaderText = "Descripcion";
-            this.description_typeNotStudent.Name = "description_typeNotStudent";
-            this.description_typeNotStudent.ReadOnly = true;
-            // 
-            // edit_typeNotStudent
-            // 
-            this.edit_typeNotStudent.DataPropertyName = "edit_typeNotStudent";
-            this.edit_typeNotStudent.HeaderText = "Editar";
-            this.edit_typeNotStudent.Name = "edit_typeNotStudent";
-            this.edit_typeNotStudent.ReadOnly = true;
-            this.edit_typeNotStudent.Text = "Editar";
-            this.edit_typeNotStudent.UseColumnTextForButtonValue = true;
-            this.edit_typeNotStudent.Width = 75;
-            // 
-            // delete_userNotStudent
-            // 
-            this.delete_userNotStudent.DataPropertyName = "delete_userNotStudent";
-            this.delete_userNotStudent.HeaderText = "Eliminar";
-            this.delete_userNotStudent.Name = "delete_userNotStudent";
-            this.delete_userNotStudent.ReadOnly = true;
-            this.delete_userNotStudent.Text = "Eliminar";
-            this.delete_userNotStudent.UseColumnTextForButtonValue = true;
-            this.delete_userNotStudent.Width = 75;
-            // 
-            // id_typeUser
-            // 
-            this.id_typeUser.DataPropertyName = "id_typeUser";
-            this.id_typeUser.HeaderText = "ID";
-            this.id_typeUser.Name = "id_typeUser";
-            this.id_typeUser.ReadOnly = true;
-            // 
-            // description_typeUser
-            // 
-            this.description_typeUser.DataPropertyName = "description_typeUser";
-            this.description_typeUser.HeaderText = "Descripcion";
-            this.description_typeUser.Name = "description_typeUser";
-            this.description_typeUser.ReadOnly = true;
-            // 
-            // edit_typeUser
-            // 
-            this.edit_typeUser.DataPropertyName = "edit_typeUser";
-            this.edit_typeUser.HeaderText = "Editar";
-            this.edit_typeUser.Name = "edit_typeUser";
-            this.edit_typeUser.ReadOnly = true;
-            this.edit_typeUser.Text = "Editar";
-            this.edit_typeUser.UseColumnTextForButtonValue = true;
-            this.edit_typeUser.Width = 75;
-            // 
-            // delete_typeUser
-            // 
-            this.delete_typeUser.DataPropertyName = "delete_typeUser";
-            this.delete_typeUser.HeaderText = "Eliminar";
-            this.delete_typeUser.Name = "delete_typeUser";
-            this.delete_typeUser.ReadOnly = true;
-            this.delete_typeUser.Text = "Eliminar";
-            this.delete_typeUser.UseColumnTextForButtonValue = true;
-            this.delete_typeUser.Width = 75;
-            // 
-            // id_user
-            // 
-            this.id_user.DataPropertyName = "id_user";
-            this.id_user.HeaderText = "ID";
-            this.id_user.Name = "id_user";
-            this.id_user.ReadOnly = true;
-            // 
-            // name_user
-            // 
-            this.name_user.DataPropertyName = "name_user";
-            this.name_user.HeaderText = "Nombre";
-            this.name_user.Name = "name_user";
-            this.name_user.ReadOnly = true;
-            // 
-            // fatherLastName_user
-            // 
-            this.fatherLastName_user.DataPropertyName = "fatherLastName_user";
-            this.fatherLastName_user.HeaderText = "Apellido paterno";
-            this.fatherLastName_user.Name = "fatherLastName_user";
-            this.fatherLastName_user.ReadOnly = true;
-            // 
-            // motherLastName_user
-            // 
-            this.motherLastName_user.DataPropertyName = "motherLastName_user";
-            this.motherLastName_user.HeaderText = "Apellido materno";
-            this.motherLastName_user.Name = "motherLastName_user";
-            this.motherLastName_user.ReadOnly = true;
-            // 
-            // id_type_user
-            // 
-            this.id_type_user.DataPropertyName = "id_type_user";
-            this.id_type_user.HeaderText = "ID Tipo de usuario";
-            this.id_type_user.Name = "id_type_user";
-            this.id_type_user.ReadOnly = true;
-            this.id_type_user.Visible = false;
-            // 
-            // description_user
-            // 
-            this.description_user.DataPropertyName = "description_user";
-            this.description_user.HeaderText = "Descripcion";
-            this.description_user.Name = "description_user";
-            this.description_user.ReadOnly = true;
-            // 
-            // edit_user
-            // 
-            this.edit_user.DataPropertyName = "edit_user";
-            this.edit_user.HeaderText = "Editar";
-            this.edit_user.Name = "edit_user";
-            this.edit_user.ReadOnly = true;
-            this.edit_user.Text = "Editar";
-            this.edit_user.UseColumnTextForButtonValue = true;
-            this.edit_user.Width = 75;
-            // 
-            // delete_user
-            // 
-            this.delete_user.DataPropertyName = "delete_user";
-            this.delete_user.HeaderText = "Eliminar";
-            this.delete_user.Name = "delete_user";
-            this.delete_user.ReadOnly = true;
-            this.delete_user.Text = "Eliminar";
-            this.delete_user.UseColumnTextForButtonValue = true;
-            this.delete_user.Width = 75;
             // 
             // edit_student
             // 
@@ -1570,6 +636,384 @@
             this.career_key_student.ReadOnly = true;
             this.career_key_student.Width = 50;
             // 
+            // lbl_register
+            // 
+            this.lbl_register.AutoSize = true;
+            this.lbl_register.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_register.Location = new System.Drawing.Point(124, 32);
+            this.lbl_register.Name = "lbl_register";
+            this.lbl_register.Size = new System.Drawing.Size(116, 31);
+            this.lbl_register.TabIndex = 18;
+            this.lbl_register.Text = "Registro";
+            // 
+            // grpbx_unique
+            // 
+            this.grpbx_unique.Controls.Add(this.btn_cancel);
+            this.grpbx_unique.Controls.Add(this.txt_idStudent);
+            this.grpbx_unique.Controls.Add(this.cmbbox_careerStudent);
+            this.grpbx_unique.Controls.Add(this.lbl_careerStudent);
+            this.grpbx_unique.Controls.Add(this.txt_semesterStudent);
+            this.grpbx_unique.Controls.Add(this.lbl_semesterStudent);
+            this.grpbx_unique.Controls.Add(this.txt_numberStudent);
+            this.grpbx_unique.Controls.Add(this.lbl_numberStudent);
+            this.grpbx_unique.Controls.Add(this.txt_motherLasnameStudent);
+            this.grpbx_unique.Controls.Add(this.btn_add);
+            this.grpbx_unique.Controls.Add(this.cmbbx_typeRegister);
+            this.grpbx_unique.Controls.Add(this.txt_fatherLasnameStudent);
+            this.grpbx_unique.Controls.Add(this.lbl_typeRegister);
+            this.grpbx_unique.Controls.Add(this.txt_nameStudent);
+            this.grpbx_unique.Controls.Add(this.lbl_nameStudent);
+            this.grpbx_unique.Controls.Add(this.lbl_motherLastnameStudent);
+            this.grpbx_unique.Controls.Add(this.lbl_fatherLastnameStudent);
+            this.grpbx_unique.Location = new System.Drawing.Point(17, 235);
+            this.grpbx_unique.Name = "grpbx_unique";
+            this.grpbx_unique.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.grpbx_unique.Size = new System.Drawing.Size(333, 239);
+            this.grpbx_unique.TabIndex = 17;
+            this.grpbx_unique.TabStop = false;
+            this.grpbx_unique.Text = "Registro";
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.AccessibleName = "Cancelar";
+            this.btn_cancel.Location = new System.Drawing.Point(256, 176);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(67, 23);
+            this.btn_cancel.TabIndex = 35;
+            this.btn_cancel.Text = "Cancelar";
+            this.btn_cancel.UseVisualStyleBackColor = true;
+            // 
+            // txt_idStudent
+            // 
+            this.txt_idStudent.Location = new System.Drawing.Point(93, 46);
+            this.txt_idStudent.Name = "txt_idStudent";
+            this.txt_idStudent.Size = new System.Drawing.Size(64, 20);
+            this.txt_idStudent.TabIndex = 34;
+            this.txt_idStudent.Visible = false;
+            // 
+            // cmbbox_careerStudent
+            // 
+            this.cmbbox_careerStudent.AccessibleName = "Licenciatura";
+            this.cmbbox_careerStudent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbbox_careerStudent.FormattingEnabled = true;
+            this.cmbbox_careerStudent.Location = new System.Drawing.Point(93, 206);
+            this.cmbbox_careerStudent.Name = "cmbbox_careerStudent";
+            this.cmbbox_careerStudent.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cmbbox_careerStudent.Size = new System.Drawing.Size(158, 21);
+            this.cmbbox_careerStudent.TabIndex = 31;
+            // 
+            // lbl_careerStudent
+            // 
+            this.lbl_careerStudent.AutoSize = true;
+            this.lbl_careerStudent.Location = new System.Drawing.Point(28, 209);
+            this.lbl_careerStudent.Name = "lbl_careerStudent";
+            this.lbl_careerStudent.Size = new System.Drawing.Size(65, 13);
+            this.lbl_careerStudent.TabIndex = 30;
+            this.lbl_careerStudent.Text = "Licenciatura";
+            // 
+            // txt_semesterStudent
+            // 
+            this.txt_semesterStudent.AccessibleName = "Semestre";
+            this.txt_semesterStudent.Location = new System.Drawing.Point(93, 179);
+            this.txt_semesterStudent.MaxLength = 2;
+            this.txt_semesterStudent.Name = "txt_semesterStudent";
+            this.txt_semesterStudent.Size = new System.Drawing.Size(158, 20);
+            this.txt_semesterStudent.TabIndex = 21;
+            // 
+            // lbl_semesterStudent
+            // 
+            this.lbl_semesterStudent.AutoSize = true;
+            this.lbl_semesterStudent.Location = new System.Drawing.Point(42, 182);
+            this.lbl_semesterStudent.Name = "lbl_semesterStudent";
+            this.lbl_semesterStudent.Size = new System.Drawing.Size(51, 13);
+            this.lbl_semesterStudent.TabIndex = 28;
+            this.lbl_semesterStudent.Text = "Semestre";
+            // 
+            // txt_numberStudent
+            // 
+            this.txt_numberStudent.AccessibleName = "Matrícula";
+            this.txt_numberStudent.Location = new System.Drawing.Point(93, 72);
+            this.txt_numberStudent.MaxLength = 7;
+            this.txt_numberStudent.Name = "txt_numberStudent";
+            this.txt_numberStudent.Size = new System.Drawing.Size(158, 20);
+            this.txt_numberStudent.TabIndex = 17;
+            // 
+            // lbl_numberStudent
+            // 
+            this.lbl_numberStudent.AutoSize = true;
+            this.lbl_numberStudent.Location = new System.Drawing.Point(41, 75);
+            this.lbl_numberStudent.Name = "lbl_numberStudent";
+            this.lbl_numberStudent.Size = new System.Drawing.Size(52, 13);
+            this.lbl_numberStudent.TabIndex = 26;
+            this.lbl_numberStudent.Text = "Matrícula";
+            // 
+            // txt_motherLasnameStudent
+            // 
+            this.txt_motherLasnameStudent.AccessibleName = "Apellido Materno";
+            this.txt_motherLasnameStudent.Location = new System.Drawing.Point(93, 153);
+            this.txt_motherLasnameStudent.MaxLength = 50;
+            this.txt_motherLasnameStudent.Name = "txt_motherLasnameStudent";
+            this.txt_motherLasnameStudent.Size = new System.Drawing.Size(158, 20);
+            this.txt_motherLasnameStudent.TabIndex = 20;
+            // 
+            // btn_add
+            // 
+            this.btn_add.AccessibleName = "Guardar";
+            this.btn_add.Location = new System.Drawing.Point(256, 205);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(67, 23);
+            this.btn_add.TabIndex = 23;
+            this.btn_add.Text = "Guardar";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
+            // cmbbx_typeRegister
+            // 
+            this.cmbbx_typeRegister.AccessibleName = "Tipo de Registro";
+            this.cmbbx_typeRegister.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbbx_typeRegister.FormattingEnabled = true;
+            this.cmbbx_typeRegister.Location = new System.Drawing.Point(93, 19);
+            this.cmbbx_typeRegister.Name = "cmbbx_typeRegister";
+            this.cmbbx_typeRegister.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cmbbx_typeRegister.Size = new System.Drawing.Size(158, 21);
+            this.cmbbx_typeRegister.TabIndex = 16;
+            this.cmbbx_typeRegister.SelectedIndexChanged += new System.EventHandler(this.cmbbx_typeRegister_SelectedIndexChanged);
+            // 
+            // txt_fatherLasnameStudent
+            // 
+            this.txt_fatherLasnameStudent.AccessibleName = "Apellido Paterno";
+            this.txt_fatherLasnameStudent.Location = new System.Drawing.Point(93, 126);
+            this.txt_fatherLasnameStudent.MaxLength = 50;
+            this.txt_fatherLasnameStudent.Name = "txt_fatherLasnameStudent";
+            this.txt_fatherLasnameStudent.Size = new System.Drawing.Size(158, 20);
+            this.txt_fatherLasnameStudent.TabIndex = 19;
+            // 
+            // lbl_typeRegister
+            // 
+            this.lbl_typeRegister.AutoSize = true;
+            this.lbl_typeRegister.Location = new System.Drawing.Point(65, 22);
+            this.lbl_typeRegister.Name = "lbl_typeRegister";
+            this.lbl_typeRegister.Size = new System.Drawing.Size(28, 13);
+            this.lbl_typeRegister.TabIndex = 18;
+            this.lbl_typeRegister.Text = "Tipo";
+            // 
+            // txt_nameStudent
+            // 
+            this.txt_nameStudent.AccessibleName = "Nombre";
+            this.txt_nameStudent.Location = new System.Drawing.Point(93, 98);
+            this.txt_nameStudent.MaxLength = 50;
+            this.txt_nameStudent.Name = "txt_nameStudent";
+            this.txt_nameStudent.Size = new System.Drawing.Size(158, 20);
+            this.txt_nameStudent.TabIndex = 18;
+            // 
+            // lbl_nameStudent
+            // 
+            this.lbl_nameStudent.AutoSize = true;
+            this.lbl_nameStudent.Location = new System.Drawing.Point(49, 101);
+            this.lbl_nameStudent.Name = "lbl_nameStudent";
+            this.lbl_nameStudent.Size = new System.Drawing.Size(44, 13);
+            this.lbl_nameStudent.TabIndex = 20;
+            this.lbl_nameStudent.Text = "Nombre";
+            // 
+            // lbl_motherLastnameStudent
+            // 
+            this.lbl_motherLastnameStudent.AutoSize = true;
+            this.lbl_motherLastnameStudent.Location = new System.Drawing.Point(7, 156);
+            this.lbl_motherLastnameStudent.Name = "lbl_motherLastnameStudent";
+            this.lbl_motherLastnameStudent.Size = new System.Drawing.Size(86, 13);
+            this.lbl_motherLastnameStudent.TabIndex = 22;
+            this.lbl_motherLastnameStudent.Text = "Apellido Materno";
+            // 
+            // lbl_fatherLastnameStudent
+            // 
+            this.lbl_fatherLastnameStudent.AutoSize = true;
+            this.lbl_fatherLastnameStudent.Location = new System.Drawing.Point(9, 129);
+            this.lbl_fatherLastnameStudent.Name = "lbl_fatherLastnameStudent";
+            this.lbl_fatherLastnameStudent.Size = new System.Drawing.Size(84, 13);
+            this.lbl_fatherLastnameStudent.TabIndex = 21;
+            this.lbl_fatherLastnameStudent.Text = "Apellido Paterno";
+            // 
+            // grpbx_load
+            // 
+            this.grpbx_load.Controls.Add(this.btn_cancelLoad);
+            this.grpbx_load.Controls.Add(this.btn_saveLoad);
+            this.grpbx_load.Controls.Add(this.cmbbx_type);
+            this.grpbx_load.Controls.Add(this.txt_file);
+            this.grpbx_load.Controls.Add(this.lbl_type);
+            this.grpbx_load.Controls.Add(this.btn_file);
+            this.grpbx_load.Location = new System.Drawing.Point(17, 100);
+            this.grpbx_load.Name = "grpbx_load";
+            this.grpbx_load.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.grpbx_load.Size = new System.Drawing.Size(333, 84);
+            this.grpbx_load.TabIndex = 16;
+            this.grpbx_load.TabStop = false;
+            this.grpbx_load.Text = "Carga con Archivo";
+            // 
+            // btn_cancelLoad
+            // 
+            this.btn_cancelLoad.AccessibleName = "Cancelar";
+            this.btn_cancelLoad.Location = new System.Drawing.Point(256, 28);
+            this.btn_cancelLoad.Name = "btn_cancelLoad";
+            this.btn_cancelLoad.Size = new System.Drawing.Size(67, 23);
+            this.btn_cancelLoad.TabIndex = 36;
+            this.btn_cancelLoad.Text = "Cancelar";
+            this.btn_cancelLoad.UseVisualStyleBackColor = true;
+            // 
+            // btn_saveLoad
+            // 
+            this.btn_saveLoad.AccessibleName = "Guardar";
+            this.btn_saveLoad.Location = new System.Drawing.Point(256, 54);
+            this.btn_saveLoad.Name = "btn_saveLoad";
+            this.btn_saveLoad.Size = new System.Drawing.Size(67, 23);
+            this.btn_saveLoad.TabIndex = 15;
+            this.btn_saveLoad.Text = "Guardar";
+            this.btn_saveLoad.UseVisualStyleBackColor = true;
+            this.btn_saveLoad.Click += new System.EventHandler(this.btn_saveLoad_Click);
+            // 
+            // cmbbx_type
+            // 
+            this.cmbbx_type.AccessibleName = "Tipo de Registro";
+            this.cmbbx_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbbx_type.FormattingEnabled = true;
+            this.cmbbx_type.Location = new System.Drawing.Point(93, 28);
+            this.cmbbx_type.Name = "cmbbx_type";
+            this.cmbbx_type.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cmbbx_type.Size = new System.Drawing.Size(160, 21);
+            this.cmbbx_type.TabIndex = 12;
+            // 
+            // txt_file
+            // 
+            this.txt_file.AccessibleName = "Archivo";
+            this.txt_file.Enabled = false;
+            this.txt_file.Location = new System.Drawing.Point(93, 56);
+            this.txt_file.Name = "txt_file";
+            this.txt_file.Size = new System.Drawing.Size(160, 20);
+            this.txt_file.TabIndex = 14;
+            this.txt_file.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lbl_type
+            // 
+            this.lbl_type.AutoSize = true;
+            this.lbl_type.Location = new System.Drawing.Point(65, 31);
+            this.lbl_type.Name = "lbl_type";
+            this.lbl_type.Size = new System.Drawing.Size(28, 13);
+            this.lbl_type.TabIndex = 13;
+            this.lbl_type.Text = "Tipo";
+            // 
+            // btn_file
+            // 
+            this.btn_file.AccessibleName = "Archivo";
+            this.btn_file.Location = new System.Drawing.Point(36, 54);
+            this.btn_file.Name = "btn_file";
+            this.btn_file.Size = new System.Drawing.Size(54, 23);
+            this.btn_file.TabIndex = 13;
+            this.btn_file.Text = "Archivo";
+            this.btn_file.UseVisualStyleBackColor = true;
+            // 
+            // tblctl_settings
+            // 
+            this.tblctl_settings.BackColor = System.Drawing.Color.Transparent;
+            this.tblctl_settings.Controls.Add(this.tbctl_form);
+            this.tblctl_settings.Controls.Add(this.grpbx_info);
+            this.tblctl_settings.Controls.Add(this.grpbx_database);
+            this.tblctl_settings.Location = new System.Drawing.Point(4, 4);
+            this.tblctl_settings.Name = "tblctl_settings";
+            this.tblctl_settings.Padding = new System.Windows.Forms.Padding(3);
+            this.tblctl_settings.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tblctl_settings.Size = new System.Drawing.Size(1115, 801);
+            this.tblctl_settings.TabIndex = 3;
+            this.tblctl_settings.Text = "Configuración";
+            // 
+            // tbctl_form
+            // 
+            this.tbctl_form.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tbctl_form.Controls.Add(this.tbpg_career);
+            this.tbctl_form.Controls.Add(this.tbpg_typeNotStudent);
+            this.tbctl_form.Controls.Add(this.tbpg_typeUser);
+            this.tbctl_form.Controls.Add(this.tbpg_userCICE);
+            this.tbctl_form.Location = new System.Drawing.Point(213, 18);
+            this.tbctl_form.Name = "tbctl_form";
+            this.tbctl_form.SelectedIndex = 0;
+            this.tbctl_form.Size = new System.Drawing.Size(871, 734);
+            this.tbctl_form.TabIndex = 8;
+            // 
+            // tbpg_career
+            // 
+            this.tbpg_career.BackColor = System.Drawing.Color.Transparent;
+            this.tbpg_career.Controls.Add(this.btn_careerCancel);
+            this.tbpg_career.Controls.Add(this.txt_idCareer);
+            this.tbpg_career.Controls.Add(this.txt_careerKey);
+            this.tbpg_career.Controls.Add(this.lbl_careerKey);
+            this.tbpg_career.Controls.Add(this.dtgd_career);
+            this.tbpg_career.Controls.Add(this.btn_careerSave);
+            this.tbpg_career.Controls.Add(this.txt_careerName);
+            this.tbpg_career.Controls.Add(this.lbl_careerName);
+            this.tbpg_career.Location = new System.Drawing.Point(4, 25);
+            this.tbpg_career.Name = "tbpg_career";
+            this.tbpg_career.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpg_career.Size = new System.Drawing.Size(863, 705);
+            this.tbpg_career.TabIndex = 0;
+            this.tbpg_career.Text = "Licenciatura";
+            // 
+            // btn_careerCancel
+            // 
+            this.btn_careerCancel.AccessibleName = "Cancelar";
+            this.btn_careerCancel.Location = new System.Drawing.Point(332, 51);
+            this.btn_careerCancel.Name = "btn_careerCancel";
+            this.btn_careerCancel.Size = new System.Drawing.Size(75, 23);
+            this.btn_careerCancel.TabIndex = 45;
+            this.btn_careerCancel.Text = "Cancelar";
+            this.btn_careerCancel.UseVisualStyleBackColor = true;
+            this.btn_careerCancel.Click += new System.EventHandler(this.btn_careerCancel_Click);
+            // 
+            // txt_idCareer
+            // 
+            this.txt_idCareer.Enabled = false;
+            this.txt_idCareer.Location = new System.Drawing.Point(252, 28);
+            this.txt_idCareer.Name = "txt_idCareer";
+            this.txt_idCareer.Size = new System.Drawing.Size(74, 20);
+            this.txt_idCareer.TabIndex = 44;
+            this.txt_idCareer.Visible = false;
+            // 
+            // txt_careerKey
+            // 
+            this.txt_careerKey.AccessibleName = "Clave";
+            this.txt_careerKey.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_careerKey.Location = new System.Drawing.Point(78, 53);
+            this.txt_careerKey.MaxLength = 6;
+            this.txt_careerKey.Name = "txt_careerKey";
+            this.txt_careerKey.Size = new System.Drawing.Size(167, 20);
+            this.txt_careerKey.TabIndex = 33;
+            // 
+            // lbl_careerKey
+            // 
+            this.lbl_careerKey.AutoSize = true;
+            this.lbl_careerKey.Location = new System.Drawing.Point(38, 57);
+            this.lbl_careerKey.Name = "lbl_careerKey";
+            this.lbl_careerKey.Size = new System.Drawing.Size(34, 13);
+            this.lbl_careerKey.TabIndex = 43;
+            this.lbl_careerKey.Text = "Clave";
+            // 
+            // dtgd_career
+            // 
+            this.dtgd_career.AllowUserToAddRows = false;
+            this.dtgd_career.AllowUserToDeleteRows = false;
+            this.dtgd_career.AllowUserToResizeRows = false;
+            this.dtgd_career.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgd_career.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_career,
+            this.career_name,
+            this.career_key,
+            this.edit_carrer,
+            this.delete_carrer});
+            this.dtgd_career.Location = new System.Drawing.Point(28, 81);
+            this.dtgd_career.Name = "dtgd_career";
+            this.dtgd_career.RowHeadersVisible = false;
+            this.dtgd_career.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dtgd_career.Size = new System.Drawing.Size(815, 603);
+            this.dtgd_career.TabIndex = 3;
+            this.dtgd_career.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgd_career_CellContentClick);
+            // 
             // id_career
             // 
             this.id_career.DataPropertyName = "id_career";
@@ -1618,6 +1062,629 @@
             this.delete_carrer.Text = "Borrar";
             this.delete_carrer.UseColumnTextForButtonValue = true;
             this.delete_carrer.Width = 75;
+            // 
+            // btn_careerSave
+            // 
+            this.btn_careerSave.AccessibleName = "Guardar";
+            this.btn_careerSave.Location = new System.Drawing.Point(251, 51);
+            this.btn_careerSave.Name = "btn_careerSave";
+            this.btn_careerSave.Size = new System.Drawing.Size(75, 23);
+            this.btn_careerSave.TabIndex = 34;
+            this.btn_careerSave.Text = "Guardar";
+            this.btn_careerSave.UseVisualStyleBackColor = true;
+            this.btn_careerSave.Click += new System.EventHandler(this.btn_careerSave_Click);
+            // 
+            // txt_careerName
+            // 
+            this.txt_careerName.AccessibleName = "Nombre";
+            this.txt_careerName.Location = new System.Drawing.Point(78, 28);
+            this.txt_careerName.MaxLength = 250;
+            this.txt_careerName.Name = "txt_careerName";
+            this.txt_careerName.Size = new System.Drawing.Size(167, 20);
+            this.txt_careerName.TabIndex = 32;
+            // 
+            // lbl_careerName
+            // 
+            this.lbl_careerName.AutoSize = true;
+            this.lbl_careerName.Location = new System.Drawing.Point(28, 33);
+            this.lbl_careerName.Name = "lbl_careerName";
+            this.lbl_careerName.Size = new System.Drawing.Size(44, 13);
+            this.lbl_careerName.TabIndex = 0;
+            this.lbl_careerName.Text = "Nombre";
+            // 
+            // tbpg_typeNotStudent
+            // 
+            this.tbpg_typeNotStudent.BackColor = System.Drawing.Color.Transparent;
+            this.tbpg_typeNotStudent.Controls.Add(this.btn_typeNotStudentCancel);
+            this.tbpg_typeNotStudent.Controls.Add(this.txt_idTypeNotStudent);
+            this.tbpg_typeNotStudent.Controls.Add(this.dtgd_typeNotStudent);
+            this.tbpg_typeNotStudent.Controls.Add(this.btn_typeNotStudentSave);
+            this.tbpg_typeNotStudent.Controls.Add(this.txt_typeNotStudentName);
+            this.tbpg_typeNotStudent.Controls.Add(this.lbl_typeNotStudentName);
+            this.tbpg_typeNotStudent.Location = new System.Drawing.Point(4, 25);
+            this.tbpg_typeNotStudent.Name = "tbpg_typeNotStudent";
+            this.tbpg_typeNotStudent.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpg_typeNotStudent.Size = new System.Drawing.Size(863, 705);
+            this.tbpg_typeNotStudent.TabIndex = 1;
+            this.tbpg_typeNotStudent.Text = "Tipos de No Estudiantes";
+            // 
+            // btn_typeNotStudentCancel
+            // 
+            this.btn_typeNotStudentCancel.AccessibleName = "Cancelar";
+            this.btn_typeNotStudentCancel.Location = new System.Drawing.Point(328, 23);
+            this.btn_typeNotStudentCancel.Name = "btn_typeNotStudentCancel";
+            this.btn_typeNotStudentCancel.Size = new System.Drawing.Size(75, 23);
+            this.btn_typeNotStudentCancel.TabIndex = 46;
+            this.btn_typeNotStudentCancel.Text = "Cancelar";
+            this.btn_typeNotStudentCancel.UseVisualStyleBackColor = true;
+            this.btn_typeNotStudentCancel.Click += new System.EventHandler(this.btn_typeNotStudentCancel_Click);
+            // 
+            // txt_idTypeNotStudent
+            // 
+            this.txt_idTypeNotStudent.Enabled = false;
+            this.txt_idTypeNotStudent.Location = new System.Drawing.Point(409, 25);
+            this.txt_idTypeNotStudent.Name = "txt_idTypeNotStudent";
+            this.txt_idTypeNotStudent.Size = new System.Drawing.Size(74, 20);
+            this.txt_idTypeNotStudent.TabIndex = 45;
+            this.txt_idTypeNotStudent.Visible = false;
+            // 
+            // dtgd_typeNotStudent
+            // 
+            this.dtgd_typeNotStudent.AllowUserToAddRows = false;
+            this.dtgd_typeNotStudent.AllowUserToDeleteRows = false;
+            this.dtgd_typeNotStudent.AllowUserToResizeRows = false;
+            this.dtgd_typeNotStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgd_typeNotStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_typeNotStudent,
+            this.description_typeNotStudent,
+            this.edit_typeNotStudent,
+            this.delete_userNotStudent});
+            this.dtgd_typeNotStudent.Location = new System.Drawing.Point(24, 66);
+            this.dtgd_typeNotStudent.Name = "dtgd_typeNotStudent";
+            this.dtgd_typeNotStudent.RowHeadersVisible = false;
+            this.dtgd_typeNotStudent.Size = new System.Drawing.Size(815, 614);
+            this.dtgd_typeNotStudent.TabIndex = 7;
+            this.dtgd_typeNotStudent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgd_typeNotStudent_CellContentClick);
+            // 
+            // id_typeNotStudent
+            // 
+            this.id_typeNotStudent.DataPropertyName = "id_typeNotStudent";
+            this.id_typeNotStudent.HeaderText = "ID";
+            this.id_typeNotStudent.Name = "id_typeNotStudent";
+            this.id_typeNotStudent.ReadOnly = true;
+            // 
+            // description_typeNotStudent
+            // 
+            this.description_typeNotStudent.DataPropertyName = "description_typeNotStudent";
+            this.description_typeNotStudent.HeaderText = "Descripcion";
+            this.description_typeNotStudent.Name = "description_typeNotStudent";
+            this.description_typeNotStudent.ReadOnly = true;
+            // 
+            // edit_typeNotStudent
+            // 
+            this.edit_typeNotStudent.DataPropertyName = "edit_typeNotStudent";
+            this.edit_typeNotStudent.HeaderText = "Editar";
+            this.edit_typeNotStudent.Name = "edit_typeNotStudent";
+            this.edit_typeNotStudent.ReadOnly = true;
+            this.edit_typeNotStudent.Text = "Editar";
+            this.edit_typeNotStudent.UseColumnTextForButtonValue = true;
+            this.edit_typeNotStudent.Width = 75;
+            // 
+            // delete_userNotStudent
+            // 
+            this.delete_userNotStudent.DataPropertyName = "delete_userNotStudent";
+            this.delete_userNotStudent.HeaderText = "Eliminar";
+            this.delete_userNotStudent.Name = "delete_userNotStudent";
+            this.delete_userNotStudent.ReadOnly = true;
+            this.delete_userNotStudent.Text = "Eliminar";
+            this.delete_userNotStudent.UseColumnTextForButtonValue = true;
+            this.delete_userNotStudent.Width = 75;
+            // 
+            // btn_typeNotStudentSave
+            // 
+            this.btn_typeNotStudentSave.AccessibleName = "Guardar";
+            this.btn_typeNotStudentSave.Location = new System.Drawing.Point(247, 23);
+            this.btn_typeNotStudentSave.Name = "btn_typeNotStudentSave";
+            this.btn_typeNotStudentSave.Size = new System.Drawing.Size(75, 23);
+            this.btn_typeNotStudentSave.TabIndex = 36;
+            this.btn_typeNotStudentSave.Text = "Guardar";
+            this.btn_typeNotStudentSave.UseVisualStyleBackColor = true;
+            this.btn_typeNotStudentSave.Click += new System.EventHandler(this.btn_typeNotStudentSave_Click);
+            // 
+            // txt_typeNotStudentName
+            // 
+            this.txt_typeNotStudentName.AccessibleName = "Nombre";
+            this.txt_typeNotStudentName.Location = new System.Drawing.Point(74, 25);
+            this.txt_typeNotStudentName.MaxLength = 250;
+            this.txt_typeNotStudentName.Name = "txt_typeNotStudentName";
+            this.txt_typeNotStudentName.Size = new System.Drawing.Size(167, 20);
+            this.txt_typeNotStudentName.TabIndex = 35;
+            // 
+            // lbl_typeNotStudentName
+            // 
+            this.lbl_typeNotStudentName.AutoSize = true;
+            this.lbl_typeNotStudentName.Location = new System.Drawing.Point(24, 28);
+            this.lbl_typeNotStudentName.Name = "lbl_typeNotStudentName";
+            this.lbl_typeNotStudentName.Size = new System.Drawing.Size(44, 13);
+            this.lbl_typeNotStudentName.TabIndex = 4;
+            this.lbl_typeNotStudentName.Text = "Nombre";
+            // 
+            // tbpg_typeUser
+            // 
+            this.tbpg_typeUser.BackColor = System.Drawing.Color.Transparent;
+            this.tbpg_typeUser.Controls.Add(this.btn_typeUserCancel);
+            this.tbpg_typeUser.Controls.Add(this.txt_idTypeUser);
+            this.tbpg_typeUser.Controls.Add(this.dtgd_typeUser);
+            this.tbpg_typeUser.Controls.Add(this.btn_typeUserSave);
+            this.tbpg_typeUser.Controls.Add(this.txt_typeUserName);
+            this.tbpg_typeUser.Controls.Add(this.lbl_typeUserName);
+            this.tbpg_typeUser.Location = new System.Drawing.Point(4, 25);
+            this.tbpg_typeUser.Name = "tbpg_typeUser";
+            this.tbpg_typeUser.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpg_typeUser.Size = new System.Drawing.Size(863, 705);
+            this.tbpg_typeUser.TabIndex = 2;
+            this.tbpg_typeUser.Text = "Tipos de Usuario";
+            // 
+            // btn_typeUserCancel
+            // 
+            this.btn_typeUserCancel.AccessibleName = "Cancelar";
+            this.btn_typeUserCancel.Location = new System.Drawing.Point(328, 23);
+            this.btn_typeUserCancel.Name = "btn_typeUserCancel";
+            this.btn_typeUserCancel.Size = new System.Drawing.Size(75, 23);
+            this.btn_typeUserCancel.TabIndex = 48;
+            this.btn_typeUserCancel.Text = "Cancelar";
+            this.btn_typeUserCancel.UseVisualStyleBackColor = true;
+            this.btn_typeUserCancel.Click += new System.EventHandler(this.btn_typeUserCancel_Click);
+            // 
+            // txt_idTypeUser
+            // 
+            this.txt_idTypeUser.Enabled = false;
+            this.txt_idTypeUser.Location = new System.Drawing.Point(409, 24);
+            this.txt_idTypeUser.Name = "txt_idTypeUser";
+            this.txt_idTypeUser.Size = new System.Drawing.Size(74, 20);
+            this.txt_idTypeUser.TabIndex = 45;
+            this.txt_idTypeUser.Visible = false;
+            // 
+            // dtgd_typeUser
+            // 
+            this.dtgd_typeUser.AllowUserToAddRows = false;
+            this.dtgd_typeUser.AllowUserToDeleteRows = false;
+            this.dtgd_typeUser.AllowUserToResizeRows = false;
+            this.dtgd_typeUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgd_typeUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_typeUser,
+            this.description_typeUser,
+            this.edit_typeUser,
+            this.delete_typeUser});
+            this.dtgd_typeUser.Location = new System.Drawing.Point(24, 66);
+            this.dtgd_typeUser.Name = "dtgd_typeUser";
+            this.dtgd_typeUser.RowHeadersVisible = false;
+            this.dtgd_typeUser.Size = new System.Drawing.Size(815, 614);
+            this.dtgd_typeUser.TabIndex = 7;
+            this.dtgd_typeUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgd_typeUser_CellContentClick);
+            // 
+            // id_typeUser
+            // 
+            this.id_typeUser.DataPropertyName = "id_typeUser";
+            this.id_typeUser.HeaderText = "ID";
+            this.id_typeUser.Name = "id_typeUser";
+            this.id_typeUser.ReadOnly = true;
+            // 
+            // description_typeUser
+            // 
+            this.description_typeUser.DataPropertyName = "description_typeUser";
+            this.description_typeUser.HeaderText = "Descripcion";
+            this.description_typeUser.Name = "description_typeUser";
+            this.description_typeUser.ReadOnly = true;
+            // 
+            // edit_typeUser
+            // 
+            this.edit_typeUser.DataPropertyName = "edit_typeUser";
+            this.edit_typeUser.HeaderText = "Editar";
+            this.edit_typeUser.Name = "edit_typeUser";
+            this.edit_typeUser.ReadOnly = true;
+            this.edit_typeUser.Text = "Editar";
+            this.edit_typeUser.UseColumnTextForButtonValue = true;
+            this.edit_typeUser.Width = 75;
+            // 
+            // delete_typeUser
+            // 
+            this.delete_typeUser.DataPropertyName = "delete_typeUser";
+            this.delete_typeUser.HeaderText = "Eliminar";
+            this.delete_typeUser.Name = "delete_typeUser";
+            this.delete_typeUser.ReadOnly = true;
+            this.delete_typeUser.Text = "Eliminar";
+            this.delete_typeUser.UseColumnTextForButtonValue = true;
+            this.delete_typeUser.Width = 75;
+            // 
+            // btn_typeUserSave
+            // 
+            this.btn_typeUserSave.AccessibleName = "Guardar";
+            this.btn_typeUserSave.Location = new System.Drawing.Point(247, 23);
+            this.btn_typeUserSave.Name = "btn_typeUserSave";
+            this.btn_typeUserSave.Size = new System.Drawing.Size(75, 23);
+            this.btn_typeUserSave.TabIndex = 38;
+            this.btn_typeUserSave.Text = "Guardar";
+            this.btn_typeUserSave.UseVisualStyleBackColor = true;
+            this.btn_typeUserSave.Click += new System.EventHandler(this.btn_typeUserSave_Click);
+            // 
+            // txt_typeUserName
+            // 
+            this.txt_typeUserName.AccessibleName = "Nombre";
+            this.txt_typeUserName.Location = new System.Drawing.Point(74, 24);
+            this.txt_typeUserName.MaxLength = 250;
+            this.txt_typeUserName.Name = "txt_typeUserName";
+            this.txt_typeUserName.Size = new System.Drawing.Size(167, 20);
+            this.txt_typeUserName.TabIndex = 37;
+            // 
+            // lbl_typeUserName
+            // 
+            this.lbl_typeUserName.AutoSize = true;
+            this.lbl_typeUserName.Location = new System.Drawing.Point(24, 29);
+            this.lbl_typeUserName.Name = "lbl_typeUserName";
+            this.lbl_typeUserName.Size = new System.Drawing.Size(44, 13);
+            this.lbl_typeUserName.TabIndex = 4;
+            this.lbl_typeUserName.Text = "Nombre";
+            // 
+            // tbpg_userCICE
+            // 
+            this.tbpg_userCICE.BackColor = System.Drawing.Color.Transparent;
+            this.tbpg_userCICE.Controls.Add(this.btn_userCancel);
+            this.tbpg_userCICE.Controls.Add(this.txt_idUser);
+            this.tbpg_userCICE.Controls.Add(this.lbl_typeUser);
+            this.tbpg_userCICE.Controls.Add(this.cmbbx_typeUser);
+            this.tbpg_userCICE.Controls.Add(this.txt_passwordUser);
+            this.tbpg_userCICE.Controls.Add(this.lbl_passwordUser);
+            this.tbpg_userCICE.Controls.Add(this.txt_motherLastnameUser);
+            this.tbpg_userCICE.Controls.Add(this.btn_userSave);
+            this.tbpg_userCICE.Controls.Add(this.txt_fatherLastnameUser);
+            this.tbpg_userCICE.Controls.Add(this.txt_nameUser);
+            this.tbpg_userCICE.Controls.Add(this.lbl_nameUser);
+            this.tbpg_userCICE.Controls.Add(this.lbl_motherLastnameUser);
+            this.tbpg_userCICE.Controls.Add(this.lbl_fatherLastnameUser);
+            this.tbpg_userCICE.Controls.Add(this.dtgd_user);
+            this.tbpg_userCICE.Location = new System.Drawing.Point(4, 25);
+            this.tbpg_userCICE.Name = "tbpg_userCICE";
+            this.tbpg_userCICE.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpg_userCICE.Size = new System.Drawing.Size(863, 705);
+            this.tbpg_userCICE.TabIndex = 3;
+            this.tbpg_userCICE.Text = "Usuarios";
+            // 
+            // btn_userCancel
+            // 
+            this.btn_userCancel.AccessibleName = "Cancelar";
+            this.btn_userCancel.Location = new System.Drawing.Point(386, 74);
+            this.btn_userCancel.Name = "btn_userCancel";
+            this.btn_userCancel.Size = new System.Drawing.Size(67, 23);
+            this.btn_userCancel.TabIndex = 46;
+            this.btn_userCancel.Text = "Cancelar";
+            this.btn_userCancel.UseVisualStyleBackColor = true;
+            this.btn_userCancel.Click += new System.EventHandler(this.btn_userCancel_Click);
+            // 
+            // txt_idUser
+            // 
+            this.txt_idUser.Enabled = false;
+            this.txt_idUser.Location = new System.Drawing.Point(282, 75);
+            this.txt_idUser.Name = "txt_idUser";
+            this.txt_idUser.Size = new System.Drawing.Size(83, 20);
+            this.txt_idUser.TabIndex = 45;
+            this.txt_idUser.Visible = false;
+            // 
+            // lbl_typeUser
+            // 
+            this.lbl_typeUser.AutoSize = true;
+            this.lbl_typeUser.Location = new System.Drawing.Point(17, 78);
+            this.lbl_typeUser.Name = "lbl_typeUser";
+            this.lbl_typeUser.Size = new System.Drawing.Size(80, 13);
+            this.lbl_typeUser.TabIndex = 44;
+            this.lbl_typeUser.Text = "Tipo de usuario";
+            // 
+            // cmbbx_typeUser
+            // 
+            this.cmbbx_typeUser.AccessibleName = "Tipo de Usuario";
+            this.cmbbx_typeUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbbx_typeUser.FormattingEnabled = true;
+            this.cmbbx_typeUser.Location = new System.Drawing.Point(103, 75);
+            this.cmbbx_typeUser.Name = "cmbbx_typeUser";
+            this.cmbbx_typeUser.Size = new System.Drawing.Size(158, 21);
+            this.cmbbx_typeUser.TabIndex = 41;
+            // 
+            // txt_passwordUser
+            // 
+            this.txt_passwordUser.AccessibleName = "Contraseña";
+            this.txt_passwordUser.Location = new System.Drawing.Point(103, 49);
+            this.txt_passwordUser.MaxLength = 50;
+            this.txt_passwordUser.Name = "txt_passwordUser";
+            this.txt_passwordUser.PasswordChar = '*';
+            this.txt_passwordUser.Size = new System.Drawing.Size(158, 20);
+            this.txt_passwordUser.TabIndex = 40;
+            // 
+            // lbl_passwordUser
+            // 
+            this.lbl_passwordUser.AutoSize = true;
+            this.lbl_passwordUser.Location = new System.Drawing.Point(36, 53);
+            this.lbl_passwordUser.Name = "lbl_passwordUser";
+            this.lbl_passwordUser.Size = new System.Drawing.Size(61, 13);
+            this.lbl_passwordUser.TabIndex = 41;
+            this.lbl_passwordUser.Text = "Contraseña";
+            // 
+            // txt_motherLastnameUser
+            // 
+            this.txt_motherLastnameUser.AccessibleName = "Apellido Materno";
+            this.txt_motherLastnameUser.Location = new System.Drawing.Point(369, 49);
+            this.txt_motherLastnameUser.MaxLength = 50;
+            this.txt_motherLastnameUser.Name = "txt_motherLastnameUser";
+            this.txt_motherLastnameUser.Size = new System.Drawing.Size(156, 20);
+            this.txt_motherLastnameUser.TabIndex = 43;
+            // 
+            // btn_userSave
+            // 
+            this.btn_userSave.AccessibleName = "Guardar";
+            this.btn_userSave.Location = new System.Drawing.Point(459, 74);
+            this.btn_userSave.Name = "btn_userSave";
+            this.btn_userSave.Size = new System.Drawing.Size(67, 23);
+            this.btn_userSave.TabIndex = 44;
+            this.btn_userSave.Text = "Guardar";
+            this.btn_userSave.UseVisualStyleBackColor = true;
+            this.btn_userSave.Click += new System.EventHandler(this.btn_userSave_Click);
+            // 
+            // txt_fatherLastnameUser
+            // 
+            this.txt_fatherLastnameUser.AccessibleName = "Apellido Paterno";
+            this.txt_fatherLastnameUser.Location = new System.Drawing.Point(369, 23);
+            this.txt_fatherLastnameUser.MaxLength = 50;
+            this.txt_fatherLastnameUser.Name = "txt_fatherLastnameUser";
+            this.txt_fatherLastnameUser.Size = new System.Drawing.Size(156, 20);
+            this.txt_fatherLastnameUser.TabIndex = 42;
+            // 
+            // txt_nameUser
+            // 
+            this.txt_nameUser.AccessibleName = "Nombre";
+            this.txt_nameUser.Location = new System.Drawing.Point(103, 23);
+            this.txt_nameUser.MaxLength = 50;
+            this.txt_nameUser.Name = "txt_nameUser";
+            this.txt_nameUser.Size = new System.Drawing.Size(158, 20);
+            this.txt_nameUser.TabIndex = 39;
+            // 
+            // lbl_nameUser
+            // 
+            this.lbl_nameUser.AutoSize = true;
+            this.lbl_nameUser.Location = new System.Drawing.Point(53, 26);
+            this.lbl_nameUser.Name = "lbl_nameUser";
+            this.lbl_nameUser.Size = new System.Drawing.Size(44, 13);
+            this.lbl_nameUser.TabIndex = 33;
+            this.lbl_nameUser.Text = "Nombre";
+            // 
+            // lbl_motherLastnameUser
+            // 
+            this.lbl_motherLastnameUser.AutoSize = true;
+            this.lbl_motherLastnameUser.Location = new System.Drawing.Point(279, 53);
+            this.lbl_motherLastnameUser.Name = "lbl_motherLastnameUser";
+            this.lbl_motherLastnameUser.Size = new System.Drawing.Size(86, 13);
+            this.lbl_motherLastnameUser.TabIndex = 35;
+            this.lbl_motherLastnameUser.Text = "Apellido Materno";
+            // 
+            // lbl_fatherLastnameUser
+            // 
+            this.lbl_fatherLastnameUser.AutoSize = true;
+            this.lbl_fatherLastnameUser.Location = new System.Drawing.Point(279, 26);
+            this.lbl_fatherLastnameUser.Name = "lbl_fatherLastnameUser";
+            this.lbl_fatherLastnameUser.Size = new System.Drawing.Size(84, 13);
+            this.lbl_fatherLastnameUser.TabIndex = 34;
+            this.lbl_fatherLastnameUser.Text = "Apellido Paterno";
+            // 
+            // dtgd_user
+            // 
+            this.dtgd_user.AllowUserToAddRows = false;
+            this.dtgd_user.AllowUserToDeleteRows = false;
+            this.dtgd_user.AllowUserToResizeRows = false;
+            this.dtgd_user.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgd_user.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_user,
+            this.name_user,
+            this.fatherLastName_user,
+            this.motherLastName_user,
+            this.id_type_user,
+            this.description_user,
+            this.edit_user,
+            this.delete_user});
+            this.dtgd_user.Location = new System.Drawing.Point(24, 122);
+            this.dtgd_user.Name = "dtgd_user";
+            this.dtgd_user.RowHeadersVisible = false;
+            this.dtgd_user.Size = new System.Drawing.Size(815, 558);
+            this.dtgd_user.TabIndex = 7;
+            this.dtgd_user.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgd_user_CellContentClick);
+            // 
+            // id_user
+            // 
+            this.id_user.DataPropertyName = "id_user";
+            this.id_user.HeaderText = "ID";
+            this.id_user.Name = "id_user";
+            this.id_user.ReadOnly = true;
+            // 
+            // name_user
+            // 
+            this.name_user.DataPropertyName = "name_user";
+            this.name_user.HeaderText = "Nombre";
+            this.name_user.Name = "name_user";
+            this.name_user.ReadOnly = true;
+            // 
+            // fatherLastName_user
+            // 
+            this.fatherLastName_user.DataPropertyName = "fatherLastName_user";
+            this.fatherLastName_user.HeaderText = "Apellido paterno";
+            this.fatherLastName_user.Name = "fatherLastName_user";
+            this.fatherLastName_user.ReadOnly = true;
+            // 
+            // motherLastName_user
+            // 
+            this.motherLastName_user.DataPropertyName = "motherLastName_user";
+            this.motherLastName_user.HeaderText = "Apellido materno";
+            this.motherLastName_user.Name = "motherLastName_user";
+            this.motherLastName_user.ReadOnly = true;
+            // 
+            // id_type_user
+            // 
+            this.id_type_user.DataPropertyName = "id_type_user";
+            this.id_type_user.HeaderText = "ID Tipo de usuario";
+            this.id_type_user.Name = "id_type_user";
+            this.id_type_user.ReadOnly = true;
+            this.id_type_user.Visible = false;
+            // 
+            // description_user
+            // 
+            this.description_user.DataPropertyName = "description_user";
+            this.description_user.HeaderText = "Descripcion";
+            this.description_user.Name = "description_user";
+            this.description_user.ReadOnly = true;
+            // 
+            // edit_user
+            // 
+            this.edit_user.DataPropertyName = "edit_user";
+            this.edit_user.HeaderText = "Editar";
+            this.edit_user.Name = "edit_user";
+            this.edit_user.ReadOnly = true;
+            this.edit_user.Text = "Editar";
+            this.edit_user.UseColumnTextForButtonValue = true;
+            this.edit_user.Width = 75;
+            // 
+            // delete_user
+            // 
+            this.delete_user.DataPropertyName = "delete_user";
+            this.delete_user.HeaderText = "Eliminar";
+            this.delete_user.Name = "delete_user";
+            this.delete_user.ReadOnly = true;
+            this.delete_user.Text = "Eliminar";
+            this.delete_user.UseColumnTextForButtonValue = true;
+            this.delete_user.Width = 75;
+            // 
+            // grpbx_info
+            // 
+            this.grpbx_info.Controls.Add(this.btn_help);
+            this.grpbx_info.Controls.Add(this.btn_documentation);
+            this.grpbx_info.Controls.Add(this.btn_manual);
+            this.grpbx_info.Controls.Add(this.btn_install);
+            this.grpbx_info.Location = new System.Drawing.Point(18, 198);
+            this.grpbx_info.Name = "grpbx_info";
+            this.grpbx_info.Size = new System.Drawing.Size(173, 149);
+            this.grpbx_info.TabIndex = 7;
+            this.grpbx_info.TabStop = false;
+            this.grpbx_info.Text = "Información";
+            // 
+            // btn_help
+            // 
+            this.btn_help.Location = new System.Drawing.Point(6, 108);
+            this.btn_help.Name = "btn_help";
+            this.btn_help.Size = new System.Drawing.Size(157, 23);
+            this.btn_help.TabIndex = 31;
+            this.btn_help.Text = "Ayuda";
+            this.btn_help.UseVisualStyleBackColor = true;
+            this.btn_help.Click += new System.EventHandler(this.btn_help_Click);
+            // 
+            // btn_documentation
+            // 
+            this.btn_documentation.Location = new System.Drawing.Point(6, 78);
+            this.btn_documentation.Name = "btn_documentation";
+            this.btn_documentation.Size = new System.Drawing.Size(157, 23);
+            this.btn_documentation.TabIndex = 30;
+            this.btn_documentation.Text = "Documentación";
+            this.btn_documentation.UseVisualStyleBackColor = true;
+            // 
+            // btn_manual
+            // 
+            this.btn_manual.Location = new System.Drawing.Point(6, 49);
+            this.btn_manual.Name = "btn_manual";
+            this.btn_manual.Size = new System.Drawing.Size(157, 23);
+            this.btn_manual.TabIndex = 29;
+            this.btn_manual.Text = "Manual de Usuario";
+            this.btn_manual.UseVisualStyleBackColor = true;
+            // 
+            // btn_install
+            // 
+            this.btn_install.Location = new System.Drawing.Point(6, 19);
+            this.btn_install.Name = "btn_install";
+            this.btn_install.Size = new System.Drawing.Size(157, 23);
+            this.btn_install.TabIndex = 28;
+            this.btn_install.Text = "Cómo Instalar";
+            this.btn_install.UseVisualStyleBackColor = true;
+            // 
+            // grpbx_database
+            // 
+            this.grpbx_database.Controls.Add(this.btn_seeder);
+            this.grpbx_database.Controls.Add(this.btn_create);
+            this.grpbx_database.Controls.Add(this.btn_deleteDuplicate);
+            this.grpbx_database.Controls.Add(this.btn_delete);
+            this.grpbx_database.Controls.Add(this.btn_drop);
+            this.grpbx_database.Location = new System.Drawing.Point(18, 18);
+            this.grpbx_database.Name = "grpbx_database";
+            this.grpbx_database.Size = new System.Drawing.Size(173, 174);
+            this.grpbx_database.TabIndex = 6;
+            this.grpbx_database.TabStop = false;
+            this.grpbx_database.Text = "Base de Datos";
+            // 
+            // btn_seeder
+            // 
+            this.btn_seeder.Location = new System.Drawing.Point(6, 48);
+            this.btn_seeder.Name = "btn_seeder";
+            this.btn_seeder.Size = new System.Drawing.Size(157, 23);
+            this.btn_seeder.TabIndex = 28;
+            this.btn_seeder.Text = "Crear Datos Iniciales";
+            this.btn_seeder.UseVisualStyleBackColor = true;
+            this.btn_seeder.Click += new System.EventHandler(this.btn_seeder_Click);
+            // 
+            // btn_create
+            // 
+            this.btn_create.AccessibleName = "Crear Base de Datos";
+            this.btn_create.Enabled = false;
+            this.btn_create.Location = new System.Drawing.Point(6, 19);
+            this.btn_create.Name = "btn_create";
+            this.btn_create.Size = new System.Drawing.Size(157, 23);
+            this.btn_create.TabIndex = 24;
+            this.btn_create.Text = "Crear Base de Datos";
+            this.btn_create.UseVisualStyleBackColor = true;
+            this.btn_create.Click += new System.EventHandler(this.btn_create_Click);
+            // 
+            // btn_deleteDuplicate
+            // 
+            this.btn_deleteDuplicate.Location = new System.Drawing.Point(6, 135);
+            this.btn_deleteDuplicate.Name = "btn_deleteDuplicate";
+            this.btn_deleteDuplicate.Size = new System.Drawing.Size(157, 23);
+            this.btn_deleteDuplicate.TabIndex = 27;
+            this.btn_deleteDuplicate.Text = "Borrar Registros Duplicados";
+            this.btn_deleteDuplicate.UseVisualStyleBackColor = true;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Location = new System.Drawing.Point(6, 106);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(157, 23);
+            this.btn_delete.TabIndex = 26;
+            this.btn_delete.Text = "Borrar Todos los Registros";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            // 
+            // btn_drop
+            // 
+            this.btn_drop.Location = new System.Drawing.Point(6, 77);
+            this.btn_drop.Name = "btn_drop";
+            this.btn_drop.Size = new System.Drawing.Size(157, 23);
+            this.btn_drop.TabIndex = 25;
+            this.btn_drop.Text = "Borrar Base de Datos";
+            this.btn_drop.UseVisualStyleBackColor = true;
+            this.btn_drop.Click += new System.EventHandler(this.btn_drop_Click);
+            // 
+            // cbtn_closeCheck
+            // 
+            this.cbtn_closeCheck.BackColor = System.Drawing.Color.Maroon;
+            this.cbtn_closeCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbtn_closeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbtn_closeCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbtn_closeCheck.Location = new System.Drawing.Point(1093, 8);
+            this.cbtn_closeCheck.Name = "cbtn_closeCheck";
+            this.cbtn_closeCheck.Size = new System.Drawing.Size(27, 23);
+            this.cbtn_closeCheck.TabIndex = 34;
+            this.cbtn_closeCheck.Text = "X";
+            this.cbtn_closeCheck.UseVisualStyleBackColor = false;
+            this.cbtn_closeCheck.Click += new System.EventHandler(this.cbtn_closeCheck_Click);
             // 
             // frm_signIn
             // 
@@ -1806,5 +1873,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn career_key;
         private System.Windows.Forms.DataGridViewButtonColumn edit_carrer;
         private System.Windows.Forms.DataGridViewButtonColumn delete_carrer;
+        private System.Windows.Forms.Button btn_cancel;
+        private System.Windows.Forms.Button btn_cancelLoad;
     }
 }

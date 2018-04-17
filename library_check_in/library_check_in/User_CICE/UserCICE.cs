@@ -4,7 +4,11 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+/**
+ *  Author      | Arcelia Aguirre
+ *  Date        | 19-02-2018
+ *  Description | Clase para operaciones de Usuarios de CICE
+ */
 namespace library_check_in.User_CICE
 {
     class UserCICE
@@ -12,14 +16,12 @@ namespace library_check_in.User_CICE
         string[] paramName = new string[20];
         object[] param = new object[20];
         Connection con = new Connection();
-
-        /**************************************************************************************/
-        /*  Author      | Arcelia Aguirre                                                     */
-        /*  Description | Agregar un usuario                                                  */
-        /*  Date        | 19-02-2018                                                          */
-        /*  Parameters  | string nameUser, string passwordUser,                               */
-        /*              | string fatherLastnameUser, string motherLastnameUser, int typeUser  */
-        /**************************************************************************************/
+        /**
+         *  Author      | Arcelia Aguirre
+         *  Description | Agregar un usuario
+         *  Date        | 19-02-2018
+         *  Parameters  | string nameUser, string passwordUser, string fatherLastnameUser, string motherLastnameUser, int typeUser
+         */
         public void save(string nameUser, string passwordUser, string fatherLastnameUser, string motherLastnameUser, int typeUser)
         {
             string command = "user_CICE_new @user_name = @nameUser, @user_password = @passwordUser, @father_last_name = @fatherLastnameUser, @mother_last_name = @motherLastnameUser, @id_type_user = @typeUser ";
@@ -35,14 +37,13 @@ namespace library_check_in.User_CICE
             param[4] = typeUser;
             System.Data.DataTable dt = con.loadData(command, paramName, param);
         }
-
-        /****************************************************************************************/
-        /*  Author      | Arcelia Aguirre                                                       */
-        /*  Description | Modificar usuario                                                     */
-        /*  Date        | 28-02-2018                                                            */
-        /*  Parameters  | int id,string user_name,string user_password,string user_password_old,*/
-        /*                string father_last_name, string mother_last_name, int id_type_user    */
-        /****************************************************************************************/
+        /**
+         *  Author      | Arcelia Aguirre   
+         *  Description | Modificar usuario
+         *  Date        | 28-02-2018
+         *  Parameters  | int id,string user_name,string user_password,string user_password_old,
+         *                string father_last_name, string mother_last_name, int id_type_user
+         */
         public void update(int id, string user_name, string user_password, string user_password_old, string father_last_name, string mother_last_name, int id_type_user)
         {
             string command = "user_CICE_update @id = @id, @user_name = @user_name,	@user_password = @user_password, @user_password_old = @user_password_old, @father_last_name = @father_last_name, @mother_last_name = @mother_last_name, @id_type_user =  @id_type_user";
@@ -62,13 +63,12 @@ namespace library_check_in.User_CICE
             param[6] = id_type_user;
             System.Data.DataTable dt = con.loadData(command, paramName, param);
         }
-
-        /****************************************************************/
-        /*  Author      |                                               */
-        /*  Description | Eliminar un usuario                           */
-        /*  Date        |                                               */
-        /*  Parameters  | int id                                        */
-        /****************************************************************/
+        /**
+         *  Author      | Arcelia Aguirre
+         *  Description | Eliminar un usuario
+         *  Date        | 28-02-2018
+         *  Parameters  | int id
+         */
         public void delete(int id)
         {
             string command = "user_CICE_delete @id = @id";
@@ -76,13 +76,12 @@ namespace library_check_in.User_CICE
             param[0] = id;
             System.Data.DataTable dt = con.loadData(command, paramName, param);
         }
-
-        /****************************************************************/
-        /*  Author      |                                               */
-        /*  Description | Consultar usuario                             */
-        /*  Date        |                                               */
-        /*  Parameters  | string type_consult                           */
-        /****************************************************************/
+        /**
+         *  Author      | Arcelia Aguirre
+         *  Description | Consultar usuario
+         *  Date        | 28-02-2018
+         *  Parameters  | int id, string user_name, string type_consult
+         */
         public object consult(int id, string user_name, string type_consult)
         {
             string command = "user_CICE_consult @id = @id, @user_name = @user_name, @type_consult = @type_consult";
@@ -95,12 +94,12 @@ namespace library_check_in.User_CICE
             return con.loadData(command, PROPS.TABLE_USER_CICE, paramName, param);
                 
         }
-        /****************************************************************/
-        /*  Author      |                                               */
-        /*  Description | login                                         */
-        /*  Date        |                                               */
-        /*  Parameters  | string user, string password                  */
-        /****************************************************************/
+        /**
+         *  Author      | Arcelia Aguirre
+         *  Description | login
+         *  Date        | 28-02-2018
+         *  Parameters  | string user, string password
+         */
         public System.Data.DataTable login(string user, string password)
         {
             string command = "select id_type_user from user_CICE where user_name = @user and user_password = @password";
@@ -111,18 +110,23 @@ namespace library_check_in.User_CICE
             System.Data.DataTable dt = con.loadData(command, paramName, param);
             return dt;
         }
-
-
-        /****************************************************************/
-        /*  Author      | Arcelia Aguirre                               */
-        /*  Description | Cargar el grid de usuarios de cice            */
-        /*  Date        | 22-02-2018                                    */
-        /*  Parameters  | DataSet ds, DataGridView dtgd_user            */
-        /****************************************************************/
+        /**
+         *  Author      | Arcelia Aguirre
+         *  Description | Cargar el grid de usuarios de cice
+         *  Date        | 22-02-2018
+         *  Parameters  | DataSet ds, DataGridView dtgd_user
+         */
         public void load_dtgdUser(DataSet ds, DataGridView dtgd_user)
         {
-            ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
-            dtgd_user.DataSource = ds.Tables[PROPS.TABLE_USER_CICE];
+            try
+            {
+                ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
+                dtgd_user.DataSource = ds.Tables[PROPS.TABLE_USER_CICE];
+            }
+            catch
+            {
+                PROPS.messageError("");
+            }
         }
     }
 }

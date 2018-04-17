@@ -63,13 +63,14 @@
             // 
             // txt_name
             // 
+            this.txt_name.AccessibleName = "Nombre de Usuario";
             this.txt_name.BackColor = System.Drawing.Color.White;
             this.txt_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_name.Font = new System.Drawing.Font("Gotham Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.txt_name.Location = new System.Drawing.Point(81, 430);
             this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(200, 28);
+            this.txt_name.Size = new System.Drawing.Size(200, 29);
             this.txt_name.TabIndex = 29;
             this.txt_name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_name_KeyPress);
             this.txt_name.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_name_KeyUp);
@@ -78,7 +79,7 @@
             // 
             this.btn_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_login.Font = new System.Drawing.Font("Gotham Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
             this.btn_login.Location = new System.Drawing.Point(81, 498);
             this.btn_login.Name = "btn_login";
@@ -119,14 +120,15 @@
             // 
             // txt_password
             // 
+            this.txt_password.AccessibleName = "Contraseña de Usuario";
             this.txt_password.BackColor = System.Drawing.Color.White;
             this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_password.Font = new System.Drawing.Font("Gotham Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.txt_password.Location = new System.Drawing.Point(81, 464);
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '•';
-            this.txt_password.Size = new System.Drawing.Size(200, 28);
+            this.txt_password.Size = new System.Drawing.Size(200, 29);
             this.txt_password.TabIndex = 30;
             this.txt_password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_password_KeyPress);
             this.txt_password.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_password_KeyUp);

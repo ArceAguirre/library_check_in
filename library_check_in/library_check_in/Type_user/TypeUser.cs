@@ -4,13 +4,11 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
-/*****************************************************/
-/*  Author      |   Arcelia Aguirre                  */
-/*  Date        |   19-02-2018                       */
-/*  Description |   Clase para operaciones de        */
-/*                  Tipo de Usuario                  */
-/*****************************************************/
+/**
+ *  Author      | Arcelia Aguirre
+ *  Date        | 19-02-2018
+ *  Description | Clase para operaciones de Tipo de Usuario                  
+ */
 namespace library_check_in.Type_user
 {
     class TypeUser
@@ -18,13 +16,12 @@ namespace library_check_in.Type_user
         string[] paramName = new string[20];
         object[] param = new object[20];
         Connection con = new Connection();
-
-        /****************************************************************/
-        /*  Author      | Arcelia Aguirre                               */
-        /*  Description | Agregar un Tipo de Usuario                    */
-        /*  Date        | 19-02-2018                                    */
-        /*  Parameters  | string typeUserNew                            */
-        /****************************************************************/
+        /**
+         *  Author      | Arcelia Aguirre
+         *  Description | Agregar un Tipo de Usuario
+         *  Date        | 19-02-2018
+         *  Parameters  | string description
+         */
         public void save(string description)
         {
             string command = "type_user_new @description = @description";
@@ -32,13 +29,12 @@ namespace library_check_in.Type_user
             param[0] = description;
             System.Data.DataTable dt = con.loadData(command, paramName, param);
         }
-
-        /****************************************************************/
-        /*  Author      | Arcelia Aguirre Treviño                       */
-        /*  Description | Modificar un Tipo de Usuario                  */
-        /*  Date        | 28-02-2018                                    */
-        /*  Parameters  | int id, string description                    */
-        /****************************************************************/
+        /**
+         *  Author      | Arcelia Aguirre Treviño
+         *  Description | Modificar un Tipo de Usuario
+         *  Date        | 28-02-2018
+         *  Parameters  | int id, string description
+         */
         public void update(int id, string description)
         {
             string command = "type_user_update @id =  @id, @description = @description";
@@ -48,13 +44,12 @@ namespace library_check_in.Type_user
             param[1] = description;
             System.Data.DataTable dt = con.loadData(command, paramName, param);
         }
-
-        /****************************************************************/
-        /*  Author      | Arcelia Aguirre Treviño                       */
-        /*  Description | Eliminar un Tipo de Usuario                   */
-        /*  Date        | 28-02-2018                                    */
-        /*  Parameters  | int id                                        */
-        /****************************************************************/
+        /**
+         *  Author      | Arcelia Aguirre Treviño
+         *  Description | Eliminar un Tipo de Usuario
+         *  Date        | 28-02-2018
+         *  Parameters  | int id
+         */
         public void delete(int id)
         {
             string command = "type_user_delete @id = @id";
@@ -62,12 +57,13 @@ namespace library_check_in.Type_user
             param[0] = id;
             System.Data.DataTable dt = con.loadData(command, paramName, param);
         }
-        /****************************************************************/
-        /*  Author      | Arcelia Aguirre Treviño                       */
-        /*  Description | Consultar un Tipo de Usuario                  */
-        /*  Date        | 22-02-2018                                    */
-        /*  Parameters  | string type_consult                           */
-        /****************************************************************/
+        /**
+         *  Author      | Arcelia Aguirre Treviño
+         *  Description | Consultar un Tipo de Usuario
+         *  Date        | 22-02-2018
+         *  Parameters  | int id, string description, string type_consult
+         *  Retrun      | DataSet resutlado de la consulta
+         */
         public object consult(int id, string description, string type_consult)
         {
             string command = "type_user_consult @id = @id, @description = @description, @type_consult = @type_consult";
@@ -78,33 +74,46 @@ namespace library_check_in.Type_user
             param[1] = description;
             param[2] = type_consult;
             return con.loadData(command, PROPS.TABLE_TYPE_USER, paramName, param);
-               
         }
-
-        /****************************************************************/
-        /*  Author      | Arcelia Aguirre                               */
-        /*  Description | Cargar el combobox de tipo de usuario         */
-        /*  Date        | 22-02-2018                                    */
-        /*  Parameters  | DataSet ds, ComboBox cmbbx_typeUser           */
-        /****************************************************************/
+        /**
+         *  Author      | Arcelia Aguirre
+         *  Description | Cargar el combobox de tipo de usuario
+         *  Date        | 22-02-2018
+         *  Parameters  | DataSet ds, ComboBox cmbbx_typeUser
+         */
         public void load_cmbbxTypeUser(DataSet ds, ComboBox cmbbx_typeUser)
         {
-            ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
-            cmbbx_typeUser.DataSource = ds.Tables[PROPS.TABLE_TYPE_USER];
-            cmbbx_typeUser.DisplayMember = "description_typeUser";
-            cmbbx_typeUser.ValueMember = "id_typeUser";
+            try
+            {
+                ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
+                cmbbx_typeUser.DataSource = ds.Tables[PROPS.TABLE_TYPE_USER];
+                cmbbx_typeUser.DisplayMember = "description_typeUser";
+                cmbbx_typeUser.ValueMember = "id_typeUser";
+            }
+            catch
+            {
+                PROPS.messageError("");
+                return;
+            }
+            
         }
-
-        /****************************************************************/
-        /*  Author      | Arcelia Aguirre                               */
-        /*  Description | Cargar el grid de tipos de usuarios           */
-        /*  Date        | 22-02-2018                                    */
-        /*  Parameters  | DataSet ds, DataGridView dtgd_typeUser        */
-        /****************************************************************/
+        /**
+         *  Author      | Arcelia Aguirre
+         *  Description | Cargar el grid de tipos de usuarios
+         *  Date        | 22-02-2018
+         *  Parameters  | DataSet ds, DataGridView dtgd_typeUser
+         */
         public void load_dtgdTypeUser(DataSet ds, DataGridView dtgd_typeUser)
         {
-            ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
-            dtgd_typeUser.DataSource = ds.Tables[PROPS.TABLE_TYPE_USER];
+            try
+            {
+                ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
+                dtgd_typeUser.DataSource = ds.Tables[PROPS.TABLE_TYPE_USER];
+            }
+            catch
+            {
+                PROPS.messageError("");
+            }
         }
     }
 }
