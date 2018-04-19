@@ -668,7 +668,7 @@ namespace library_check_in
          */
         private void btn_cancel_Click(object sender, EventArgs e)
         {
-            TextBox[] component = { txt_idStudent, txt_numberStudent, txt_nameStudent, txt_fatherLasnameStudent, txt_semesterStudent};
+            TextBox[] component = { txt_idStudent, txt_numberStudent, txt_nameStudent, txt_fatherLasnameStudent, txt_motherLasnameStudent, txt_semesterStudent };
             ComboBox[] comboBox = { cmbbx_typeRegister, cmbbox_careerStudent };
             PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
             PROPS.clear(comboBox, (int)PROPS.COMPONENT.COMPONENT_COMBO_BOX);
@@ -687,6 +687,26 @@ namespace library_check_in
                 return;
             PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
             PROPS.clear(comboBox, (int)PROPS.COMPONENT.COMPONENT_COMBO_BOX);
+        }
+        /**
+         *  Author      | Arcelia Aguirre
+         *  Date        | 19-04-2018
+         *  Description | Pimera letra de cada palabra en mayuscula
+         *  Parameteres | object sender, KeyEventArgs e
+         */
+        private void upper(object sender, EventArgs e)
+        {
+            PROPS.UpperTextBox(sender, e);
+        }
+        /**
+         *  Author      | Arcelia Aguirre
+         *  Description | El campo solo acepta caracteres númericos
+         *  Date        | 23-02-2018
+         *  Parameters  | object sender, KeyPressEventArgs e
+         */
+        private void onlyNumbers(object sender, KeyPressEventArgs e)
+        {
+            PROPS.onlyNumbers(sender, e);
         }
     }
 }
