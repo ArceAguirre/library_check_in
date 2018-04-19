@@ -169,6 +169,7 @@
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_drop = new System.Windows.Forms.Button();
             this.cbtn_closeCheck = new System.Windows.Forms.Button();
+            this.btn_cancelReport = new System.Windows.Forms.Button();
             this.tblctl_signIn.SuspendLayout();
             this.tbpg_signIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptrbx_CICE)).BeginInit();
@@ -352,6 +353,7 @@
             // tbpg_report
             // 
             this.tbpg_report.BackColor = System.Drawing.Color.Transparent;
+            this.tbpg_report.Controls.Add(this.btn_cancelReport);
             this.tbpg_report.Controls.Add(this.btn_excel);
             this.tbpg_report.Controls.Add(this.dtgd_report);
             this.tbpg_report.Controls.Add(this.lbl_semester);
@@ -376,12 +378,13 @@
             // btn_excel
             // 
             this.btn_excel.AccessibleName = "Excel";
-            this.btn_excel.Location = new System.Drawing.Point(162, 239);
+            this.btn_excel.Location = new System.Drawing.Point(165, 239);
             this.btn_excel.Name = "btn_excel";
             this.btn_excel.Size = new System.Drawing.Size(75, 23);
             this.btn_excel.TabIndex = 10;
             this.btn_excel.Text = "Excel";
             this.btn_excel.UseVisualStyleBackColor = true;
+            this.btn_excel.Click += new System.EventHandler(this.btn_excel_Click);
             // 
             // dtgd_report
             // 
@@ -427,7 +430,7 @@
             this.txt_semester.Location = new System.Drawing.Point(86, 208);
             this.txt_semester.MaxLength = 2;
             this.txt_semester.Name = "txt_semester";
-            this.txt_semester.Size = new System.Drawing.Size(100, 20);
+            this.txt_semester.Size = new System.Drawing.Size(79, 20);
             this.txt_semester.TabIndex = 9;
             this.txt_semester.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -682,6 +685,7 @@
             this.btn_cancel.TabIndex = 35;
             this.btn_cancel.Text = "Cancelar";
             this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // txt_idStudent
             // 
@@ -858,6 +862,7 @@
             this.btn_cancelLoad.TabIndex = 36;
             this.btn_cancelLoad.Text = "Cancelar";
             this.btn_cancelLoad.UseVisualStyleBackColor = true;
+            this.btn_cancelLoad.Click += new System.EventHandler(this.btn_cancelLoad_Click);
             // 
             // btn_saveLoad
             // 
@@ -1686,6 +1691,17 @@
             this.cbtn_closeCheck.UseVisualStyleBackColor = false;
             this.cbtn_closeCheck.Click += new System.EventHandler(this.cbtn_closeCheck_Click);
             // 
+            // btn_cancelReport
+            // 
+            this.btn_cancelReport.AccessibleName = "Cancelar";
+            this.btn_cancelReport.Location = new System.Drawing.Point(86, 239);
+            this.btn_cancelReport.Name = "btn_cancelReport";
+            this.btn_cancelReport.Size = new System.Drawing.Size(75, 23);
+            this.btn_cancelReport.TabIndex = 15;
+            this.btn_cancelReport.Text = "Cancelar";
+            this.btn_cancelReport.UseVisualStyleBackColor = true;
+            this.btn_cancelReport.Click += new System.EventHandler(this.btn_cancelReport_Click);
+            // 
             // frm_signIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1875,5 +1891,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn delete_carrer;
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_cancelLoad;
+        private System.Windows.Forms.Button btn_cancelReport;
     }
 }

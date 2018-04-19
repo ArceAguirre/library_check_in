@@ -23,7 +23,6 @@ namespace library_check_in
     {
         static System.Windows.Forms.Timer myTimer = new System.Windows.Forms.Timer();
         static int alarmCounter = 1;
-        static bool exitFlag = false;
 
         string[] paramName = new string[20];
         object[] param = new object[20];
@@ -85,13 +84,21 @@ namespace library_check_in
             }
         }
         /**
+         *  Author      | Arcelia Aguirre
          *  Description | Generar el reporte seleccionado
-         *  Date        | 
+         *  Date        | 19-04-2018
          *  Pestaña     | Reportes
          *  Parameters  | object sender, EventArgs e
          */
         private void btn_generate_Click(object sender, EventArgs e)
         {
+            TextBox[] component = { txt_semester };
+            ComboBox[] comboBox = { cmbbx_report, cmbbx_carrer };
+            DateTimePicker[] dateTimePicker = { dttmpk_initialDate, dttmpk_finalDate };
+            /*Cargar Gird*/
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
+            PROPS.clear(comboBox, (int)PROPS.COMPONENT.COMPONENT_COMBO_BOX);
+            PROPS.clear(dateTimePicker, (int)PROPS.COMPONENT.COMPONENT_DATE_TIME);
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -110,19 +117,8 @@ namespace library_check_in
                 typeNotStudent.save(txt_typeNotStudentName.Text);
             else
                 typeNotStudent.update(Int32.Parse(txt_idTypeNotStudent.Text), txt_typeNotStudentName.Text);
-            PROPS.clearTextBox(component);
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
             typeNotStudent.load_dtgdTypeNotStudent(ds, dtgd_typeNotStudent);
-        }
-        /**
-         *  Author      | Juan Pablo Espinoza
-         *  Description | Mayusculas en la pirmera letra de cada palabra
-         *  Date        | 15-02-2018
-         *  Parameters  | object sender, EventArgs e
-         */
-        private void txt_typeNotStudentName_TextChanged(object sender, EventArgs e)
-        {
-            txt_typeNotStudentName.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txt_typeNotStudentName.Text);
-            txt_typeNotStudentName.SelectionStart = txt_typeNotStudentName.Text.Length;
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -141,7 +137,7 @@ namespace library_check_in
                 typeUser.save(txt_typeUserName.Text);
             else
                 typeUser.update(Int32.Parse(txt_idTypeUser.Text), txt_typeUserName.Text);
-            PROPS.clearTextBox(component);
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
             typeUser.load_dtgdTypeUser(ds, dtgd_typeUser);
         }
         /**
@@ -161,16 +157,17 @@ namespace library_check_in
          */
         private void btn_careerSave_Click(object sender, EventArgs e)
         {
-            TextBox[] component = { txt_idCareer, txt_careerName, txt_careerKey };
-            TextBox[] componentEmpty = { txt_careerName, txt_careerKey };
+            TextBox[] component = { txt_careerName, txt_careerKey };
             Career career = new Career();
-            if (!PROPS.emptyTextBox(componentEmpty))
+            if (!PROPS.emptyTextBox(component))
                 return;
+
+            component = new TextBox[]{ txt_idCareer, txt_careerName, txt_careerKey };
             if (txt_idCareer.Text == PROPS.EMPTY)
                 career.save(txt_careerName.Text, txt_careerKey.Text);
             else
                 career.update(Int32.Parse(txt_idCareer.Text), txt_careerName.Text, txt_careerKey.Text);
-            PROPS.clearTextBox(component);
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
             career.load_dtgdCareer(ds, dtgd_career);
         }
         /**
@@ -182,6 +179,7 @@ namespace library_check_in
         private void btn_userSave_Click(object sender, EventArgs e)
         {
             TextBox[] component = { txt_nameUser, txt_passwordUser, txt_fatherLastnameUser };
+            ComboBox[] comboBox = { cmbbx_typeUser };
             UserCICE userCICE = new UserCICE();
             if (!PROPS.emptyTextBox(component))
                 return;
@@ -190,7 +188,8 @@ namespace library_check_in
                 userCICE.save(txt_nameUser.Text, txt_passwordUser.Text, txt_fatherLastnameUser.Text, txt_motherLastnameUser.Text, Int32.Parse(cmbbx_typeUser.SelectedValue.ToString()));
             else
                 userCICE.update(Int32.Parse(txt_idUser.Text), txt_nameUser.Text, txt_passwordUser.Text, PROPS.EMPTY, txt_fatherLastnameUser.Text, txt_motherLastnameUser.Text, Int32.Parse(cmbbx_typeUser.SelectedValue.ToString()));
-            PROPS.clearTextBox(component);
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_COMBO_BOX);
             userCICE.load_dtgdUser(ds, dtgd_user);
         }
         /**
@@ -201,29 +200,39 @@ namespace library_check_in
          */
         private void btn_add_Click(object sender, EventArgs e)
         {
-            TextBox[] component = { txt_numberStudent, txt_nameStudent, txt_fatherLasnameStudent, txt_semesterStudent, };
+            TextBox[] component = { txt_numberStudent, txt_nameStudent, txt_fatherLasnameStudent, txt_semesterStudent};
+            ComboBox[] comboBox = { cmbbx_typeRegister, cmbbox_careerStudent };
             if (!PROPS.emptyTextBox(component))
                 return;
-            component = new TextBox[] { txt_idStudent, txt_numberStudent, txt_nameStudent, txt_fatherLasnameStudent, txt_motherLasnameStudent, txt_semesterStudent, };  
-            if (cmbbx_typeRegister.Items.Count != cmbbx_typeRegister.SelectedIndex + 1 && cmbbx_typeRegister.SelectedValue is int)
+            component = new TextBox[] { txt_idStudent, txt_numberStudent, txt_nameStudent, txt_fatherLasnameStudent, txt_motherLasnameStudent, txt_semesterStudent };
+            try
             {
-                NotStudent notStudent = new NotStudent();
-                if (txt_idStudent.Text == PROPS.EMPTY)
-                    notStudent.save(txt_numberStudent.Text, txt_nameStudent.Text, txt_fatherLasnameStudent.Text, txt_motherLasnameStudent.Text,Int32.Parse(cmbbx_typeRegister.SelectedValue.ToString()));
+                if (cmbbx_typeRegister.Items.Count != cmbbx_typeRegister.SelectedIndex + 1 && cmbbx_typeRegister.SelectedValue is int)
+                {
+                    NotStudent notStudent = new NotStudent();
+                    if (txt_idStudent.Text == PROPS.EMPTY)
+                        notStudent.save(txt_numberStudent.Text, txt_nameStudent.Text, txt_fatherLasnameStudent.Text, txt_motherLasnameStudent.Text, Int32.Parse(cmbbx_typeRegister.SelectedValue.ToString()));
+                    else
+                        notStudent.update(Int32.Parse(txt_idStudent.Text), txt_numberStudent.Text, txt_nameStudent.Text, txt_fatherLasnameStudent.Text, txt_motherLasnameStudent.Text, Int32.Parse(cmbbx_typeRegister.SelectedValue.ToString()));
+                    notStudent.load_dtgdStudent(ds, dtgd_student, cmbbx_typeRegister);
+                }
                 else
-                    notStudent.update(Int32.Parse(txt_idStudent.Text), txt_numberStudent.Text, txt_nameStudent.Text, txt_fatherLasnameStudent.Text, txt_motherLasnameStudent.Text, Int32.Parse(cmbbx_typeRegister.SelectedValue.ToString()));
-                notStudent.load_dtgdStudent(ds, dtgd_student, cmbbx_typeRegister);
+                {
+                    Student.Student student = new Student.Student();
+                    if (txt_idStudent.Text == PROPS.EMPTY)
+                        student.save(txt_numberStudent.Text, txt_nameStudent.Text, txt_fatherLasnameStudent.Text, txt_motherLasnameStudent.Text, txt_semesterStudent.Text, Int32.Parse(cmbbox_careerStudent.SelectedValue.ToString()));
+                    else
+                        student.update(Int32.Parse(txt_idStudent.Text), txt_numberStudent.Text, txt_nameStudent.Text, txt_fatherLasnameStudent.Text, txt_motherLasnameStudent.Text, txt_semesterStudent.Text, Int32.Parse(cmbbox_careerStudent.SelectedValue.ToString()));
+                    student.load_dtgdStudent(ds, dtgd_student);
+                }
             }
-            else
+            catch
             {
-                Student.Student student = new Student.Student();
-                if (txt_idStudent.Text == PROPS.EMPTY)
-                    student.save(txt_numberStudent.Text, txt_nameStudent.Text, txt_fatherLasnameStudent.Text, txt_motherLasnameStudent.Text, txt_semesterStudent.Text, Int32.Parse(cmbbox_careerStudent.SelectedValue.ToString()));
-                else
-                    student.update(Int32.Parse(txt_idStudent.Text), txt_numberStudent.Text, txt_nameStudent.Text, txt_fatherLasnameStudent.Text, txt_motherLasnameStudent.Text, txt_semesterStudent.Text, Int32.Parse(cmbbox_careerStudent.SelectedValue.ToString()));
-                student.load_dtgdStudent(ds, dtgd_student);
+                PROPS.messageError("");
             }
-            PROPS.clearTextBox(component);
+           
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
+            PROPS.clear(comboBox, (int)PROPS.COMPONENT.COMPONENT_COMBO_BOX);
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -235,7 +244,7 @@ namespace library_check_in
         {
             TextBox[] component = { txt_idUser, txt_nameUser, txt_passwordUser, txt_fatherLastnameUser, txt_motherLastnameUser };
             UserCICE userCICE = new UserCICE();
-            PROPS.clearTextBox(component);
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
             if (this.dtgd_user.Columns[e.ColumnIndex].Name.Equals("delete_user"))
             {
                 if (MessageBox.Show("¿Seguro que quieres borrar el Usuario?", "Borrar", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -264,7 +273,7 @@ namespace library_check_in
         {
             TextBox[] component = { txt_idCareer, txt_careerName, txt_careerKey };
             Career career = new Career();
-            PROPS.clearTextBox(component);
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
             if (this.dtgd_career.Columns[e.ColumnIndex].Name.Equals("delete_carrer"))
             {
                 if (MessageBox.Show("¿Seguro que quieres borrar la Licenciatura?", "Borrar", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -291,7 +300,7 @@ namespace library_check_in
         {
             TextBox[] component = { txt_idTypeNotStudent, txt_typeNotStudentName};
             TypeNotStudent typeNotStudent = new TypeNotStudent();
-            PROPS.clearTextBox(component);
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
 
             if (this.dtgd_typeNotStudent.Columns[e.ColumnIndex].Name.Equals("delete_userNotStudent"))
             {
@@ -318,7 +327,7 @@ namespace library_check_in
         {
             TextBox[] component = { txt_idTypeUser, txt_typeUserName };
             TypeUser typeUser = new TypeUser();
-            PROPS.clearTextBox(component);
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
             if (this.dtgd_typeUser.Columns[e.ColumnIndex].Name.Equals("delete_typeUser"))
             {
                 if (MessageBox.Show("¿Seguro que quieres borrar el Tipo de Usuario?", "Borrar", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -343,7 +352,7 @@ namespace library_check_in
         private void btn_careerCancel_Click(object sender, EventArgs e)
         {
             TextBox[] component = { txt_idCareer, txt_careerName, txt_careerKey };
-            PROPS.clearTextBox(component);
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -354,7 +363,7 @@ namespace library_check_in
         private void btn_typeNotStudentCancel_Click(object sender, EventArgs e)
         {
             TextBox[] component = { txt_typeNotStudentName, txt_idTypeNotStudent };
-            PROPS.clearTextBox(component);
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -365,7 +374,7 @@ namespace library_check_in
         private void btn_typeUserCancel_Click(object sender, EventArgs e)
         {
             TextBox[] component = { txt_idTypeUser, txt_typeUserName };
-            PROPS.clearTextBox(component);
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -376,7 +385,9 @@ namespace library_check_in
         private void btn_userCancel_Click(object sender, EventArgs e)
         {
             TextBox[] component = { txt_idUser, txt_nameUser, txt_passwordUser, txt_fatherLastnameUser, txt_motherLastnameUser };
-            PROPS.clearTextBox(component);
+            ComboBox[] comboBox = { cmbbx_typeUser };
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
+            PROPS.clear(comboBox, (int)PROPS.COMPONENT.COMPONENT_COMBO_BOX);
         }
         /**
          *  Author      | Arcelia Aguirre                               
@@ -432,7 +443,7 @@ namespace library_check_in
         {
             TextBox[] component = { txt_idStudent, txt_numberStudent, txt_nameStudent, txt_fatherLasnameStudent, txt_motherLasnameStudent, txt_semesterStudent };
             Student.Student student = new Student.Student();
-            PROPS.clearTextBox(component);
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
             if (this.dtgd_student.Columns[e.ColumnIndex].Name.Equals("delete_student"))
             {
                 if (MessageBox.Show("¿Seguro que quieres borrar el Estudiante?", "Borrar", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -488,8 +499,8 @@ namespace library_check_in
         private void cmbbx_typeRegister_SelectedIndexChanged(object sender, EventArgs e)
         {
             TextBox[] component = { txt_idStudent, txt_numberStudent, txt_nameStudent, txt_fatherLasnameStudent, txt_motherLasnameStudent, txt_semesterStudent };
-            PROPS.clearTextBox(component);
-            if(cmbbox_careerStudent.Items.Count > 0)
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
+            if (cmbbox_careerStudent.Items.Count > 0)
             {
                 cmbbox_careerStudent.SelectedIndex = 0;
             }
@@ -529,7 +540,7 @@ namespace library_check_in
             //TextBox[] component = { txt_number, txt_name, txt_numberData, txt_career, txt_signInDate };
             //Access.Access access = new Access.Access();
             //access.save(txt_number.Text, txt_number.Text);
-            //PROPS.clear(component);
+            //PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -572,7 +583,7 @@ namespace library_check_in
                     //myTimer.Start();
                     //if (exitFlag)
                     //{
-                        PROPS.clearTextBox(component);
+                    PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
                     //}
                 }
             }
@@ -599,7 +610,7 @@ namespace library_check_in
                 //else
                 //{
                 // Stops the timer.
-                exitFlag = true;
+                //exitFlag = true;
             //}
         }
         /**
@@ -613,6 +624,69 @@ namespace library_check_in
             TextBox[] component = { txt_file };
             if (!PROPS.emptyTextBox(component))
                 return;
+            /*Guardar*/
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
+        }
+        /**
+         *  Author      | Arcelia Aguirre
+         *  Date        | 19-04-2018
+         *  Description | Generar excel del reporte
+         *  Parameteres | object sender, KeyEventArgs e
+         */
+        private void btn_excel_Click(object sender, EventArgs e)
+        {
+            TextBox[] component = { txt_semester };
+            ComboBox[] comboBox = { cmbbx_report, cmbbx_carrer };
+            DateTimePicker[] dateTimePicker = { dttmpk_initialDate, dttmpk_finalDate };
+            /*Generar excel*/
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
+            PROPS.clear(comboBox, (int)PROPS.COMPONENT.COMPONENT_COMBO_BOX);
+            PROPS.clear(dateTimePicker, (int)PROPS.COMPONENT.COMPONENT_DATE_TIME);
+        }
+        /**
+         *  Author      | Arcelia Aguirre
+         *  Date        | 19-04-2018
+         *  Description | Limpiar campos de reportes
+         *  Parameteres | object sender, KeyEventArgs e
+         */
+        private void btn_cancelReport_Click(object sender, EventArgs e)
+        {
+            TextBox[] component = { txt_semester };
+            ComboBox[] comboBox = { cmbbx_report, cmbbx_carrer };
+            DateTimePicker[] dateTimePicker = { dttmpk_initialDate, dttmpk_finalDate };
+            /*Generar excel*/
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
+            PROPS.clear(comboBox, (int)PROPS.COMPONENT.COMPONENT_COMBO_BOX);
+            PROPS.clear(dateTimePicker, (int)PROPS.COMPONENT.COMPONENT_DATE_TIME);
+        }
+
+        /**
+         *  Author      | Arcelia Aguirre
+         *  Date        | 19-04-2018
+         *  Description | Limpiar campos de registros
+         *  Parameteres | object sender, KeyEventArgs e
+         */
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            TextBox[] component = { txt_idStudent, txt_numberStudent, txt_nameStudent, txt_fatherLasnameStudent, txt_semesterStudent};
+            ComboBox[] comboBox = { cmbbx_typeRegister, cmbbox_careerStudent };
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
+            PROPS.clear(comboBox, (int)PROPS.COMPONENT.COMPONENT_COMBO_BOX);
+        }
+        /**
+         *  Author      | Arcelia Aguirre
+         *  Date        | 19-04-2018
+         *  Description | Limpiar campos de carga por archivo
+         *  Parameteres | object sender, KeyEventArgs e
+         */
+        private void btn_cancelLoad_Click(object sender, EventArgs e)
+        {
+            TextBox[] component = { txt_file };
+            ComboBox[] comboBox = { cmbbx_type };
+            if (!PROPS.emptyTextBox(component))
+                return;
+            PROPS.clear(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX);
+            PROPS.clear(comboBox, (int)PROPS.COMPONENT.COMPONENT_COMBO_BOX);
         }
     }
 }

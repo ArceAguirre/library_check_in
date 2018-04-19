@@ -27,20 +27,44 @@ namespace library_check_in
         public static string TABLE_USER_CICE = "user_CICE";
         public static string TABLE_STUDENT = "student";
         public static string TABLE_NOT_STUDENT = "not_student";
+        
+        public enum COMPONENT { COMPONENT_TEXT_BOX, COMPONENT_COMBO_BOX, COMPONENT_DATE_TIME };
 
-        public string ERROR_DATA_BASE = "dataBase";
+        //private string ERROR_DATA_BASE = "dataBase";
         /**
          *  Author      | Arcelia Aguirre
          *  Description | Limpiar TextBox
          *  Date        | 28-02-2018
          *  Parameters  | TextBox[] componen
          */
-        public static void clearTextBox(TextBox[] component)
+        public static void clear(object[] component, int type)
         {
-            for (int i = 0; i < component.Length; i++)
+            switch (type)
             {
-                if (component[i] != null)
-                    component[i].Text = EMPTY;
+                /*Textbox*/
+                case (int)COMPONENT.COMPONENT_TEXT_BOX:
+                    for (int i = 0; i < component.Length; i++)
+                    {
+                        if (component[i] != null)
+                            ((TextBox)component[i]).Text = EMPTY;
+                    }
+                break;
+                /*Combo box*/
+                case (int)COMPONENT.COMPONENT_COMBO_BOX:
+                    for (int i = 0; i < component.Length; i++)
+                    {
+                        if (component[i] != null && ((ComboBox)component[i]).Items.Count > 0)
+                            ((ComboBox)component[i]).SelectedIndex = CERO;
+                    }
+                break;
+                /* Date Time Picker*/
+                case (int)COMPONENT.COMPONENT_DATE_TIME:
+                    for (int i = 0; i < component.Length; i++)
+                    {
+                        if (component[i] != null)
+                            ((DateTimePicker)component[i]).ResetText();
+                    }
+                break;
             }
         }
         /**
@@ -111,11 +135,11 @@ namespace library_check_in
             }
         }
         /**
-        *  Author      | Arcelia Aguirre
-        *  Description | Deshabilitar botones
-        *  Date        | 16-04-2018
-        *  Parameters  | string error, codigo de error
-        */
+         *  Author      | Arcelia Aguirre
+         *  Description | Deshabilitar botones
+         *  Date        | 16-04-2018
+         *  Parameters  | string error, codigo de error
+         */
         public static void enableButton(Button[] component)
         {
             for (int i = 0; i < component.Length; i++)
@@ -124,12 +148,22 @@ namespace library_check_in
                     component[i].Enabled = false;
             }
         }
-        //void upperText(Text)
-        //{
-
-        //}
-        //string textIn;
-        //textIn + ".text" = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(textIn + "text");
-        //textIn+ ".text".SelectionStart = textIn + ".text".Length;
+        /**
+          *  Author      | Juan Pablo Espinoza
+          *  Description | Mayusculas en la pirmera letra de cada palabra
+          *  Date        | 15-02-2018
+          *  Parameters  | object sender, EventArgs e
+          *  ************************************************************
+          *  Author      | Arcelia Aguirre
+          *  Description | Modificación
+          *  Date        | 19-04-2018
+          *  Parameters  | object sender, EventArgs e
+          */
+        public static void UpperTextBox(object component, EventArgs e)
+        {
+            TextBox textBox = (TextBox)component;
+            textBox.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(textBox.Text);
+            textBox.SelectionStart = textBox.Text.Length;
+        }
     }
 }
