@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using library_check_in.User_CICE;
 /**
  *  Author      | Arcelia Aguirre
@@ -47,7 +41,7 @@ namespace library_check_in{
 
             /*Validación*/
             TextBox[] component = { txt_name, txt_password };
-            if (!PROPS.emptyTextBox(component))
+            if (!PROPS.emptyComponent(component, (int)PROPS.COMPONENT.COMPONENT_TEXT_BOX))
                 return;
 
             //dt =  userCICE.login(txt_name.Text, txt_password.Text);

@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 /**
 *  Author      | Arcelia Aguirre                 
 *  Date        | 02-02-2018                      
@@ -57,7 +52,7 @@ namespace library_check_in
             }
             catch
             {
-                PROPS.messageError("");
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.DATA_BASE_CONSOLE);
                 return null;
             }
         }
@@ -95,7 +90,7 @@ namespace library_check_in
             }
             catch
             {
-                PROPS.messageError("");
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.DATA_BASE_CONSOLE);
                 return null;
             }
         }

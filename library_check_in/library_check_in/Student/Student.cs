@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data;
+﻿using System.Data;
 using System.Windows.Forms;
 /**
  *  Author      | Arcelia Aguirre
@@ -27,7 +23,8 @@ namespace library_check_in.Student
          */
         public void save(string number, string student_name, string student_father_last_name, string student_mother_last_name, string semester, int id_carrer)
         {
-            string command = "student_new @number = @number, @student_name = @student_name,	@student_father_last_name = @student_father_last_name,	@student_mother_last_name = @student_mother_last_name, @semester = @semester, @id_career = @id_career";
+            string command = "student_new @number = @number, @student_name = @student_name,	@student_father_last_name = @student_father_last_name,	" +
+                "@student_mother_last_name = @student_mother_last_name, @semester = @semester, @id_career = @id_career";
             paramName[0] = "@number";
             paramName[1] = "@student_name";
             paramName[2] = "@student_father_last_name";
@@ -40,7 +37,10 @@ namespace library_check_in.Student
             param[3] = student_mother_last_name;
             param[4] = semester;
             param[5] = id_carrer;
-            DataTable dt = con.loadData(command, paramName, param);
+            if (con.loadData(command, paramName, param) == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_SAVE);
+            }
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -53,7 +53,8 @@ namespace library_check_in.Student
          */
         public void update(int id, string number, string student_name, string student_father_last_name, string student_mother_last_name, string semester, int id_carrer)
         {
-            string command = "student_update @id = @id, @number = @number, @student_name = @student_name,	@student_father_last_name = @student_father_last_name,	@student_mother_last_name = @student_mother_last_name, @semester = @semester, @id_career = @id_career";
+            string command = "student_update @id = @id, @number = @number, @student_name = @student_name,	@student_father_last_name = @student_father_last_name,	" +
+                "@student_mother_last_name = @student_mother_last_name, @semester = @semester, @id_career = @id_career";
             paramName[0] = "@id";
             paramName[1] = "@number";
             paramName[2] = "@student_name";
@@ -68,7 +69,10 @@ namespace library_check_in.Student
             param[4] = student_mother_last_name;
             param[5] = semester;
             param[6] = id_carrer;
-            DataTable dt = con.loadData(command, paramName, param);
+            if (con.loadData(command, paramName, param) == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_UPDATE);
+            }
         }
         /**
          *  Author      | Arcelia Aguirre                                              
@@ -82,6 +86,10 @@ namespace library_check_in.Student
             paramName[0] = "@id";
             param[0] = id;
             DataTable dt = con.loadData(command, paramName, param);
+            if (con.loadData(command, paramName, param) == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_DELETE);
+            }
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -92,6 +100,7 @@ namespace library_check_in.Student
          */
         public DataSet consult(int id, string number, string student_name, string type_consult)
         {
+            DataSet dataSet;
             string command = "student_consult @id = @id, @number = @number,	@student_name =  @student_name, @type_consult =  @type_consult";
             paramName[0] = "@id";
             paramName[1] = "@number";
@@ -101,7 +110,13 @@ namespace library_check_in.Student
             param[1] = number;
             param[2] = student_name;
             param[3] = type_consult;
-            return con.loadData(command, PROPS.TABLE_STUDENT, paramName, param);
+            dataSet = con.loadData(command, PROPS.TABLE_STUDENT, paramName, param);
+            if (dataSet == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_LOAD_CONSOLE);
+                return null;
+            }
+            return dataSet;
         }
         /**
          *  Author      | Arcelia Aguirre                               
@@ -111,16 +126,13 @@ namespace library_check_in.Student
          */
         public void load_dtgdStudent(DataSet ds, DataGridView dtgd_student)
         {
-            try
+            ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.EMPTY, PROPS.CONSULT_L1);
+            if (ds == null)
             {
-                ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.EMPTY, PROPS.CONSULT_L1);
-                dtgd_student.DataSource = ds.Tables[PROPS.TABLE_STUDENT];
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_LOAD_CONSOLE);
+                return;
             }
-            catch
-            {
-                PROPS.messageError("");
-            }
-            
+            dtgd_student.DataSource = ds.Tables[PROPS.TABLE_STUDENT];
         }
     }
 }

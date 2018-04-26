@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
+﻿using System.Data;
 using System.Windows.Forms;
 /**
  *  Author      | Arcelia Aguirre
@@ -27,7 +23,10 @@ namespace library_check_in.Type_not_student
             string command = "type_not_student_new @description =  @typeNotStudentName";
             paramName[0] = "@typeNotStudentName";
             param[0] = typeNotStudentName;
-            System.Data.DataTable dt = con.loadData(command, paramName, param);
+            if (con.loadData(command, paramName, param) == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_SAVE);
+            }
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -42,7 +41,10 @@ namespace library_check_in.Type_not_student
             paramName[1] = "@description";
             param[0] = id;
             param[1] = description;
-            System.Data.DataTable dt = con.loadData(command, paramName, param);
+            if (con.loadData(command, paramName, param) == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_UPDATE);
+            }
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -55,7 +57,10 @@ namespace library_check_in.Type_not_student
             string command = "type_not_student_delete @id = @id";
             paramName[0] = "@id";
             param[0] = id;
-            System.Data.DataTable dt = con.loadData(command, paramName, param);
+            if (con.loadData(command, paramName, param) == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_DELETE);
+            }
         }
         /**
          *  Author      | Felipe Randolfo
@@ -83,19 +88,10 @@ namespace library_check_in.Type_not_student
          */
         public void load_cmbbxReport(DataSet ds, ComboBox cmbbx_report)
         {
-            try
-            {
-                ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
-                cmbbx_report.DataSource = ds.Tables[PROPS.TABLE_TYPE_NOT_STUDENT];
-                cmbbx_report.DisplayMember = "description_typeNotStudent";
-                cmbbx_report.ValueMember = "id_typeNotStudent";
-            }
-            catch
-            {
-                PROPS.messageError("");
-                return;
-            }
-           
+            ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
+            cmbbx_report.DataSource = ds.Tables[PROPS.TABLE_TYPE_NOT_STUDENT];
+            cmbbx_report.DisplayMember = "description_typeNotStudent";
+            cmbbx_report.ValueMember = "id_typeNotStudent";
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -105,15 +101,13 @@ namespace library_check_in.Type_not_student
          */
         public void load_dtgdTypeNotStudent(DataSet ds, DataGridView dtgd_typeNotStudent)
         {
-            try
+            ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
+            if (ds == null)
             {
-                ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
-                dtgd_typeNotStudent.DataSource = ds.Tables[PROPS.TABLE_TYPE_NOT_STUDENT];
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_LOAD_CONSOLE);
+                return;
             }
-            catch
-            {
-                PROPS.messageError("");
-            }
+            dtgd_typeNotStudent.DataSource = ds.Tables[PROPS.TABLE_TYPE_NOT_STUDENT];
         }
     }
 }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
+﻿using System.Data;
 using System.Windows.Forms;
 /**
  *  Author      | Arcelia Aguirre
@@ -35,7 +31,10 @@ namespace library_check_in.User_CICE
             param[2] = fatherLastnameUser;
             param[3] = motherLastnameUser;
             param[4] = typeUser;
-            System.Data.DataTable dt = con.loadData(command, paramName, param);
+            if (con.loadData(command, paramName, param) == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_SAVE);
+            }
         }
         /**
          *  Author      | Arcelia Aguirre   
@@ -61,7 +60,10 @@ namespace library_check_in.User_CICE
             param[4] = father_last_name;
             param[5] = mother_last_name;
             param[6] = id_type_user;
-            System.Data.DataTable dt = con.loadData(command, paramName, param);
+            if (con.loadData(command, paramName, param) == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_UPDATE);
+            }
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -74,7 +76,10 @@ namespace library_check_in.User_CICE
             string command = "user_CICE_delete @id = @id";
             paramName[0] = "@id";
             param[0] = id;
-            System.Data.DataTable dt = con.loadData(command, paramName, param);
+            if (con.loadData(command, paramName, param) == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_DELETE);
+            }
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -84,6 +89,7 @@ namespace library_check_in.User_CICE
          */
         public object consult(int id, string user_name, string type_consult)
         {
+            DataSet dataSet;
             string command = "user_CICE_consult @id = @id, @user_name = @user_name, @type_consult = @type_consult";
             paramName[0] = "@id";
             paramName[1] = "@user_name";
@@ -91,8 +97,13 @@ namespace library_check_in.User_CICE
             param[0] = id;
             param[1] = user_name;
             param[2] = type_consult;
-            return con.loadData(command, PROPS.TABLE_USER_CICE, paramName, param);
-                
+            dataSet = con.loadData(command, PROPS.TABLE_USER_CICE, paramName, param);
+            if (dataSet == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_LOAD_CONSOLE);
+                return null;
+            }
+            return dataSet;
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -100,14 +111,14 @@ namespace library_check_in.User_CICE
          *  Date        | 28-02-2018
          *  Parameters  | string user, string password
          */
-        public System.Data.DataTable login(string user, string password)
+        public DataTable login(string user, string password)
         {
             string command = "select id_type_user from user_CICE where user_name = @user and user_password = @password";
             paramName[0] = "@user";
             param[0] = user;
             paramName[1] = "@password";
             param[1] = password;
-            System.Data.DataTable dt = con.loadData(command, paramName, param);
+            DataTable dt = con.loadData(command, paramName, param);
             return dt;
         }
         /**
@@ -118,15 +129,9 @@ namespace library_check_in.User_CICE
          */
         public void load_dtgdUser(DataSet ds, DataGridView dtgd_user)
         {
-            try
-            {
-                ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
-                dtgd_user.DataSource = ds.Tables[PROPS.TABLE_USER_CICE];
-            }
-            catch
-            {
-                PROPS.messageError("");
-            }
+
+            ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
+            dtgd_user.DataSource = ds.Tables[PROPS.TABLE_USER_CICE];
         }
     }
 }

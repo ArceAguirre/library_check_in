@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 /**
  *  Author      | Arcelia Aguirre
@@ -29,6 +26,7 @@ namespace library_check_in
         public static string TABLE_NOT_STUDENT = "not_student";
         
         public enum COMPONENT { COMPONENT_TEXT_BOX, COMPONENT_COMBO_BOX, COMPONENT_DATE_TIME };
+        public enum MESSAGE_ERROR { DATA_BASE, DATA_BASE_CONSOLE, NOT_SAVE, NOT_UPDATE, NOT_DELETE, NOT_LOAD, NOT_LOAD_CONSOLE, NOT_CLEAR };
 
         //private string ERROR_DATA_BASE = "dataBase";
         /**
@@ -65,6 +63,8 @@ namespace library_check_in
                             ((DateTimePicker)component[i]).ResetText();
                     }
                 break;
+                default :
+                break;
             }
         }
         /**
@@ -85,30 +85,50 @@ namespace library_check_in
                 e.Handled = true;
             }
         }
-
         /**
          *  Author      | Arcelia Aguirre
          *  Description | Validación de campos vacíos
          *  Date        | 16-04-2018
          *  Parameters  | TextBox[] component
          */
-        public static bool emptyTextBox(TextBox[] component)
+        public static bool emptyComponent(object[] component, int type)
         {
-            if (component == null) return false;
-            for (int i = 0; i < component.Length; i++)
+            switch (type)
             {
-                if (component[i] != null)
-                {
-                    if (component[i].Text == EMPTY)
+                case (int)COMPONENT.COMPONENT_TEXT_BOX:
+                    if (component == null) return false;
+                    for (int i = 0; i < component.Length; i++)
                     {
-                        MessageBox.Show("El campo de " + component[i].AccessibleName + " no puede estar vacío");
-                        return false;
+                        if (component[i] != null)
+                        {
+                            if (((TextBox)component[i]).Text == EMPTY)
+                            {
+                                MessageBox.Show("El campo de " + ((TextBox)component[i]).AccessibleName + " no puede estar vacío");
+                                return false;
+                            }
+                        }
+                        else
+                            return false;
                     }
-                }
-                else
-                    return false;
-                    
-            }return true;
+                    break;
+                case (int)COMPONENT.COMPONENT_COMBO_BOX:
+                    if (component == null) return false;
+                    for (int i = 0; i < component.Length; i++)
+                    {
+                        if (component[i] != null)
+                        {
+                            if (((ComboBox)component[i]).SelectedValue == null)
+                            {
+                                MessageBox.Show("Se tiene que seleccionar opción de " + ((ComboBox)component[i]).AccessibleName);
+                                return false;
+                            }
+                        }
+                        else
+                            return false;
+                    }
+                    break;
+            }
+            return true;
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -116,9 +136,38 @@ namespace library_check_in
          *  Date        | 16-04-2018
          *  Parameters  | string error, codigo de error
          */
-        public static void messageError(string error)
+        public static void messageError(int error)
         {
-            //MessageBox.Show("Ocurrió un error con la base de datos");
+            switch (error)
+            {
+                case (int)MESSAGE_ERROR.DATA_BASE :
+                    Console.WriteLine("Ocurrió un error con la base de datos");
+                    break;
+                case (int)MESSAGE_ERROR.DATA_BASE_CONSOLE :
+                    Console.WriteLine("Ocurrió un error con la base de datos");
+                    break;
+                case (int)MESSAGE_ERROR.NOT_SAVE:
+                    MessageBox.Show("Ocurrió un error al guardar");
+                    break;
+                case (int)MESSAGE_ERROR.NOT_UPDATE:
+                    MessageBox.Show("Ocurrió un error la actualizar");
+                    break;
+                case (int)MESSAGE_ERROR.NOT_DELETE:
+                    MessageBox.Show("Ocurrió un error la eliminar");
+                    break;
+                case (int)MESSAGE_ERROR.NOT_LOAD:
+                    MessageBox.Show("Ocurrió un error la cargar los datos");
+                    break;
+                case (int)MESSAGE_ERROR.NOT_LOAD_CONSOLE:
+                    Console.WriteLine("Ocurrió un error la cargar los datos");
+                    break;
+                case (int)MESSAGE_ERROR.NOT_CLEAR:
+                    MessageBox.Show("No se limpiaron correctamente los campos");
+                    break;
+                default:
+                    MessageBox.Show("Ocurrió un error");
+                    break;
+            }
         }
         /**
          *  Author      | Arcelia Aguirre

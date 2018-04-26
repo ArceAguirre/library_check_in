@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
+﻿using System.Data;
 using System.Windows.Forms;
 /**
  *  Author      | Arcelia Aguirre
@@ -35,7 +31,10 @@ namespace library_check_in.Not_student
             param[2] = father_last_name;
             param[3] = mother_last_name;
             param[4] = id_type_not_student;
-            DataTable dt = con.loadData(command, paramName, param);
+            if (con.loadData(command, paramName, param) == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_SAVE);
+            }
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -58,7 +57,10 @@ namespace library_check_in.Not_student
             param[3] = father_last_name;
             param[4] = mother_last_name;
             param[5] = id_type_not_student;
-            DataTable dt = con.loadData(command, paramName, param);
+            if (con.loadData(command, paramName, param) == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_UPDATE);
+            }
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -71,7 +73,10 @@ namespace library_check_in.Not_student
             string command = "student_delete @id = @id";
             paramName[0] = "@id";
             param[0] = id;
-            DataTable dt = con.loadData(command, paramName, param);
+            if (con.loadData(command, paramName, param) == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_DELETE);
+            }
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -104,6 +109,11 @@ namespace library_check_in.Not_student
         public void load_dtgdStudent(DataSet ds, DataGridView dtgd_student, ComboBox cmbbx_typeRegister)
         {
             ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.EMPTY, cmbbx_typeRegister.SelectedValue, PROPS.CONSULT_L3);
+            if(ds == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_LOAD_CONSOLE);
+                return;
+            }
             dtgd_student.DataSource = ds.Tables[PROPS.TABLE_NOT_STUDENT];
         }
     }

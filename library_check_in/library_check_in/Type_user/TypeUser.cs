@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
+﻿using System.Data;
 using System.Windows.Forms;
 /**
  *  Author      | Arcelia Aguirre
@@ -27,7 +23,10 @@ namespace library_check_in.Type_user
             string command = "type_user_new @description = @description";
             paramName[0] = "@description";
             param[0] = description;
-            System.Data.DataTable dt = con.loadData(command, paramName, param);
+            if (con.loadData(command, paramName, param) == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_SAVE);
+            }
         }
         /**
          *  Author      | Arcelia Aguirre Treviño
@@ -42,7 +41,10 @@ namespace library_check_in.Type_user
             paramName[1] = "@description";
             param[0] = id;
             param[1] = description;
-            System.Data.DataTable dt = con.loadData(command, paramName, param);
+            if (con.loadData(command, paramName, param) == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_UPDATE);
+            }
         }
         /**
          *  Author      | Arcelia Aguirre Treviño
@@ -55,7 +57,10 @@ namespace library_check_in.Type_user
             string command = "type_user_delete @id = @id";
             paramName[0] = "@id";
             param[0] = id;
-            System.Data.DataTable dt = con.loadData(command, paramName, param);
+            if (con.loadData(command, paramName, param) == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_DELETE);
+            }
         }
         /**
          *  Author      | Arcelia Aguirre Treviño
@@ -83,19 +88,10 @@ namespace library_check_in.Type_user
          */
         public void load_cmbbxTypeUser(DataSet ds, ComboBox cmbbx_typeUser)
         {
-            try
-            {
-                ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
-                cmbbx_typeUser.DataSource = ds.Tables[PROPS.TABLE_TYPE_USER];
-                cmbbx_typeUser.DisplayMember = "description_typeUser";
-                cmbbx_typeUser.ValueMember = "id_typeUser";
-            }
-            catch
-            {
-                PROPS.messageError("");
-                return;
-            }
-            
+            ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
+            cmbbx_typeUser.DataSource = ds.Tables[PROPS.TABLE_TYPE_USER];
+            cmbbx_typeUser.DisplayMember = "description_typeUser";
+            cmbbx_typeUser.ValueMember = "id_typeUser";
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -105,15 +101,13 @@ namespace library_check_in.Type_user
          */
         public void load_dtgdTypeUser(DataSet ds, DataGridView dtgd_typeUser)
         {
-            try
+            ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
+            if (ds == null)
             {
-                ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.CONSULT_L1);
-                dtgd_typeUser.DataSource = ds.Tables[PROPS.TABLE_TYPE_USER];
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_LOAD_CONSOLE);
+                return;
             }
-            catch
-            {
-                PROPS.messageError("");
-            }
+            dtgd_typeUser.DataSource = ds.Tables[PROPS.TABLE_TYPE_USER];
         }
     }
 }

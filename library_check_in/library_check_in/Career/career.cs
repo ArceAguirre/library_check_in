@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
+﻿using System.Data;
 using System.Windows.Forms;
 /**
  *  Author      | Arcelia Aguirre
@@ -29,7 +25,10 @@ namespace library_check_in.career
             paramName[1] = "@careerKey";
             param[0] = carrerName;
             param[1] = carrerKey;
-            DataTable dt = con.loadData(command, paramName, param);
+            if (con.loadData(command, paramName, param) == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_SAVE);
+            }
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -46,7 +45,10 @@ namespace library_check_in.career
             param[0] = id;
             param[1] = carrerName;
             param[2] = carrerKey;
-            DataTable dt = con.loadData(command, paramName, param);
+            if (con.loadData(command, paramName, param) == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_UPDATE);
+            }
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -55,11 +57,14 @@ namespace library_check_in.career
          *  Parameters  | int id
          */
         public void delete(int id)
-        {   
+        {
             string command = "career_delete @id = @id";
             paramName[0] = "@id";
             param[0] = id;
-            DataTable dt = con.loadData(command, paramName, param);
+            if (con.loadData(command, paramName, param) == null)
+            {
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_DELETE);
+            }
         }
         /**
          *  Author      | Arcelia Aguirre Treviño
@@ -70,6 +75,7 @@ namespace library_check_in.career
          */
         public object consult(int id, string career_name, string career_key, string type_consult)
         {
+            DataSet dataSet;
             string command = "career_consult @id = @id, @career_name = @career_name, @career_key = @career_key, @type_consult = @type_consult";
             paramName[0] = "@id";
             paramName[1] = "@career_name";
@@ -79,6 +85,7 @@ namespace library_check_in.career
             param[1] = career_name;
             param[2] = career_key;
             param[3] = type_consult;
+            dataSet = con.loadData(command, PROPS.TABLE_CAREER, paramName, param);
             return con.loadData(command, PROPS.TABLE_CAREER, paramName, param);
         }
         /**
@@ -89,18 +96,10 @@ namespace library_check_in.career
          */
         public void load_cmbbxCarrer(DataSet ds, ComboBox cmbbx_carrer)
         {
-            try
-            {
-                ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.EMPTY, PROPS.CONSULT_L1);
-                cmbbx_carrer.DataSource = ds.Tables[PROPS.TABLE_CAREER];
-                cmbbx_carrer.DisplayMember = "career_name";
-                cmbbx_carrer.ValueMember = "id_career";
-            }
-            catch
-            {
-                PROPS.messageError("");
-            }
-            
+            ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.EMPTY, PROPS.CONSULT_L1);
+            cmbbx_carrer.DataSource = ds.Tables[PROPS.TABLE_CAREER];
+            cmbbx_carrer.DisplayMember = "career_name";
+            cmbbx_carrer.ValueMember = "id_career";
         }
         /**
          *  Author      | Arcelia Aguirre
@@ -110,15 +109,13 @@ namespace library_check_in.career
          */
         public void load_dtgdCareer(DataSet ds, DataGridView dtgd_Career)
         {
-            try
+            ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.EMPTY, PROPS.CONSULT_L1);
+            if (ds == null)
             {
-                ds = (DataSet)this.consult(PROPS.CERO, PROPS.EMPTY, PROPS.EMPTY, PROPS.CONSULT_L1);
-                dtgd_Career.DataSource = ds.Tables[PROPS.TABLE_CAREER];
+                PROPS.messageError((int)PROPS.MESSAGE_ERROR.NOT_LOAD_CONSOLE);
+                return;
             }
-            catch
-            {
-                PROPS.messageError("");
-            }
+            dtgd_Career.DataSource = ds.Tables[PROPS.TABLE_CAREER];
         }
     }
 }
